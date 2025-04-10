@@ -88,39 +88,69 @@ const Privacy = () => {
         
         <main className="container flex-1 py-8">
           <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
-            <h1 className="text-2xl font-bold mb-6 text-ruler-primary">{currentContent.title}</h1>
+            <div className="text-2xl font-bold mb-6 text-ruler-primary">
+              {currentContent.title}
+            </div>
             
-            <p className="mb-6">{currentContent.intro}</p>
+            <p className="mb-6">
+              {currentContent.intro}
+            </p>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.collection}</h2>
-            <p className="mb-3">{currentContent.collectionDetails}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.collection}
+            </h2>
+            <p className="mb-3">
+              {currentContent.collectionDetails}
+            </p>
             <ul className="list-disc pl-6 mb-6">
               {currentContent.collectionItems.map((item, index) => (
-                <li key={index} className="mb-1">{item}</li>
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
               ))}
             </ul>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.usage}</h2>
-            <p className="mb-3">{currentContent.usageDetails}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.usage}
+            </h2>
+            <p className="mb-3">
+              {currentContent.usageDetails}
+            </p>
             <ul className="list-disc pl-6 mb-6">
               {currentContent.usageItems.map((item, index) => (
-                <li key={index} className="mb-1">{item}</li>
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
               ))}
             </ul>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.storage}</h2>
-            <p className="mb-6">{currentContent.storageDetails}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.storage}
+            </h2>
+            <p className="mb-6">
+              {currentContent.storageDetails}
+            </p>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.rights}</h2>
-            <p className="mb-3">{currentContent.rightsDetails}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.rights}
+            </h2>
+            <p className="mb-3">
+              {currentContent.rightsDetails}
+            </p>
             <ul className="list-disc pl-6 mb-6">
               {currentContent.rightsItems.map((item, index) => (
-                <li key={index} className="mb-1">{item}</li>
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
               ))}
             </ul>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.contact}</h2>
-            <p>{currentContent.contactDetails}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.contact}
+            </h2>
+            <p>
+              {currentContent.contactDetails}
+            </p>
           </div>
         </main>
         

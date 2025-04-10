@@ -77,7 +77,7 @@
   }
 
   .ruler-tick {
-    @apply bg-ruler-text;
+    @apply bg-black;
   }
 
   .ruler-tick-major {
@@ -93,18 +93,47 @@
   }
 
   .ruler-number {
-    @apply text-xs text-ruler-text;
+    @apply text-xs text-black font-semibold;
   }
 
   .ruler-container {
-    @apply relative bg-white border border-ruler-primary rounded-md shadow-md;
+    @apply relative rounded-md shadow-md z-10;
   }
 
   .ruler-horizontal {
-    @apply h-16 w-full min-w-[300px] overflow-hidden;
+    @apply h-32 w-full overflow-hidden;
   }
 
   .ruler-vertical {
-    @apply w-16 h-[70vh] min-h-[300px] overflow-hidden;
+    @apply w-32 h-[80vh] overflow-hidden;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

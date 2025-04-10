@@ -86,37 +86,65 @@ const Disclaimer = () => {
         
         <main className="container flex-1 py-8">
           <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
-            <h1 className="text-2xl font-bold mb-6 text-ruler-primary">{currentContent.title}</h1>
+            <div className="text-2xl font-bold mb-6 text-ruler-primary">
+              {currentContent.title}
+            </div>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.accuracy}</h2>
-            <p className="mb-3">{currentContent.accuracyText}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.accuracy}
+            </h2>
+            <p className="mb-3">
+              {currentContent.accuracyText}
+            </p>
             <ul className="list-disc pl-6 mb-6">
               {currentContent.accuracyItems.map((item, index) => (
-                <li key={index} className="mb-1">{item}</li>
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
               ))}
             </ul>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.disclaimer}</h2>
-            <p className="mb-3">{currentContent.disclaimerText}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.disclaimer}
+            </h2>
+            <p className="mb-3">
+              {currentContent.disclaimerText}
+            </p>
             <ul className="list-disc pl-6 mb-6">
               {currentContent.disclaimerItems.map((item, index) => (
-                <li key={index} className="mb-1">{item}</li>
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
               ))}
             </ul>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.usage}</h2>
-            <p className="mb-3">{currentContent.usageText}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.usage}
+            </h2>
+            <p className="mb-3">
+              {currentContent.usageText}
+            </p>
             <ul className="list-disc pl-6 mb-6">
               {currentContent.usageItems.map((item, index) => (
-                <li key={index} className="mb-1">{item}</li>
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
               ))}
             </ul>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.changes}</h2>
-            <p className="mb-6">{currentContent.changesText}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.changes}
+            </h2>
+            <p className="mb-6">
+              {currentContent.changesText}
+            </p>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">{currentContent.contact}</h2>
-            <p>{currentContent.contactText}</p>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {currentContent.contact}
+            </h2>
+            <p>
+              {currentContent.contactText}
+            </p>
           </div>
         </main>
         

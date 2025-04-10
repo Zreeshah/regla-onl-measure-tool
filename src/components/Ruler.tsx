@@ -23,6 +23,27 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [startDragPosition, setStartDragPosition] = useState({ x: 0, y: 0 });
+  const [rulerWidth, setRulerWidth] = useState(0);
+  const [rulerHeight, setRulerHeight] = useState(0);
+  
+  useEffect(() => {
+    const updateRulerDimensions = () => {
+      if (orientation === 'horizontal') {
+        setRulerWidth(window.innerWidth);
+        setRulerHeight(150);
+      } else {
+        setRulerHeight(window.innerHeight);
+        setRulerWidth(150);
+      }
+    };
+    
+    updateRulerDimensions();
+    window.addEventListener('resize', updateRulerDimensions);
+    
+    return () => {
+      window.removeEventListener('resize', updateRulerDimensions);
+    };
+  }, [orientation]);
   
   // Calculate the number of ticks based on orientation and container size
   const generateTicks = () => {
@@ -30,9 +51,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
     
     const ticks = [];
     const isHorizontal = orientation === 'horizontal';
-    const rulerLength = isHorizontal 
-      ? rulerRef.current.clientWidth
-      : rulerRef.current.clientHeight;
+    const rulerLength = isHorizontal ? rulerWidth : rulerHeight;
     
     // Calculate max value based on unit and ruler length
     const maxValue = getValueInSelectedUnit(rulerLength);
@@ -171,7 +190,10 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       ref={rulerRef}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
-        cursor: isDragging ? 'grabbing' : 'grab'
+        cursor: isDragging ? 'grabbing' : 'grab',
+        width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
+        height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
+        backgroundColor: '#FEF7CD' // Light yellow background for traditional ruler look
       }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
@@ -187,7 +209,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       {/* Ruler markings */}
       <div className={`relative ${orientation === 'horizontal' ? 'w-full h-full' : 'h-full w-full'}`}>
         {/* Ruler base */}
-        <div className={`absolute ${orientation === 'horizontal' ? 'w-full h-6 top-6' : 'h-full w-6 left-6'} bg-ruler-light border-t border-ruler-primary`}></div>
+        <div className={`absolute ${orientation === 'horizontal' ? 'w-full h-6 top-6' : 'h-full w-6 left-6'} bg-transparent border-t border-ruler-primary`}></div>
         
         {/* Ticks */}
         {ticks.map((tick, index) => (
@@ -196,8 +218,9 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
             {orientation === 'horizontal' && (
               <>
                 <div 
-                  className={`ruler-tick ruler-tick-${tick.type} absolute`}
+                  className={`ruler-tick ruler-tick-${tick.type} absolute bg-black`}
                   style={{
+                    height: tick.type === 'major' ? '16px' : tick.type === 'medium' ? '12px' : '8px',
                     width: '1px',
                     left: `${tick.position}px`,
                     top: '24px',
@@ -207,7 +230,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
                 
                 {tick.showLabel && (
                   <div 
-                    className="ruler-number absolute"
+                    className="ruler-number absolute text-xs font-semibold"
                     style={{
                       left: `${tick.position}px`,
                       top: '4px',
@@ -224,19 +247,19 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
             {orientation === 'vertical' && (
               <>
                 <div 
-                  className={`ruler-tick ruler-tick-${tick.type} absolute`}
+                  className={`ruler-tick ruler-tick-${tick.type} absolute bg-black`}
                   style={{
+                    width: tick.type === 'major' ? '16px' : tick.type === 'medium' ? '12px' : '8px',
                     height: '1px',
                     top: `${tick.position}px`,
                     left: '24px',
                     transform: 'translateY(-50%)',
-                    width: tick.type === 'major' ? '16px' : tick.type === 'medium' ? '12px' : '8px',
                   }}
                 ></div>
                 
                 {tick.showLabel && (
                   <div 
-                    className="ruler-number absolute"
+                    className="ruler-number absolute text-xs font-semibold"
                     style={{
                       top: `${tick.position}px`,
                       left: '4px',
@@ -253,14 +276,14 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         
         {/* Unit label */}
         <div 
-          className="absolute text-xs text-ruler-text font-semibold"
+          className="absolute text-xs text-black font-semibold"
           style={
             orientation === 'horizontal' 
               ? { right: '4px', top: '4px' } 
               : { bottom: '4px', left: '8px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }
           }
         >
-          {unit}
+          {unit.toUpperCase()}
         </div>
       </div>
     </div>

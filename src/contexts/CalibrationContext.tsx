@@ -38,7 +38,7 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
 
     window.addEventListener('resize', handleResize);
     
-    // Initial auto-calibration
+    // Initial auto-calibration - run once on mount
     autoCalibrate();
     
     return () => {
@@ -48,8 +48,36 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
 
   // Calculate physical screen size using DPI and screen dimensions
   const calculatePhysicalScreenSize = (): number => {
-    // Default to a common DPI if we can't detect it
-    const dpi = window.devicePixelRatio * 96;
+    // Try to use more accurate method using screen.width/height if available
+    // These values are in physical pixels
+    const screenObj = window.screen;
+    if (screenObj && screenObj.width && screenObj.height) {
+      // Get device pixel ratio - number of screen pixels per CSS pixel
+      const dpr = window.devicePixelRatio || 1;
+      
+      // Standard reference DPI - baseline for most calculations
+      const standardDPI = 96;
+      
+      // Adjust DPI based on pixel ratio
+      const dpi = dpr * standardDPI;
+      
+      // Calculate physical dimensions
+      const widthInInches = screenObj.width / dpi;
+      const heightInInches = screenObj.height / dpi;
+      
+      // Pythagoras to calculate diagonal
+      const diagonalInInches = Math.sqrt(widthInInches * widthInInches + heightInInches * heightInInches);
+      
+      // If we get a reasonable size, return it
+      if (diagonalInInches > 3 && diagonalInInches < 40) {
+        console.log('Screen auto-calibration:', diagonalInInches.toFixed(1) + ' inches');
+        return diagonalInInches;
+      }
+    }
+    
+    // Fallback to window dimensions if screen dimensions aren't reliable
+    const dpr = window.devicePixelRatio || 1;
+    const dpi = dpr * 96;
     const widthInInches = screenWidth / dpi;
     const heightInInches = screenHeight / dpi;
     
@@ -61,20 +89,24 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
     // Try to detect the physical screen size
     const estimatedScreenSizeInches = calculatePhysicalScreenSize();
     
-    if (estimatedScreenSizeInches > 1) {
+    if (estimatedScreenSizeInches > 3) {
       // If we got a reasonable value, use it
       calibrateByScreen(estimatedScreenSizeInches);
+      console.log('Auto-calibrated to:', estimatedScreenSizeInches.toFixed(1) + ' inches');
     } else {
       // Fallback to a common screen size based on device width
       if (screenWidth < 600) {
         // Probably a phone
         calibrateByScreen(5.5);
+        console.log('Auto-calibrated to default phone size: 5.5 inches');
       } else if (screenWidth < 1024) {
         // Probably a tablet
         calibrateByScreen(10);
+        console.log('Auto-calibrated to default tablet size: 10 inches');
       } else {
         // Probably a desktop/laptop
         calibrateByScreen(15.6);
+        console.log('Auto-calibrated to default laptop size: 15.6 inches');
       }
     }
   };
@@ -86,6 +118,9 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
     );
     const pixelsPerInch = screenDiagonalPixels / screenSizeInches;
     const newPixelsPerCm = pixelsPerInch / CM_PER_INCH;
+    
+    console.log('Calibrated to screen size:', screenSizeInches, 'inches');
+    console.log('Calculated pixels per cm:', newPixelsPerCm.toFixed(2));
     
     setPixelsPerCm(newPixelsPerCm);
   };

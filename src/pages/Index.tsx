@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Ruler from '@/components/Ruler';
@@ -8,15 +8,28 @@ import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useCalibration } from '@/contexts/CalibrationContext';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from '@/components/ui/card';
 import { Ruler as RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
+  const { orientation } = useCalibration();
+  const [contentTopMargin, setContentTopMargin] = useState("200px");
   
   // Create a shortened meta description (150 characters max)
   const metaDescription = "Regla online con calibración precisa para medir en cm, mm y pulgadas en tu pantalla. Perfecta para mediciones exactas.";
+  
+  // Adjust content positioning based on ruler orientation
+  useEffect(() => {
+    // Add extra space if ruler is vertical since it takes more space
+    if (orientation === 'vertical') {
+      setContentTopMargin("520px"); // Approximate height of vertical ruler + controls
+    } else {
+      setContentTopMargin("200px"); // Approximate height of horizontal ruler + controls
+    }
+  }, [orientation]);
   
   return (
     <>
@@ -66,7 +79,13 @@ const Index = () => {
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
         
-        <main className="container flex-1 relative pt-36 pb-6">
+        {/* Ruler is now fixed position so it's outside the main content flow */}
+        <Ruler className="mb-4 mx-auto" />
+        
+        <main 
+          className="container flex-1 relative pb-6"
+          style={{ marginTop: contentTopMargin }} // Dynamic margin based on ruler orientation
+        >
           <div className="mb-6 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#9b87f5] animate-fade-in">
               {t('title').split(' - ')[0]}
@@ -74,17 +93,6 @@ const Index = () => {
             <p className="text-lg text-gray-600 animate-slide-in">
               {t('subtitle')}
             </p>
-          </div>
-          
-          {/* Ruler Space - positioned absolutely to avoid layout conflicts */}
-          <div className="relative h-32 mb-20 mt-4">
-            <Ruler className="mb-4 mx-auto" />
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-            <div className="lg:col-span-3">
-              {/* This div is intentionally left empty to create space for the ruler */}
-            </div>
           </div>
           
           <div className="mb-10">

@@ -109,16 +109,6 @@
   }
 }
 
-/* Create a dedicated space for the ruler */
-.ruler-space {
-  @apply h-32 w-full relative mb-10 mt-4;
-}
-
-/* Adjust main content to make space for the ruler */
-.main-with-ruler {
-  @apply pt-36 pb-6;
-}
-
 /* Animation classes */
 .animate-fade-in {
   animation: fadeIn 0.6s ease-in-out;

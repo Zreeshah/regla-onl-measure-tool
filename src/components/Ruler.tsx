@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { 
-  Move, 
   Maximize, 
   Minimize, 
   RefreshCw, 
@@ -17,7 +16,6 @@ import {
   DropdownMenuItem 
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Input } from "@/components/ui/input";
 
 interface RulerProps {
@@ -67,13 +65,15 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   const { t } = useLanguage();
   
   const rulerRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [startDragPosition, setStartDragPosition] = useState({ x: 0, y: 0 });
   const [rulerWidth, setRulerWidth] = useState(0);
   const [rulerHeight, setRulerHeight] = useState(0);
   const [customScreenSize, setCustomScreenSize] = useState('15.6');
   const [screenSizeDropdownOpen, setScreenSizeDropdownOpen] = useState(false);
+  
+  // Run auto-calibration once on initial mount
+  useEffect(() => {
+    autoCalibrate();
+  }, []);
   
   useEffect(() => {
     const updateRulerDimensions = () => {
@@ -168,65 +168,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
     
     return ticks;
   };
-  
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
-    setStartDragPosition({
-      x: e.clientX - position.x,
-      y: e.clientY - position.y
-    });
-  };
-  
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (e.touches.length === 1) {
-      setIsDragging(true);
-      setStartDragPosition({
-        x: e.touches[0].clientX - position.x,
-        y: e.touches[0].clientY - position.y
-      });
-    }
-  };
-  
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (isDragging) {
-        setPosition({
-          x: e.clientX - startDragPosition.x,
-          y: e.clientY - startDragPosition.y
-        });
-      }
-    };
-    
-    const handleTouchMove = (e: TouchEvent) => {
-      if (isDragging && e.touches.length === 1) {
-        setPosition({
-          x: e.touches[0].clientX - startDragPosition.x,
-          y: e.touches[0].clientY - startDragPosition.y
-        });
-        e.preventDefault(); // Prevent scrolling while dragging
-      }
-    };
-    
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
-    
-    const handleTouchEnd = () => {
-      setIsDragging(false);
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
-    window.addEventListener('touchend', handleTouchEnd);
-    
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [isDragging, startDragPosition]);
 
   const handleCustomScreenSizeSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -238,36 +179,27 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   };
   
   const ticks = generateTicks();
+
+  // Set fixed position styles for the ruler
+  const rulerStyle = {
+    width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
+    height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
+    backgroundColor: '#F5F7FA',
+    zIndex: 50,
+    position: 'fixed' as const, // Use position fixed to keep it in place
+    left: 20,
+    top: 80, // Position slightly below header
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+    borderRadius: '6px',
+    overflow: 'visible' // Allow buttons to overflow
+  };
   
   return (
     <div
       className={`ruler-container ${orientation === 'horizontal' ? 'ruler-horizontal' : 'ruler-vertical'} ${className}`}
       ref={rulerRef}
-      style={{
-        transform: `translate(${position.x}px, ${position.y}px)`,
-        cursor: isDragging ? 'grabbing' : 'grab',
-        width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
-        height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
-        backgroundColor: '#F5F7FA',
-        zIndex: 50,
-        position: 'absolute',
-        left: 20,
-        top: 100,
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-        borderRadius: '6px',
-        overflow: 'visible' // Allow buttons to overflow
-      }}
-      onMouseDown={handleMouseDown}
-      onTouchStart={handleTouchStart}
+      style={rulerStyle}
     >
-      {/* Ruler handle */}
-      <div 
-        className="absolute top-0 right-0 bg-[#9b87f5] text-white p-1 rounded-bl cursor-grab z-10 flex items-center"
-        title={t('move')}
-      >
-        <Move size={16} />
-      </div>
-      
       {/* Control buttons */}
       <div className="absolute -top-10 left-0 flex space-x-1 z-10">
         {/* Orientation toggle buttons */}

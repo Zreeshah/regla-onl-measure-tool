@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 207 84% 50%;
+    --primary: 262 83% 74%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -97,7 +97,7 @@
   }
 
   .ruler-container {
-    @apply relative rounded-md shadow-md z-10;
+    @apply relative rounded-md shadow-md z-30;
   }
 
   .ruler-horizontal {

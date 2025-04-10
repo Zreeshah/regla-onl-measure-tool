@@ -64,10 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				ruler: {
-					primary: "#1E88E5",
-					secondary: "#F5F5F5",
+					primary: "#9b87f5", // Updated to purple theme
+					secondary: "#F5F7FA",
 					accent: "#EEEEEE",
-					text: "#333333",
+					text: "#1A1F2C",
 					light: "#FFFFFF"
 				}
 			},

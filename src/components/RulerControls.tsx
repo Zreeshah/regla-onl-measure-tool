@@ -41,7 +41,7 @@ const RulerControls: React.FC = () => {
   return (
     <Card className="shadow-md bg-white">
       <CardHeader className="border-b pb-3">
-        <CardTitle className="text-lg text-ruler-primary">{t('calibrationTitle')}</CardTitle>
+        <CardTitle className="text-lg text-[#9b87f5]">{t('calibrationTitle')}</CardTitle>
       </CardHeader>
       <CardContent className="pt-4">
         <Tabs defaultValue="screen" className="w-full">
@@ -58,7 +58,7 @@ const RulerControls: React.FC = () => {
             </p>
             <Button 
               onClick={autoCalibrate}
-              className="w-full bg-ruler-primary hover:bg-blue-600"
+              className="w-full bg-[#9b87f5] hover:bg-[#7E69AB]"
             >
               {t('autoCalibrate')}
             </Button>
@@ -79,7 +79,7 @@ const RulerControls: React.FC = () => {
                   onChange={handleScreenSizeChange}
                   className="flex-1"
                 />
-                <Button type="submit" className="bg-ruler-primary hover:bg-blue-600">
+                <Button type="submit" className="bg-[#9b87f5] hover:bg-[#7E69AB]">
                   <Ruler size={16} className="mr-1" />
                   {t('calibrationTitle')}
                 </Button>
@@ -93,7 +93,7 @@ const RulerControls: React.FC = () => {
             </p>
             <Button 
               onClick={calibrateByCard}
-              className="w-full bg-ruler-primary hover:bg-blue-600"
+              className="w-full bg-[#9b87f5] hover:bg-[#7E69AB]"
             >
               <CreditCard size={16} className="mr-1" />
               {t('calibrationTitle')}
@@ -158,7 +158,7 @@ const RulerControls: React.FC = () => {
             <div className="flex space-x-2">
               <Button
                 variant={orientation === 'horizontal' ? 'default' : 'outline'}
-                className={orientation === 'horizontal' ? 'bg-ruler-primary' : ''}
+                className={orientation === 'horizontal' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : ''}
                 onClick={() => setOrientation('horizontal')}
               >
                 <Maximize size={16} className="mr-1" />
@@ -166,7 +166,7 @@ const RulerControls: React.FC = () => {
               </Button>
               <Button
                 variant={orientation === 'vertical' ? 'default' : 'outline'}
-                className={orientation === 'vertical' ? 'bg-ruler-primary' : ''}
+                className={orientation === 'vertical' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : ''}
                 onClick={() => setOrientation('vertical')}
               >
                 <Minimize size={16} className="mr-1 rotate-90" />

@@ -88,6 +88,9 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       // Round to avoid floating point issues
       const roundedValue = Math.round(value * 100) / 100;
       
+      // Skip 0 position for the ruler ticks
+      if (roundedValue === 0) continue;
+      
       // Determine tick type
       let tickType = 'minor';
       if (roundedValue % majorTickInterval === 0) {
@@ -95,9 +98,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       } else if (roundedValue % mediumTickInterval === 0) {
         tickType = 'medium';
       }
-      
-      // Skip 0 position for the ruler ticks
-      if (roundedValue === 0) continue;
       
       // Calculate position in pixels
       const position = getPixelsFromValue(roundedValue);
@@ -107,9 +107,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       
       // Format the label based on unit
       let label = roundedValue.toString();
-      if (unit === 'inch' && showLabel) {
-        label = roundedValue.toString();
-      }
       
       ticks.push({
         position,
@@ -193,14 +190,18 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         cursor: isDragging ? 'grabbing' : 'grab',
         width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
         height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
-        backgroundColor: '#FEF7CD' // Light yellow background for traditional ruler look
+        backgroundColor: '#F5F7FA', // Updated to match site theme
+        zIndex: 10, // Ensure ruler is above other content
+        position: 'absolute', // Make it absolute positioned to avoid layout conflicts
+        left: 0,
+        top: 0
       }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
     >
       {/* Ruler handle */}
       <div 
-        className="absolute top-0 right-0 bg-ruler-primary text-white p-1 rounded-bl cursor-grab z-10 flex items-center"
+        className="absolute top-0 right-0 bg-[#9b87f5] text-white p-1 rounded-bl cursor-grab z-10 flex items-center"
         title={t('move')}
       >
         <Move size={16} />
@@ -209,7 +210,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       {/* Ruler markings */}
       <div className={`relative ${orientation === 'horizontal' ? 'w-full h-full' : 'h-full w-full'}`}>
         {/* Ruler base */}
-        <div className={`absolute ${orientation === 'horizontal' ? 'w-full h-6 top-6' : 'h-full w-6 left-6'} bg-transparent border-t border-ruler-primary`}></div>
+        <div className={`absolute ${orientation === 'horizontal' ? 'w-full h-6 top-6' : 'h-full w-6 left-6'} bg-transparent border-t border-[#9b87f5]`}></div>
         
         {/* Ticks */}
         {ticks.map((tick, index) => (
@@ -218,7 +219,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
             {orientation === 'horizontal' && (
               <>
                 <div 
-                  className={`ruler-tick ruler-tick-${tick.type} absolute bg-black`}
+                  className={`ruler-tick ruler-tick-${tick.type} absolute bg-[#1A1F2C]`}
                   style={{
                     height: tick.type === 'major' ? '16px' : tick.type === 'medium' ? '12px' : '8px',
                     width: '1px',
@@ -235,6 +236,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
                       left: `${tick.position}px`,
                       top: '4px',
                       transform: 'translateX(-50%)',
+                      color: '#1A1F2C',
                     }}
                   >
                     {tick.label}
@@ -247,7 +249,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
             {orientation === 'vertical' && (
               <>
                 <div 
-                  className={`ruler-tick ruler-tick-${tick.type} absolute bg-black`}
+                  className={`ruler-tick ruler-tick-${tick.type} absolute bg-[#1A1F2C]`}
                   style={{
                     width: tick.type === 'major' ? '16px' : tick.type === 'medium' ? '12px' : '8px',
                     height: '1px',
@@ -264,6 +266,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
                       top: `${tick.position}px`,
                       left: '4px',
                       transform: 'translateY(-50%)',
+                      color: '#1A1F2C',
                     }}
                   >
                     {tick.label}
@@ -276,7 +279,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         
         {/* Unit label */}
         <div 
-          className="absolute text-xs text-black font-semibold"
+          className="absolute text-xs text-[#1A1F2C] font-semibold"
           style={
             orientation === 'horizontal' 
               ? { right: '4px', top: '4px' } 

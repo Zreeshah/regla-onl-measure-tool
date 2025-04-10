@@ -17,10 +17,10 @@ import { Ruler as RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 const Index = () => {
   const { t, language } = useLanguage();
   
-  // Create a shortened meta description
+  // Create a shortened meta description (150 characters max)
   const metaDescription = language === 'en' 
-    ? "Online ruler with precise calibration to measure in cm, mm, and inches on your screen."
-    : "Regla online con calibración precisa para medir en cm, mm e pulgadas en tu pantalla.";
+    ? "Online ruler with accurate calibration for measuring in cm, mm, and inches directly on your screen. Perfect for precise measurements."
+    : "Regla online con calibración precisa para medir en cm, mm y pulgadas en tu pantalla. Perfecta para mediciones exactas.";
   
   return (
     <>

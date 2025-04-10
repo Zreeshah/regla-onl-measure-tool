@@ -10,9 +10,9 @@ import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from '@/components/ui/card';
-import { Ruler as RulerIcon, Maximize, RulerSquare, Pencil } from 'lucide-react';
+import { Ruler as RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 
 const Index = () => {
   const { t, language } = useLanguage();
@@ -109,7 +109,7 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                    <RulerSquare className="text-ruler-primary mr-2 mt-1" size={20} />
+                    <Square className="text-ruler-primary mr-2 mt-1" size={20} />
                     <div>
                       <h3 className="font-semibold mb-1">{t('useCase3')}</h3>
                       <p className="text-sm text-gray-600">Regla tamaño real perfecta para enseñar mediciones a estudiantes de forma interactiva.</p>

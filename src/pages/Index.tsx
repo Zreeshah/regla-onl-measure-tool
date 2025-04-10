@@ -1,9 +1,8 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Ruler from '@/components/Ruler';
-import RulerControls from '@/components/RulerControls';
-import DeviceInfo from '@/components/DeviceInfo';
 import HowToUseSection from '@/components/HowToUseSection';
 import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
@@ -77,19 +76,14 @@ const Index = () => {
             </p>
           </div>
           
-          <DeviceInfo />
-          
           {/* Ruler Space - positioned absolutely to avoid layout conflicts */}
           <div className="relative h-32 mb-20 mt-4">
             <Ruler className="mb-4 mx-auto" />
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               {/* This div is intentionally left empty to create space for the ruler */}
-            </div>
-            <div>
-              <RulerControls />
             </div>
           </div>
           

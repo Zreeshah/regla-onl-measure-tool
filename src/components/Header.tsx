@@ -13,7 +13,7 @@ const Header: React.FC = () => {
       <div className="container flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <Ruler size={28} className="text-ruler-primary mr-2" />
-          <h1 className="text-2xl font-bold text-ruler-primary">Regla<span className="text-gray-800">.Onl</span></h1>
+          <span className="text-2xl font-bold text-ruler-primary">Regla<span className="text-gray-800">.Onl</span></span>
         </Link>
         <LanguageSwitcher />
       </div>

@@ -79,6 +79,16 @@ const Index = () => {
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
         
+        {/* Title and subtitle before the ruler */}
+        <div className="container text-center mt-6 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
+            Regla Online Tamaño Real
+          </h1>
+          <p className="text-lg text-gray-600 mt-2 animate-slide-in">
+            Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
+          </p>
+        </div>
+        
         {/* Ruler is now fixed position so it's outside the main content flow */}
         <Ruler className="mb-4 mx-auto" />
         

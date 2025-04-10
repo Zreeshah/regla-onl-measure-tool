@@ -45,11 +45,12 @@ const RulerControls: React.FC = () => {
       </CardHeader>
       <CardContent className="pt-4">
         <Tabs defaultValue="screen" className="w-full">
-          <TabsList className="grid grid-cols-4 mb-4">
-            <TabsTrigger value="auto">{t('autoCalibrate')}</TabsTrigger>
-            <TabsTrigger value="screen">{t('screenSize')}</TabsTrigger>
-            <TabsTrigger value="card">{t('creditCard')}</TabsTrigger>
-            <TabsTrigger value="manual">{t('manual')}</TabsTrigger>
+          {/* Fix overlapping text by increasing the width and using full-width grid */}
+          <TabsList className="grid grid-cols-4 mb-4 w-full min-w-[300px]">
+            <TabsTrigger value="auto" className="text-xs sm:text-sm px-1 sm:px-2">{t('autoCalibrate')}</TabsTrigger>
+            <TabsTrigger value="screen" className="text-xs sm:text-sm px-1 sm:px-2">{t('screenSize')}</TabsTrigger>
+            <TabsTrigger value="card" className="text-xs sm:text-sm px-1 sm:px-2">{t('creditCard')}</TabsTrigger>
+            <TabsTrigger value="manual" className="text-xs sm:text-sm px-1 sm:px-2">{t('manual')}</TabsTrigger>
           </TabsList>
           
           <TabsContent value="auto" className="space-y-2">
@@ -79,7 +80,7 @@ const RulerControls: React.FC = () => {
                   onChange={handleScreenSizeChange}
                   className="flex-1"
                 />
-                <Button type="submit" className="bg-[#9b87f5] hover:bg-[#7E69AB]">
+                <Button type="submit" className="bg-[#9b87f5] hover:bg-[#7E69AB] whitespace-nowrap">
                   <Ruler size={16} className="mr-1" />
                   {t('calibrationTitle')}
                 </Button>
@@ -125,7 +126,7 @@ const RulerControls: React.FC = () => {
         </Tabs>
         
         <div className="mt-6 space-y-4">
-          {/* Units */}
+          {/* Units - Fix radio group to prevent overlapping */}
           <div>
             <Label className="text-sm font-medium mb-2 block">
               {t('unitTitle')}
@@ -133,7 +134,7 @@ const RulerControls: React.FC = () => {
             <RadioGroup 
               value={unit} 
               onValueChange={(value) => setUnit(value as 'cm' | 'mm' | 'inch')}
-              className="flex space-x-2"
+              className="flex flex-wrap gap-x-4 gap-y-2"
             >
               <div className="flex items-center space-x-1">
                 <RadioGroupItem value="cm" id="unit-cm" />
@@ -150,15 +151,15 @@ const RulerControls: React.FC = () => {
             </RadioGroup>
           </div>
           
-          {/* Orientation */}
+          {/* Orientation - Improve button layout */}
           <div>
             <Label className="text-sm font-medium mb-2 block">
               {t('orientation')}
             </Label>
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap gap-2">
               <Button
                 variant={orientation === 'horizontal' ? 'default' : 'outline'}
-                className={orientation === 'horizontal' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : ''}
+                className={`${orientation === 'horizontal' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : ''} text-xs sm:text-sm px-2 sm:px-3`}
                 onClick={() => setOrientation('horizontal')}
               >
                 <Maximize size={16} className="mr-1" />
@@ -166,7 +167,7 @@ const RulerControls: React.FC = () => {
               </Button>
               <Button
                 variant={orientation === 'vertical' ? 'default' : 'outline'}
-                className={orientation === 'vertical' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : ''}
+                className={`${orientation === 'vertical' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : ''} text-xs sm:text-sm px-2 sm:px-3`}
                 onClick={() => setOrientation('vertical')}
               >
                 <Minimize size={16} className="mr-1 rotate-90" />

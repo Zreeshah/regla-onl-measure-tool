@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import LanguageSwitcher from './LanguageSwitcher';
 import { Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +14,7 @@ const Header: React.FC = () => {
           <Ruler size={28} className="text-ruler-primary mr-2" />
           <span className="text-2xl font-bold text-ruler-primary">Regla<span className="text-gray-800">.Onl</span></span>
         </Link>
-        <LanguageSwitcher />
+        {/* Language switcher removed as we only support Spanish now */}
       </div>
     </header>
   );

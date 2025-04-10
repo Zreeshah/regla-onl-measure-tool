@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -15,12 +14,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Ruler as RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 
 const Index = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   
   // Create a shortened meta description (150 characters max)
-  const metaDescription = language === 'en' 
-    ? "Online ruler with accurate calibration for measuring in cm, mm, and inches directly on your screen. Perfect for precise measurements."
-    : "Regla online con calibración precisa para medir en cm, mm y pulgadas en tu pantalla. Perfecta para mediciones exactas.";
+  const metaDescription = "Regla online con calibración precisa para medir en cm, mm y pulgadas en tu pantalla. Perfecta para mediciones exactas.";
   
   return (
     <>
@@ -28,7 +25,7 @@ const Index = () => {
         <title>{t('title')}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content="regla online, regla virtual, regla tamaño real, regla online cm, cinta metrica online" />
-        <html lang={language} />
+        <html lang="es" />
         <link rel="canonical" href="https://regla.onl" />
         {/* Schema.org structured data for FAQs */}
         <script type="application/ld+json">

@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import { Smartphone } from 'lucide-react';
 
 const DeviceInfo: React.FC = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [deviceType, setDeviceType] = useState<string>('');
   const [screenSize, setScreenSize] = useState<string>('');
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -24,11 +24,11 @@ const DeviceInfo: React.FC = () => {
     let detectedDevice = '';
     
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
-      detectedDevice = language === 'es' ? 'Tablet' : 'Tablet';
+      detectedDevice = 'Tablet';
     } else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
-      detectedDevice = language === 'es' ? 'Teléfono móvil' : 'Mobile Phone';
+      detectedDevice = 'Teléfono móvil';
     } else {
-      detectedDevice = language === 'es' ? 'Computadora' : 'Desktop';
+      detectedDevice = 'Computadora';
     }
     
     setDeviceType(detectedDevice);

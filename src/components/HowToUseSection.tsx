@@ -19,8 +19,8 @@ const HowToUseSection: React.FC = () => {
             <li>{t('howToUseStep2')}</li>
             <li>{t('howToUseStep3')}</li>
             <li>{t('howToUseStep4')}</li>
-            <li>Usa esta regla online cm para medir cualquier objeto colocándolo junto a tu pantalla</li>
-            <li>Nuestro medidor digital te permite hacer mediciones con regla tamaño real</li>
+            <li>{t('useCase1Description')}</li>
+            <li>{t('useCase4Description')}</li>
           </ul>
         </CardContent>
       </Card>

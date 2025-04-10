@@ -11,7 +11,7 @@ interface LanguageContextType {
 
 const translations = {
   es: {
-    title: "Regla Online Tamaño Real - Medir en Pantalla con Precisión | Regla.Onl",
+    title: "Regla Online Tamaño Real - Medir en Pantalla con Precisión",
     subtitle: "Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla",
     calibrationTitle: "Calibración",
     screenSize: "Tamaño de Pantalla",
@@ -71,10 +71,14 @@ const translations = {
     useCase1: "Diseño gráfico y web",
     useCase2: "Mediciones para manualidades",
     useCase3: "Uso educativo",
-    useCase4: "Mediciones rápidas sin herramientas físicas"
+    useCase4: "Mediciones rápidas sin herramientas físicas",
+    useCase1Description: "Regla digital perfecta para diseñadores que necesitan medir elementos visuales con precisión.",
+    useCase2Description: "Cinta métrica online ideal para medir con exactitud en proyectos de manualidades.",
+    useCase3Description: "Regla tamaño real perfecta para enseñar mediciones a estudiantes de forma interactiva.",
+    useCase4Description: "Regla online cm que permite realizar mediciones precisas sin necesidad de herramientas físicas."
   },
   en: {
-    title: "Online Ruler Real Size - Measure on Screen with Precision | Regla.Onl",
+    title: "Online Ruler Real Size - Measure on Screen with Precision",
     subtitle: "Digital ruler and online measuring tape with precise calibration to measure real objects on your screen",
     calibrationTitle: "Calibration",
     screenSize: "Screen Size",
@@ -134,7 +138,11 @@ const translations = {
     useCase1: "Graphic and web design",
     useCase2: "Craft measurements",
     useCase3: "Educational use",
-    useCase4: "Quick measurements without physical tools"
+    useCase4: "Quick measurements without physical tools",
+    useCase1Description: "Perfect digital ruler for designers who need to measure visual elements with precision.",
+    useCase2Description: "Ideal online measuring tape for accurate measurements in craft projects.",
+    useCase3Description: "Perfect real-size ruler for teaching measurements to students interactively.",
+    useCase4Description: "Online ruler in cm that allows precise measurements without physical tools."
   }
 };
 

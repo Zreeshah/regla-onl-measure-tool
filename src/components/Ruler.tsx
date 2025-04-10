@@ -29,11 +29,11 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   useEffect(() => {
     const updateRulerDimensions = () => {
       if (orientation === 'horizontal') {
-        setRulerWidth(window.innerWidth);
-        setRulerHeight(150);
+        setRulerWidth(Math.min(window.innerWidth - 40, 600)); // Limit width to avoid overlap
+        setRulerHeight(120);
       } else {
-        setRulerHeight(window.innerHeight);
-        setRulerWidth(150);
+        setRulerHeight(Math.min(window.innerHeight * 0.7, 500)); // Limit height to avoid overlap
+        setRulerWidth(120);
       }
     };
     
@@ -191,10 +191,11 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
         height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
         backgroundColor: '#F5F7FA', // Updated to match site theme
-        zIndex: 10, // Ensure ruler is above other content
+        zIndex: 50, // Higher z-index to ensure ruler stays on top
         position: 'absolute', // Make it absolute positioned to avoid layout conflicts
-        left: 0,
-        top: 0
+        left: 20,
+        top: 100, // Position it below the header
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
       }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
@@ -277,13 +278,13 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           </div>
         ))}
         
-        {/* Unit label */}
+        {/* Unit label - ensure it's always visible */}
         <div 
-          className="absolute text-xs text-[#1A1F2C] font-semibold"
+          className="absolute text-xs bg-white px-1 rounded text-[#1A1F2C] font-semibold"
           style={
             orientation === 'horizontal' 
-              ? { right: '4px', top: '4px' } 
-              : { bottom: '4px', left: '8px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }
+              ? { right: '8px', top: '4px' } 
+              : { bottom: '24px', left: '8px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }
           }
         >
           {unit.toUpperCase()}

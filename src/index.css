@@ -97,16 +97,26 @@
   }
 
   .ruler-container {
-    @apply relative rounded-md shadow-md z-30;
+    @apply relative rounded-md shadow-md;
   }
 
   .ruler-horizontal {
-    @apply h-32 w-full overflow-hidden;
+    @apply h-24 w-full overflow-hidden;
   }
 
   .ruler-vertical {
-    @apply w-32 h-[80vh] overflow-hidden;
+    @apply w-24 h-[70vh] overflow-hidden;
   }
+}
+
+/* Create a dedicated space for the ruler */
+.ruler-space {
+  @apply h-32 w-full relative mb-10 mt-4;
+}
+
+/* Adjust main content to make space for the ruler */
+.main-with-ruler {
+  @apply pt-36 pb-6;
 }
 
 /* Animation classes */

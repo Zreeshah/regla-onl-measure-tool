@@ -17,11 +17,16 @@ import { Ruler as RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 const Index = () => {
   const { t, language } = useLanguage();
   
+  // Create a shortened meta description
+  const metaDescription = language === 'en' 
+    ? "Online ruler with precise calibration to measure in cm, mm, and inches on your screen."
+    : "Regla online con calibración precisa para medir en cm, mm e pulgadas en tu pantalla.";
+  
   return (
     <>
       <Helmet>
         <title>{t('title')}</title>
-        <meta name="description" content="Regla online con calibración precisa para medir en cm, mm e pulgadas." />
+        <meta name="description" content={metaDescription} />
         <meta name="keywords" content="regla online, regla virtual, regla tamaño real, regla online cm, cinta metrica online" />
         <html lang={language} />
         <link rel="canonical" href="https://regla.onl" />
@@ -65,10 +70,10 @@ const Index = () => {
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
         
-        <main className="container flex-1 relative pt-12 pb-6">
+        <main className="container flex-1 relative pt-36 pb-6">
           <div className="mb-6 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#9b87f5] animate-fade-in">
-              {t('title').split(' | ')[0]}
+              {t('title').split(' - ')[0]}
             </h1>
             <p className="text-lg text-gray-600 animate-slide-in">
               {t('subtitle')}
@@ -77,11 +82,14 @@ const Index = () => {
           
           <DeviceInfo />
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10 mt-32">
-            <div className="lg:col-span-2 relative">
-              <div className="absolute top-[-150px] left-0 w-full">
-                <Ruler className="mb-4 mx-auto" />
-              </div>
+          {/* Ruler Space - positioned absolutely to avoid layout conflicts */}
+          <div className="relative h-32 mb-20 mt-4">
+            <Ruler className="mb-4 mx-auto" />
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+            <div className="lg:col-span-2">
+              {/* This div is intentionally left empty to create space for the ruler */}
             </div>
             <div>
               <RulerControls />
@@ -100,28 +108,28 @@ const Index = () => {
                     <RulerIcon className="text-[#9b87f5] mr-2 mt-1" size={20} />
                     <div>
                       <h3 className="font-semibold mb-1">{t('useCase1')}</h3>
-                      <p className="text-sm text-gray-600">Regla digital perfecta para diseñadores que necesitan medir elementos visuales con precisión.</p>
+                      <p className="text-sm text-gray-600">{t('useCase1Description')}</p>
                     </div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg flex items-start">
                     <Pencil className="text-[#9b87f5] mr-2 mt-1" size={20} />
                     <div>
                       <h3 className="font-semibold mb-1">{t('useCase2')}</h3>
-                      <p className="text-sm text-gray-600">Cinta métrica online ideal para medir con exactitud en proyectos de manualidades.</p>
+                      <p className="text-sm text-gray-600">{t('useCase2Description')}</p>
                     </div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg flex items-start">
                     <Square className="text-[#9b87f5] mr-2 mt-1" size={20} />
                     <div>
                       <h3 className="font-semibold mb-1">{t('useCase3')}</h3>
-                      <p className="text-sm text-gray-600">Regla tamaño real perfecta para enseñar mediciones a estudiantes de forma interactiva.</p>
+                      <p className="text-sm text-gray-600">{t('useCase3Description')}</p>
                     </div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg flex items-start">
                     <Maximize className="text-[#9b87f5] mr-2 mt-1" size={20} />
                     <div>
                       <h3 className="font-semibold mb-1">{t('useCase4')}</h3>
-                      <p className="text-sm text-gray-600">Regla online cm que permite realizar mediciones precisas sin necesidad de herramientas físicas.</p>
+                      <p className="text-sm text-gray-600">{t('useCase4Description')}</p>
                     </div>
                   </div>
                 </div>

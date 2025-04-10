@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -96,15 +95,6 @@ const Index = () => {
           className="container flex-1 relative pb-6"
           style={{ marginTop: contentTopMargin }} // Dynamic margin based on ruler orientation
         >
-          <div className="mb-6 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#9b87f5] animate-fade-in">
-              {t('title').split(' - ')[0]}
-            </h1>
-            <p className="text-lg text-gray-600 animate-slide-in">
-              {t('subtitle')}
-            </p>
-          </div>
-          
           <div className="mb-10">
             <Card className="bg-white p-6">
               <CardContent className="p-0">

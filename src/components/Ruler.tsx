@@ -305,9 +305,9 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           {t('autoCalibrate')}
         </Button>
         
-        {/* Screen size dropdown */}
-        <Popover open={screenSizeDropdownOpen} onOpenChange={setScreenSizeDropdownOpen}>
-          <PopoverTrigger asChild>
+        {/* Screen size dropdown - Fix: Use DropdownMenu instead of Popover for screen sizes */}
+        <DropdownMenu open={screenSizeDropdownOpen} onOpenChange={setScreenSizeDropdownOpen}>
+          <DropdownMenuTrigger asChild>
             <Button
               variant="outline"
               size="sm"
@@ -318,8 +318,8 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
               {customScreenSize}"
               <ChevronDown size={14} className="ml-1" />
             </Button>
-          </PopoverTrigger>
-          <PopoverContent className="p-0 w-48 max-h-80 overflow-y-auto" side="bottom" align="start">
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="p-0 w-48 max-h-80 overflow-y-auto" side="bottom" align="start">
             <div className="p-2 border-b">
               <form onSubmit={handleCustomScreenSizeSubmit} className="flex items-center space-x-1">
                 <Input
@@ -351,8 +351,8 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
                 </DropdownMenuItem>
               ))}
             </div>
-          </PopoverContent>
-        </Popover>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
       
       {/* Ruler markings */}

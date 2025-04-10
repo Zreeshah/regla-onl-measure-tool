@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -78,18 +79,23 @@ const Index = () => {
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
         
-        {/* Title and subtitle before the ruler */}
-        <div className="container text-center mt-6 mb-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
-            Regla Online Tamaño Real
-          </h1>
-          <p className="text-lg text-gray-600 mt-2 animate-slide-in">
-            Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
-          </p>
+        {/* Main container with z-index structure */}
+        <div className="relative">
+          {/* Title and subtitle with higher z-index */}
+          <div className="container text-center mt-6 mb-4 relative z-20">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
+              Regla Online Tamaño Real
+            </h1>
+            <p className="text-lg text-gray-600 mt-2 animate-slide-in">
+              Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
+            </p>
+          </div>
+          
+          {/* Ruler with lower z-index */}
+          <div className="relative z-10">
+            <Ruler className="mb-4 mx-auto" />
+          </div>
         </div>
-        
-        {/* Ruler is now fixed position so it's outside the main content flow */}
-        <Ruler className="mb-4 mx-auto" />
         
         <main 
           className="container flex-1 relative pb-6"

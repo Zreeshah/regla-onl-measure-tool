@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -70,7 +69,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   const [customScreenSize, setCustomScreenSize] = useState('15.6');
   const [screenSizeDropdownOpen, setScreenSizeDropdownOpen] = useState(false);
   
-  // Run auto-calibration once on initial mount
   useEffect(() => {
     autoCalibrate();
   }, []);
@@ -78,10 +76,10 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   useEffect(() => {
     const updateRulerDimensions = () => {
       if (orientation === 'horizontal') {
-        setRulerWidth(Math.min(window.innerWidth - 40, 600)); // Limit width to avoid overlap
+        setRulerWidth(Math.min(window.innerWidth - 40, 600));
         setRulerHeight(120);
       } else {
-        setRulerHeight(Math.min(window.innerHeight * 0.7, 500)); // Limit height to avoid overlap
+        setRulerHeight(Math.min(window.innerHeight * 0.7, 500));
         setRulerWidth(120);
       }
     };
@@ -94,7 +92,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
     };
   }, [orientation]);
   
-  // Calculate the number of ticks based on orientation and container size
   const generateTicks = () => {
     if (!rulerRef.current) return [];
     
@@ -102,29 +99,27 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
     const isHorizontal = orientation === 'horizontal';
     const rulerLength = isHorizontal ? rulerWidth : rulerHeight;
     
-    // Calculate max value based on unit and ruler length
     const maxValue = getValueInSelectedUnit(rulerLength);
     
-    // Determine the appropriate tick interval based on the selected unit
     let majorTickInterval: number;
     let mediumTickInterval: number;
     let minorTickInterval: number;
     
     switch (unit) {
       case 'inch':
-        majorTickInterval = 1; // Every inch
-        mediumTickInterval = 0.5; // Every half inch
-        minorTickInterval = 0.125; // Every 1/8 inch
+        majorTickInterval = 1;
+        mediumTickInterval = 0.5;
+        minorTickInterval = 0.125;
         break;
       case 'cm':
-        majorTickInterval = 1; // Every cm
-        mediumTickInterval = 0.5; // Every 5mm
-        minorTickInterval = 0.1; // Every 1mm
+        majorTickInterval = 1;
+        mediumTickInterval = 0.5;
+        minorTickInterval = 0.1;
         break;
       case 'mm':
-        majorTickInterval = 10; // Every 10mm (1cm)
-        mediumTickInterval = 5; // Every 5mm
-        minorTickInterval = 1; // Every 1mm
+        majorTickInterval = 10;
+        mediumTickInterval = 5;
+        minorTickInterval = 1;
         break;
       default:
         majorTickInterval = 1;
@@ -132,15 +127,11 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         minorTickInterval = 0.1;
     }
     
-    // Generate all the ticks
     for (let value = 0; value <= maxValue; value += minorTickInterval) {
-      // Round to avoid floating point issues
       const roundedValue = Math.round(value * 100) / 100;
       
-      // Skip 0 position for the ruler ticks
       if (roundedValue === 0) continue;
       
-      // Determine tick type
       let tickType = 'minor';
       if (roundedValue % majorTickInterval === 0) {
         tickType = 'major';
@@ -148,13 +139,10 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         tickType = 'medium';
       }
       
-      // Calculate position in pixels
       const position = getPixelsFromValue(roundedValue);
       
-      // Only show labels for major ticks
       const showLabel = tickType === 'major';
       
-      // Format the label based on unit
       let label = roundedValue.toString();
       
       ticks.push({
@@ -180,18 +168,17 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   
   const ticks = generateTicks();
 
-  // Set fixed position styles for the ruler
   const rulerStyle = {
     width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
     height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
     backgroundColor: '#F5F7FA',
-    zIndex: 50,
-    position: 'fixed' as const, // Use position fixed to keep it in place
+    zIndex: 10,
+    position: 'fixed' as const,
     left: 20,
-    top: 80, // Position slightly below header
+    top: 140,
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
     borderRadius: '6px',
-    overflow: 'visible' // Allow buttons to overflow
+    overflow: 'visible'
   };
   
   return (
@@ -200,9 +187,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       ref={rulerRef}
       style={rulerStyle}
     >
-      {/* Control buttons */}
       <div className="absolute -top-10 left-0 flex space-x-1 z-10">
-        {/* Orientation toggle buttons */}
         <Button
           variant={orientation === 'horizontal' ? 'default' : 'outline'}
           size="sm"
@@ -225,7 +210,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           {t('vertical')}
         </Button>
         
-        {/* Auto calibrate button */}
         <Button
           variant="outline"
           size="sm"
@@ -237,7 +221,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           {t('autoCalibrate')}
         </Button>
         
-        {/* Screen size dropdown - Fix: Use DropdownMenu instead of Popover for screen sizes */}
         <DropdownMenu open={screenSizeDropdownOpen} onOpenChange={setScreenSizeDropdownOpen}>
           <DropdownMenuTrigger asChild>
             <Button
@@ -287,15 +270,11 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
         </DropdownMenu>
       </div>
       
-      {/* Ruler markings */}
       <div className={`relative ${orientation === 'horizontal' ? 'w-full h-full' : 'h-full w-full'}`}>
-        {/* Ruler base */}
         <div className={`absolute ${orientation === 'horizontal' ? 'w-full h-6 top-6' : 'h-full w-6 left-6'} bg-transparent border-t border-[#9b87f5]`}></div>
         
-        {/* Ticks */}
         {ticks.map((tick, index) => (
           <div key={index} className="absolute">
-            {/* Horizontal ruler */}
             {orientation === 'horizontal' && (
               <>
                 <div 
@@ -325,7 +304,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
               </>
             )}
             
-            {/* Vertical ruler */}
             {orientation === 'vertical' && (
               <>
                 <div 
@@ -357,7 +335,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           </div>
         ))}
         
-        {/* Unit label - ensure it's always visible */}
         <div 
           className="absolute text-xs bg-white px-1 rounded text-[#1A1F2C] font-semibold"
           style={
@@ -369,7 +346,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           {unit.toUpperCase()}
         </div>
 
-        {/* Unit buttons at bottom */}
         <div className={`absolute flex space-x-1 ${orientation === 'horizontal' ? 'bottom-2 left-2' : 'bottom-2 right-2'}`}>
           <Button 
             variant={unit === 'cm' ? 'default' : 'outline'} 

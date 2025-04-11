@@ -111,8 +111,8 @@
   /* Mobile ruler specific styles */
   .mobile-ruler {
     @apply h-screen sticky top-0;
-    background-color: #f0e68c !important; /* Light yellow color similar to reference */
-    border-right: 2px solid #000000;
+    background-color: #f1f0fb !important; /* Light purple color matching website theme */
+    border-right: 2px solid #9b87f5; /* Purple border matching theme */
     overflow-y: auto;
   }
   

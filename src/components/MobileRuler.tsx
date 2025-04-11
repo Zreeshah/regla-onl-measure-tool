@@ -21,7 +21,7 @@ const MobileRuler: React.FC = () => {
   const { t } = useLanguage();
   
   // Set ruler to cover the full screen height
-  const rulerHeight = window.innerHeight;
+  const rulerHeight = Math.max(window.innerHeight, document.documentElement.scrollHeight);
   
   // Force vertical orientation for mobile
   const orientation = 'vertical';
@@ -49,7 +49,7 @@ const MobileRuler: React.FC = () => {
     if (!rulerRef.current) return [];
     
     const ticks = [];
-    const maxValue = 15; // Show more cm on mobile to cover full height
+    const maxValue = 25; // Show more cm to cover full height
     
     // Generate ticks with cleaner spacing
     const majorTickInterval = 1; // 1cm
@@ -94,7 +94,7 @@ const MobileRuler: React.FC = () => {
       </div>
       
       <div className="mobile-ruler-layout">
-        {/* Vertical ruler on left - full height with yellow background */}
+        {/* Vertical ruler on left - full height with theme-colored background */}
         <div
           className="ruler-container ruler-vertical mobile-ruler"
           ref={rulerRef}
@@ -108,18 +108,19 @@ const MobileRuler: React.FC = () => {
         >
           <div className="relative h-full w-full">
             {/* Create a dark border line for the ruler */}
-            <div className="absolute h-full w-8 left-8 bg-transparent border-l border-black"></div>
+            <div className="absolute h-full w-8 left-8 bg-transparent border-l border-[#9b87f5]"></div>
             
             {ticks.map((tick, index) => (
               <div key={index} className="absolute">
                 <div 
-                  className="absolute bg-black"
+                  className="absolute"
                   style={{
                     width: tick.type === 'major' ? '32px' : '16px',
                     height: '2px', // Make ticks thicker and more visible
                     top: `${tick.position}px`,
                     left: tick.type === 'major' ? '28px' : '44px',
                     transform: 'translateY(-50%)',
+                    backgroundColor: '#9b87f5' // Theme color for ticks
                   }}
                 ></div>
                 
@@ -130,7 +131,7 @@ const MobileRuler: React.FC = () => {
                       top: `${tick.position}px`,
                       left: '12px',
                       transform: 'translateY(-50%)',
-                      color: '#000000',
+                      color: '#7E69AB', // Theme color for labels
                       fontSize: '20px', // Larger font size for better visibility
                     }}
                   >
@@ -142,7 +143,7 @@ const MobileRuler: React.FC = () => {
             
             {/* Unit label on the ruler */}
             <div 
-              className="absolute text-sm bg-[#f0e68c] px-2 rounded text-black font-semibold"
+              className="absolute text-sm bg-[#f1f0fb] px-2 rounded text-[#7E69AB] font-semibold"
               style={{ bottom: '24px', left: '12px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }}
             >
               {unit.toUpperCase()}
@@ -195,7 +196,7 @@ const MobileRuler: React.FC = () => {
         <div className="flex space-x-4 items-center">
           <a 
             href="#" 
-            className={`text-blue-600 ${unit === 'cm' ? 'font-bold' : ''}`}
+            className={`text-[#9b87f5] ${unit === 'cm' ? 'font-bold' : ''}`}
             onClick={(e) => {
               e.preventDefault();
               setUnit('cm');
@@ -206,7 +207,7 @@ const MobileRuler: React.FC = () => {
           <span className="text-gray-300">|</span>
           <a 
             href="#" 
-            className={`text-blue-600 ${unit === 'inch' ? 'font-bold' : ''}`}
+            className={`text-[#9b87f5] ${unit === 'inch' ? 'font-bold' : ''}`}
             onClick={(e) => {
               e.preventDefault();
               setUnit('inch');
@@ -217,7 +218,7 @@ const MobileRuler: React.FC = () => {
           <span className="text-gray-300">|</span>
           <a 
             href="#" 
-            className="text-blue-600"
+            className="text-[#9b87f5]"
             onClick={(e) => {
               e.preventDefault();
               console.log('Protractor - Not implemented yet');

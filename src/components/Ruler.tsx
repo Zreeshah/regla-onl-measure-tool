@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -76,7 +77,8 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   useEffect(() => {
     const updateRulerDimensions = () => {
       if (orientation === 'horizontal') {
-        setRulerWidth(Math.min(window.innerWidth - 40, 600));
+        // Take full viewport width minus some padding
+        setRulerWidth(window.innerWidth);
         setRulerHeight(120);
       } else {
         setRulerHeight(Math.min(window.innerHeight * 0.7, 500));
@@ -174,7 +176,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
     backgroundColor: '#F5F7FA',
     position: 'relative' as const,
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-    borderRadius: '6px',
+    borderRadius: orientation === 'horizontal' ? '0' : '6px', // Remove border radius for horizontal full-width
     overflow: 'visible',
     margin: '0 auto'
   };

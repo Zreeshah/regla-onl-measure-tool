@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -88,9 +89,9 @@ const Index = () => {
           </p>
         </div>
         
-        {/* Ruler section - completely separate below title */}
-        <div className="w-full flex justify-center mt-4">
-          <Ruler className="mb-4 mx-auto" />
+        {/* Ruler section - full width with no container constraints */}
+        <div className="w-full overflow-hidden">
+          <Ruler className="mb-4" />
         </div>
         
         <main 

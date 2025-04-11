@@ -97,15 +97,15 @@
   }
 
   .ruler-container {
-    @apply relative rounded-md shadow-md;
+    @apply relative;
   }
 
   .ruler-horizontal {
-    @apply h-24 w-full overflow-hidden;
+    @apply h-24 w-full overflow-visible;
   }
 
   .ruler-vertical {
-    @apply w-24 h-[70vh] overflow-hidden;
+    @apply w-24 h-[70vh] overflow-visible;
   }
 }
 

@@ -172,13 +172,11 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
     width: orientation === 'horizontal' ? `${rulerWidth}px` : `${rulerWidth}px`,
     height: orientation === 'vertical' ? `${rulerHeight}px` : `${rulerHeight}px`,
     backgroundColor: '#F5F7FA',
-    zIndex: 10,
-    position: 'fixed' as const,
-    left: 20,
-    top: 140,
+    position: 'relative' as const,
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
     borderRadius: '6px',
-    overflow: 'visible'
+    overflow: 'visible',
+    margin: '0 auto'
   };
   
   return (

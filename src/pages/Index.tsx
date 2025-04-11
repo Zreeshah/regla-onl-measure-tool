@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -16,7 +15,7 @@ import { Ruler as RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 const Index = () => {
   const { t } = useLanguage();
   const { orientation } = useCalibration();
-  const [contentTopMargin, setContentTopMargin] = useState("200px");
+  const [contentTopMargin, setContentTopMargin] = useState("320px"); // Increased default margin
   
   // Create a shortened meta description (150 characters max)
   const metaDescription = "Regla online con calibración precisa para medir en cm, mm y pulgadas en tu pantalla. Perfecta para mediciones exactas.";
@@ -25,9 +24,9 @@ const Index = () => {
   useEffect(() => {
     // Add extra space if ruler is vertical since it takes more space
     if (orientation === 'vertical') {
-      setContentTopMargin("520px"); // Approximate height of vertical ruler + controls
+      setContentTopMargin("640px"); // Increased for vertical ruler
     } else {
-      setContentTopMargin("200px"); // Approximate height of horizontal ruler + controls
+      setContentTopMargin("320px"); // Increased for horizontal ruler
     }
   }, [orientation]);
   
@@ -79,22 +78,19 @@ const Index = () => {
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
         
-        {/* Main container with z-index structure */}
-        <div className="relative">
-          {/* Title and subtitle with higher z-index */}
-          <div className="container text-center mt-6 mb-4 relative z-20">
-            <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
-              Regla Online Tamaño Real
-            </h1>
-            <p className="text-lg text-gray-600 mt-2 animate-slide-in">
-              Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
-            </p>
-          </div>
-          
-          {/* Ruler with lower z-index */}
-          <div className="relative z-10">
-            <Ruler className="mb-4 mx-auto" />
-          </div>
+        {/* Title and subtitle section - completely separate from ruler */}
+        <div className="container text-center mt-8 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
+            Regla Online Tamaño Real
+          </h1>
+          <p className="text-lg text-gray-600 mt-2 mb-8 animate-slide-in">
+            Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
+          </p>
+        </div>
+        
+        {/* Ruler section - completely separate below title */}
+        <div className="w-full flex justify-center mt-4">
+          <Ruler className="mb-4 mx-auto" />
         </div>
         
         <main 

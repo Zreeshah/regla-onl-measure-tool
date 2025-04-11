@@ -51,10 +51,12 @@ const MobileRuler: React.FC = () => {
     const ticks = [];
     const maxValue = 13; // Show 13cm on mobile
     
+    // Adjust tick spacing for cleaner appearance
     const majorTickInterval = 1; // 1cm
     const mediumTickInterval = 0.5; // 5mm
     const minorTickInterval = 0.1; // 1mm
     
+    // Generate fewer ticks for a cleaner look
     for (let value = 0; value <= maxValue; value += minorTickInterval) {
       const roundedValue = Math.round(value * 100) / 100;
       
@@ -69,6 +71,7 @@ const MobileRuler: React.FC = () => {
       
       const position = getPixelsFromValue(roundedValue);
       
+      // Only show labels for major ticks (whole centimeters)
       const showLabel = tickType === 'major';
       
       let label = roundedValue.toString();
@@ -139,40 +142,42 @@ const MobileRuler: React.FC = () => {
           className="ruler-container ruler-vertical mobile-ruler"
           ref={rulerRef}
           style={{
-            width: '80px',
+            width: '100px', // Increased width for better readability
             height: `${rulerHeight}px`,
-            backgroundColor: '#FEF7CD',
+            backgroundColor: '#F1F0FB', // Changed to a light purple that matches the theme
             position: 'relative',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
             borderRadius: '6px',
             overflow: 'visible',
-            margin: '0'
+            margin: '0',
+            borderRight: '2px solid #9b87f5' // Added a themed border
           }}
         >
           <div className={`relative h-full w-full`}>
-            <div className={`absolute h-full w-6 left-6 bg-transparent border-t border-black`}></div>
+            <div className={`absolute h-full w-8 left-8 bg-transparent border-t border-black`}></div>
             
             {ticks.map((tick, index) => (
               <div key={index} className="absolute">
                 <div 
                   className={`ruler-tick ruler-tick-${tick.type} absolute bg-black`}
                   style={{
-                    width: tick.type === 'major' ? '16px' : tick.type === 'medium' ? '12px' : '8px',
+                    width: tick.type === 'major' ? '24px' : tick.type === 'medium' ? '16px' : '8px',
                     height: '1px',
                     top: `${tick.position}px`,
-                    left: '24px',
+                    left: '36px', // Adjusted position for better spacing
                     transform: 'translateY(-50%)',
                   }}
                 ></div>
                 
                 {tick.showLabel && (
                   <div 
-                    className="ruler-number absolute text-xs font-semibold"
+                    className="ruler-number absolute font-semibold"
                     style={{
                       top: `${tick.position}px`,
-                      left: '4px',
+                      left: '12px',
                       transform: 'translateY(-50%)',
-                      color: 'black',
+                      color: '#1A1F2C',
+                      fontSize: '14px', // Increased font size for better readability
                     }}
                   >
                     {tick.label}
@@ -182,8 +187,8 @@ const MobileRuler: React.FC = () => {
             ))}
             
             <div 
-              className="absolute text-xs bg-[#FEF7CD] px-1 rounded text-black font-semibold"
-              style={{ bottom: '24px', left: '8px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }}
+              className="absolute text-sm bg-[#F1F0FB] px-2 rounded text-[#9b87f5] font-semibold"
+              style={{ bottom: '24px', left: '12px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }}
             >
               {unit.toUpperCase()}
             </div>
@@ -198,21 +203,21 @@ const MobileRuler: React.FC = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center">
         <div className="flex space-x-4 items-center">
           <button 
-            className={`text-[#1EAEDB] ${unit === 'cm' ? 'underline font-bold' : ''}`}
+            className={`text-[#9b87f5] ${unit === 'cm' ? 'underline font-bold' : ''}`}
             onClick={() => setUnit('cm')}
           >
             CM
           </button>
           <span className="text-gray-300">|</span>
           <button 
-            className={`text-[#1EAEDB] ${unit === 'inch' ? 'underline font-bold' : ''}`}
+            className={`text-[#9b87f5] ${unit === 'inch' ? 'underline font-bold' : ''}`}
             onClick={() => setUnit('inch')}
           >
             INCH
           </button>
           <span className="text-gray-300">|</span>
           <button 
-            className="text-[#1EAEDB]"
+            className="text-[#9b87f5]"
             onClick={() => console.log('Protractor - Not implemented yet')}
           >
             protractor

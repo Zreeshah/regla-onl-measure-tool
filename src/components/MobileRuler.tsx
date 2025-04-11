@@ -92,65 +92,25 @@ const MobileRuler: React.FC = () => {
   
   return (
     <div className="relative mobile-ruler-container">
-      <div className="mx-auto px-4 pt-4 text-center">
-        <p className="text-sm text-gray-600 mb-2">(Scroll down to show full ruler)</p>
-        
-        <div className="bg-white p-4 rounded-lg shadow-md mb-6">
-          <p className="text-sm font-medium mb-3">
-            YOUR device is {deviceType}. The screen size is {screenSize} inch. 
-            If the screen size detection is inaccurate, please adjust the screen size below.
-          </p>
-          
-          <div className="flex justify-center mb-3">
-            <div className="relative w-32 h-52 border-2 border-gray-300 rounded-xl flex items-center justify-center">
-              <Smartphone className="absolute inset-0 m-auto text-gray-200" size={80} />
-              <span className="text-lg font-bold">{sliderValue}"</span>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-3 mb-2">
-            <Button 
-              onClick={redetectScreenSize}
-              size="sm"
-              className="bg-[#9b87f5] hover:bg-[#7E69AB]"
-            >
-              <RefreshCw size={14} className="mr-1" />
-              Re-detect
-            </Button>
-            
-            <div className="flex-grow">
-              <Slider
-                defaultValue={[screenSize]}
-                value={[sliderValue]}
-                min={3}
-                max={15}
-                step={0.01}
-                onValueChange={handleSliderChange}
-                className="mt-2"
-              />
-            </div>
-          </div>
-        </div>
+      <div className="px-2 pt-2 text-center">
+        <p className="text-xs text-gray-600 mb-1">(Scroll down to show full ruler)</p>
       </div>
       
-      <div 
-        className="flex mobile-ruler-layout"
-        style={{ minHeight: 'calc(100vh - 350px)' }}
-      >
+      <div className="mobile-ruler-layout">
         {/* Vertical ruler on left */}
         <div
           className="ruler-container ruler-vertical mobile-ruler"
           ref={rulerRef}
           style={{
-            width: '100px', // Increased width for better readability
+            width: '80px', // Made slightly narrower
             height: `${rulerHeight}px`,
-            backgroundColor: '#F1F0FB', // Changed to a light purple that matches the theme
+            backgroundColor: '#F1F0FB',
             position: 'relative',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
             borderRadius: '6px',
             overflow: 'visible',
             margin: '0',
-            borderRight: '2px solid #9b87f5' // Added a themed border
+            borderRight: '2px solid #9b87f5'
           }}
         >
           <div className={`relative h-full w-full`}>
@@ -164,7 +124,7 @@ const MobileRuler: React.FC = () => {
                     width: tick.type === 'major' ? '24px' : tick.type === 'medium' ? '16px' : '8px',
                     height: '1px',
                     top: `${tick.position}px`,
-                    left: '36px', // Adjusted position for better spacing
+                    left: '36px',
                     transform: 'translateY(-50%)',
                   }}
                 ></div>
@@ -177,7 +137,7 @@ const MobileRuler: React.FC = () => {
                       left: '12px',
                       transform: 'translateY(-50%)',
                       color: '#1A1F2C',
-                      fontSize: '14px', // Increased font size for better readability
+                      fontSize: '14px',
                     }}
                   >
                     {tick.label}
@@ -195,8 +155,44 @@ const MobileRuler: React.FC = () => {
           </div>
         </div>
         
-        {/* Main content area */}
-        <div className="flex-1"></div>
+        {/* Device info card - moved to right side and made smaller */}
+        <div className="flex-1 px-2">
+          <div className="bg-white p-3 rounded-lg shadow-sm mb-4 max-w-[200px] mx-auto">
+            <p className="text-xs font-medium mb-2">
+              {deviceType} • {screenSize}"
+            </p>
+            
+            <div className="flex items-center gap-2 mb-2">
+              <div className="relative w-16 h-28 border border-gray-300 rounded-lg flex items-center justify-center">
+                <Smartphone className="absolute inset-0 m-auto text-gray-200" size={40} />
+                <span className="text-sm font-bold">{sliderValue}"</span>
+              </div>
+              
+              <div className="flex-grow">
+                <Slider
+                  defaultValue={[screenSize]}
+                  value={[sliderValue]}
+                  min={3}
+                  max={15}
+                  step={0.01}
+                  onValueChange={handleSliderChange}
+                  className="mb-2"
+                  orientation="vertical"
+                />
+                
+                <Button 
+                  onClick={redetectScreenSize}
+                  size="sm"
+                  variant="outline"
+                  className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]"
+                >
+                  <RefreshCw size={10} className="mr-1" />
+                  Re-detect
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       
       {/* Footer unit selection */}

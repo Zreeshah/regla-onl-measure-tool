@@ -110,8 +110,8 @@
   
   /* Mobile ruler specific styles */
   .mobile-ruler {
-    @apply h-auto w-24 sticky top-0;
-    background-color: #F1F0FB !important; /* Changed from yellow to light purple */
+    @apply h-auto sticky top-0;
+    background-color: #F1F0FB !important;
     border-right: 2px solid #9b87f5;
   }
   

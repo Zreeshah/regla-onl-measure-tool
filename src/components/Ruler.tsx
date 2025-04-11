@@ -187,87 +187,90 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       ref={rulerRef}
       style={rulerStyle}
     >
-      <div className="absolute -top-10 left-0 flex space-x-1 z-10">
-        <Button
-          variant={orientation === 'horizontal' ? 'default' : 'outline'}
-          size="sm"
-          className={`${orientation === 'horizontal' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : 'bg-white'} rounded-md text-xs`}
-          onClick={() => setOrientation('horizontal')}
-          title={t('horizontal')}
-        >
-          <Maximize size={16} className="mr-1" />
-          {t('horizontal')}
-        </Button>
-        
-        <Button
-          variant={orientation === 'vertical' ? 'default' : 'outline'}
-          size="sm"
-          className={`${orientation === 'vertical' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : 'bg-white'} rounded-md text-xs`}
-          onClick={() => setOrientation('vertical')}
-          title={t('vertical')}
-        >
-          <Minimize size={16} className="mr-1 rotate-90" />
-          {t('vertical')}
-        </Button>
-        
-        <Button
-          variant="outline"
-          size="sm"
-          className="bg-white rounded-md text-xs"
-          onClick={autoCalibrate}
-          title={t('autoCalibrate')}
-        >
-          <RefreshCw size={16} className="mr-1" />
-          {t('autoCalibrate')}
-        </Button>
-        
-        <DropdownMenu open={screenSizeDropdownOpen} onOpenChange={setScreenSizeDropdownOpen}>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="outline"
-              size="sm"
-              className="bg-white rounded-md text-xs flex items-center"
-              title={t('screenSize')}
-            >
-              <Monitor size={16} className="mr-1" />
-              {customScreenSize}"
-              <ChevronDown size={14} className="ml-1" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="p-0 w-48 max-h-80 overflow-y-auto" side="bottom" align="start">
-            <div className="p-2 border-b">
-              <form onSubmit={handleCustomScreenSizeSubmit} className="flex items-center space-x-1">
-                <Input
-                  type="number"
-                  min="1"
-                  step="0.1"
-                  value={customScreenSize}
-                  onChange={(e) => setCustomScreenSize(e.target.value)}
-                  className="h-8 text-sm"
-                  placeholder={t('screenSize') || ""}
-                />
-                <Button type="submit" size="sm" className="h-8 bg-[#9b87f5] hover:bg-[#7E69AB]">
-                  OK
-                </Button>
-              </form>
-            </div>
-            <div className="py-1">
-              {COMMON_SCREEN_SIZES.map((size) => (
-                <DropdownMenuItem 
-                  key={size.value}
-                  className="text-sm px-3 py-1.5 cursor-pointer"
-                  onClick={() => {
-                    setCustomScreenSize(size.value.toString());
-                    calibrateByScreen(size.value);
-                    setScreenSizeDropdownOpen(false);
-                  }}
-                >
-                  {size.label}
-                </DropdownMenuItem>
-              ))}
-            </div>
-          </DropdownMenuContent>
-        </DropdownMenu>
+      {/* Control Buttons Group - Positioned above the ruler */}
+      <div className="absolute -top-12 left-0 flex flex-wrap gap-2 z-10">
+        <div className="flex space-x-1">
+          <Button
+            variant={orientation === 'horizontal' ? 'default' : 'outline'}
+            size="sm"
+            className={`${orientation === 'horizontal' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : 'bg-white'} rounded-md text-xs`}
+            onClick={() => setOrientation('horizontal')}
+            title={t('horizontal')}
+          >
+            <Maximize size={16} className="mr-1" />
+            {t('horizontal')}
+          </Button>
+          
+          <Button
+            variant={orientation === 'vertical' ? 'default' : 'outline'}
+            size="sm"
+            className={`${orientation === 'vertical' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : 'bg-white'} rounded-md text-xs`}
+            onClick={() => setOrientation('vertical')}
+            title={t('vertical')}
+          >
+            <Minimize size={16} className="mr-1 rotate-90" />
+            {t('vertical')}
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-white rounded-md text-xs"
+            onClick={autoCalibrate}
+            title={t('autoCalibrate')}
+          >
+            <RefreshCw size={16} className="mr-1" />
+            {t('autoCalibrate')}
+          </Button>
+          
+          <DropdownMenu open={screenSizeDropdownOpen} onOpenChange={setScreenSizeDropdownOpen}>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="outline"
+                size="sm"
+                className="bg-white rounded-md text-xs flex items-center"
+                title={t('screenSize')}
+              >
+                <Monitor size={16} className="mr-1" />
+                {customScreenSize}"
+                <ChevronDown size={14} className="ml-1" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="p-0 w-48 max-h-80 overflow-y-auto" side="bottom" align="start">
+              <div className="p-2 border-b">
+                <form onSubmit={handleCustomScreenSizeSubmit} className="flex items-center space-x-1">
+                  <Input
+                    type="number"
+                    min="1"
+                    step="0.1"
+                    value={customScreenSize}
+                    onChange={(e) => setCustomScreenSize(e.target.value)}
+                    className="h-8 text-sm"
+                    placeholder={t('screenSize') || ""}
+                  />
+                  <Button type="submit" size="sm" className="h-8 bg-[#9b87f5] hover:bg-[#7E69AB]">
+                    OK
+                  </Button>
+                </form>
+              </div>
+              <div className="py-1">
+                {COMMON_SCREEN_SIZES.map((size) => (
+                  <DropdownMenuItem 
+                    key={size.value}
+                    className="text-sm px-3 py-1.5 cursor-pointer"
+                    onClick={() => {
+                      setCustomScreenSize(size.value.toString());
+                      calibrateByScreen(size.value);
+                      setScreenSizeDropdownOpen(false);
+                    }}
+                  >
+                    {size.label}
+                  </DropdownMenuItem>
+                ))}
+              </div>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
       
       <div className={`relative ${orientation === 'horizontal' ? 'w-full h-full' : 'h-full w-full'}`}>
@@ -346,6 +349,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
           {unit.toUpperCase()}
         </div>
 
+        {/* Unit buttons - Positioned below the ruler */}
         <div className={`absolute flex space-x-1 ${orientation === 'horizontal' ? 'bottom-2 left-2' : 'bottom-2 right-2'}`}>
           <Button 
             variant={unit === 'cm' ? 'default' : 'outline'} 

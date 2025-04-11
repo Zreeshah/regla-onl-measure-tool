@@ -80,17 +80,17 @@ const Index = () => {
         <Header />
         
         {/* Title and subtitle section - completely separate from ruler */}
-        <div className="container text-center mt-8 mb-4">
+        <div className="container text-center mt-8 mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
             Regla Online Tamaño Real
           </h1>
-          <p className="text-lg text-gray-600 mt-2 mb-8 animate-slide-in">
+          <p className="text-lg text-gray-600 mt-2 animate-slide-in">
             Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
           </p>
         </div>
         
         {/* Ruler section - full width with no container constraints */}
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden mt-4">
           <Ruler className="mb-4" />
         </div>
         

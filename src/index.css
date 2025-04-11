@@ -110,9 +110,10 @@
   
   /* Mobile ruler specific styles */
   .mobile-ruler {
-    @apply h-auto sticky top-0;
-    background-color: #F1F0FB !important;
-    border-right: 2px solid #9b87f5;
+    @apply h-screen sticky top-0;
+    background-color: #f0e68c !important; /* Light yellow color similar to reference */
+    border-right: 2px solid #000000;
+    overflow-y: auto;
   }
   
   .mobile-ruler-container {

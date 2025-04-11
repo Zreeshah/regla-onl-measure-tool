@@ -107,6 +107,20 @@
   .ruler-vertical {
     @apply w-24 h-[70vh] overflow-visible;
   }
+  
+  /* Mobile ruler specific styles */
+  .mobile-ruler {
+    @apply h-auto w-20 sticky top-0;
+    background-color: #FEF7CD !important;
+  }
+  
+  .mobile-ruler-container {
+    @apply min-h-screen;
+  }
+  
+  .mobile-ruler-layout {
+    @apply flex;
+  }
 }
 
 /* Animation classes */

@@ -2,10 +2,17 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useDeviceInfo } from '@/hooks/use-device-info';
-import { RefreshCw, Smartphone } from 'lucide-react';
+import { RefreshCw, Smartphone, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Link } from 'react-router-dom';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const MobileRuler: React.FC = () => {
   const { 
@@ -24,6 +31,7 @@ const MobileRuler: React.FC = () => {
   
   const rulerRef = useRef<HTMLDivElement>(null);
   const [sliderValue, setSliderValue] = useState<number>(screenSize);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   useEffect(() => {
     setSliderValue(screenSize);
@@ -81,8 +89,47 @@ const MobileRuler: React.FC = () => {
   
   return (
     <div className="relative mobile-ruler-container">
-      <div className="px-2 pt-2 text-center">
+      <div className="px-2 pt-2 text-center flex justify-between items-center">
         <p className="text-xs text-gray-600 mb-1">(Scroll down to show full ruler)</p>
+        
+        <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="text-ruler-primary hover:bg-gray-100">
+              <Menu size={24} />
+              <span className="sr-only">Menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent className="w-[300px] sm:w-[400px]">
+            <SheetHeader>
+              <SheetTitle className="text-ruler-primary">Menu</SheetTitle>
+            </SheetHeader>
+            <div className="py-6">
+              <nav className="flex flex-col space-y-4">
+                <Link 
+                  to="/" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Inicio
+                </Link>
+                <Link 
+                  to="/privacy" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('privacy')}
+                </Link>
+                <Link 
+                  to="/disclaimer" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('disclaimer')}
+                </Link>
+              </nav>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
       
       <div className="mobile-ruler-layout">

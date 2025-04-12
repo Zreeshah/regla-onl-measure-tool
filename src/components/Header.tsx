@@ -3,6 +3,7 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import MenuButton from './MenuButton';
 
 const Header: React.FC = () => {
   const { t } = useLanguage();
@@ -14,7 +15,9 @@ const Header: React.FC = () => {
           <Ruler size={28} className="text-ruler-primary mr-2" />
           <span className="text-2xl font-bold text-ruler-primary">Regla<span className="text-gray-800">.Onl</span></span>
         </Link>
-        {/* Language switcher removed as we only support Spanish now */}
+        <div className="flex items-center">
+          <MenuButton />
+        </div>
       </div>
     </header>
   );

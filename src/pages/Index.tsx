@@ -8,6 +8,7 @@ import HowToUseSection from '@/components/HowToUseSection';
 import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
+import HomeContent from '@/components/HomeContent';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -110,6 +111,15 @@ const Index = () => {
               className="container flex-1 relative pb-6"
               style={{ marginTop: contentTopMargin }} // Dynamic margin based on ruler orientation
             >
+              {/* New HomeContent component */}
+              <div className="mb-10">
+                <Card className="bg-white p-6">
+                  <CardContent className="p-0">
+                    <HomeContent />
+                  </CardContent>
+                </Card>
+              </div>
+              
               <div className="mb-10">
                 <Card className="bg-white p-6">
                   <CardContent className="p-0">

@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,6 +7,7 @@ import { RefreshCw, Smartphone, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Link } from 'react-router-dom';
+import HomeContent from '@/components/HomeContent';
 import {
   Sheet,
   SheetContent,
@@ -27,7 +29,7 @@ const MobileRuler: React.FC = () => {
   const { deviceType, screenSize, redetectScreenSize, setScreenSize } = useDeviceInfo();
   const { t } = useLanguage();
   
-  const rulerHeight = Math.max(window.innerHeight, document.documentElement.scrollHeight);
+  const rulerHeight = 400; // Fixed height for the ruler
   
   const rulerRef = useRef<HTMLDivElement>(null);
   const [sliderValue, setSliderValue] = useState<number>(screenSize);
@@ -223,6 +225,13 @@ const MobileRuler: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Homepage content after the ruler section */}
+      <div className="px-4 py-6 mt-4">
+        <div className="bg-white rounded-lg shadow-sm p-4">
+          <HomeContent />
         </div>
       </div>
       

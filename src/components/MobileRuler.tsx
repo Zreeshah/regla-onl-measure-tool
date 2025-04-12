@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,6 +5,7 @@ import { useDeviceInfo } from '@/hooks/use-device-info';
 import { RefreshCw, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
+import { Link } from 'react-router-dom';
 
 const MobileRuler: React.FC = () => {
   const { 
@@ -20,11 +20,7 @@ const MobileRuler: React.FC = () => {
   const { deviceType, screenSize, redetectScreenSize, setScreenSize } = useDeviceInfo();
   const { t } = useLanguage();
   
-  // Set ruler to cover the full screen height
   const rulerHeight = Math.max(window.innerHeight, document.documentElement.scrollHeight);
-  
-  // Force vertical orientation for mobile
-  const orientation = 'vertical';
   
   const rulerRef = useRef<HTMLDivElement>(null);
   const [sliderValue, setSliderValue] = useState<number>(screenSize);
@@ -34,7 +30,6 @@ const MobileRuler: React.FC = () => {
   }, [screenSize]);
   
   useEffect(() => {
-    // Apply calibration based on detected screen size
     calibrateByScreen(screenSize);
   }, [screenSize, calibrateByScreen]);
   
@@ -49,11 +44,10 @@ const MobileRuler: React.FC = () => {
     if (!rulerRef.current) return [];
     
     const ticks = [];
-    const maxValue = 25; // Show more cm to cover full height
+    const maxValue = 25;
     
-    // Generate ticks with cleaner spacing
-    const majorTickInterval = 1; // 1cm
-    const minorTickInterval = 0.2; // 2mm - reduced tick density for cleaner look
+    const majorTickInterval = 1;
+    const minorTickInterval = 0.2;
     
     for (let value = 0; value <= maxValue; value += minorTickInterval) {
       const roundedValue = Math.round(value * 10) / 10;
@@ -61,14 +55,12 @@ const MobileRuler: React.FC = () => {
       if (roundedValue === 0) continue;
       
       let tickType = 'minor';
-      // Only show major ticks for whole numbers (centimeters)
       if (roundedValue % majorTickInterval === 0) {
         tickType = 'major';
       }
       
       const position = getPixelsFromValue(roundedValue);
       
-      // Only show labels for major ticks (whole centimeters)
       const showLabel = tickType === 'major';
       
       let label = roundedValue.toString();
@@ -94,7 +86,6 @@ const MobileRuler: React.FC = () => {
       </div>
       
       <div className="mobile-ruler-layout">
-        {/* Vertical ruler on left - full height with theme-colored background */}
         <div
           className="ruler-container ruler-vertical mobile-ruler"
           ref={rulerRef}
@@ -107,7 +98,6 @@ const MobileRuler: React.FC = () => {
           }}
         >
           <div className="relative h-full w-full">
-            {/* Create a dark border line for the ruler */}
             <div className="absolute h-full w-8 left-8 bg-transparent border-l border-[#9b87f5]"></div>
             
             {ticks.map((tick, index) => (
@@ -116,11 +106,11 @@ const MobileRuler: React.FC = () => {
                   className="absolute"
                   style={{
                     width: tick.type === 'major' ? '32px' : '16px',
-                    height: '2px', // Make ticks thicker and more visible
+                    height: '2px',
                     top: `${tick.position}px`,
                     left: tick.type === 'major' ? '28px' : '44px',
                     transform: 'translateY(-50%)',
-                    backgroundColor: '#9b87f5' // Theme color for ticks
+                    backgroundColor: '#9b87f5'
                   }}
                 ></div>
                 
@@ -131,8 +121,8 @@ const MobileRuler: React.FC = () => {
                       top: `${tick.position}px`,
                       left: '12px',
                       transform: 'translateY(-50%)',
-                      color: '#7E69AB', // Theme color for labels
-                      fontSize: '20px', // Larger font size for better visibility
+                      color: '#7E69AB',
+                      fontSize: '20px'
                     }}
                   >
                     {tick.label}
@@ -141,7 +131,6 @@ const MobileRuler: React.FC = () => {
               </div>
             ))}
             
-            {/* Unit label on the ruler */}
             <div 
               className="absolute text-sm bg-[#f1f0fb] px-2 rounded text-[#7E69AB] font-semibold"
               style={{ bottom: '24px', left: '12px', transform: 'rotate(-90deg)', transformOrigin: 'left bottom' }}
@@ -151,7 +140,6 @@ const MobileRuler: React.FC = () => {
           </div>
         </div>
         
-        {/* Device info card - moved to right side and made smaller */}
         <div className="flex-1 px-2">
           <div className="bg-white p-3 rounded-lg shadow-sm mb-4 max-w-[200px] mx-auto">
             <p className="text-xs font-medium mb-2">
@@ -191,9 +179,8 @@ const MobileRuler: React.FC = () => {
         </div>
       </div>
       
-      {/* Footer unit selection - style like the reference image */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center">
-        <div className="flex space-x-4 items-center">
+        <div className="flex items-center space-x-4">
           <a 
             href="#" 
             className={`text-[#9b87f5] ${unit === 'cm' ? 'font-bold' : ''}`}
@@ -216,16 +203,13 @@ const MobileRuler: React.FC = () => {
             INCH
           </a>
           <span className="text-gray-300">|</span>
-          <a 
-            href="#" 
-            className="text-[#9b87f5]"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log('Protractor - Not implemented yet');
-            }}
-          >
-            protractor
-          </a>
+          <Link to="/privacy" className="text-[#9b87f5] text-sm">
+            {t('privacy')}
+          </Link>
+          <span className="text-gray-300">|</span>
+          <Link to="/disclaimer" className="text-[#9b87f5] text-sm">
+            {t('disclaimer')}
+          </Link>
         </div>
       </div>
     </div>

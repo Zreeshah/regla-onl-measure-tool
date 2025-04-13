@@ -276,6 +276,10 @@ const MobileRuler: React.FC = () => {
             INCH
           </a>
           <span className="text-gray-300">|</span>
+          <Link to="/blog/buscar-dni-por-nombre" className="text-[#9b87f5] text-sm">
+            Blog
+          </Link>
+          <span className="text-gray-300">|</span>
           <Link to="/privacy" className="text-[#9b87f5] text-sm">
             {t('privacy')}
           </Link>

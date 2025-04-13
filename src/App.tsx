@@ -12,6 +12,7 @@ import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
+import BlogPost from "./pages/BlogPost";
 
 // Create the QueryClient outside of the component
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App: React.FC = () => {
                   <Route path="/" element={<Index />} />
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/disclaimer" element={<Disclaimer />} />
+                  <Route path="/blog/buscar-dni-por-nombre" element={<BlogPost />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>

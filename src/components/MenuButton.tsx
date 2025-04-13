@@ -38,6 +38,13 @@ const MenuButton: React.FC = () => {
               Inicio
             </Link>
             <Link 
+              to="/blog/buscar-dni-por-nombre" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Buscar DNI por Nombre
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

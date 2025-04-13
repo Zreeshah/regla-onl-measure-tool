@@ -3,12 +3,17 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useDeviceInfo } from '@/hooks/use-device-info';
-import { RefreshCw, Smartphone } from 'lucide-react';
+import { RefreshCw, Smartphone, RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Link } from 'react-router-dom';
 import HomeContent from '@/components/HomeContent';
 import MenuButton from '@/components/MenuButton';
+import { Card, CardContent } from '@/components/ui/card';
+import HowToUseSection from '@/components/HowToUseSection';
+import WhyPerfectSection from '@/components/WhyPerfectSection';
+import FaqSection from '@/components/FaqSection';
+import RulerSizesTable from '@/components/RulerSizesTable';
 
 const MobileRuler: React.FC = () => {
   const { 
@@ -185,9 +190,65 @@ const MobileRuler: React.FC = () => {
       
       {/* Homepage content after the ruler section */}
       <div className="px-4 py-6 mt-4">
-        <div className="bg-white rounded-lg shadow-sm p-4">
+        <div className="bg-white rounded-lg shadow-sm p-4 mb-8">
+          <h1 className="text-2xl font-bold text-[#9b87f5] mb-2">
+            Regla Online Tamaño Real
+          </h1>
+          <p className="text-gray-600 mb-4">
+            Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
+          </p>
           <HomeContent />
         </div>
+        
+        <div className="mb-10">
+          <Card className="bg-white p-4">
+            <CardContent className="p-0">
+              <p className="mb-4">{t('rulerDescription')}</p>
+              <p className="mb-4">{t('contentIntro')}</p>
+              
+              <h2 className="text-xl font-bold mb-3 text-[#9b87f5]">{t('moreInfo')}</h2>
+              <div className="grid grid-cols-1 gap-4 mb-6">
+                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                  <RulerIcon className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                  <div>
+                    <h3 className="font-semibold mb-1">{t('useCase1')}</h3>
+                    <p className="text-sm text-gray-600">{t('useCase1Description')}</p>
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                  <Pencil className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                  <div>
+                    <h3 className="font-semibold mb-1">{t('useCase2')}</h3>
+                    <p className="text-sm text-gray-600">{t('useCase2Description')}</p>
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                  <Square className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                  <div>
+                    <h3 className="font-semibold mb-1">{t('useCase3')}</h3>
+                    <p className="text-sm text-gray-600">{t('useCase3Description')}</p>
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                  <Maximize className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                  <div>
+                    <h3 className="font-semibold mb-1">{t('useCase4')}</h3>
+                    <p className="text-sm text-gray-600">{t('useCase4Description')}</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-6 mb-10">
+          <HowToUseSection />
+          <WhyPerfectSection />
+        </div>
+        
+        <FaqSection />
+        
+        <RulerSizesTable />
       </div>
       
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center">

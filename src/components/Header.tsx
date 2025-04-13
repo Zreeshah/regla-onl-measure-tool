@@ -8,7 +8,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
@@ -34,9 +33,27 @@ const Header: React.FC = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link to="/blog/buscar-dni-por-nombre" className={`${navigationMenuTriggerStyle()} px-4`}>
-                  Buscar DNI
-                </Link>
+                <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[250px]">
+                    <li>
+                      <Link 
+                        to="/blog/buscar-dni-por-nombre" 
+                        className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                      >
+                        Buscar DNI por Nombre
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/blog/saber-dni-persona" 
+                        className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                      >
+                        Cómo Saber el DNI de una Persona
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Más</NavigationMenuTrigger>

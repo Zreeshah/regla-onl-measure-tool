@@ -94,7 +94,8 @@ const MobileRuler: React.FC = () => {
         <MenuButton />
       </div>
       
-      <div className="mobile-ruler-layout">
+      {/* Fix: Add a fixed height container with overflow handling */}
+      <div className="mobile-ruler-layout" style={{ height: `${rulerHeight + 80}px`, overflow: 'hidden', position: 'relative' }}>
         <div
           className="ruler-container ruler-vertical mobile-ruler"
           ref={rulerRef}
@@ -149,7 +150,7 @@ const MobileRuler: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex-1 px-2">
+        <div className="flex-1 px-2 absolute top-0 right-0 w-[calc(100%-80px)]">
           <div className="bg-white p-3 rounded-lg shadow-sm mb-4 max-w-[200px] mx-auto">
             <p className="text-xs font-medium mb-2">
               {deviceType} • {screenSize}"

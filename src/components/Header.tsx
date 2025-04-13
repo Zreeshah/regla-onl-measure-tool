@@ -10,6 +10,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuLink,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 
@@ -37,20 +38,24 @@ const Header: React.FC = () => {
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[250px]">
                     <li>
-                      <Link 
-                        to="/blog/buscar-dni-por-nombre" 
-                        className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                      >
-                        Buscar DNI por Nombre
-                      </Link>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          to="/blog/buscar-dni-por-nombre" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          Buscar DNI por Nombre
+                        </Link>
+                      </NavigationMenuLink>
                     </li>
                     <li>
-                      <Link 
-                        to="/blog/saber-dni-persona" 
-                        className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                      >
-                        Cómo Saber el DNI de una Persona
-                      </Link>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          to="/blog/saber-dni-persona" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          Cómo Saber el DNI de una Persona
+                        </Link>
+                      </NavigationMenuLink>
                     </li>
                   </ul>
                 </NavigationMenuContent>

@@ -73,6 +73,13 @@ const MenuButton: React.FC = () => {
               Números Adimensionales
             </Link>
             <Link 
+              to="/blog/como-saber-cuanto-paro" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Cómo Saber Cuánto Paro Tengo
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

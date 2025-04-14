@@ -80,6 +80,13 @@ const MenuButton: React.FC = () => {
               Cómo Saber Cuánto Paro Tengo
             </Link>
             <Link 
+              to="/blog/como-usar-regla" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Cómo Usar una Regla
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

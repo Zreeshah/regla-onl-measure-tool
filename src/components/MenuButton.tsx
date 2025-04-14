@@ -52,6 +52,13 @@ const MenuButton: React.FC = () => {
               Cómo Saber el DNI de una Persona
             </Link>
             <Link 
+              to="/blog/perdido-dni" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              He Perdido el DNI
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

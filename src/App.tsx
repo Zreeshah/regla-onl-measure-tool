@@ -14,6 +14,7 @@ import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 import BlogPost from "./pages/BlogPost";
 import SaberDNIBlogPost from "./pages/SaberDNIBlogPost";
+import LostDNIBlogPost from "./pages/LostDNIBlogPost";
 
 // Create the QueryClient outside of the component
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App: React.FC = () => {
                   <Route path="/disclaimer" element={<Disclaimer />} />
                   <Route path="/blog/buscar-dni-por-nombre" element={<BlogPost />} />
                   <Route path="/blog/saber-dni-persona" element={<SaberDNIBlogPost />} />
+                  <Route path="/blog/perdido-dni" element={<LostDNIBlogPost />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>

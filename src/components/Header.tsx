@@ -57,6 +57,16 @@ const Header: React.FC = () => {
                         </Link>
                       </NavigationMenuLink>
                     </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          to="/blog/perdido-dni" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          He Perdido el DNI
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>

@@ -80,6 +80,16 @@ const Header: React.FC = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
+                          to="/blog/sistema-mks" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          Sistema MKS
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
                           to="/blog/numeros-adimensionales" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >

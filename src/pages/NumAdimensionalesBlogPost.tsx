@@ -227,7 +227,7 @@ const NumAdimensionalesBlogPost = () => {
             <ul className="list-disc ml-6 mb-4">
               <li>Variables: velocidad = 2 m/s, diámetro = 0.1 m, densidad = 1000 kg/m³, viscosidad = 0.001 kg/m·s.</li>
               <li>Fórmula: Re = (ρ × v × L) / μ = (1000 × 2 × 0.1) / 0.001 = 200,000.</li>
-              <li>Interpretación: Un Re > 4000 indica flujo turbulento, por lo que este flujo es turbulento.</li>
+              <li>Interpretación: Un Re &gt; 4000 indica flujo turbulento, por lo que este flujo es turbulento.</li>
             </ul>
 
             <h2 id="ventajas-de-usar-números-adimensionales" className="text-2xl font-semibold mt-8 mb-4">Ventajas de Usar Números Adimensionales</h2>

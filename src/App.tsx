@@ -16,6 +16,7 @@ import BlogPost from "./pages/BlogPost";
 import SaberDNIBlogPost from "./pages/SaberDNIBlogPost";
 import LostDNIBlogPost from "./pages/LostDNIBlogPost";
 import MetricSystemBlogPost from "./pages/MetricSystemBlogPost";
+import NumAdimensionalesBlogPost from "./pages/NumAdimensionalesBlogPost";
 
 // Create the QueryClient outside of the component
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App: React.FC = () => {
                   <Route path="/blog/saber-dni-persona" element={<SaberDNIBlogPost />} />
                   <Route path="/blog/perdido-dni" element={<LostDNIBlogPost />} />
                   <Route path="/blog/sistema-metrico-decimal" element={<MetricSystemBlogPost />} />
+                  <Route path="/blog/numeros-adimensionales" element={<NumAdimensionalesBlogPost />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>

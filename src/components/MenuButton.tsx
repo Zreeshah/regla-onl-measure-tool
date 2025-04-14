@@ -66,6 +66,13 @@ const MenuButton: React.FC = () => {
               Sistema Métrico Decimal
             </Link>
             <Link 
+              to="/blog/numeros-adimensionales" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Números Adimensionales
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

@@ -8,9 +8,9 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuLink,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 
@@ -64,6 +64,16 @@ const Header: React.FC = () => {
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
                           He Perdido el DNI
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          to="/blog/sistema-metrico-decimal" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          Sistema Métrico Decimal
                         </Link>
                       </NavigationMenuLink>
                     </li>

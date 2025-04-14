@@ -59,6 +59,13 @@ const MenuButton: React.FC = () => {
               He Perdido el DNI
             </Link>
             <Link 
+              to="/blog/sistema-metrico-decimal" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema Métrico Decimal
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

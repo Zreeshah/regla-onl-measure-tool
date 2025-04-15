@@ -73,6 +73,13 @@ const MenuButton: React.FC = () => {
               Sistema MKS
             </Link>
             <Link 
+              to="/blog/sistema-natural-unidades" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema Natural de Unidades
+            </Link>
+            <Link 
               to="/blog/numeros-adimensionales" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

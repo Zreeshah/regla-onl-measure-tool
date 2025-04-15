@@ -90,6 +90,16 @@ const Header: React.FC = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
+                          to="/blog/sistema-natural-unidades" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          Sistema Natural de Unidades
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
                           to="/blog/numeros-adimensionales" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >

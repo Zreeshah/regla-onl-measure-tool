@@ -94,6 +94,13 @@ const MenuButton: React.FC = () => {
               Clinómetro: Qué es y Cómo Usarlo
             </Link>
             <Link 
+              to="/blog/medidor-profundidad" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Medidor de Profundidad: Qué es y Cómo Usarlo
+            </Link>
+            <Link 
               to="/blog/numeros-adimensionales" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

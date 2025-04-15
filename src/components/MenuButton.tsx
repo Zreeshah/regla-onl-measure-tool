@@ -80,6 +80,13 @@ const MenuButton: React.FC = () => {
               Sistema Natural de Unidades
             </Link>
             <Link 
+              to="/blog/sistema-anglosajon-unidades" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema Anglosajón de Unidades
+            </Link>
+            <Link 
               to="/blog/clinometro" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

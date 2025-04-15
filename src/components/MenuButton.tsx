@@ -80,6 +80,13 @@ const MenuButton: React.FC = () => {
               Sistema Natural de Unidades
             </Link>
             <Link 
+              to="/blog/clinometro" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Clinómetro: Qué es y Cómo Usarlo
+            </Link>
+            <Link 
               to="/blog/numeros-adimensionales" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

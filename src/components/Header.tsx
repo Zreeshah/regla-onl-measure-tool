@@ -100,6 +100,16 @@ const Header: React.FC = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
+                          to="/blog/clinometro" 
+                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          Clinómetro: Qué es y Cómo Usarlo
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
                           to="/blog/numeros-adimensionales" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >

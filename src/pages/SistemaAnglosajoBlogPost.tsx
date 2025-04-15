@@ -226,6 +226,8 @@ const SistemaAnglosajoBlogPost = () => {
             <p className="text-sm text-gray-600 mt-2">Gráfico comparativo de unidades de longitud entre sistema anglosajón y métrico</p>
           </div>
 
+          <p>Este esquema visualiza cómo las unidades de longitud se relacionan entre sistemas.</p>
+
           <h2 id="aplicaciones" className="text-2xl font-bold mt-8 mb-4">
             Aplicaciones del Sistema Anglosajón
           </h2>
@@ -238,15 +240,32 @@ const SistemaAnglosajoBlogPost = () => {
             />
           </div>
 
-          <p>A pesar del avance del sistema métrico, el <strong>sistema anglosajón</strong> sigue teniendo aplicaciones importantes:</p>
+          <p>El <strong>sistema anglosajón</strong> se usa ampliamente en:</p>
 
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li><strong>Industria aeronáutica</strong>: En EE.UU., altitudes en pies y distancias en millas.</li>
-            <li><strong>Construcción</strong>: Medidas en pulgadas y pies para edificaciones en países anglosajones.</li>
-            <li><strong>Mercado doméstico</strong>: Electrodomésticos y pantallas medidas en pulgadas.</li>
-            <li><strong>Gastronomía</strong>: Recetas americanas con onzas, libras y tazas.</li>
-            <li><strong>Automoción</strong>: Velocidad en mph en Reino Unido y EE.UU.</li>
+            <li><strong>Construcción</strong>: En EE.UU., planos y materiales se miden en pies y pulgadas.</li>
+            <li><strong>Cocina</strong>: Recetas usan tazas, onzas y cucharadas.</li>
+            <li><strong>Comercio</strong>: Pesos de productos en libras y volúmenes en galones.</li>
+            <li><strong>Meteorología</strong>: Temperaturas en Fahrenheit para el público estadounidense.</li>
+            <li><strong>Deportes</strong>: Distancias en yardas (fútbol americano) o millas (carreras).</li>
+            <li><strong>Aviación</strong>: Altitudes en pies en EE.UU., a pesar de estándares métricos globales.</li>
           </ul>
+
+          <p>Estas aplicaciones reflejan su arraigo en la vida diaria de países angloparlantes.</p>
+
+          <h2 id="desafios" className="text-2xl font-bold mt-8 mb-4">
+            Desafíos y Adopción Global
+          </h2>
+
+          <p>Aunque el <strong>sistema anglosajón</strong> es práctico en contextos locales, presenta desafíos:</p>
+
+          <ul className="list-disc pl-6 my-4 space-y-2">
+            <li><strong>Falta de universalidad</strong>: El sistema métrico es el estándar en ciencia, comercio internacional y la mayoría de los países, lo que genera confusión.</li>
+            <li><strong>Errores de conversión</strong>: Equivocaciones en cálculos (ej., ingeniería o farmacología) pueden tener consecuencias graves.</li>
+            <li><strong>Costo de transición</strong>: Cambiar al sistema métrico en EE.UU. implica actualizar infraestructura, educación y normativas.</li>
+          </ul>
+
+          <p>A pesar de esto, sectores como la ciencia y la industria en EE.UU. usan el sistema métrico para alinearse con estándares globales, mientras que el <strong>sistema anglosajón</strong> persiste en la vida cotidiana.</p>
 
           <h2 id="tabla-conversiones" className="text-2xl font-bold mt-8 mb-4">
             Tabla de Conversiones Comunes
@@ -256,41 +275,42 @@ const SistemaAnglosajoBlogPost = () => {
             <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
               <thead className="bg-gray-100">
                 <tr>
-                  <th className="px-4 py-2 border">Medida</th>
-                  <th className="px-4 py-2 border">Valor en Sistema Anglosajón</th>
-                  <th className="px-4 py-2 border">Equivalente en Sistema Métrico</th>
+                  <th className="px-4 py-2 border">Magnitud</th>
+                  <th className="px-4 py-2 border">Unidad Anglosajón</th>
+                  <th className="px-4 py-2 border">Equivalencia Métrica</th>
+                  <th className="px-4 py-2 border">Ejemplo Práctico</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="px-4 py-2 border">Altura promedio hombre</td>
-                  <td className="px-4 py-2 border">5 pies 9 pulgadas</td>
-                  <td className="px-4 py-2 border">1.75 metros</td>
+                  <td className="px-4 py-2 border">Longitud</td>
+                  <td className="px-4 py-2 border">1 pulgada</td>
+                  <td className="px-4 py-2 border">2.54 cm</td>
+                  <td className="px-4 py-2 border">Un tornillo de 2" = 5.08 cm</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-2 border">Peso promedio adulto</td>
-                  <td className="px-4 py-2 border">160 libras</td>
-                  <td className="px-4 py-2 border">72.6 kilogramos</td>
+                  <td className="px-4 py-2 border">Longitud</td>
+                  <td className="px-4 py-2 border">1 milla</td>
+                  <td className="px-4 py-2 border">1.609 km</td>
+                  <td className="px-4 py-2 border">Una carrera de 5 mi = 8 km</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 border">Tamaño televisor</td>
-                  <td className="px-4 py-2 border">50 pulgadas</td>
-                  <td className="px-4 py-2 border">127 centímetros</td>
+                  <td className="px-4 py-2 border">Peso</td>
+                  <td className="px-4 py-2 border">1 libra</td>
+                  <td className="px-4 py-2 border">0.4536 kg</td>
+                  <td className="px-4 py-2 border">10 lb de frutas = 4.536 kg</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-2 border">Temperatura ambiente</td>
-                  <td className="px-4 py-2 border">72°F</td>
-                  <td className="px-4 py-2 border">22.2°C</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-2 border">Contenido bebida</td>
+                  <td className="px-4 py-2 border">Volumen</td>
                   <td className="px-4 py-2 border">1 galón</td>
-                  <td className="px-4 py-2 border">3.78 litros</td>
+                  <td className="px-4 py-2 border">3.785 L</td>
+                  <td className="px-4 py-2 border">2 gal de gasolina = 7.57 L</td>
                 </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-4 py-2 border">Límite velocidad</td>
-                  <td className="px-4 py-2 border">55 mph</td>
-                  <td className="px-4 py-2 border">88.5 km/h</td>
+                <tr>
+                  <td className="px-4 py-2 border">Temperatura</td>
+                  <td className="px-4 py-2 border">68 °F</td>
+                  <td className="px-4 py-2 border">20 °C</td>
+                  <td className="px-4 py-2 border">68 °F = (68-32)/1.8 = 20 °C</td>
                 </tr>
               </tbody>
             </table>
@@ -303,30 +323,78 @@ const SistemaAnglosajoBlogPost = () => {
           <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-100 my-6">
             <h3 className="text-xl font-semibold mb-4">Casos prácticos</h3>
             
-            <div className="mb-4">
-              <h4 className="font-medium mb-1">Ejemplo 1: Altura personal</h4>
-              <p>Convertir 6 pies 2 pulgadas a centímetros:</p>
-              <div className="bg-white p-2 rounded my-2 font-mono text-sm">
-                (6 × 30.48) + (2 × 2.54) = 182.88 + 5.08 = 187.96 cm
-              </div>
-            </div>
+            <ol className="list-decimal pl-6 space-y-4">
+              <li>
+                <strong>Longitud</strong>: Una mesa mide 6 pies. ¿Cuánto es en metros?
+                <ul className="list-disc pl-6 mt-2">
+                  <li>6 × 0.3048 = 1.8288 m</li>
+                </ul>
+              </li>
+              
+              <li>
+                <strong>Peso</strong>: Una maleta pesa 50 libras. ¿Cuánto es en kilogramos?
+                <ul className="list-disc pl-6 mt-2">
+                  <li>50 × 0.4536 = 22.68 kg</li>
+                </ul>
+              </li>
+              
+              <li>
+                <strong>Volumen</strong>: Un tanque contiene 10 galones. ¿Cuántos litros son?
+                <ul className="list-disc pl-6 mt-2">
+                  <li>10 × 3.785 = 37.85 L</li>
+                </ul>
+              </li>
+              
+              <li>
+                <strong>Temperatura</strong>: El clima está a 77 °F. ¿Cuánto es en °C?
+                <ul className="list-disc pl-6 mt-2">
+                  <li>(77 - 32) / 1.8 = 25 °C</li>
+                </ul>
+              </li>
+            </ol>
             
-            <div className="mb-4">
-              <h4 className="font-medium mb-1">Ejemplo 2: Temperatura</h4>
-              <p>Convertir 98.6°F (temperatura corporal normal) a °C:</p>
-              <div className="bg-white p-2 rounded my-2 font-mono text-sm">
-                (98.6 - 32) / 1.8 = 66.6 / 1.8 = 37°C
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-medium mb-1">Ejemplo 3: Compra de gasolina</h4>
-              <p>Convertir 10 galones a litros:</p>
-              <div className="bg-white p-2 rounded my-2 font-mono text-sm">
-                10 × 3.785 = 37.85 litros
-              </div>
-            </div>
+            <p className="mt-4">Estos ejemplos muestran cómo aplicar las conversiones en situaciones reales.</p>
           </div>
+
+          <h2 id="ventajas" className="text-2xl font-bold mt-8 mb-4">
+            Ventajas y Limitaciones
+          </h2>
+
+          <div className="overflow-x-auto my-6">
+            <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="px-4 py-2 border">Aspecto</th>
+                  <th className="px-4 py-2 border">Ventajas</th>
+                  <th className="px-4 py-2 border">Limitaciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-4 py-2 border"><strong>Familiaridad</strong></td>
+                  <td className="px-4 py-2 border">Arraigado en la cultura de EE.UU. y Reino Unido</td>
+                  <td className="px-4 py-2 border">Desconocido en países métricos</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-2 border"><strong>Uso práctico</strong></td>
+                  <td className="px-4 py-2 border">Intuitivo para medidas cotidianas (pulgadas, libras)</td>
+                  <td className="px-4 py-2 border">Menos preciso para ciencia e ingeniería</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2 border"><strong>Estandarización</strong></td>
+                  <td className="px-4 py-2 border">Útil en industrias locales (construcción)</td>
+                  <td className="px-4 py-2 border">Incompatible con estándares globales</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-2 border"><strong>Adaptabilidad</strong></td>
+                  <td className="px-4 py-2 border">Flexible para contextos tradicionales</td>
+                  <td className="px-4 py-2 border">Conversiones frecuentes generan errores</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Consejo</strong>: Usa calculadoras de conversión online para agilizar cálculos entre sistemas.</p>
 
           <h2 id="conclusion" className="text-2xl font-bold mt-8 mb-4">
             Conclusión

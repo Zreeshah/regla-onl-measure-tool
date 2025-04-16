@@ -459,7 +459,7 @@ const MetricSystemBlogPost: React.FC = () => {
               <p className="text-sm text-center mt-2">Escala logarítmica para mejor visualización</p>
             </div>
             
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-center my-8 p-4 bg-gray-50 rounded-lg">
+            <div className="mx-4 my-6 p-6 bg-white rounded-lg shadow-md w-full max-w-3xl overflow-hidden">
               <div className="flex items-center gap-2">
                 <ArrowUp className="text-green-500" />
                 <span>Dividir por 10</span>

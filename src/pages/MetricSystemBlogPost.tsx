@@ -1,41 +1,48 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { 
-  Table, 
-  TableHeader, 
-  TableBody, 
-  TableRow, 
-  TableHead, 
-  TableCell 
-} from "@/components/ui/table";
-import { 
-  ChartContainer, 
-  ChartTooltip, 
-  ChartTooltipContent 
-} from "@/components/ui/chart";
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { Square, Triangle, Circle, ArrowDown, ArrowUp } from 'lucide-react';
-
 const MetricSystemBlogPost: React.FC = () => {
-  const { t } = useLanguage();
-  
-  // Sample data for conversion examples chart
-  const conversionData = [
-    { name: 'km', value: 1000, label: 'Kilómetro' },
-    { name: 'hm', value: 100, label: 'Hectómetro' },
-    { name: 'dam', value: 10, label: 'Decámetro' },
-    { name: 'm', value: 1, label: 'Metro' },
-    { name: 'dm', value: 0.1, label: 'Decímetro' },
-    { name: 'cm', value: 0.01, label: 'Centímetro' },
-    { name: 'mm', value: 0.001, label: 'Milímetro' },
-  ];
+  const {
+    t
+  } = useLanguage();
 
-  return (
-    <>
+  // Sample data for conversion examples chart
+  const conversionData = [{
+    name: 'km',
+    value: 1000,
+    label: 'Kilómetro'
+  }, {
+    name: 'hm',
+    value: 100,
+    label: 'Hectómetro'
+  }, {
+    name: 'dam',
+    value: 10,
+    label: 'Decámetro'
+  }, {
+    name: 'm',
+    value: 1,
+    label: 'Metro'
+  }, {
+    name: 'dm',
+    value: 0.1,
+    label: 'Decímetro'
+  }, {
+    name: 'cm',
+    value: 0.01,
+    label: 'Centímetro'
+  }, {
+    name: 'mm',
+    value: 0.001,
+    label: 'Milímetro'
+  }];
+  return <>
       <Helmet>
         <title>Sistema Métrico Decimal: Guía Completa | Regla.onl</title>
         <meta name="description" content="Aprende todo sobre el sistema métrico decimal: longitud, masa, capacidad, superficie y volumen. Incluye tablas de conversión y ejemplos prácticos." />
@@ -53,11 +60,7 @@ const MetricSystemBlogPost: React.FC = () => {
         <main className="flex-grow container py-8">
           <article className="prose prose-lg max-w-none">
             <div className="mb-8">
-              <img 
-                src="/placeholder.svg" 
-                alt="Sistema Métrico Decimal" 
-                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-md"
-              />
+              <img src="/placeholder.svg" alt="Sistema Métrico Decimal" className="w-full h-64 md:h-96 object-cover rounded-lg shadow-md" />
             </div>
             
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
@@ -98,11 +101,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </div>
             
             <div className="my-8">
-              <img 
-                src="/placeholder.svg" 
-                alt="Ventajas del Sistema Métrico Decimal" 
-                className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
-              />
+              <img src="/placeholder.svg" alt="Ventajas del Sistema Métrico Decimal" className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md" />
             </div>
             
             <h2 id="unidades-del-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">
@@ -405,11 +404,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </div>
             
             <div className="my-8">
-              <img 
-                src="/placeholder.svg" 
-                alt="Unidades del Sistema Métrico Decimal" 
-                className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
-              />
+              <img src="/placeholder.svg" alt="Unidades del Sistema Métrico Decimal" className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md" />
             </div>
             
             <h2 id="cómo-convertir-unidades-en-el-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">
@@ -444,28 +439,19 @@ const MetricSystemBlogPost: React.FC = () => {
               <p>Mueve el punto decimal a la izquierda (división) o derecha (multiplicación) según los niveles.</p>
             </div>
             
-            <div className="my-8">
+            <div className="my-8 bg-gray-800 rounded-none mx-[48px]">
               <h3 className="text-xl font-semibold mb-4">Gráfico de equivalencia entre unidades de longitud</h3>
               <div className="h-80 w-full">
-                <ChartContainer
-                  config={{
-                    primary: { label: "Equivalencia en metros" },
-                  }}
-                >
+                <ChartContainer config={{
+                primary: {
+                  label: "Equivalencia en metros"
+                }
+              }}>
                   <BarChart data={conversionData}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
-                    <YAxis 
-                      scale="log" 
-                      domain={[0.0001, 10000]} 
-                      ticks={[0.001, 0.01, 0.1, 1, 10, 100, 1000]}
-                      tickFormatter={(value) => value.toString()}
-                    />
-                    <ChartTooltip
-                      content={
-                        <ChartTooltipContent />
-                      }
-                    />
+                    <YAxis scale="log" domain={[0.0001, 10000]} ticks={[0.001, 0.01, 0.1, 1, 10, 100, 1000]} tickFormatter={value => value.toString()} />
+                    <ChartTooltip content={<ChartTooltipContent />} />
                     <Bar dataKey="value" fill="#8884d8" name="Equivalencia" />
                   </BarChart>
                 </ChartContainer>
@@ -610,11 +596,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </p>
             
             <div className="my-8">
-              <img 
-                src="/placeholder.svg" 
-                alt="Comparación de sistemas de medida" 
-                className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
-              />
+              <img src="/placeholder.svg" alt="Comparación de sistemas de medida" className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md" />
             </div>
             
             <h2 id="conclusión" className="text-2xl font-bold mt-10 mb-4">
@@ -637,8 +619,6 @@ const MetricSystemBlogPost: React.FC = () => {
         
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default MetricSystemBlogPost;

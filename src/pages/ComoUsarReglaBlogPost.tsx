@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -6,12 +5,11 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft, Ruler, ChevronRight } from 'lucide-react';
-
 const ComoUsarReglaBlogPost: React.FC = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+  const {
+    t
+  } = useLanguage();
+  return <div className="flex flex-col min-h-screen bg-gray-50">
       <Helmet>
         <title>Cómo Usar una Regla: Guía Completa para Medir con Precisión | Regla.Onl</title>
         <meta name="description" content="Aprende cómo se usa la regla correctamente, desde las partes básicas hasta técnicas avanzadas. Guía completa sobre reglas de medir físicas y online para resultados precisos." />
@@ -45,11 +43,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
               </button>
             </div>
             
-            <img 
-              src="https://images.unsplash.com/photo-1564939558297-fc396f18e5c7" 
-              alt="Regla de medir con lápiz sobre papel cuadriculado" 
-              className="w-full h-72 sm:h-96 object-cover rounded-lg mb-8"
-            />
+            <img src="https://images.unsplash.com/photo-1564939558297-fc396f18e5c7" alt="Regla de medir con lápiz sobre papel cuadriculado" className="w-full h-72 sm:h-96 object-cover rounded-lg mb-8" />
             
             <article className="prose prose-sm sm:prose lg:prose-lg max-w-none">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Cómo Usar una Regla: Guía Completa para Medir con Precisión</h1>
@@ -135,19 +129,11 @@ const ComoUsarReglaBlogPost: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1621600411688-4be93c2c1208" 
-                    alt="Regla metálica sobre plano" 
-                    className="w-full h-64 object-cover rounded-lg mb-2"
-                  />
+                  <img src="https://images.unsplash.com/photo-1621600411688-4be93c2c1208" alt="Regla metálica sobre plano" className="w-full h-64 object-cover rounded-lg mb-2" />
                   <p className="text-sm text-gray-600 italic">Regla metálica profesional, ideal para dibujo técnico y mediciones precisas.</p>
                 </div>
                 <div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1605016661327-85637f087a8c" 
-                    alt="Regla siendo usada para dibujar" 
-                    className="w-full h-64 object-cover rounded-lg mb-2"
-                  />
+                  <img src="https://images.unsplash.com/photo-1605016661327-85637f087a8c" alt="Regla siendo usada para dibujar" className="w-full h-64 object-cover rounded-lg mb-2" />
                   <p className="text-sm text-gray-600 italic">El uso correcto de la regla permite trazar líneas rectas con precisión.</p>
                 </div>
               </div>
@@ -209,11 +195,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                 <strong>Ejemplo práctico</strong>: Si mides un lápiz y el punto cero está alineado con un extremo, y el otro extremo cae entre 12 y 13 cm, estima la fracción más cercana (ej., 12.8 cm).
               </p>
               
-              <img 
-                src="https://images.unsplash.com/photo-1600696920053-12ece0026de9" 
-                alt="Regla midiendo un objeto" 
-                className="w-full h-64 sm:h-80 object-cover rounded-lg my-8"
-              />
+              <img src="https://images.unsplash.com/photo-1600696920053-12ece0026de9" alt="Regla midiendo un objeto" className="w-full h-64 sm:h-80 object-cover rounded-lg my-8" />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="tecnicas-avanzadas">Técnicas Avanzadas para Medir con una Regla</h2>
               
@@ -278,21 +260,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                 </table>
               </div>
               
-              <div className="bg-gray-100 p-4 rounded-lg my-6">
-                <h3 className="font-bold mb-2">Gráfico de selección de reglas:</h3>
-                <pre className="whitespace-pre-wrap text-sm">
-Precisión Alta   | Regla de precisión (Acero)
-               | Regla metálica
-               |------------------
-               | Regla escolar
-               | Regla flexible
-               | Regla plegable
-Precisión Baja   |------------------
-               Corto      Largo
-               Longitud de Medición
-                </pre>
-                <p className="text-sm mt-2">Este gráfico te ayuda a elegir la regla adecuada según la precisión y longitud requerida.</p>
-              </div>
+              
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="aplicaciones">Aplicaciones de la Regla en la Vida Diaria</h2>
               
@@ -355,11 +323,7 @@ Precisión Baja   |------------------
               </p>
               
               <div className="bg-[#F1F0FB] p-4 rounded-lg my-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1518655048521-f130df041f66" 
-                  alt="Laptop con regla digital" 
-                  className="w-full h-64 object-cover rounded-lg mb-4"
-                />
+                <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66" alt="Laptop con regla digital" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <p className="text-sm text-gray-600 italic">Las reglas online son herramientas útiles para diseñadores y profesionales que trabajan en entornos digitales.</p>
               </div>
               
@@ -464,8 +428,6 @@ Precisión Baja   |------------------
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ComoUsarReglaBlogPost;

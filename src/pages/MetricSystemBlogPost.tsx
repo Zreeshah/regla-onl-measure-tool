@@ -598,7 +598,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </p>
             
             <div className="my-8">
-              <img src="/placeholder.svg" alt="Comparación de sistemas de medida" className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md" />
+              
             </div>
             
             <h2 id="conclusión" className="text-2xl font-bold mt-10 mb-4">

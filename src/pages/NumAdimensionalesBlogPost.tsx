@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,14 +8,11 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-
 const NumAdimensionalesBlogPost = () => {
   const currentUrl = "/blog/numeros-adimensionales";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
-  
-  return (
-    <div className="flex flex-col min-h-screen">
+  return <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Números Adimensionales: Qué Son, Significado y Ejemplos Prácticos</title>
         <meta name="description" content="Descubre qué es adimensional, el significado de números adimensionales y ejemplos prácticos. Guía completa de números adimensionales en física e ingeniería." />
@@ -43,21 +39,16 @@ const NumAdimensionalesBlogPost = () => {
         <article className="max-w-4xl mx-auto">
           {/* Featured Image */}
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src="https://source.unsplash.com/1485827404703-89b55fcc595e" 
-              alt="Representación de números adimensionales" 
-              className="w-full h-auto object-cover"
-              loading="lazy"
-              width="800" 
-              height="400"
-            />
+            <img alt="Representación de números adimensionales" className="w-full h-auto object-cover" loading="lazy" width="800" height="400" src="/lovable-uploads/6328a843-2738-47e0-a58d-69f6ab06586b.jpg" />
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-ruler-primary">Números Adimensionales: Qué Son, Significado y Ejemplos Prácticos</h1>
           
           <div className="prose prose-lg max-w-none mb-8">
             <p className="lead text-xl mb-6">
-              ¿Te has preguntado <strong>qué es adimensional</strong> o cuál es el <strong>adimensional significado</strong>? Los <strong>números adimensionales</strong> son herramientas esenciales en física, ingeniería y ciencias aplicadas, ya que permiten analizar fenómenos sin depender de unidades de medida. <span dangerouslySetInnerHTML={{ __html: homepageLink }} /> En esta guía completa, exploraremos en profundidad los <strong>números adimensionales</strong>, su importancia, aplicaciones y ejemplos claros.
+              ¿Te has preguntado <strong>qué es adimensional</strong> o cuál es el <strong>adimensional significado</strong>? Los <strong>números adimensionales</strong> son herramientas esenciales en física, ingeniería y ciencias aplicadas, ya que permiten analizar fenómenos sin depender de unidades de medida. <span dangerouslySetInnerHTML={{
+              __html: homepageLink
+            }} /> En esta guía completa, exploraremos en profundidad los <strong>números adimensionales</strong>, su importancia, aplicaciones y ejemplos claros.
             </p>
 
             <h2 id="qué-es-un-número-adimensional" className="text-2xl font-semibold mt-8 mb-4">¿Qué es un Número Adimensional?</h2>
@@ -69,11 +60,7 @@ const NumAdimensionalesBlogPost = () => {
             </p>
 
             <div className="my-8">
-              <img 
-                src="https://source.unsplash.com/1487058792275-0ad4aaf24ca7" 
-                alt="Aplicación práctica de números adimensionales" 
-                className="rounded-lg shadow-md w-full h-auto"
-              />
+              <img alt="Aplicación práctica de números adimensionales" className="rounded-lg shadow-md w-full h-auto" src="/lovable-uploads/20b00d36-9ef0-4a3c-aa19-b363f2d5645c.jpg" />
               <p className="text-sm text-gray-600 mt-2">Visualización conceptual de números adimensionales en ciencias aplicadas.</p>
             </div>
 
@@ -102,12 +89,8 @@ const NumAdimensionalesBlogPost = () => {
             <p>Para ilustrar el <strong>adimensional significado</strong>, aquí tienes algunos <strong>adimensional ejemplos</strong> ampliamente utilizados en física e ingeniería:</p>
             
             <div className="my-8">
-              <img 
-                src="https://source.unsplash.com/1526374965328-7f61d4dc18c5" 
-                alt="Representación de flujo y números adimensionales" 
-                className="rounded-lg shadow-md w-full h-auto"
-              />
-              <p className="text-sm text-gray-600 mt-2">Visualización de flujos afectados por distintos números adimensionales.</p>
+              
+              
             </div>
 
             <h3 id="número-de-reynolds-re" className="text-xl font-semibold mt-6 mb-3">Número de Reynolds (Re)</h3>
@@ -227,12 +210,8 @@ const NumAdimensionalesBlogPost = () => {
             <p>Estas aplicaciones demuestran por qué los <strong>números adimensionales</strong> son fundamentales para resolver problemas complejos en la ciencia y la tecnología.</p>
 
             <div className="my-8">
-              <img 
-                src="https://source.unsplash.com/1498050108023-c5249f4df085" 
-                alt="Aplicaciones computacionales de números adimensionales" 
-                className="rounded-lg shadow-md w-full h-auto"
-              />
-              <p className="text-sm text-gray-600 mt-2">Simulaciones computacionales que utilizan números adimensionales para modelar fenómenos físicos.</p>
+              
+              
             </div>
 
             <h2 id="cómo-calcular-un-número-adimensional" className="text-2xl font-semibold mt-8 mb-4">Cómo Calcular un Número Adimensional</h2>
@@ -276,8 +255,6 @@ const NumAdimensionalesBlogPost = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default NumAdimensionalesBlogPost;

@@ -21,7 +21,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
             <header className="mb-10 text-center">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">Sistema Natural de Unidades: Qué es y Cómo Funciona</h1>
               <div className="w-full rounded-lg overflow-hidden mb-6">
-                <img src="/lovable-uploads/sistema-natural-universe.jpg" alt="Sistema Natural de Unidades - Representación del universo" className="w-full h-auto object-cover" />
+                <img alt="Sistema Natural de Unidades - Representación del universo" src="/lovable-uploads/6e30be3b-fb3c-45ac-9368-d0c966ceb463.jpg" className="w-full h-auto object-cover" />
                 <p className="text-sm text-gray-500 mt-1">El sistema natural de unidades se basa en constantes universales.</p>
               </div>
             </header>

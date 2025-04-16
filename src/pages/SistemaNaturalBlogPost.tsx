@@ -56,7 +56,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
                   <strong>¿Qué es un sistema natural</strong> en términos simples? Es una forma de medir que refleja las leyes intrínsecas del universo, asegurando que las unidades sean consistentes en cualquier lugar y tiempo. Este enfoque es especialmente valioso en física teórica, donde la precisión y la universalidad son cruciales.
                 </p>
                 <div className="bg-gray-100 p-4 rounded-lg my-6">
-                  <img src="/lovable-uploads/constants-universe.jpg" alt="Constantes fundamentales del universo" className="w-full h-auto rounded-lg mb-2" />
+                  <img alt="Constantes fundamentales del universo" className="w-full h-auto rounded-lg mb-2" src="/lovable-uploads/5edf45ba-3814-4583-b74c-27296f9e750d.jpg" />
                   <p className="text-sm text-center">Las constantes universales son la base del sistema natural de unidades</p>
                 </div>
               </section>

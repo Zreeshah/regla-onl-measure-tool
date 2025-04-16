@@ -1,53 +1,14 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft } from 'lucide-react';
-import RelatedArticles from '@/components/RelatedArticles';
-import { insertHomepageLink } from '@/utils/internalLinking';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();
-  const articleId = "buscar-dni"; // Hardcoded for this page
-  
-  // This is where we would normally fetch the article content from a CMS
-  // For demonstration, we'll use the existing content and add internal links
-  
-  // Original article content with homepage link injected
-  const articleContent = `
-    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita</h1>
-    
-    <p className="lead">
-      ¿Necesitas <strong>buscar DNI por nombre</strong> o <strong>DNI por nombre y apellido gratis</strong>? En esta guía te explicamos cómo encontrar el Documento Nacional de Identidad (DNI) de una persona en España de manera legal y segura. Con nuestro <strong>buscador de DNI</strong>, podrás obtener información útil como dirección, fecha de nacimiento o multas, siempre respetando la privacidad y evitando usos fraudulentos.
-    </p>
-    
-    <p>
-      Descubre los métodos más efectivos para <strong>buscar DNI por nombre y apellido gratis</strong> y aclara todas tus dudas con esta información optimizada y detallada. ¡Sigue leyendo!
-    </p>
-    
-    <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="por-qué-buscar-dni-por-nombre-y-apellido">¿Por Qué Buscar DNI por Nombre y Apellido?</h2>
-    
-    <p>
-      El <strong>DNI por nombre</strong> es una herramienta clave para diversas situaciones legales y personales en España. Tanto ciudadanos españoles como residentes extranjeros cuentan con este documento, y conocerlo puede ser útil por varias razones:
-    </p>
-    
-    <ul className="list-disc pl-6 mb-6">
-      <li><strong>Verificar identidad</strong>: Evita estafas confirmando la identidad de una persona.</li>
-      <li><strong>Consultar multas</strong>: Revisa si alguien tiene sanciones de tránsito pendientes.</li>
-      <li><strong>Obtener datos básicos</strong>: Accede a información como dirección o fecha de nacimiento.</li>
-      <li><strong>Reportar incidentes</strong>: Facilita denuncias de delitos o accidentes de tráfico.</li>
-    </ul>
-    
-    <p>
-      Sin embargo, es fundamental usar esta información de forma ética y legal, ya que el acceso al DNI está protegido por leyes de privacidad.
-    </p>
-  `;
-  
-  // Process content by adding homepage link within first 200 words
-  const processedContent = insertHomepageLink(articleContent);
   
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -91,8 +52,32 @@ const BlogPost: React.FC = () => {
             />
             
             <article className="prose prose-sm sm:prose lg:prose-lg max-w-none">
-              {/* Render processed content with injected homepage link */}
-              <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita</h1>
+              
+              <p className="lead">
+                ¿Necesitas <strong>buscar DNI por nombre</strong> o <strong>DNI por nombre y apellido gratis</strong>? En esta guía te explicamos cómo encontrar el Documento Nacional de Identidad (DNI) de una persona en España de manera legal y segura. Con nuestro <strong>buscador de DNI</strong>, podrás obtener información útil como dirección, fecha de nacimiento o multas, siempre respetando la privacidad y evitando usos fraudulentos.
+              </p>
+              
+              <p>
+                Descubre los métodos más efectivos para <strong>buscar DNI por nombre y apellido gratis</strong> y aclara todas tus dudas con esta información optimizada y detallada. ¡Sigue leyendo!
+              </p>
+              
+              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="por-qué-buscar-dni-por-nombre-y-apellido">¿Por Qué Buscar DNI por Nombre y Apellido?</h2>
+              
+              <p>
+                El <strong>DNI por nombre</strong> es una herramienta clave para diversas situaciones legales y personales en España. Tanto ciudadanos españoles como residentes extranjeros cuentan con este documento, y conocerlo puede ser útil por varias razones:
+              </p>
+              
+              <ul className="list-disc pl-6 mb-6">
+                <li><strong>Verificar identidad</strong>: Evita estafas confirmando la identidad de una persona.</li>
+                <li><strong>Consultar multas</strong>: Revisa si alguien tiene sanciones de tránsito pendientes.</li>
+                <li><strong>Obtener datos básicos</strong>: Accede a información como dirección o fecha de nacimiento.</li>
+                <li><strong>Reportar incidentes</strong>: Facilita denuncias de delitos o accidentes de tráfico.</li>
+              </ul>
+              
+              <p>
+                Sin embargo, es fundamental usar esta información de forma ética y legal, ya que el acceso al DNI está protegido por leyes de privacidad.
+              </p>
               
               <div className="bg-[#F1F0FB] p-4 rounded-lg my-8">
                 <img 
@@ -243,12 +228,9 @@ const BlogPost: React.FC = () => {
               </p>
               
               <p>
-                Para más herramientas útiles, también puedes visitar nuestra <Link to="/blog/como-usar-regla" className="text-[#9b87f5] hover:underline">guía sobre cómo usar correctamente una regla</Link> para mediciones exactas, o aprender sobre el <Link to="/blog/sistema-metrico-decimal" className="text-[#9b87f5] hover:underline">sistema métrico decimal</Link> utilizado en España y la mayoría de países.
+                ¿Quieres más consejos sobre trámites en España? Explora nuestro sitio web para encontrar guías detalladas sobre procesos administrativos y documentación. ¡Sigue informado y resuelve tus dudas con facilidad!
               </p>
             </article>
-            
-            {/* Related Articles Component */}
-            <RelatedArticles currentArticleId={articleId} />
           </div>
         </div>
       </main>

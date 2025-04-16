@@ -1,60 +1,13 @@
-import React, { useEffect } from 'react';
+
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import RelatedArticles from '@/components/RelatedArticles';
-import { insertHomepageLink } from '@/utils/internalLinking';
 
 const ClinometroBlogPost: React.FC = () => {
-  const articleId = "clinometro"; // Hardcoded ID for this article
-  
-  // Define the initial part of the article that will be processed for internal links
-  const articleIntro = `
-    <h1 className="text-3xl md:text-4xl font-bold mb-6">Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo</h1>
-    
-    <p className="lead">
-      ¿Te preguntas <strong>qué es un clinómetro</strong> o <strong>para qué sirve un clinómetro</strong>? 
-      El <strong>clinómetro</strong> es una herramienta clave para medir ángulos de inclinación y pendientes, 
-      indispensable en campos como la geología, la ingeniería y la topografía. Desde los tradicionales hasta 
-      los modernos <strong>clinómetros digitales</strong>, esta guía completa explora todo sobre el 
-      <strong>clinómetro</strong>: su historia, funcionamiento, aplicaciones y tendencias tecnológicas.
-    </p>
-
-    <h2 id="tabla-de-contenidos" className="text-2xl font-semibold mt-8 mb-4">Tabla de Contenidos</h2>
-    <ul>
-      <li><a href="#qué-es-un-clinómetro">¿Qué es un Clinómetro?</a></li>
-      <li><a href="#historia-del-clinómetro">Historia del Clinómetro</a></li>
-      <li><a href="#partes-y-funcionamiento-del-clinómetro">Partes y Funcionamiento del Clinómetro</a></li>
-      <li><a href="#tipos-de-clinómetros">Tipos de Clinómetros</a></li>
-      <li><a href="#para-qué-sirve-un-clinómetro">Para Qué Sirve un Clinómetro: Aplicaciones</a></li>
-      <li><a href="#clinómetro-digital">Clinómetro Digital: La Evolución Tecnológica</a></li>
-      <li><a href="#cómo-usar-un-clinómetro">Cómo Usar un Clinómetro: Guía Práctica</a></li>
-      <li><a href="#ventajas-y-limitaciones">Ventajas y Limitaciones del Clinómetro</a></li>
-      <li><a href="#tabla-comparación">Tabla de Comparación: Tradicional vs. Digital</a></li>
-      <li><a href="#conclusión">Conclusión</a></li>
-    </ul>
-
-    <h2 id="qué-es-un-clinómetro" className="text-2xl font-semibold mt-8 mb-4">¿Qué es un Clinómetro?</h2>
-    <p>
-      Un <strong>clinómetro</strong> es un instrumento diseñado para medir el <strong>ángulo de inclinación</strong> 
-      o <strong>pendiente</strong> de una superficie respecto a la vertical o la horizontal. También conocido como 
-      inclinómetro, el <strong>clinómetro</strong> es esencial en disciplinas que requieren precisión topográfica, 
-      estructural o astronómica. Desde medir la pendiente de un terreno hasta determinar la inclinación de una estrella, 
-      el <strong>clinómetro</strong> combina simplicidad y exactitud.
-    </p>
-    <p>
-      <strong>Que es un clinómetro</strong> en términos simples? Es una herramienta que ayuda a calcular cuánto 
-      se desvía un objeto o superficie de la línea vertical, expresado en grados, minutos o segundos. Su versatilidad 
-      lo hace indispensable tanto para profesionales como para aficionados.
-    </p>
-  `;
-  
-  // Process intro to add homepage link within first 200 words
-  const processedIntro = insertHomepageLink(articleIntro);
-  
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
@@ -85,6 +38,8 @@ const ClinometroBlogPost: React.FC = () => {
           </div>
 
           <div className="prose prose-lg max-w-none">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo</h1>
+            
             <div className="relative rounded-lg overflow-hidden mb-8">
               <img 
                 src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" 
@@ -96,8 +51,41 @@ const ClinometroBlogPost: React.FC = () => {
               </div>
             </div>
 
-            {/* Render processed intro with internal links */}
-            <div dangerouslySetInnerHTML={{ __html: processedIntro }} />
+            <p className="lead">
+              ¿Te preguntas <strong>qué es un clinómetro</strong> o <strong>para qué sirve un clinómetro</strong>? 
+              El <strong>clinómetro</strong> es una herramienta clave para medir ángulos de inclinación y pendientes, 
+              indispensable en campos como la geología, la ingeniería y la topografía. Desde los tradicionales hasta 
+              los modernos <strong>clinómetros digitales</strong>, esta guía completa explora todo sobre el 
+              <strong>clinómetro</strong>: su historia, funcionamiento, aplicaciones y tendencias tecnológicas.
+            </p>
+
+            <h2 id="tabla-de-contenidos" className="text-2xl font-semibold mt-8 mb-4">Tabla de Contenidos</h2>
+            <ul>
+              <li><a href="#qué-es-un-clinómetro">¿Qué es un Clinómetro?</a></li>
+              <li><a href="#historia-del-clinómetro">Historia del Clinómetro</a></li>
+              <li><a href="#partes-y-funcionamiento-del-clinómetro">Partes y Funcionamiento del Clinómetro</a></li>
+              <li><a href="#tipos-de-clinómetros">Tipos de Clinómetros</a></li>
+              <li><a href="#para-qué-sirve-un-clinómetro">Para Qué Sirve un Clinómetro: Aplicaciones</a></li>
+              <li><a href="#clinómetro-digital">Clinómetro Digital: La Evolución Tecnológica</a></li>
+              <li><a href="#cómo-usar-un-clinómetro">Cómo Usar un Clinómetro: Guía Práctica</a></li>
+              <li><a href="#ventajas-y-limitaciones">Ventajas y Limitaciones del Clinómetro</a></li>
+              <li><a href="#tabla-comparación">Tabla de Comparación: Tradicional vs. Digital</a></li>
+              <li><a href="#conclusión">Conclusión</a></li>
+            </ul>
+
+            <h2 id="qué-es-un-clinómetro" className="text-2xl font-semibold mt-8 mb-4">¿Qué es un Clinómetro?</h2>
+            <p>
+              Un <strong>clinómetro</strong> es un instrumento diseñado para medir el <strong>ángulo de inclinación</strong> 
+              o <strong>pendiente</strong> de una superficie respecto a la vertical o la horizontal. También conocido como 
+              inclinómetro, el <strong>clinómetro</strong> es esencial en disciplinas que requieren precisión topográfica, 
+              estructural o astronómica. Desde medir la pendiente de un terreno hasta determinar la inclinación de una estrella, 
+              el <strong>clinómetro</strong> combina simplicidad y exactitud.
+            </p>
+            <p>
+              <strong>Que es un clinómetro</strong> en términos simples? Es una herramienta que ayuda a calcular cuánto 
+              se desvía un objeto o superficie de la línea vertical, expresado en grados, minutos o segundos. Su versatilidad 
+              lo hace indispensable tanto para profesionales como para aficionados.
+            </p>
 
             <div className="my-8 flex justify-center">
               <img 
@@ -387,9 +375,6 @@ const ClinometroBlogPost: React.FC = () => {
               y lleva tus mediciones al siguiente nivel hoy mismo!
             </p>
           </div>
-          
-          {/* Related Articles Component */}
-          <RelatedArticles currentArticleId={articleId} />
         </div>
       </main>
 

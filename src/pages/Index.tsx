@@ -9,7 +9,6 @@ import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
 import HomeContent from '@/components/HomeContent';
-import FeaturedArticles from '@/components/FeaturedArticles';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -117,15 +116,6 @@ const Index = () => {
                 <Card className="bg-white p-6">
                   <CardContent className="p-0">
                     <HomeContent />
-                  </CardContent>
-                </Card>
-              </div>
-              
-              {/* Featured Articles Section */}
-              <div className="mb-10">
-                <Card className="bg-white p-6">
-                  <CardContent className="p-0">
-                    <FeaturedArticles />
                   </CardContent>
                 </Card>
               </div>

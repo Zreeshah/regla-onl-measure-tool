@@ -1,12 +1,18 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { IdCard, AlertTriangle, FileText, MapPin, Phone, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const LostDNIBlogPost: React.FC = () => {
+  const currentUrl = "/blog/perdido-dni";
+  const relatedArticles = getRelatedArticles(currentUrl, 2);
+  const homepageLink = createContextualLink(relatedArticles[0]);
+  
   return (
     <>
       <Helmet>
@@ -20,12 +26,21 @@ const LostDNIBlogPost: React.FC = () => {
           content="he perdido el DNI, perdí el DNI, qué hacer si he perdido el DNI, renovar DNI perdido, denuncia pérdida DNI, DNI urgente" 
         />
         <link rel="canonical" href="https://regla.onl/blog/perdido-dni" />
+        
+        <link rel="preconnect" href="https://picsum.photos" />
+        <link rel="dns-prefetch" href="https://picsum.photos" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />
         
         <main className="flex-grow container py-8">
+          <Link to="/" className="inline-flex items-center text-ruler-primary mb-6 hover:underline mx-4">
+            <ArrowLeft size={16} className="mr-1" />
+            Volver a la página principal
+          </Link>
+          
           <Card className="mb-8">
             <CardContent className="p-6">
               <div className="mb-6">
@@ -33,6 +48,9 @@ const LostDNIBlogPost: React.FC = () => {
                   src="https://picsum.photos/seed/lostdni/800/400" 
                   alt="Persona preocupada porque ha perdido su DNI" 
                   className="w-full h-64 object-cover rounded-lg mb-4"
+                  loading="lazy"
+                  width="800" 
+                  height="400"
                 />
                 <p className="text-sm text-gray-500 italic">Imagen representativa: Pérdida de DNI</p>
               </div>
@@ -40,7 +58,7 @@ const LostDNIBlogPost: React.FC = () => {
               <h1 className="text-3xl font-bold mb-4 text-gray-800">He Perdido el DNI: Qué Hacer y Cómo Renovar el DNI si lo He Perdido</h1>
               
               <p className="mb-6 text-gray-700">
-                ¿<strong>He perdido el DNI</strong> y no sabes qué hacer? Perder el Documento Nacional de Identidad (DNI) puede ser estresante, especialmente si <strong>lo necesitas urgente</strong>. En esta guía completa, te explicamos paso a paso <strong>qué hacer si he perdido el DNI</strong>, cómo denunciar la pérdida o robo, y cómo renovarlo rápidamente. Con información actualizada y consejos prácticos, podrás resolver esta situación de forma eficiente. ¡Sigue leyendo para recuperar tu DNI sin complicaciones!
+                ¿<strong>He perdido el DNI</strong> y no sabes qué hacer? Perder el Documento Nacional de Identidad (DNI) puede ser estresante, especialmente si <strong>lo necesitas urgente</strong>. <span dangerouslySetInnerHTML={{ __html: homepageLink }} /> En esta guía completa, te explicamos paso a paso <strong>qué hacer si he perdido el DNI</strong>, cómo denunciar la pérdida o robo, y cómo renovarlo rápidamente.
               </p>
               
               <div className="mb-8">
@@ -300,7 +318,9 @@ const LostDNIBlogPost: React.FC = () => {
               </section>
               
               <section id="conclusion" className="mb-4">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-800">Conclusión</h2>
+                <RelatedArticlesSection currentUrl={currentUrl} />
+                
+                <h2 className="text-2xl font-semibold mb-4 text-gray-800 mt-8">Conclusión</h2>
                 
                 <p className="mb-4 text-gray-700">
                   Si <strong>he perdido el DNI</strong>, la clave es actuar con rapidez: denuncia la pérdida o robo, solicita una cita previa y reúne los documentos necesarios para renovarlo. Ya sea en España o en el extranjero, con esta guía puedes resolver la situación sin estrés, incluso si <strong>he perdido el DNI y lo necesito urgente</strong>. Recuerda que el DNI es esencial para múltiples trámites, así que no dejes pasar el tiempo.

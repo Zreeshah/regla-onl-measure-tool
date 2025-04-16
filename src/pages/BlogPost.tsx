@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -6,9 +5,13 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft } from 'lucide-react';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();
+  const currentUrl = "/blog/buscar-dni-por-nombre";
+  const relatedArticles = getRelatedArticles(currentUrl, 2);
+  const homepageLink = createContextualLink(relatedArticles[0]);
   
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -22,6 +25,9 @@ const BlogPost: React.FC = () => {
         <meta property="og:url" content="https://regla.onl/blog/buscar-dni-por-nombre" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" />
+        
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </Helmet>
       
       <Header />
@@ -49,13 +55,16 @@ const BlogPost: React.FC = () => {
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
               alt="Persona buscando información DNI en portátil" 
               className="w-full h-72 sm:h-96 object-cover rounded-lg mb-8"
+              loading="lazy"
+              width="800"
+              height="400"
             />
             
             <article className="prose prose-sm sm:prose lg:prose-lg max-w-none">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita</h1>
               
               <p className="lead">
-                ¿Necesitas <strong>buscar DNI por nombre</strong> o <strong>DNI por nombre y apellido gratis</strong>? En esta guía te explicamos cómo encontrar el Documento Nacional de Identidad (DNI) de una persona en España de manera legal y segura. Con nuestro <strong>buscador de DNI</strong>, podrás obtener información útil como dirección, fecha de nacimiento o multas, siempre respetando la privacidad y evitando usos fraudulentos.
+                ¿Necesitas <strong>buscar DNI por nombre</strong> o <strong>DNI por nombre y apellido gratis</strong>? En esta guía te explicamos cómo encontrar el Documento Nacional de Identidad (DNI) de una persona en España de manera legal y segura. <span dangerouslySetInnerHTML={{ __html: homepageLink }} />
               </p>
               
               <p>

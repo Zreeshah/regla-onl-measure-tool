@@ -6,8 +6,14 @@ import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { RulerIcon, Clock, ArrowRight, ArrowLeft, History, Settings, Ruler, Wrench, BarChart, AreaChart } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
+import { Link } from 'react-router-dom';
 
 const MedidorProfundidadBlogPost: React.FC = () => {
+  const currentUrl = "/blog/medidor-profundidad";
+  const relatedArticles = getRelatedArticles(currentUrl, 2);
+  const homepageLink = createContextualLink(relatedArticles[0]);
+  
   return (
     <Layout>
       <Helmet>
@@ -21,9 +27,18 @@ const MedidorProfundidadBlogPost: React.FC = () => {
           content="medidor de profundidad, qué es un medidor de profundidad, instrumento para medir profundidad, indicadores de profundidad, pantalla regla virtual" 
         />
         <link rel="canonical" href="https://regla.onl/blog/medidor-profundidad" />
+        
+        <link rel="preconnect" href="https://picsum.photos" />
+        <link rel="dns-prefetch" href="https://picsum.photos" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
 
       <main className="container mx-auto py-8">
+        <Link to="/" className="inline-flex items-center text-ruler-primary mb-6 hover:underline">
+          <ArrowLeft size={16} className="mr-1" />
+          Volver a la página principal
+        </Link>
+        
         <Card className="mb-8">
           <CardContent className="p-6">
             <div className="mb-6">
@@ -31,6 +46,9 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                 src="https://picsum.photos/seed/depthgauge/800/400" 
                 alt="Medidor de Profundidad" 
                 className="w-full h-64 object-cover rounded-lg mb-4"
+                loading="lazy"
+                width="800" 
+                height="400"
               />
               <p className="text-sm text-gray-500 italic">Imagen representativa de un medidor de profundidad</p>
             </div>
@@ -38,7 +56,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
             <h1 className="text-3xl font-bold mb-4 text-gray-800">Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión</h1>
 
             <p className="mb-6 text-gray-700">
-              ¿Quieres saber <strong>qué es un medidor de profundidad</strong> y cómo puede facilitar tus proyectos? Un <strong>medidor de profundidad</strong> es un instrumento esencial para medir la profundidad de agujeros, ranuras y otros espacios con precisión. En esta guía completa, exploraremos los diferentes <strong>tipos de medidores de profundidad</strong>, sus aplicaciones en diversas industrias y cómo utilizarlos correctamente. ¡Descubre cómo este instrumento puede mejorar la exactitud en tus trabajos!
+              ¿Quieres saber <strong>qué es un medidor de profundidad</strong> y cómo puede facilitar tus proyectos? Un <strong>medidor de profundidad</strong> es un instrumento esencial para medir la profundidad de agujeros, ranuras y otros espacios con precisión. <span dangerouslySetInnerHTML={{ __html: homepageLink }} /> En esta guía completa, exploraremos los diferentes <strong>tipos de medidores de profundidad</strong>, sus aplicaciones en diversas industrias y cómo utilizarlos correctamente.
             </p>
 
             <div className="mb-8">
@@ -262,7 +280,9 @@ const MedidorProfundidadBlogPost: React.FC = () => {
             </section>
 
             <section id="conclusion" className="mb-4">
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Conclusión</h2>
+              <RelatedArticlesSection currentUrl={currentUrl} />
+              
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 mt-8">Conclusión</h2>
 
               <p className="mb-4 text-gray-700">
                 El <strong>medidor de profundidad</strong> es una herramienta indispensable para cualquier profesional que requiera mediciones precisas de profundidades. Conocer los diferentes <strong>tipos de medidores de profundidad</strong>, cómo utilizarlos correctamente y cómo mantenerlos en buen estado te permitirá mejorar la calidad y exactitud de tus trabajos.

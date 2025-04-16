@@ -1,12 +1,18 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const NumAdimensionalesBlogPost = () => {
+  const currentUrl = "/blog/numeros-adimensionales";
+  const relatedArticles = getRelatedArticles(currentUrl, 2);
+  const homepageLink = createContextualLink(relatedArticles[0]);
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
@@ -18,11 +24,20 @@ const NumAdimensionalesBlogPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://regla.onl/blog/numeros-adimensionales" />
         <link rel="canonical" href="https://regla.onl/blog/numeros-adimensionales" />
+        
+        <link rel="preconnect" href="https://source.unsplash.com" />
+        <link rel="dns-prefetch" href="https://source.unsplash.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
 
       <Header />
 
       <main className="flex-grow container mx-auto px-4 py-8">
+        <Link to="/" className="inline-flex items-center text-ruler-primary mb-6 hover:underline">
+          <ArrowLeft size={16} className="mr-1" />
+          Volver a la página principal
+        </Link>
+        
         <article className="max-w-4xl mx-auto">
           {/* Featured Image */}
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
@@ -30,6 +45,9 @@ const NumAdimensionalesBlogPost = () => {
               src="https://source.unsplash.com/1485827404703-89b55fcc595e" 
               alt="Representación de números adimensionales" 
               className="w-full h-auto object-cover"
+              loading="lazy"
+              width="800" 
+              height="400"
             />
           </div>
 
@@ -37,7 +55,7 @@ const NumAdimensionalesBlogPost = () => {
           
           <div className="prose prose-lg max-w-none mb-8">
             <p className="lead text-xl mb-6">
-              ¿Te has preguntado <strong>qué es adimensional</strong> o cuál es el <strong>adimensional significado</strong>? Los <strong>números adimensionales</strong> son herramientas esenciales en física, ingeniería y ciencias aplicadas, ya que permiten analizar fenómenos sin depender de unidades de medida. En esta guía completa, exploraremos en profundidad los <strong>números adimensionales</strong>, su importancia, aplicaciones y ejemplos claros. Con un enfoque optimizado para SEO, esta información te ayudará a dominar el concepto de <strong>adimensional</strong> y aplicarlo con confianza. ¡Sigue leyendo para descubrir más!
+              ¿Te has preguntado <strong>qué es adimensional</strong> o cuál es el <strong>adimensional significado</strong>? Los <strong>números adimensionales</strong> son herramientas esenciales en física, ingeniería y ciencias aplicadas, ya que permiten analizar fenómenos sin depender de unidades de medida. <span dangerouslySetInnerHTML={{ __html: homepageLink }} /> En esta guía completa, exploraremos en profundidad los <strong>números adimensionales</strong>, su importancia, aplicaciones y ejemplos claros.
             </p>
 
             <h2 id="qué-es-un-número-adimensional" className="text-2xl font-semibold mt-8 mb-4">¿Qué es un Número Adimensional?</h2>
@@ -242,8 +260,15 @@ const NumAdimensionalesBlogPost = () => {
             <p>Estas ventajas hacen que los <strong>números adimensionales</strong> sean una herramienta poderosa en cualquier campo técnico.</p>
 
             <h2 id="conclusión" className="text-2xl font-semibold mt-8 mb-4">Conclusión</h2>
-            <p>Los <strong>números adimensionales</strong> son mucho más que simples relaciones matemáticas: son la clave para entender y analizar fenómenos físicos sin las limitaciones de las unidades de medida. Desde el <strong>número de Reynolds</strong> hasta el <strong>número de Péclet</strong>, estos valores permiten simplificar cálculos, diseñar sistemas eficientes y predecir comportamientos en disciplinas como la ingeniería, la física y la química. Con los <strong>adimensional ejemplos</strong> y aplicaciones de esta guía, ahora puedes comprender <strong>qué es adimensional</strong> y cómo usarlo en la práctica.</p>
-            <p>¿Quieres seguir aprendiendo sobre conceptos científicos? Explora nuestro sitio para descubrir más guías sobre física, matemáticas y tecnología. ¡Conviértete en un experto en <strong>números adimensionales</strong> hoy mismo!</p>
+            
+            <RelatedArticlesSection currentUrl={currentUrl} />
+            
+            <p className="mt-6">
+              Los <strong>números adimensionales</strong> son mucho más que simples relaciones matemáticas: son la clave para entender y analizar fenómenos físicos sin las limitaciones de las unidades de medida. Desde el <strong>número de Reynolds</strong> hasta el <strong>número de Péclet</strong>, estos valores permiten simplificar cálculos, diseñar sistemas eficientes y predecir comportamientos en disciplinas como la ingeniería, la física y la química. Con los <strong>adimensional ejemplos</strong> y aplicaciones de esta guía, ahora puedes comprender <strong>qué es adimensional</strong> y cómo usarlo en la práctica.
+            </p>
+            <p>
+              ¿Quieres seguir aprendiendo sobre conceptos científicos? Explora nuestro sitio para descubrir más guías sobre física, matemáticas y tecnología. ¡Conviértete en un experto en <strong>números adimensionales</strong> hoy mismo!
+            </p>
           </div>
         </article>
       </main>

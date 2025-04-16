@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft } from 'lucide-react';
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import CanonicalLink from '@/components/CanonicalLink';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();
@@ -20,7 +22,6 @@ const BlogPost: React.FC = () => {
         <title>Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita | Regla.Onl</title>
         <meta name="description" content="Aprende cómo buscar DNI por nombre y apellido en España de forma gratuita y legal. Guía completa con métodos efectivos para verificar identidad, consultar multas y más." />
         <meta name="keywords" content="buscar DNI por nombre, DNI por nombre y apellido gratis, buscador de DNI, buscar DNI España" />
-        <link rel="canonical" href="https://regla.onl/blog/buscar-dni-por-nombre" />
         <meta property="og:title" content="Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita" />
         <meta property="og:description" content="Aprende cómo buscar DNI por nombre y apellido en España de forma gratuita y legal. Guía completa con métodos efectivos." />
         <meta property="og:url" content="https://regla.onl/blog/buscar-dni-por-nombre" />
@@ -30,6 +31,9 @@ const BlogPost: React.FC = () => {
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </Helmet>
+      
+      {/* Adding the CanonicalLink component for dynamic canonical URLs */}
+      <CanonicalLink />
       
       <Header />
       

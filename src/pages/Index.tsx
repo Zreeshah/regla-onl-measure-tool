@@ -12,6 +12,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Ruler as RulerIcon, Maximize, Square, Pencil, Book, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { blogArticles } from '@/utils/internalLinks';
+import CanonicalLink from '@/components/CanonicalLink';
 
 // Lazy load components that aren't immediately visible
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
@@ -52,7 +53,6 @@ const Index = () => {
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content="regla online, regla virtual, regla tamaño real, regla online cm, cinta metrica online" />
         <html lang="es" />
-        <link rel="canonical" href="https://regla.onl" />
         
         {/* Core Web Vitals optimizations */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -96,6 +96,9 @@ const Index = () => {
           `}
         </script>
       </Helmet>
+      
+      {/* Adding the CanonicalLink component for dynamic canonical URLs */}
+      <CanonicalLink />
       
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
@@ -236,4 +239,3 @@ const Index = () => {
 };
 
 export default Index;
-

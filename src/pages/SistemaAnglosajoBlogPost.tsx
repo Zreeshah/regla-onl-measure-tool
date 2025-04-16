@@ -74,7 +74,7 @@ const SistemaAnglosajoBlogPost = () => {
           <p>El <strong>sistema anglosajón</strong> tiene raíces profundas en la historia británica:</p>
 
           <div className="my-6 rounded-lg overflow-hidden shadow-md">
-            <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&h=400" alt="Historia del Sistema Anglosajón" className="w-full h-auto object-cover" />
+            <img alt="Historia del Sistema Anglosajón" className="w-full h-auto object-cover" src="/lovable-uploads/2bfee74f-0a29-4825-ba3c-d22d5a01c53d.jpg" />
           </div>
 
           <ul className="list-disc pl-6 my-4 space-y-2">

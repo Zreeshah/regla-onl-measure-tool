@@ -291,7 +291,7 @@ const MKSSystemBlogPost: React.FC = () => {
             </h2>
             
             <div className="mb-6">
-              <img src="/placeholder.svg" alt="Aplicaciones del sistema MKS en la ciencia y la ingeniería" className="w-full h-auto rounded-lg shadow-md" />
+              
               <p className="text-sm text-gray-600 mt-2">Aplicaciones prácticas del sistema MKS en diversos campos</p>
             </div>
             

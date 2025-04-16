@@ -16,14 +16,17 @@ const BlogPost: React.FC = () => {
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
   
+  // Unique meta description for this blog post
+  const metaDescription = "Aprende cómo buscar DNI por nombre y apellido en España de forma gratuita y legal. Guía completa con métodos efectivos para verificar identidad, consultar multas y más.";
+  
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Helmet>
         <title>Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita | Regla.Onl</title>
-        <meta name="description" content="Aprende cómo buscar DNI por nombre y apellido en España de forma gratuita y legal. Guía completa con métodos efectivos para verificar identidad, consultar multas y más." />
+        <meta name="description" content={metaDescription} />
         <meta name="keywords" content="buscar DNI por nombre, DNI por nombre y apellido gratis, buscador de DNI, buscar DNI España" />
         <meta property="og:title" content="Buscar DNI por Nombre y Apellido en España: Guía Completa y Gratuita" />
-        <meta property="og:description" content="Aprende cómo buscar DNI por nombre y apellido en España de forma gratuita y legal. Guía completa con métodos efectivos." />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content="https://regla.onl/blog/buscar-dni-por-nombre" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" />

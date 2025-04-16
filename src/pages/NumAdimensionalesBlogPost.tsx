@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,20 +8,24 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import CanonicalLink from '@/components/CanonicalLink';
 
 const NumAdimensionalesBlogPost = () => {
   const currentUrl = "/blog/numeros-adimensionales";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
   
+  // Unique meta description for this blog post
+  const metaDescription = "Descubre qué es adimensional, el significado de números adimensionales y ejemplos prácticos. Guía completa de números adimensionales en física e ingeniería.";
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Números Adimensionales: Qué Son, Significado y Ejemplos Prácticos</title>
-        <meta name="description" content="Descubre qué es adimensional, el significado de números adimensionales y ejemplos prácticos. Guía completa de números adimensionales en física e ingeniería." />
+        <meta name="description" content={metaDescription} />
         <meta name="keywords" content="números adimensionales, qué es adimensional, adimensional significado, número de Reynolds, número de Mach, adimensional ejemplos" />
         <meta property="og:title" content="Números Adimensionales: Guía Completa y Ejemplos" />
-        <meta property="og:description" content="Todo sobre los números adimensionales: definición, ejemplos y aplicaciones en física e ingeniería." />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://regla.onl/blog/numeros-adimensionales" />
         <link rel="canonical" href="https://regla.onl/blog/numeros-adimensionales" />
@@ -31,6 +34,8 @@ const NumAdimensionalesBlogPost = () => {
         <link rel="dns-prefetch" href="https://source.unsplash.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
+      
+      <CanonicalLink />
 
       <Header />
 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -6,8 +7,7 @@ import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { RulerIcon, Clock, ArrowRight, ArrowLeft, History, Settings, Ruler, Wrench, BarChart, AreaChart } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
-import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
 import { Link } from 'react-router-dom';
 
 const MedidorProfundidadBlogPost: React.FC = () => {
@@ -27,7 +27,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
           name="keywords" 
           content="medidor de profundidad, qué es un medidor de profundidad, instrumento para medir profundidad, indicadores de profundidad, pantalla regla virtual" 
         />
-        <link rel="canonical" href="https://regla.onl/blog/medidor-profundidad" />
+        <link rel="canonical" href="/blog/medidor-profundidad" />
         
         <link rel="preconnect" href="https://picsum.photos" />
         <link rel="dns-prefetch" href="https://picsum.photos" />

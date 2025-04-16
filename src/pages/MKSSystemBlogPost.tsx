@@ -4,13 +4,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calculator, Ruler, Scale, MoveHorizontal, Clock, Zap, Atom } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+
 const MKSSystemBlogPost: React.FC = () => {
   return <div className="min-h-screen flex flex-col">
       <Helmet>
-        <title>Sistema MKS: Qué es, Unidades y su Importancia en la Medición | Regla.onl</title>
+        <title>Sistema MKS: Qué es, Unidades y su Importancia en la Medición</title>
         <meta name="description" content="Aprende qué es el sistema MKS, sus unidades básicas y derivadas, y cómo se aplica en la ciencia e ingeniería. Guía completa sobre la medición con el sistema Metro-Kilogramo-Segundo." />
         <meta name="keywords" content="sistema MKS, que significa MKS, sistema de unidades MKS, longitud MKS, potencia en el sistema MKS, Sistema Internacional o MKS" />
-        <link rel="canonical" href="https://regla.onl/blog/sistema-mks" />
+        <link rel="canonical" href="/blog/sistema-mks" />
       </Helmet>
 
       <Header />
@@ -474,4 +475,5 @@ const MKSSystemBlogPost: React.FC = () => {
       <Footer />
     </div>;
 };
+
 export default MKSSystemBlogPost;

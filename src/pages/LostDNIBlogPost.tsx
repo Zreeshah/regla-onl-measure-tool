@@ -1,12 +1,10 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { IdCard, AlertTriangle, FileText, MapPin, Phone, ShieldAlert, CheckCircle2 } from 'lucide-react';
-import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
-import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
@@ -27,7 +25,7 @@ const LostDNIBlogPost: React.FC = () => {
           name="keywords" 
           content="he perdido el DNI, perdí el DNI, qué hacer si he perdido el DNI, renovar DNI perdido, denuncia pérdida DNI, DNI urgente" 
         />
-        <link rel="canonical" href="https://regla.onl/blog/perdido-dni" />
+        <link rel="canonical" href="/blog/perdido-dni" />
         
         <link rel="preconnect" href="https://picsum.photos" />
         <link rel="dns-prefetch" href="https://picsum.photos" />

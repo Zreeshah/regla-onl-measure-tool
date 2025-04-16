@@ -34,7 +34,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
         <Card className="mb-8">
           <CardContent className="p-6">
             <div className="mb-6">
-              <img alt="Medidor de Profundidad" className="w-full h-64 object-cover rounded-lg mb-4" loading="lazy" width="800" height="400" src="/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg" />
+              <img alt="Medidor de Profundidad" loading="lazy" width="800" height="400" src="/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg" className="w-full h-64 rounded-lg mb-4 object-contain" />
               <p className="text-sm text-gray-500 italic">Imagen representativa de un medidor de profundidad</p>
             </div>
 
@@ -71,7 +71,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
               </p>
 
               <div className="bg-blue-50 p-4 rounded-lg my-6">
-                <img alt="Medidor de profundidad en uso" className="w-full h-48 object-cover rounded-lg mb-2" src="/lovable-uploads/ffdb12f2-5be7-4807-ac03-92d6bb79f171.jpg" />
+                <img alt="Medidor de profundidad en uso" src="/lovable-uploads/ffdb12f2-5be7-4807-ac03-92d6bb79f171.jpg" className="w-full h-48 rounded-lg mb-2 object-contain" />
                 <p className="text-sm text-gray-600 italic">Un medidor de profundidad en acción</p>
               </div>
 

@@ -6,12 +6,11 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Search, Database, AlertTriangle, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import CanonicalLink from '@/components/CanonicalLink';
 
 const SaberDNIBlogPost: React.FC = () => {
   const { t } = useLanguage();
   
-  // Create a unique meta description for this blog post
+  // Create a shortened meta description (150-160 characters max)
   const metaDescription = "Descubre cómo saber el DNI de una persona en España de forma legal. Guía completa con métodos verificados para consultar el DNI por nombre y apellidos.";
   
   return (
@@ -50,8 +49,6 @@ const SaberDNIBlogPost: React.FC = () => {
           `}
         </script>
       </Helmet>
-      
-      <CanonicalLink />
       
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />

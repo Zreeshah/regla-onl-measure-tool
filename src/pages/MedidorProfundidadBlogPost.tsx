@@ -9,15 +9,11 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
-import CanonicalLink from '@/components/CanonicalLink';
 
 const MedidorProfundidadBlogPost: React.FC = () => {
   const currentUrl = "/blog/medidor-profundidad";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
-  
-  // Unique meta description for this blog post
-  const metaDescription = "Aprende qué es un medidor de profundidad, sus tipos, aplicaciones y cómo usarlo correctamente en diferentes industrias como ingeniería, carpintería y fabricación.";
   
   return (
     <Layout>
@@ -25,7 +21,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
         <title>Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión</title>
         <meta 
           name="description" 
-          content={metaDescription} 
+          content="Aprende qué es un medidor de profundidad, sus tipos, aplicaciones y cómo usarlo correctamente en diferentes industrias como ingeniería, carpintería y fabricación." 
         />
         <meta 
           name="keywords" 
@@ -37,8 +33,6 @@ const MedidorProfundidadBlogPost: React.FC = () => {
         <link rel="dns-prefetch" href="https://picsum.photos" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
-      
-      <CanonicalLink />
 
       <main className="container mx-auto py-8">
         <Link to="/" className="inline-flex items-center text-ruler-primary mb-6 hover:underline">

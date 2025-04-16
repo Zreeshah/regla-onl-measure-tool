@@ -1,20 +1,11 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  ChevronRight, 
-  Ruler, 
-  ArrowRight,
-  BarChart3, 
-  Scale
-} from 'lucide-react';
+import { ChevronRight, Ruler, ArrowRight, BarChart3, Scale } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Separator } from "@/components/ui/separator";
-
 const SistemaAnglosajoBlogPost = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Sistema Anglosajón de Unidades: Qué es, Unidades y Conversiones | Regla.onl</title>
         <meta name="description" content="Descubre qué es el sistema anglosajón de unidades, sus principales medidas, historia y cómo convertirlas al sistema métrico con ejemplos prácticos." />
@@ -42,11 +33,7 @@ const SistemaAnglosajoBlogPost = () => {
           <h1 className="text-3xl font-bold mb-6 text-ruler-primary">Sistema Anglosajón de Unidades: Qué es, Unidades y Conversiones</h1>
 
           <div className="my-6 rounded-lg overflow-hidden shadow-md">
-            <img 
-              src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?auto=format&fit=crop&w=1200&h=500" 
-              alt="Sistema Anglosajón de Unidades" 
-              className="w-full h-auto object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?auto=format&fit=crop&w=1200&h=500" alt="Sistema Anglosajón de Unidades" className="w-full h-auto object-cover" />
             <p className="text-xs text-gray-500 p-2 bg-gray-100">Imagen: El sistema anglosajón tiene un origen histórico y sigue siendo relevante en países como Estados Unidos y Reino Unido.</p>
           </div>
 
@@ -87,11 +74,7 @@ const SistemaAnglosajoBlogPost = () => {
           <p>El <strong>sistema anglosajón</strong> tiene raíces profundas en la historia británica:</p>
 
           <div className="my-6 rounded-lg overflow-hidden shadow-md">
-            <img 
-              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&h=400" 
-              alt="Historia del Sistema Anglosajón" 
-              className="w-full h-auto object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&h=400" alt="Historia del Sistema Anglosajón" className="w-full h-auto object-cover" />
           </div>
 
           <ul className="list-disc pl-6 my-4 space-y-2">
@@ -214,17 +197,7 @@ const SistemaAnglosajoBlogPost = () => {
             </div>
           </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg my-6 text-center overflow-x-auto">
-            <pre className="whitespace-pre-wrap text-left">
-{`   1 Milla  |================| 1.609 km
-   1 Yarda  |====| 0.914 m
-   1 Pie    |=| 0.305 m
-   1 Pulgada|| 0.0254 m
-            +-----------------
-            Sistema Anglosajón   Sistema Métrico`}
-            </pre>
-            <p className="text-sm text-gray-600 mt-2">Gráfico comparativo de unidades de longitud entre sistema anglosajón y métrico</p>
-          </div>
+          
 
           <p>Este esquema visualiza cómo las unidades de longitud se relacionan entre sistemas.</p>
 
@@ -233,11 +206,7 @@ const SistemaAnglosajoBlogPost = () => {
           </h2>
 
           <div className="my-6 rounded-lg overflow-hidden shadow-md">
-            <img 
-              src="https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&w=1200&h=400" 
-              alt="Aplicaciones del Sistema Anglosajón" 
-              className="w-full h-auto object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&w=1200&h=400" alt="Aplicaciones del Sistema Anglosajón" className="w-full h-auto object-cover" />
           </div>
 
           <p>El <strong>sistema anglosajón</strong> se usa ampliamente en:</p>
@@ -443,8 +412,6 @@ const SistemaAnglosajoBlogPost = () => {
       </main>
 
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default SistemaAnglosajoBlogPost;

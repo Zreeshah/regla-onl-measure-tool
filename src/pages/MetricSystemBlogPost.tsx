@@ -7,12 +7,12 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { Square, Triangle, Circle, ArrowDown, ArrowUp } from 'lucide-react';
+
 const MetricSystemBlogPost: React.FC = () => {
   const {
     t
   } = useLanguage();
 
-  // Sample data for conversion examples chart
   const conversionData = [{
     name: 'km',
     value: 1000,
@@ -42,6 +42,7 @@ const MetricSystemBlogPost: React.FC = () => {
     value: 0.001,
     label: 'Milímetro'
   }];
+
   return <>
       <Helmet>
         <title>Sistema Métrico Decimal: Guía Completa | Regla.onl</title>
@@ -430,7 +431,7 @@ const MetricSystemBlogPost: React.FC = () => {
                 Convertir 5 metros a decámetros: Subes 1 nivel (m → dam), divides por 10 → <strong>5 ÷ 10 = 0.5 dam</strong>.
               </li>
               <li className="mb-2">
-                Convertir 3 hectogramos a miligramos: Bajas 4 niveles (hg → g → dg → cg → mg), multiplicas por 10⁴ → <strong>3 × 10,000 = 30,000 mg</strong>.
+                Convertir 3 hectogramos a miligramos: Bajas 4 niveles (hg → g → dg → cg → mg), multiplica por 10⁴ → <strong>3 × 10,000 = 30,000 mg</strong>.
               </li>
             </ul>
             
@@ -441,20 +442,24 @@ const MetricSystemBlogPost: React.FC = () => {
             
             <div className="mx-4 my-6 p-6 bg-white rounded-lg shadow-md w-full max-w-3xl overflow-hidden py-[24px] px-[86px]">
               <h3 className="text-xl font-semibold mb-4">Gráfico de equivalencia entre unidades de longitud</h3>
-              <div className="mx-4 my-6 p-4 sm:mx-6 sm:p-6 bg-white rounded-md shadow-sm w-full max-w-3xl sm:max-w-4xl overflow-hidden">
-                <ChartContainer config={{
-                primary: {
-                  label: "Equivalencia en metros"
-                }
-              }}>
-                  <BarChart data={conversionData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis scale="log" domain={[0.0001, 10000]} ticks={[0.001, 0.01, 0.1, 1, 10, 100, 1000]} tickFormatter={value => value.toString()} />
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                    <Bar dataKey="value" fill="#8884d8" name="Equivalencia" />
-                  </BarChart>
-                </ChartContainer>
+              <div className="bg-white rounded-lg shadow-sm p-4 overflow-hidden">
+                <div className="w-full h-[300px] md:h-[400px]">
+                  <ChartContainer config={{
+                    primary: {
+                      label: "Equivalencia en metros"
+                    }
+                  }}>
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={conversionData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis scale="log" domain={[0.0001, 10000]} ticks={[0.001, 0.01, 0.1, 1, 10, 100, 1000]} tickFormatter={value => value.toString()} />
+                        <ChartTooltip content={<ChartTooltipContent />} />
+                        <Bar dataKey="value" fill="#8884d8" name="Equivalencia" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </ChartContainer>
+                </div>
               </div>
               <p className="text-sm text-center mt-2">Escala logarítmica para mejor visualización</p>
             </div>
@@ -621,4 +626,5 @@ const MetricSystemBlogPost: React.FC = () => {
       </div>
     </>;
 };
+
 export default MetricSystemBlogPost;

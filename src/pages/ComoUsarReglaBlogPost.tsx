@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -6,20 +5,19 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft, Ruler, ChevronRight } from 'lucide-react';
-
 const ComoUsarReglaBlogPost: React.FC = () => {
   const {
     t
   } = useLanguage();
   return <div className="flex flex-col min-h-screen bg-gray-50">
       <Helmet>
-        <title>Cómo Usar una Regla: Guía Completa para Medir con Precisión</title>
+        <title>Cómo Usar una Regla: Guía Completa para Medir con Precisión | Regla.Onl</title>
         <meta name="description" content="Aprende cómo se usa la regla correctamente, desde las partes básicas hasta técnicas avanzadas. Guía completa sobre reglas de medir físicas y online para resultados precisos." />
         <meta name="keywords" content="cómo se usa la regla, regla de medir, partes de una regla, regla online, uso de regla" />
-        <link rel="canonical" href="/blog/como-usar-regla" />
+        <link rel="canonical" href="https://regla.onl/blog/como-usar-regla" />
         <meta property="og:title" content="Cómo Usar una Regla: Guía Completa para Medir con Precisión" />
         <meta property="og:description" content="Aprende cómo usar una regla correctamente, desde conceptos básicos hasta técnicas avanzadas de medición." />
-        <meta property="og:url" content="/blog/como-usar-regla" />
+        <meta property="og:url" content="https://regla.onl/blog/como-usar-regla" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1564939558297-fc396f18e5c7" />
       </Helmet>
@@ -432,5 +430,4 @@ const ComoUsarReglaBlogPost: React.FC = () => {
       <Footer />
     </div>;
 };
-
 export default ComoUsarReglaBlogPost;

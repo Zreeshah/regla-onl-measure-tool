@@ -103,7 +103,7 @@ const MKSSystemBlogPost: React.FC = () => {
             <h3 className="text-xl font-semibold mt-6 mb-3">Orígenes del Sistema Métrico</h3>
             
             <div className="mb-4">
-              <img src="/placeholder.svg" alt="Evolución histórica de los sistemas de medida" className="w-full h-auto rounded-lg shadow-md" />
+              <img alt="Evolución histórica de los sistemas de medida" src="/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg" className="w-full h-auto rounded-lg shadow-md object-scale-down" />
               <p className="text-sm text-gray-600 mt-2">Evolución de los sistemas de medida a lo largo de la historia</p>
             </div>
             

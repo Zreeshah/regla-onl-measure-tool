@@ -5,7 +5,8 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft } from 'lucide-react';
-import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
+import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
+import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();

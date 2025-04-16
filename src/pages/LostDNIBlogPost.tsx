@@ -1,10 +1,12 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { IdCard, AlertTriangle, FileText, MapPin, Phone, ShieldAlert, CheckCircle2 } from 'lucide-react';
-import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
+import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
+import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 

@@ -7,12 +7,10 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { Square, Triangle, Circle, ArrowDown, ArrowUp } from 'lucide-react';
-
 const MetricSystemBlogPost: React.FC = () => {
   const {
     t
   } = useLanguage();
-
   const conversionData = [{
     name: 'km',
     value: 1000,
@@ -42,7 +40,6 @@ const MetricSystemBlogPost: React.FC = () => {
     value: 0.001,
     label: 'Milímetro'
   }];
-
   return <>
       <Helmet>
         <title>Sistema Métrico Decimal: Guía Completa | Regla.onl</title>
@@ -61,7 +58,7 @@ const MetricSystemBlogPost: React.FC = () => {
         <main className="flex-grow container py-8">
           <article className="prose prose-lg max-w-none">
             <div className="mb-8">
-              <img src="/placeholder.svg" alt="Sistema Métrico Decimal" className="w-full h-64 md:h-96 object-cover rounded-lg shadow-md" />
+              <img alt="Sistema Métrico Decimal" className="w-full h-64 md:h-96 object-cover rounded-lg shadow-md" src="/lovable-uploads/79ba06b7-f526-4c13-8eda-7f0f2ac9be8f.jpg" />
             </div>
             
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
@@ -445,10 +442,10 @@ const MetricSystemBlogPost: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm p-4 overflow-hidden">
                 <div className="w-full h-[300px] md:h-[400px]">
                   <ChartContainer config={{
-                    primary: {
-                      label: "Equivalencia en metros"
-                    }
-                  }}>
+                  primary: {
+                    label: "Equivalencia en metros"
+                  }
+                }}>
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={conversionData}>
                         <CartesianGrid strokeDasharray="3 3" />
@@ -626,5 +623,4 @@ const MetricSystemBlogPost: React.FC = () => {
       </div>
     </>;
 };
-
 export default MetricSystemBlogPost;

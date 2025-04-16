@@ -99,7 +99,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </div>
             
             <div className="my-8">
-              <img src="/placeholder.svg" alt="Ventajas del Sistema Métrico Decimal" className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md" />
+              <img alt="Ventajas del Sistema Métrico Decimal" src="/lovable-uploads/ac043476-ab03-4ce6-b0b3-942cb4d79ac5.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />
             </div>
             
             <h2 id="unidades-del-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">
@@ -402,7 +402,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </div>
             
             <div className="my-8">
-              <img src="/placeholder.svg" alt="Unidades del Sistema Métrico Decimal" className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md" />
+              <img alt="Unidades del Sistema Métrico Decimal" src="/lovable-uploads/3aaf4fe4-39fa-4068-9fb3-a5d1decbbc8e.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />
             </div>
             
             <h2 id="cómo-convertir-unidades-en-el-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">

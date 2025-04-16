@@ -1,21 +1,20 @@
-
 import React from 'react';
 
 const HomeContent: React.FC = () => {
   return (
     <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none text-gray-700">
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4">Regla Online - Herramienta de Medición Virtual en Tamaño Real</h2>
-      <p>¡Bienvenido a <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tu <strong>regla virtual</strong> en línea para mediciones precisas! Ya sea que necesites una <strong>regla en centímetros</strong> o una <strong>regla en pulgadas</strong>, nuestra herramienta es perfecta para medir cualquier cosa directamente desde tu navegador, ya sea en tu computadora o dispositivo móvil. Con <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tienes acceso a una <strong>regla tamaño real</strong> que se adapta a tu pantalla, ofreciendo la precisión que necesitas sin depender de una regla física.</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Regla Online - Herramienta de Medición Virtual en Tamaño Real</strong></h2>
+      <p>¡Bienvenido a <strong>Regla.onl</strong>, tu <strong>regla virtual</strong> en línea para mediciones precisas! Ya sea que necesites una <strong>regla en centímetros</strong> o una <strong>regla en pulgadas</strong>, nuestra herramienta es perfecta para medir cualquier cosa directamente desde tu navegador, ya sea en tu computadora o dispositivo móvil. Con <strong>Regla.onl</strong>, tienes acceso a una <strong>regla tamaño real</strong> que se adapta a tu pantalla, ofreciendo la precisión que necesitas sin depender de una regla física.</p>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Qué es </strong><a href="https://regla.onl" className="text-[#9b87f5]"><strong>Regla.onl</strong></a><strong>?</strong></h2>
-      <p><a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> es una <strong>regla online</strong> gratuita que te permite medir objetos y distancias con facilidad. Nuestra <strong>regla virtual</strong> es ideal para estudiantes, diseñadores, arquitectos y cualquier persona que necesite realizar mediciones rápidas y exactas. Olvídate de buscar una regla tradicional; con <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tienes una <strong>regla para medir</strong> siempre disponible directamente en tu pantalla.</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Qué es </strong><strong>Regla.onl</strong><strong>?</strong></h2>
+      <p><strong>Regla.onl</strong> es una <strong>regla online</strong> gratuita que te permite medir objetos y distancias con facilidad. Nuestra <strong>regla virtual</strong> es ideal para estudiantes, diseñadores, arquitectos y cualquier persona que necesite realizar mediciones rápidas y exactas. Olvídate de buscar una regla tradicional; con <strong>Regla.onl</strong>, tienes una <strong>regla para medir</strong> siempre disponible directamente en tu pantalla.</p>
       
       <hr className="my-6" />
       
       <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Cómo usar nuestra Regla Online?</strong></h2>
-      <p>Usar <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> es simple y rápido:</p>
+      <p>Usar <strong>Regla.onl</strong> es simple y rápido:</p>
       <ol className="list-decimal pl-6 mb-4">
           <li className="mb-2">
               <p><strong>Calibra la regla</strong>: Ajusta la <strong>regla tamaño real</strong> según el tamaño de tu pantalla para garantizar resultados precisos.</p>
@@ -67,7 +66,7 @@ const HomeContent: React.FC = () => {
               <p><strong>Versátil</strong>: Úsala para proyectos escolares, diseño, arquitectura y más.</p>
           </li>
       </ul>
-      <p>¡Prueba <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> hoy y disfruta de la comodidad de tener una <strong>regla métrica</strong> siempre a tu alcance!</p>
+      <p>¡Prueba <strong>Regla.onl</strong> hoy y disfruta de la comodidad de tener una <strong>regla métrica</strong> siempre a tu alcance!</p>
       
       <hr className="my-6" />
       
@@ -88,7 +87,7 @@ const HomeContent: React.FC = () => {
       <hr className="my-6" />
       
       <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Testimonios de Usuarios</strong></h2>
-      <p className="mb-2">"<a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> me ha sido muy útil cuando necesito medir algo rápidamente y no tengo una regla física a mano. ¡Es increíblemente práctica!"</p>
+      <p className="mb-2">"<strong>Regla.onl</strong> me ha sido muy útil cuando necesito medir algo rápidamente y no tengo una regla física a mano. ¡Es increíblemente práctica!"</p>
       <p className="italic mb-4">— Usuario satisfecho</p>
       
       <p className="mb-2">"Como estudiante de diseño, esta <strong>regla virtual</strong> me ha facilitado mucho mis proyectos. Es precisa y fácil de usar."</p>
@@ -96,8 +95,8 @@ const HomeContent: React.FC = () => {
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Por qué elegir </strong><a href="https://regla.onl" className="text-[#9b87f5]"><strong>Regla.onl</strong></a><strong>?</strong></h2>
-      <p>En <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, ofrecemos la mejor <strong>regla online</strong> disponible. Nuestra herramienta destaca por:</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Por qué elegir </strong><strong>Regla.onl</strong><strong>?</strong></h2>
+      <p>En <strong>Regla.onl</strong>, ofrecemos la mejor <strong>regla online</strong> disponible. Nuestra herramienta destaca por:</p>
       <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
               <p><strong>Precisión</strong>: Mediciones exactas en <strong>centímetros</strong> y <strong>pulgadas</strong>.</p>
@@ -112,11 +111,11 @@ const HomeContent: React.FC = () => {
               <p><strong>Accesibilidad</strong>: Tu <strong>regla en línea</strong> está disponible en cualquier momento y dispositivo.</p>
           </li>
       </ul>
-      <p>Ya sea para un proyecto importante o una medición rápida, <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> es tu solución ideal.</p>
+      <p>Ya sea para un proyecto importante o una medición rápida, <strong>Regla.onl</strong> es tu solución ideal.</p>
       
       <hr className="my-6" />
       
-      <p className="font-medium">¡Empieza a medir con precisión ahora mismo! Descubre <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tu <strong>regla virtual</strong> confiable y siempre accesible.</p>
+      <p className="font-medium">¡Empieza a medir con precisión ahora mismo! Descubre <strong>Regla.onl</strong>, tu <strong>regla virtual</strong> confiable y siempre accesible.</p>
     </div>
   );
 };

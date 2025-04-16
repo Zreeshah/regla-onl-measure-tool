@@ -109,7 +109,7 @@ const Index = () => {
             {/* Title and subtitle section - completely separate from ruler */}
             <div className="container text-center mt-8 mb-12">
               <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
-                Regla Online Tamaño Real
+                <strong>Regla Online Tamaño Real</strong>
               </h1>
               <p className="text-lg text-gray-600 mt-2 animate-slide-in">
                 Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
@@ -236,3 +236,4 @@ const Index = () => {
 };
 
 export default Index;
+

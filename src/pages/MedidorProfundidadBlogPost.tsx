@@ -7,8 +7,7 @@ import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { RulerIcon, Clock, ArrowRight, ArrowLeft, History, Settings, Ruler, Wrench, BarChart, AreaChart } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
-import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
 import { Link } from 'react-router-dom';
 
 const MedidorProfundidadBlogPost: React.FC = () => {

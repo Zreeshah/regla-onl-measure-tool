@@ -1,12 +1,10 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
-import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import { getRelatedArticles, createContextualLink, RelatedArticlesSection } from '@/utils/internalLinks';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 

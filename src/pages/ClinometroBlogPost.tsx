@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, User } from 'lucide-react';
@@ -6,10 +5,8 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-
 const ClinometroBlogPost: React.FC = () => {
-  return (
-    <div className="flex flex-col min-h-screen">
+  return <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo | Regla.Onl</title>
         <meta name="description" content="Descubre qué es un clinómetro, para qué sirve y cómo usarlo correctamente. Guía completa con tipos, aplicaciones y consejos prácticos." />
@@ -40,11 +37,7 @@ const ClinometroBlogPost: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-6">Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo</h1>
             
             <div className="relative rounded-lg overflow-hidden mb-8">
-              <img 
-                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" 
-                alt="Medición de pendientes con clinómetro en montañas" 
-                className="w-full h-[300px] md:h-[400px] object-cover"
-              />
+              <img alt="Medición de pendientes con clinómetro en montañas" className="w-full h-[300px] md:h-[400px] object-cover" src="/lovable-uploads/65090091-5d64-4667-af28-509718c18951.jpg" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                 <p className="text-white text-sm">Medición de pendientes en terrenos montañosos con clinómetro</p>
               </div>
@@ -87,11 +80,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" 
-                alt="Clinómetro utilizado en topografía" 
-                className="rounded-lg w-full max-w-2xl h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" />
             </div>
 
             <h2 id="historia-del-clinómetro" className="text-2xl font-semibold mt-8 mb-4">Historia del Clinómetro</h2>
@@ -165,11 +154,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86" 
-                alt="Medición de altura de árboles con clinómetro" 
-                className="rounded-lg w-full max-w-2xl h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86" alt="Medición de altura de árboles con clinómetro" className="rounded-lg w-full max-w-2xl h-auto" />
             </div>
 
             <h2 id="tipos-de-clinómetros" className="text-2xl font-semibold mt-8 mb-4">Tipos de Clinómetros</h2>
@@ -226,11 +211,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3" 
-                alt="Usando clinómetro en geología para medir estratos" 
-                className="rounded-lg w-full max-w-2xl h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3" alt="Usando clinómetro en geología para medir estratos" className="rounded-lg w-full max-w-2xl h-auto" />
             </div>
 
             <h2 id="clinómetro-digital" className="text-2xl font-semibold mt-8 mb-4">Clinómetro Digital: La Evolución Tecnológica</h2>
@@ -378,8 +359,6 @@ const ClinometroBlogPost: React.FC = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ClinometroBlogPost;

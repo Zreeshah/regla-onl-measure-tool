@@ -19,7 +19,6 @@ const ComoSaberParoBlogPost: React.FC = () => {
           name="keywords" 
           content="cómo saber cuánto paro tengo, prestación por desempleo, cuánto paro tengo acumulado, sede electrónica SEPE, tabla días cotizados para cobrar paro"
         />
-        <link rel="canonical" href="https://regla.onl/blog/como-saber-cuanto-paro" />
         <meta property="og:title" content="Cómo Saber Cuánto Paro Tengo: Guía Completa para Consultar tu Prestación" />
         <meta property="og:description" content="Aprende a consultar tu prestación por desempleo paso a paso y descubre cuánto paro tienes acumulado con esta guía completa." />
         <meta property="og:type" content="article" />

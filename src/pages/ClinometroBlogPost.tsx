@@ -14,7 +14,6 @@ const ClinometroBlogPost: React.FC = () => {
         <title>Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo | Regla.Onl</title>
         <meta name="description" content="Descubre qué es un clinómetro, para qué sirve y cómo usarlo correctamente. Guía completa con tipos, aplicaciones y consejos prácticos." />
         <meta name="keywords" content="clinómetro, qué es un clinómetro, para qué sirve un clinómetro, clinómetro digital, medir inclinación, pendiente" />
-        <link rel="canonical" href="https://regla.onl/blog/clinometro" />
       </Helmet>
 
       <Header />

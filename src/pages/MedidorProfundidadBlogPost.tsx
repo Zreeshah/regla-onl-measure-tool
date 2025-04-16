@@ -9,24 +9,15 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
-
 const MedidorProfundidadBlogPost: React.FC = () => {
   const currentUrl = "/blog/medidor-profundidad";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
-  
-  return (
-    <Layout>
+  return <Layout>
       <Helmet>
         <title>Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión</title>
-        <meta 
-          name="description" 
-          content="Aprende qué es un medidor de profundidad, sus tipos, aplicaciones y cómo usarlo correctamente en diferentes industrias como ingeniería, carpintería y fabricación." 
-        />
-        <meta 
-          name="keywords" 
-          content="medidor de profundidad, qué es un medidor de profundidad, instrumento para medir profundidad, indicadores de profundidad, pantalla regla virtual" 
-        />
+        <meta name="description" content="Aprende qué es un medidor de profundidad, sus tipos, aplicaciones y cómo usarlo correctamente en diferentes industrias como ingeniería, carpintería y fabricación." />
+        <meta name="keywords" content="medidor de profundidad, qué es un medidor de profundidad, instrumento para medir profundidad, indicadores de profundidad, pantalla regla virtual" />
         <link rel="canonical" href="https://regla.onl/blog/medidor-profundidad" />
         
         <link rel="preconnect" href="https://picsum.photos" />
@@ -43,21 +34,16 @@ const MedidorProfundidadBlogPost: React.FC = () => {
         <Card className="mb-8">
           <CardContent className="p-6">
             <div className="mb-6">
-              <img 
-                src="https://picsum.photos/seed/depthgauge/800/400" 
-                alt="Medidor de Profundidad" 
-                className="w-full h-64 object-cover rounded-lg mb-4"
-                loading="lazy"
-                width="800" 
-                height="400"
-              />
+              <img alt="Medidor de Profundidad" className="w-full h-64 object-cover rounded-lg mb-4" loading="lazy" width="800" height="400" src="/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg" />
               <p className="text-sm text-gray-500 italic">Imagen representativa de un medidor de profundidad</p>
             </div>
 
             <h1 className="text-3xl font-bold mb-4 text-gray-800">Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión</h1>
 
             <p className="mb-6 text-gray-700">
-              ¿Quieres saber <strong>qué es un medidor de profundidad</strong> y cómo puede facilitar tus proyectos? Un <strong>medidor de profundidad</strong> es un instrumento esencial para medir la profundidad de agujeros, ranuras y otros espacios con precisión. <span dangerouslySetInnerHTML={{ __html: homepageLink }} /> En esta guía completa, exploraremos los diferentes <strong>tipos de medidores de profundidad</strong>, sus aplicaciones en diversas industrias y cómo utilizarlos correctamente.
+              ¿Quieres saber <strong>qué es un medidor de profundidad</strong> y cómo puede facilitar tus proyectos? Un <strong>medidor de profundidad</strong> es un instrumento esencial para medir la profundidad de agujeros, ranuras y otros espacios con precisión. <span dangerouslySetInnerHTML={{
+              __html: homepageLink
+            }} /> En esta guía completa, exploraremos los diferentes <strong>tipos de medidores de profundidad</strong>, sus aplicaciones en diversas industrias y cómo utilizarlos correctamente.
             </p>
 
             <div className="mb-8">
@@ -85,11 +71,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
               </p>
 
               <div className="bg-blue-50 p-4 rounded-lg my-6">
-                <img 
-                  src="https://picsum.photos/seed/depthgauge2/600/300" 
-                  alt="Medidor de profundidad en uso" 
-                  className="w-full h-48 object-cover rounded-lg mb-2"
-                />
+                <img alt="Medidor de profundidad en uso" className="w-full h-48 object-cover rounded-lg mb-2" src="/lovable-uploads/ffdb12f2-5be7-4807-ac03-92d6bb79f171.jpg" />
                 <p className="text-sm text-gray-600 italic">Un medidor de profundidad en acción</p>
               </div>
 
@@ -116,11 +98,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img 
-                    src="https://picsum.photos/seed/depthgauge3/600/400" 
-                    alt="Medidor de profundidad mecánico" 
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
+                  <img alt="Medidor de profundidad mecánico" src="/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg" className="w-full h-64 rounded-lg object-contain" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad mecánico</p>
                 </div>
               </div>
@@ -133,11 +111,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img 
-                    src="https://picsum.photos/seed/depthgauge4/600/400" 
-                    alt="Medidor de profundidad digital" 
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
+                  <img alt="Medidor de profundidad digital" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/5f1db272-a18d-4773-a230-09265e4b3f80.jpg" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad digital</p>
                 </div>
               </div>
@@ -150,11 +124,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img 
-                    src="https://picsum.photos/seed/depthgauge5/600/400" 
-                    alt="Medidor de profundidad ultrasónico" 
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
+                  <img alt="Medidor de profundidad ultrasónico" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/2bf27732-317f-433d-8291-77b4eca1015a.png" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad ultrasónico</p>
                 </div>
               </div>
@@ -205,20 +175,12 @@ const MedidorProfundidadBlogPost: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <img 
-                    src="https://picsum.photos/seed/depthgauge6/600/400" 
-                    alt="Medidor de profundidad en ingeniería" 
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
-                  <p className="text-sm text-gray-500 italic mt-2">Uso en ingeniería</p>
+                  
+                  
                 </div>
                 <div>
-                  <img 
-                    src="https://picsum.photos/seed/depthgauge7/600/400" 
-                    alt="Medidor de profundidad en carpintería" 
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
-                  <p className="text-sm text-gray-500 italic mt-2">Uso en carpintería</p>
+                  
+                  
                 </div>
               </div>
             </section>
@@ -296,8 +258,6 @@ const MedidorProfundidadBlogPost: React.FC = () => {
           </CardContent>
         </Card>
       </main>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default MedidorProfundidadBlogPost;

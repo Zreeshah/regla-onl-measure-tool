@@ -15,7 +15,7 @@ const HomeContent: React.FC = () => {
       <hr className="my-6" />
       
       <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Cómo usar nuestra Regla Online?</strong></h2>
-      <p>Usar <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> es simple y rápido:</p>
+      <p>Usar">Regla.onl</a> es simple y rápido:</p>
       <ol className="list-decimal pl-6 mb-4">
           <li className="mb-2">
               <p><strong>Calibra la regla</strong>: Ajusta la <strong>regla tamaño real</strong> según el tamaño de tu pantalla para garantizar resultados precisos.</p>

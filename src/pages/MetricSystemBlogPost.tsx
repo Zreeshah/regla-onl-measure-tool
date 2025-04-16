@@ -441,7 +441,7 @@ const MetricSystemBlogPost: React.FC = () => {
             
             <div className="mx-4 my-6 p-6 bg-white rounded-lg shadow-md w-full max-w-3xl overflow-hidden py-[24px] px-[86px]">
               <h3 className="text-xl font-semibold mb-4">Gráfico de equivalencia entre unidades de longitud</h3>
-              <div className="h-80 w-full">
+              <div className="mx-4 my-6 p-4 sm:mx-6 sm:p-6 bg-white rounded-md shadow-sm w-full max-w-3xl sm:max-w-4xl overflow-hidden">
                 <ChartContainer config={{
                 primary: {
                   label: "Equivalencia en metros"

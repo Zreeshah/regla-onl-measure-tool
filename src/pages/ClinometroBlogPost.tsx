@@ -80,7 +80,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" />
+              <img alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" src="/lovable-uploads/ce693ed3-d8cb-43dd-a187-074a62e05b25.jpg" />
             </div>
 
             <h2 id="historia-del-clinómetro" className="text-2xl font-semibold mt-8 mb-4">Historia del Clinómetro</h2>
@@ -154,7 +154,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86" alt="Medición de altura de árboles con clinómetro" className="rounded-lg w-full max-w-2xl h-auto" />
+              
             </div>
 
             <h2 id="tipos-de-clinómetros" className="text-2xl font-semibold mt-8 mb-4">Tipos de Clinómetros</h2>
@@ -211,7 +211,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3" alt="Usando clinómetro en geología para medir estratos" className="rounded-lg w-full max-w-2xl h-auto" />
+              
             </div>
 
             <h2 id="clinómetro-digital" className="text-2xl font-semibold mt-8 mb-4">Clinómetro Digital: La Evolución Tecnológica</h2>

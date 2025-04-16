@@ -195,7 +195,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                 <strong>Ejemplo práctico</strong>: Si mides un lápiz y el punto cero está alineado con un extremo, y el otro extremo cae entre 12 y 13 cm, estima la fracción más cercana (ej., 12.8 cm).
               </p>
               
-              <img src="https://images.unsplash.com/photo-1600696920053-12ece0026de9" alt="Regla midiendo un objeto" className="w-full h-64 sm:h-80 object-cover rounded-lg my-8" />
+              <img alt="Regla midiendo un objeto" className="w-full h-64 sm:h-80 object-cover rounded-lg my-8" src="/lovable-uploads/c058baa5-0359-41f1-a81f-fdaeb13aa151.jpg" />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="tecnicas-avanzadas">Técnicas Avanzadas para Medir con una Regla</h2>
               

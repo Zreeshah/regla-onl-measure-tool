@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -9,25 +8,16 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-
 const LostDNIBlogPost: React.FC = () => {
   const currentUrl = "/blog/perdido-dni";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
-  
-  return (
-    <>
+  return <>
       <Helmet>
         <title>He Perdido el DNI: Qué Hacer y Cómo Renovar el DNI si lo He Perdido</title>
-        <meta 
-          name="description" 
-          content="¿Has perdido el DNI y no sabes qué hacer? Aprende paso a paso cómo denunciar la pérdida o robo del DNI y cómo renovarlo rápidamente. Guía completa y actualizada." 
-        />
-        <meta 
-          name="keywords" 
-          content="he perdido el DNI, perdí el DNI, qué hacer si he perdido el DNI, renovar DNI perdido, denuncia pérdida DNI, DNI urgente" 
-        />
-        <link rel="canonical" href="https://regla.onl/blog/perdido-dni" />
+        <meta name="description" content="¿Has perdido el DNI y no sabes qué hacer? Aprende paso a paso cómo denunciar la pérdida o robo del DNI y cómo renovarlo rápidamente. Guía completa y actualizada." />
+        <meta name="keywords" content="he perdido el DNI, perdí el DNI, qué hacer si he perdido el DNI, renovar DNI perdido, denuncia pérdida DNI, DNI urgente" />
+        <link rel="canonical" href="/blog/perdido-dni" />
         
         <link rel="preconnect" href="https://picsum.photos" />
         <link rel="dns-prefetch" href="https://picsum.photos" />
@@ -46,21 +36,16 @@ const LostDNIBlogPost: React.FC = () => {
           <Card className="mb-8">
             <CardContent className="p-6">
               <div className="mb-6">
-                <img 
-                  src="https://picsum.photos/seed/lostdni/800/400" 
-                  alt="Persona preocupada porque ha perdido su DNI" 
-                  className="w-full h-64 object-cover rounded-lg mb-4"
-                  loading="lazy"
-                  width="800" 
-                  height="400"
-                />
+                <img alt="Persona preocupada porque ha perdido su DNI" loading="lazy" width="800" height="400" src="/lovable-uploads/be7737c1-5845-4b0b-8686-ba2d8a55c4e3.jpg" className="w-full h-64 rounded-lg mb-4 object-cover" />
                 <p className="text-sm text-gray-500 italic">Imagen representativa: Pérdida de DNI</p>
               </div>
               
               <h1 className="text-3xl font-bold mb-4 text-gray-800">He Perdido el DNI: Qué Hacer y Cómo Renovar el DNI si lo He Perdido</h1>
               
               <p className="mb-6 text-gray-700">
-                ¿<strong>He perdido el DNI</strong> y no sabes qué hacer? Perder el Documento Nacional de Identidad (DNI) puede ser estresante, especialmente si <strong>lo necesitas urgente</strong>. <span dangerouslySetInnerHTML={{ __html: homepageLink }} /> En esta guía completa, te explicamos paso a paso <strong>qué hacer si he perdido el DNI</strong>, cómo denunciar la pérdida o robo, y cómo renovarlo rápidamente.
+                ¿<strong>He perdido el DNI</strong> y no sabes qué hacer? Perder el Documento Nacional de Identidad (DNI) puede ser estresante, especialmente si <strong>lo necesitas urgente</strong>. <span dangerouslySetInnerHTML={{
+                __html: homepageLink
+              }} /> En esta guía completa, te explicamos paso a paso <strong>qué hacer si he perdido el DNI</strong>, cómo denunciar la pérdida o robo, y cómo renovarlo rápidamente.
               </p>
               
               <div className="mb-8">
@@ -99,11 +84,7 @@ const LostDNIBlogPost: React.FC = () => {
                 </p>
                 
                 <div className="bg-blue-50 p-4 rounded-lg my-6">
-                  <img 
-                    src="https://picsum.photos/seed/dnicard/600/300" 
-                    alt="Documento Nacional de Identidad español" 
-                    className="w-full h-48 object-cover rounded-lg mb-2"
-                  />
+                  <img src="https://picsum.photos/seed/dnicard/600/300" alt="Documento Nacional de Identidad español" className="w-full h-48 object-cover rounded-lg mb-2" />
                   <p className="text-sm text-gray-600 italic">Un DNI español: documento esencial para todos los ciudadanos</p>
                 </div>
               </section>
@@ -193,11 +174,7 @@ const LostDNIBlogPost: React.FC = () => {
                   </div>
                   
                   <div>
-                    <img 
-                      src="https://picsum.photos/seed/consulado/600/400" 
-                      alt="Consulado español en el extranjero" 
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
+                    <img src="https://picsum.photos/seed/consulado/600/400" alt="Consulado español en el extranjero" className="w-full h-64 object-cover rounded-lg" />
                     <p className="text-sm text-gray-500 italic mt-2">Consulado español: tu punto de apoyo en el extranjero</p>
                   </div>
                 </div>
@@ -309,11 +286,7 @@ const LostDNIBlogPost: React.FC = () => {
                   </div>
                   
                   <div>
-                    <img 
-                      src="https://picsum.photos/seed/multa/600/400" 
-                      alt="Concepto de multa administrativa" 
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
+                    <img src="https://picsum.photos/seed/multa/600/400" alt="Concepto de multa administrativa" className="w-full h-64 object-cover rounded-lg" />
                     <p className="text-sm text-gray-500 italic mt-2">Las multas solo aplican en casos de negligencia repetida</p>
                   </div>
                 </div>
@@ -338,8 +311,6 @@ const LostDNIBlogPost: React.FC = () => {
         
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default LostDNIBlogPost;

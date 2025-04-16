@@ -129,11 +129,11 @@ const ComoUsarReglaBlogPost: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div>
-                  <img src="https://images.unsplash.com/photo-1621600411688-4be93c2c1208" alt="Regla metálica sobre plano" className="w-full h-64 object-cover rounded-lg mb-2" />
+                  <img alt="Regla metálica sobre plano" className="w-full h-64 object-cover rounded-lg mb-2" src="/lovable-uploads/381e2e34-ef77-4b15-a19c-117866a61d42.jpg" />
                   <p className="text-sm text-gray-600 italic">Regla metálica profesional, ideal para dibujo técnico y mediciones precisas.</p>
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1605016661327-85637f087a8c" alt="Regla siendo usada para dibujar" className="w-full h-64 object-cover rounded-lg mb-2" />
+                  <img alt="Regla siendo usada para dibujar" className="w-full h-64 object-cover rounded-lg mb-2" src="/lovable-uploads/bb16f626-e524-4084-865f-88ee1ff6eea2.jpg" />
                   <p className="text-sm text-gray-600 italic">El uso correcto de la regla permite trazar líneas rectas con precisión.</p>
                 </div>
               </div>

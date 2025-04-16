@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -8,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft } from 'lucide-react';
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
-import CanonicalLink from '@/components/CanonicalLink';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();
@@ -31,9 +29,6 @@ const BlogPost: React.FC = () => {
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </Helmet>
-      
-      {/* Adding the CanonicalLink component for dynamic canonical URLs */}
-      <CanonicalLink />
       
       <Header />
       

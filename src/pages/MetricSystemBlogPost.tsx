@@ -439,7 +439,7 @@ const MetricSystemBlogPost: React.FC = () => {
               <p>Mueve el punto decimal a la izquierda (división) o derecha (multiplicación) según los niveles.</p>
             </div>
             
-            <div className="mx-4 my-6 p-6 bg-white rounded-lg shadow-md w-full max-w-3xl overflow-hidden">
+            <div className="mx-4 my-6 p-6 bg-white rounded-lg shadow-md w-full max-w-3xl overflow-hidden py-[24px] px-[86px]">
               <h3 className="text-xl font-semibold mb-4">Gráfico de equivalencia entre unidades de longitud</h3>
               <div className="h-80 w-full">
                 <ChartContainer config={{

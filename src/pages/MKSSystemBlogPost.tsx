@@ -1,14 +1,11 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calculator, Ruler, Scale, MoveHorizontal, Clock, Zap, Atom } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-
 const MKSSystemBlogPost: React.FC = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Helmet>
         <title>Sistema MKS: Qué es, Unidades y su Importancia en la Medición | Regla.onl</title>
         <meta name="description" content="Aprende qué es el sistema MKS, sus unidades básicas y derivadas, y cómo se aplica en la ciencia e ingeniería. Guía completa sobre la medición con el sistema Metro-Kilogramo-Segundo." />
@@ -22,11 +19,7 @@ const MKSSystemBlogPost: React.FC = () => {
         <article className="prose prose-lg max-w-none">
           {/* Featured Image */}
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src="/placeholder.svg" 
-              alt="Sistema MKS - Metro, Kilogramo, Segundo" 
-              className="w-full h-auto object-cover" 
-            />
+            <img src="/placeholder.svg" alt="Sistema MKS - Metro, Kilogramo, Segundo" className="w-full h-auto object-cover" />
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Sistema MKS: Qué es, Unidades y su Importancia en la Medición</h1>
@@ -110,11 +103,7 @@ const MKSSystemBlogPost: React.FC = () => {
             <h3 className="text-xl font-semibold mt-6 mb-3">Orígenes del Sistema Métrico</h3>
             
             <div className="mb-4">
-              <img 
-                src="/placeholder.svg" 
-                alt="Evolución histórica de los sistemas de medida" 
-                className="w-full h-auto rounded-lg shadow-md" 
-              />
+              <img src="/placeholder.svg" alt="Evolución histórica de los sistemas de medida" className="w-full h-auto rounded-lg shadow-md" />
               <p className="text-sm text-gray-600 mt-2">Evolución de los sistemas de medida a lo largo de la historia</p>
             </div>
             
@@ -246,18 +235,7 @@ const MKSSystemBlogPost: React.FC = () => {
               Por ejemplo, la <strong>potencia en el sistema MKS</strong> se mide en <strong>vatios</strong>, equivalente a un joule por segundo, usado en cálculos eléctricos y mecánicos.
             </p>
             
-            <div className="bg-gray-100 p-4 rounded-lg my-6">
-              <h4 className="font-semibold mb-2">Gráfico de relaciones entre unidades:</h4>
-              <pre className="text-xs overflow-x-auto">
-                Longitud (m) ---&gt; Velocidad (m/s) ---&gt; Aceleración (m/s²)
-                     |                   |                      |
-                     v                   v                      v
-                Masa (kg) -----&gt; Fuerza (N) --------&gt; Energía (J) ---&gt; Potencia (W)
-                     |                                         |
-                Tiempo (s) ---------------------------------/
-              </pre>
-              <p className="text-sm mt-2">Este esquema muestra cómo las unidades básicas generan las derivadas.</p>
-            </div>
+            
           </section>
 
           <section id="diferencias">
@@ -313,11 +291,7 @@ const MKSSystemBlogPost: React.FC = () => {
             </h2>
             
             <div className="mb-6">
-              <img 
-                src="/placeholder.svg" 
-                alt="Aplicaciones del sistema MKS en la ciencia y la ingeniería" 
-                className="w-full h-auto rounded-lg shadow-md" 
-              />
+              <img src="/placeholder.svg" alt="Aplicaciones del sistema MKS en la ciencia y la ingeniería" className="w-full h-auto rounded-lg shadow-md" />
               <p className="text-sm text-gray-600 mt-2">Aplicaciones prácticas del sistema MKS en diversos campos</p>
             </div>
             
@@ -498,8 +472,6 @@ const MKSSystemBlogPost: React.FC = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default MKSSystemBlogPost;

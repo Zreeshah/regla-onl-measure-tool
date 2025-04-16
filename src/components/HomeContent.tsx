@@ -10,7 +10,7 @@ const HomeContent: React.FC = () => {
       <hr className="my-6" />
       
       <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Qué es </strong><a href="https://regla.onl" className="text-[#9b87f5]"><strong>Regla.onl</strong></a><strong>?</strong></h2>
-      <p><a>Regla.onl</a> es una <strong>regla online</strong> gratuita que te permite medir objetos y distancias con facilidad. Nuestra <strong>regla virtual</strong> es ideal para estudiantes, diseñadores, arquitectos y cualquier persona que necesite realizar mediciones rápidas y exactas. Olvídate de buscar una regla tradicional; con <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tienes una <strong>regla para medir</strong> siempre disponible directamente en tu pantalla.</p>
+      <p><a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a> es una <strong>regla online</strong> gratuita que te permite medir objetos y distancias con facilidad. Nuestra <strong>regla virtual</strong> es ideal para estudiantes, diseñadores, arquitectos y cualquier persona que necesite realizar mediciones rápidas y exactas. Olvídate de buscar una regla tradicional; con <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tienes una <strong>regla para medir</strong> siempre disponible directamente en tu pantalla.</p>
       
       <hr className="my-6" />
       

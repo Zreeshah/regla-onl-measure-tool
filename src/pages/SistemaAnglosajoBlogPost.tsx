@@ -206,7 +206,7 @@ const SistemaAnglosajoBlogPost = () => {
           </h2>
 
           <div className="my-6 rounded-lg overflow-hidden shadow-md">
-            <img src="https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&w=1200&h=400" alt="Aplicaciones del Sistema Anglosajón" className="w-full h-auto object-cover" />
+            <img alt="Aplicaciones del Sistema Anglosajón" className="w-full h-auto object-cover" src="/lovable-uploads/8b3c80ea-3437-4fc9-a084-f6338459e2d1.jpg" />
           </div>
 
           <p>El <strong>sistema anglosajón</strong> se usa ampliamente en:</p>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,22 +5,15 @@ import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Ruler, Compass, BarChart3, ArrowDownCircle, MoveVertical } from 'lucide-react';
-
 const MedidorProfundidadBlogPost: React.FC = () => {
-  const { t } = useLanguage();
-
-  return (
-    <Layout>
+  const {
+    t
+  } = useLanguage();
+  return <Layout>
       <Helmet>
         <title>Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión | Regla.Onl</title>
-        <meta 
-          name="description" 
-          content="Descubre qué es un medidor de profundidad, sus tipos y cómo usarlo correctamente. Guía completa sobre indicadores de profundidad para ingeniería y carpintería." 
-        />
-        <meta 
-          name="keywords" 
-          content="medidor de profundidad, qué es un medidor de profundidad, indicador de profundidad, instrumento para medir profundidad, pantalla regla virtual" 
-        />
+        <meta name="description" content="Descubre qué es un medidor de profundidad, sus tipos y cómo usarlo correctamente. Guía completa sobre indicadores de profundidad para ingeniería y carpintería." />
+        <meta name="keywords" content="medidor de profundidad, qué es un medidor de profundidad, indicador de profundidad, instrumento para medir profundidad, pantalla regla virtual" />
         <link rel="canonical" href="https://regla.onl/blog/medidor-profundidad" />
         <meta property="og:title" content="Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión" />
         <meta property="og:description" content="Guía completa sobre medidores de profundidad, sus aplicaciones y uso preciso en ingeniería y carpintería." />
@@ -37,11 +29,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
           <CardContent className="p-6">
             <div className="mb-8">
               <div className="relative w-full h-64 md:h-80 mb-6 rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Medidor de profundidad digital y tradicional" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Medidor de profundidad digital y tradicional" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                   <div className="p-4 text-white">
                     <span className="text-sm font-medium bg-blue-600 px-2 py-1 rounded">Herramientas de Medición</span>
@@ -76,11 +64,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
 
             <div className="flex justify-center my-8">
               <div className="relative w-full md:w-4/5 h-64 rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Ingeniero usando un medidor de profundidad digital" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Ingeniero usando un medidor de profundidad digital" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -105,11 +89,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
 
             <div className="flex justify-center my-8">
               <div className="relative w-full md:w-4/5 h-64 rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Evolución histórica de los medidores de profundidad" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Evolución histórica de los medidores de profundidad" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -204,28 +184,12 @@ const MedidorProfundidadBlogPost: React.FC = () => {
               </Table>
             </div>
             
-            <p className="text-base mb-4"><strong>Gráfico de selección de medidores</strong>:</p>
-            <div className="bg-gray-100 p-4 rounded-md mb-6">
-              <pre className="whitespace-pre-wrap text-sm">
-                Precisión Alta   | Medidor Digital
-                               | Micrómetro de Profundidad
-                               |------------------
-                               | Base Plana
-                               | Base en V
-                               | App Regla Virtual
-                Precisión Baja   |------------------
-                               Simple     Complejo
-                               Tipo de Medición
-              </pre>
-            </div>
+            
+            
 
             <div className="flex justify-center my-8">
               <div className="relative w-full md:w-4/5 h-64 rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Diferentes tipos de medidores de profundidad" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Diferentes tipos de medidores de profundidad" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -273,11 +237,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
 
             <div className="flex justify-center my-8">
               <div className="relative w-full md:w-4/5 h-64 rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Medidor de profundidad digital con pantalla LCD" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Medidor de profundidad digital con pantalla LCD" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -425,11 +385,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
 
             <div className="flex justify-center my-8">
               <div className="relative w-full md:w-4/5 h-64 rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Comparación de medidores de profundidad tradicionales y digitales" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Comparación de medidores de profundidad tradicionales y digitales" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -455,8 +411,6 @@ const MedidorProfundidadBlogPost: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default MedidorProfundidadBlogPost;

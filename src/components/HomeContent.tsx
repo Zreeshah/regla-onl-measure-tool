@@ -1,8 +1,10 @@
 
 import React from 'react';
+import { insertHomepageLink } from '@/utils/internalLinking';
 
 const HomeContent: React.FC = () => {
-  return (
+  // Original content HTML
+  const originalContent = `
     <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none text-gray-700">
       <h2 className="text-2xl font-bold text-[#9b87f5] mb-4">Regla Online - Herramienta de Medición Virtual en Tamaño Real</h2>
       <p>¡Bienvenido a <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tu <strong>regla virtual</strong> en línea para mediciones precisas! Ya sea que necesites una <strong>regla en centímetros</strong> o una <strong>regla en pulgadas</strong>, nuestra herramienta es perfecta para medir cualquier cosa directamente desde tu navegador, ya sea en tu computadora o dispositivo móvil. Con <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tienes acceso a una <strong>regla tamaño real</strong> que se adapta a tu pantalla, ofreciendo la precisión que necesitas sin depender de una regla física.</p>
@@ -118,6 +120,12 @@ const HomeContent: React.FC = () => {
       
       <p className="font-medium">¡Empieza a medir con precisión ahora mismo! Descubre <a href="https://regla.onl" className="text-[#9b87f5]">Regla.onl</a>, tu <strong>regla virtual</strong> confiable y siempre accesible.</p>
     </div>
+  `;
+
+  // This would typically come from a CMS or database
+  // For demonstration, we'll use the existing content
+  return (
+    <div dangerouslySetInnerHTML={{ __html: originalContent }} />
   );
 };
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,20 +5,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table } from '@/components/ui/table';
 import { ScrollArea } from '@/components/ui/scroll-area';
-
 const SistemaNaturalBlogPost: React.FC = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Sistema Natural de Unidades: Qué es y Cómo Funciona | Regla.Onl</title>
-        <meta 
-          name="description" 
-          content="Descubre qué es el sistema natural de unidades, cómo funciona y sus aplicaciones en física teórica. Guía completa con constantes fundamentales." 
-        />
-        <meta 
-          name="keywords" 
-          content="sistema natural de unidades, qué es un sistema natural, constantes fundamentales, sistema natural, unidades naturales, física teórica" 
-        />
+        <meta name="description" content="Descubre qué es el sistema natural de unidades, cómo funciona y sus aplicaciones en física teórica. Guía completa con constantes fundamentales." />
+        <meta name="keywords" content="sistema natural de unidades, qué es un sistema natural, constantes fundamentales, sistema natural, unidades naturales, física teórica" />
         <link rel="canonical" href="https://regla.onl/blog/sistema-natural-unidades" />
       </Helmet>
 
@@ -30,11 +21,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
             <header className="mb-10 text-center">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">Sistema Natural de Unidades: Qué es y Cómo Funciona</h1>
               <div className="w-full rounded-lg overflow-hidden mb-6">
-                <img 
-                  src="/lovable-uploads/sistema-natural-universe.jpg" 
-                  alt="Sistema Natural de Unidades - Representación del universo" 
-                  className="w-full h-auto object-cover" 
-                />
+                <img src="/lovable-uploads/sistema-natural-universe.jpg" alt="Sistema Natural de Unidades - Representación del universo" className="w-full h-auto object-cover" />
                 <p className="text-sm text-gray-500 mt-1">El sistema natural de unidades se basa en constantes universales.</p>
               </div>
             </header>
@@ -69,11 +56,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
                   <strong>¿Qué es un sistema natural</strong> en términos simples? Es una forma de medir que refleja las leyes intrínsecas del universo, asegurando que las unidades sean consistentes en cualquier lugar y tiempo. Este enfoque es especialmente valioso en física teórica, donde la precisión y la universalidad son cruciales.
                 </p>
                 <div className="bg-gray-100 p-4 rounded-lg my-6">
-                  <img 
-                    src="/lovable-uploads/constants-universe.jpg" 
-                    alt="Constantes fundamentales del universo" 
-                    className="w-full h-auto rounded-lg mb-2" 
-                  />
+                  <img src="/lovable-uploads/constants-universe.jpg" alt="Constantes fundamentales del universo" className="w-full h-auto rounded-lg mb-2" />
                   <p className="text-sm text-center">Las constantes universales son la base del sistema natural de unidades</p>
                 </div>
               </section>
@@ -163,28 +146,11 @@ const SistemaNaturalBlogPost: React.FC = () => {
                   </ul>
                 </div>
                 
-                <p className="mb-4"><strong>Gráfico de escalas en el sistema natural</strong>:</p>
-                <div className="bg-gray-50 p-4 rounded-lg mb-6 overflow-x-auto">
-                  <pre className="text-sm">
-                    Escala Cósmica   |-------------------| Grandes distancias (galaxias)
-                                     |                   |
-                                     |-------------------| Escala humana (metros)
-                                     |                   |
-                                     |-------------------| Escala cuántica (longitud de Compton)
-                                     |                   |
-                                     |-------------------| Escala de Planck
-                  </pre>
-                </div>
+                
+                
                 <p>Este esquema muestra cómo el <strong>sistema natural</strong> cubre desde lo subatómico hasta lo cosmológico.</p>
                 
-                <div className="my-8">
-                  <img 
-                    src="/lovable-uploads/planck-scale.jpg" 
-                    alt="Escala de Planck y sistema natural de unidades" 
-                    className="w-full h-auto rounded-lg" 
-                  />
-                  <p className="text-sm text-center mt-2">La escala de Planck representa los límites fundamentales del universo</p>
-                </div>
+                
               </section>
 
               <section id="aplicaciones" className="mb-10">
@@ -340,14 +306,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
                 </div>
                 <p>Estos ejemplos muestran cómo el <strong>sistema natural</strong> simplifica fenómenos complejos.</p>
                 
-                <div className="my-8">
-                  <img 
-                    src="/lovable-uploads/quantum-physics.jpg" 
-                    alt="Aplicaciones del sistema natural en física cuántica" 
-                    className="w-full h-auto rounded-lg" 
-                  />
-                  <p className="text-sm text-center mt-2">La física cuántica utiliza ampliamente el sistema natural por su simplicidad matemática</p>
-                </div>
+                
               </section>
 
               <section id="conclusión" className="mb-10">
@@ -367,8 +326,6 @@ const SistemaNaturalBlogPost: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default SistemaNaturalBlogPost;

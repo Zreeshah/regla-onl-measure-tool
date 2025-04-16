@@ -19,7 +19,7 @@ const MKSSystemBlogPost: React.FC = () => {
         <article className="prose prose-lg max-w-none">
           {/* Featured Image */}
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
-            <img src="/placeholder.svg" alt="Sistema MKS - Metro, Kilogramo, Segundo" className="w-full h-auto object-cover" />
+            <img alt="Sistema MKS - Metro, Kilogramo, Segundo" src="/lovable-uploads/3d520faf-c186-4486-92e5-9bcbb32657b4.jpg" className="w-full h-auto object-cover" />
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Sistema MKS: Qué es, Unidades y su Importancia en la Medición</h1>

@@ -18,7 +18,6 @@ const ClinometroBlogPost: React.FC = () => {
       </Helmet>
 
       <Header />
-
       <main className="flex-grow container py-8">
         <div className="max-w-4xl mx-auto">
           <Link to="/" className="inline-flex items-center text-ruler-primary hover:underline mb-4">

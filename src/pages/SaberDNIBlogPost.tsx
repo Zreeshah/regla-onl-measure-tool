@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -6,15 +5,14 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Search, Database, AlertTriangle, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-
 const SaberDNIBlogPost: React.FC = () => {
-  const { t } = useLanguage();
-  
+  const {
+    t
+  } = useLanguage();
+
   // Create a shortened meta description (150-160 characters max)
   const metaDescription = "Descubre cómo saber el DNI de una persona en España de forma legal. Guía completa con métodos verificados para consultar el DNI por nombre y apellidos.";
-  
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Cómo Saber el DNI de una Persona en España: Guía Completa y Legal</title>
         <meta name="description" content={metaDescription} />
@@ -58,11 +56,7 @@ const SaberDNIBlogPost: React.FC = () => {
             <CardContent className="p-6">
               {/* Featured image */}
               <div className="mb-6 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1568848460334-b40c0817c04f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=630&q=80" 
-                  alt="Documento Nacional de Identidad español"
-                  className="w-full object-cover h-auto"
-                />
+                <img alt="Documento Nacional de Identidad español" className="w-full object-cover h-auto" src="/lovable-uploads/d73796b6-8230-48d3-a8b5-4b17f6e5b2d9.jpg" />
               </div>
               
               {/* Main title */}
@@ -109,11 +103,7 @@ const SaberDNIBlogPost: React.FC = () => {
                   Sin embargo, el acceso al DNI está regulado por leyes de protección de datos, por lo que es crucial usar métodos legales y éticos para <strong>saber el DNI de una persona</strong>.
                 </p>
                 <div className="my-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                    alt="Documento Nacional de Identidad español sobre una mesa"
-                    className="rounded-lg w-full object-cover h-auto"
-                  />
+                  <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Documento Nacional de Identidad español sobre una mesa" className="rounded-lg w-full object-cover h-auto" />
                   <p className="text-sm text-gray-500 mt-2 italic">El DNI es un documento esencial para la identidad en España</p>
                 </div>
               </section>
@@ -213,11 +203,7 @@ const SaberDNIBlogPost: React.FC = () => {
                       </ol>
                       
                       <div className="my-4">
-                        <img 
-                          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                          alt="Búsqueda de información en documentos oficiales"
-                          className="rounded-lg w-full object-cover h-auto"
-                        />
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Búsqueda de información en documentos oficiales" className="rounded-lg w-full object-cover h-auto" />
                         <p className="text-sm text-gray-500 mt-1 italic">El BOE contiene información oficial que puede incluir datos de DNI</p>
                       </div>
                       
@@ -324,8 +310,6 @@ const SaberDNIBlogPost: React.FC = () => {
         
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default SaberDNIBlogPost;

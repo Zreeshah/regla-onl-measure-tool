@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useDeviceInfo } from '@/hooks/use-device-info';
 import { RefreshCw, Smartphone, RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
+import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
 import HomeContent from '@/components/HomeContent';
 import MenuButton from '@/components/MenuButton';
@@ -13,6 +13,7 @@ import HowToUseSection from '@/components/HowToUseSection';
 import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
+
 const MobileRuler: React.FC = () => {
   const {
     pixelsPerCm,
@@ -34,19 +35,36 @@ const MobileRuler: React.FC = () => {
   const rulerHeight = 400; // Fixed height for the ruler
 
   const rulerRef = useRef<HTMLDivElement>(null);
-  const [sliderValue, setSliderValue] = useState<number>(screenSize);
+  const [inputValue, setInputValue] = useState<string>(screenSize.toString());
+  
   useEffect(() => {
-    setSliderValue(screenSize);
+    setInputValue(screenSize.toString());
   }, [screenSize]);
+  
   useEffect(() => {
     calibrateByScreen(screenSize);
   }, [screenSize, calibrateByScreen]);
-  const handleSliderChange = (value: number[]) => {
-    const newSize = value[0];
-    setSliderValue(newSize);
-    setScreenSize(newSize);
-    calibrateByScreen(newSize);
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
   };
+  
+  const handleInputBlur = () => {
+    const newSize = parseFloat(inputValue);
+    if (!isNaN(newSize) && newSize > 0) {
+      setScreenSize(newSize);
+      calibrateByScreen(newSize);
+    } else {
+      setInputValue(screenSize.toString());
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.currentTarget.blur();
+    }
+  };
+  
   const generateTicks = () => {
     if (!rulerRef.current) return [];
     const ticks = [];
@@ -73,7 +91,9 @@ const MobileRuler: React.FC = () => {
     }
     return ticks;
   };
+  
   const ticks = generateTicks();
+  
   return <div className="relative mobile-ruler-container">
       <div className="px-2 pt-2 text-center flex justify-between items-center">
         <p className="text-xs text-gray-600 mb-1">(Scroll down to show full ruler)</p>
@@ -131,19 +151,34 @@ const MobileRuler: React.FC = () => {
         <div className="flex-1 px-2 absolute top-0 right-0 w-[calc(100%-80px)]">
           <div className="bg-white p-3 rounded-lg shadow-sm mb-4 max-w-[200px] mx-auto">
             <p className="text-xs font-medium mb-2">
-              {deviceType} • {screenSize}"
+              {deviceType} • {parseFloat(screenSize.toFixed(2))}"
             </p>
             
             <div className="flex items-center gap-2 mb-2">
-              <div className="relative w-16 h-28 border border-gray-300 rounded-lg flex items-center justify-center">
-                
-                <span className="text-sm font-bold">{sliderValue}"</span>
+              <div className="relative w-16 h-28 border border-gray-300 rounded-lg flex items-center justify-center flex-col">
+                <span className="text-sm text-gray-500">Screen</span>
+                <Input 
+                  type="number"
+                  min="3"
+                  max="25"
+                  step="0.1"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  onBlur={handleInputBlur}
+                  onKeyDown={handleKeyDown}
+                  className="text-center h-8 w-14 text-sm font-bold"
+                />
+                <span className="text-xs">inches</span>
               </div>
               
-              <div className="flex-grow">
-                <Slider defaultValue={[screenSize]} value={[sliderValue]} min={3} max={15} step={0.01} onValueChange={handleSliderChange} className="mb-2" orientation="vertical" />
-                
-                <Button onClick={redetectScreenSize} size="sm" variant="outline" className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]">
+              <div className="flex-grow flex flex-col">
+                <p className="text-xs text-gray-500 mb-1">Enter your device's screen size</p>
+                <Button 
+                  onClick={redetectScreenSize} 
+                  size="sm" 
+                  variant="outline" 
+                  className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]"
+                >
                   <RefreshCw size={10} className="mr-1" />
                   Re-detect
                 </Button>
@@ -247,4 +282,5 @@ const MobileRuler: React.FC = () => {
       </div>
     </div>;
 };
+
 export default MobileRuler;

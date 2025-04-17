@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -16,7 +17,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { Input } from "@/components/ui/input";
-import RulerCustomizer from './RulerCustomizer';
 
 interface RulerProps {
   className?: string;
@@ -69,7 +69,6 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
   const [rulerHeight, setRulerHeight] = useState(0);
   const [customScreenSize, setCustomScreenSize] = useState('15.6');
   const [screenSizeDropdownOpen, setScreenSizeDropdownOpen] = useState(false);
-  const [showCustomizer, setShowCustomizer] = useState(false);
   
   useEffect(() => {
     autoCalibrate();
@@ -271,25 +270,8 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
               </div>
             </DropdownMenuContent>
           </DropdownMenu>
-          
-          <Button
-            variant={showCustomizer ? 'default' : 'outline'}
-            size="sm"
-            className={`${showCustomizer ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : 'bg-white'} rounded-md text-xs`}
-            onClick={() => setShowCustomizer(!showCustomizer)}
-            title={t('customize') || "Customize"}
-          >
-            {t('customize') || "Customize"}
-          </Button>
         </div>
       </div>
-      
-      {/* Customizer Box */}
-      {showCustomizer && (
-        <div className="absolute -top-60 right-0 w-64 z-20">
-          <RulerCustomizer />
-        </div>
-      )}
       
       <div className={`relative ${orientation === 'horizontal' ? 'w-full h-full' : 'h-full w-full'}`}>
         <div className={`absolute ${orientation === 'horizontal' ? 'w-full h-6 top-6' : 'h-full w-6 left-6'} bg-transparent border-t border-[#9b87f5]`}></div>

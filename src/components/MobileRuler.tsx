@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -32,12 +33,23 @@ const MobileRuler: React.FC = () => {
   const {
     t
   } = useLanguage();
-  const rulerHeight = 400; // Fixed height for the ruler
-
+  
+  // Dynamic ruler height based on screen size
+  const calculateRulerHeight = () => {
+    // Ensure we show at least up to 25 units or screen size + buffer, whichever is larger
+    const minHeight = 400; // Minimum height
+    const unitsToShow = Math.max(25, Math.ceil(screenSize) + 5); // Show at least screen size + 5 units
+    const heightPerUnit = 40; // Approximate pixels per unit
+    return Math.max(minHeight, unitsToShow * heightPerUnit);
+  };
+  
+  const [rulerHeight, setRulerHeight] = useState(calculateRulerHeight());
   const rulerRef = useRef<HTMLDivElement>(null);
   const [inputValue, setInputValue] = useState<string>(screenSize.toString());
   
+  // Recalculate ruler height when screen size changes
   useEffect(() => {
+    setRulerHeight(calculateRulerHeight());
     setInputValue(screenSize.toString());
   }, [screenSize]);
   
@@ -68,7 +80,8 @@ const MobileRuler: React.FC = () => {
   const generateTicks = () => {
     if (!rulerRef.current) return [];
     const ticks = [];
-    const maxValue = 25;
+    // Increased maximum value to ensure all units are shown
+    const maxValue = Math.max(25, Math.ceil(screenSize) + 5);
     const majorTickInterval = 1;
     const minorTickInterval = 0.2;
     for (let value = 0; value <= maxValue; value += minorTickInterval) {
@@ -100,49 +113,51 @@ const MobileRuler: React.FC = () => {
         <MenuButton />
       </div>
       
-      {/* Fix: Add a fixed height container with overflow handling */}
+      {/* Updated container with dynamic height and scrollable area */}
       <div className="mobile-ruler-layout" style={{
-      height: `${rulerHeight + 80}px`,
-      overflow: 'hidden',
-      position: 'relative'
-    }}>
-        <div className="ruler-container ruler-vertical mobile-ruler" ref={rulerRef} style={{
-        width: '80px',
-        height: `${rulerHeight}px`,
+        height: 'auto',
+        maxHeight: '80vh',
         position: 'relative',
-        overflow: 'visible',
-        margin: '0'
+        overflowX: 'hidden',
+        overflowY: 'auto'
       }}>
+        <div className="ruler-container ruler-vertical mobile-ruler" ref={rulerRef} style={{
+          width: '80px',
+          height: `${rulerHeight}px`,
+          position: 'relative',
+          overflow: 'visible',
+          margin: '0'
+        }}>
           <div className="relative h-full w-full rounded-none">
             <div className="absolute h-full w-8 left-8 bg-transparent border-l border-[#9b87f5]"></div>
             
             {ticks.map((tick, index) => <div key={index} className="absolute">
                 <div className="absolute" style={{
-              width: tick.type === 'major' ? '32px' : '16px',
-              height: '2px',
-              top: `${tick.position}px`,
-              left: tick.type === 'major' ? '28px' : '44px',
-              transform: 'translateY(-50%)',
-              backgroundColor: '#9b87f5'
-            }}></div>
+                  width: tick.type === 'major' ? '32px' : '16px',
+                  height: '2px',
+                  top: `${tick.position}px`,
+                  left: tick.type === 'major' ? '28px' : '44px',
+                  transform: 'translateY(-50%)',
+                  backgroundColor: '#9b87f5'
+                }}></div>
                 
                 {tick.showLabel && <div className="absolute font-bold" style={{
-              top: `${tick.position}px`,
-              left: '12px',
-              transform: 'translateY(-50%)',
-              color: '#7E69AB',
-              fontSize: '20px'
-            }}>
+                  top: `${tick.position}px`,
+                  left: '12px',
+                  transform: 'translateY(-50%)',
+                  color: '#7E69AB',
+                  fontSize: '20px'
+                }}>
                     {tick.label}
                   </div>}
               </div>)}
             
             <div className="absolute text-sm bg-[#f1f0fb] px-2 rounded text-[#7E69AB] font-semibold" style={{
-            bottom: '24px',
-            left: '12px',
-            transform: 'rotate(-90deg)',
-            transformOrigin: 'left bottom'
-          }}>
+              bottom: '24px',
+              left: '12px',
+              transform: 'rotate(-90deg)',
+              transformOrigin: 'left bottom'
+            }}>
               {unit.toUpperCase()}
             </div>
           </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -14,7 +13,6 @@ import { Link } from 'react-router-dom';
 import { blogArticles } from '@/utils/internalLinks';
 import CanonicalLink from '@/components/CanonicalLink';
 
-// Lazy load components that aren't immediately visible
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
 const FaqSection = lazy(() => import('@/components/FaqSection'));
@@ -27,22 +25,39 @@ const Index = () => {
   const [contentTopMargin, setContentTopMargin] = useState("320px");
   const isMobile = useIsMobile();
   
-  // Filter articles to exclude homepage
   const featuredArticles = blogArticles.filter(article => article.url !== "/").slice(0, 3);
   
-  // Create a shortened meta description (150 characters max)
   const metaDescription = "Regla online con calibración precisa para medir en cm, mm y pulgadas en tu pantalla. Perfecta para mediciones exactas.";
   
-  // Adjust content positioning based on ruler orientation
+  const webApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Regla Online",
+    "description": metaDescription,
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "url": "https://regla.onl",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Medición en centímetros y pulgadas",
+      "Tamaño real ajustable",
+      "Compatible con todos los dispositivos",
+      "Sin descargas necesarias",
+      "Calibración precisa"
+    ]
+  };
+  
   useEffect(() => {
-    // Skip margin adjustment on mobile
     if (isMobile) return;
     
-    // Add extra space if ruler is vertical since it takes more space
     if (orientation === 'vertical') {
-      setContentTopMargin("640px"); // Increased for vertical ruler
+      setContentTopMargin("640px");
     } else {
-      setContentTopMargin("320px"); // Increased for horizontal ruler
+      setContentTopMargin("320px");
     }
   }, [orientation, isMobile]);
   
@@ -54,13 +69,15 @@ const Index = () => {
         <meta name="keywords" content="regla online, regla virtual, regla tamaño real, regla online cm, cinta metrica online" />
         <html lang="es" />
         
-        {/* Core Web Vitals optimizations */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#9b87f5" />
         
-        {/* Schema.org structured data for FAQs */}
+        <script type="application/ld+json">
+          {JSON.stringify(webApplicationSchema)}
+        </script>
+        
         <script type="application/ld+json">
           {`
             {
@@ -97,19 +114,15 @@ const Index = () => {
         </script>
       </Helmet>
       
-      {/* Adding the CanonicalLink component for dynamic canonical URLs */}
       <CanonicalLink />
       
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
         
-        {/* For mobile devices, show the mobile-specific ruler layout */}
         {isMobile ? (
           <MobileRuler />
         ) : (
-          // Desktop version continues below
           <>
-            {/* Title and subtitle section - completely separate from ruler */}
             <div className="container text-center mt-8 mb-12">
               <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
                 <strong>Regla Online Tamaño Real</strong>
@@ -119,16 +132,14 @@ const Index = () => {
               </p>
             </div>
             
-            {/* Ruler section - full width with no container constraints */}
             <div className="w-full overflow-hidden mt-4">
               <Ruler className="mb-4" />
             </div>
             
             <main 
               className="container flex-1 relative pb-6"
-              style={{ marginTop: contentTopMargin }} // Dynamic margin based on ruler orientation
+              style={{ marginTop: contentTopMargin }}
             >
-              {/* Featured Articles Section */}
               <div className="mb-10">
                 <Card className="bg-white p-6">
                   <CardContent className="p-0">
@@ -160,7 +171,6 @@ const Index = () => {
                 </Card>
               </div>
               
-              {/* Suspense wrapped components for code splitting and lazy loading */}
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <div className="mb-10">
                   <Card className="bg-white p-6">

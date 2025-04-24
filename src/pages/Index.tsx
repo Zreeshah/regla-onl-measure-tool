@@ -64,7 +64,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>{t('title')}</title>
+        <title>Regla Online a Tamaño Real</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content="regla online, regla virtual, regla tamaño real, regla online cm, cinta metrica online" />
         <html lang="es" />
@@ -125,7 +125,7 @@ const Index = () => {
           <>
             <div className="container text-center mt-8 mb-12">
               <h1 className="text-3xl md:text-4xl font-bold text-[#9b87f5] animate-fade-in">
-                <strong>Regla Online Tamaño Real</strong>
+                <strong>Regla Online a Tamaño Real</strong>
               </h1>
               <p className="text-lg text-gray-600 mt-2 animate-slide-in">
                 Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla

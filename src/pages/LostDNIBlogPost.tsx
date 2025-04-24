@@ -8,21 +8,30 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import CanonicalLink from '@/components/CanonicalLink';
+
 const LostDNIBlogPost: React.FC = () => {
   const currentUrl = "/blog/perdido-dni";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
-  return <>
+  
+  return (
+    <>
       <Helmet>
         <title>He Perdido el DNI: Qué Hacer y Cómo Renovar el DNI si lo He Perdido</title>
         <meta name="description" content="¿Has perdido el DNI y no sabes qué hacer? Aprende paso a paso cómo denunciar la pérdida o robo del DNI y cómo renovarlo rápidamente. Guía completa y actualizada." />
         <meta name="keywords" content="he perdido el DNI, perdí el DNI, qué hacer si he perdido el DNI, renovar DNI perdido, denuncia pérdida DNI, DNI urgente" />
-        <link rel="canonical" href="/blog/perdido-dni" />
+        
+        <link rel="canonical" href="https://regla.onl/blog/perdido-dni" />
         
         <link rel="preconnect" href="https://picsum.photos" />
         <link rel="dns-prefetch" href="https://picsum.photos" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
+
+      <CanonicalLink 
+        customUrl="https://regla.onl/blog/perdido-dni" 
+      />
 
       <div className="min-h-screen flex flex-col">
         <Header />
@@ -311,6 +320,8 @@ const LostDNIBlogPost: React.FC = () => {
         
         <Footer />
       </div>
-    </>;
+    </>
+  );
 };
+
 export default LostDNIBlogPost;

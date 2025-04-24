@@ -3,11 +3,14 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const CanonicalLink: React.FC = () => {
+interface CanonicalLinkProps {
+  customUrl?: string;
+}
+
+const CanonicalLink: React.FC<CanonicalLinkProps> = ({ customUrl }) => {
   const location = useLocation();
-  // Using window.location.origin ensures we get the correct base URL in any environment
   const baseUrl = window.location.origin;
-  const canonicalUrl = `${baseUrl}${location.pathname}`;
+  const canonicalUrl = customUrl || `${baseUrl}${location.pathname}`;
 
   return (
     <Helmet>

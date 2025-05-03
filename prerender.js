@@ -1,4 +1,3 @@
-
 import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
@@ -18,7 +17,7 @@ const routesToPrerender = fs
 
 ;(async () => {
   for (const url of routesToPrerender) {
-    const appHtml = render(url);
+    const appHtml = await render(url); // ✅ Added `await` here
     const html = template.replace('<!--app-html-->', appHtml)
 
     const filePath = `dist${url === '/' ? '/index' : url}.html`

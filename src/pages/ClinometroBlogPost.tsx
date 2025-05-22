@@ -37,7 +37,7 @@ const ClinometroBlogPost: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-6">Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo</h1>
             
             <div className="relative rounded-lg overflow-hidden mb-8">
-              <img alt="Medición de pendientes con clinómetro en montañas" className="w-full h-[300px] md:h-[400px] object-cover" src="/lovable-uploads/65090091-5d64-4667-af28-509718c18951.jpg" />
+              <img alt="Medición de pendientes con clinómetro en montañas" className="w-full h-auto object-cover" src="/lovable-uploads/65090091-5d64-4667-af28-509718c18951.jpg" width="1200" height="630" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                 <p className="text-white text-sm">Medición de pendientes en terrenos montañosos con clinómetro</p>
               </div>
@@ -80,7 +80,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" src="/lovable-uploads/ce693ed3-d8cb-43dd-a187-074a62e05b25.jpg" />
+              <img alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" src="/lovable-uploads/ce693ed3-d8cb-43dd-a187-074a62e05b25.jpg" width="1200" height="630" />
             </div>
 
             <h2 id="historia-del-clinómetro" className="text-2xl font-semibold mt-8 mb-4">Historia del Clinómetro</h2>

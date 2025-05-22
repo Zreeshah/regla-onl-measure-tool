@@ -59,10 +59,10 @@ const BlogPost: React.FC = () => {
             <img 
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
               alt="Persona buscando información DNI en portátil" 
-              className="w-full h-72 sm:h-96 object-cover rounded-lg mb-8"
+              className="w-full h-auto object-cover rounded-lg mb-8"
               loading="lazy"
-              width="800"
-              height="400"
+              width="1200"
+              height="630"
             />
             
             <article className="prose prose-sm sm:prose lg:prose-lg max-w-none">
@@ -97,7 +97,9 @@ const BlogPost: React.FC = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" 
                   alt="Búsqueda de información DNI en línea" 
-                  className="w-full h-64 object-cover rounded-lg mb-4"
+                  className="w-full h-auto object-cover rounded-lg mb-4"
+                  width="1200"
+                  height="630"
                 />
                 <p className="text-sm text-gray-600 italic">La verificación de identidad es uno de los usos más comunes al buscar un DNI por nombre.</p>
               </div>
@@ -146,7 +148,9 @@ const BlogPost: React.FC = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1494891848038-7bd202a2afeb" 
                     alt="Edificio oficial para trámites de DNI" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-auto object-cover rounded-lg"
+                    width="1200"
+                    height="630"
                   />
                   <p className="text-sm text-gray-600 mt-2">Oficina de la DGT donde se pueden realizar consultas presenciales.</p>
                 </div>
@@ -154,7 +158,9 @@ const BlogPost: React.FC = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c" 
                     alt="Dispositivo electrónico para consultas" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-auto object-cover rounded-lg"
+                    width="1200"
+                    height="630"
                   />
                   <p className="text-sm text-gray-600 mt-2">Las consultas digitales son cada vez más comunes para buscar información de DNI.</p>
                 </div>
@@ -232,7 +238,9 @@ const BlogPost: React.FC = () => {
               <img 
                 src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
                 alt="Seguridad de datos digitales" 
-                className="w-full h-64 object-cover rounded-lg my-8"
+                className="w-full h-auto object-cover rounded-lg my-8"
+                width="1200"
+                height="630"
               />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Última palabra</h2>

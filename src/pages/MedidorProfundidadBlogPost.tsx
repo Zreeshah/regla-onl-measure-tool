@@ -34,7 +34,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
         <Card className="mb-8">
           <CardContent className="p-6">
             <div className="mb-6">
-              <img alt="Medidor de Profundidad" loading="lazy" width="800" height="400" src="/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg" className="w-full h-64 rounded-lg mb-4 object-contain" />
+              <img alt="Medidor de Profundidad" loading="lazy" width="1200" height="630" src="/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg" className="w-full h-auto rounded-lg mb-4 object-contain" />
               <p className="text-sm text-gray-500 italic">Imagen representativa de un medidor de profundidad</p>
             </div>
 
@@ -71,7 +71,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
               </p>
 
               <div className="bg-blue-50 p-4 rounded-lg my-6">
-                <img alt="Medidor de profundidad en uso" src="/lovable-uploads/ffdb12f2-5be7-4807-ac03-92d6bb79f171.jpg" className="w-full h-48 rounded-lg mb-2 object-contain" />
+                <img alt="Medidor de profundidad en uso" src="/lovable-uploads/ffdb12f2-5be7-4807-ac03-92d6bb79f171.jpg" className="w-full h-auto rounded-lg mb-2 object-contain" width="1200" height="630" />
                 <p className="text-sm text-gray-600 italic">Un medidor de profundidad en acción</p>
               </div>
 
@@ -98,7 +98,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img alt="Medidor de profundidad mecánico" src="/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg" className="w-full h-64 rounded-lg object-contain" />
+                  <img alt="Medidor de profundidad mecánico" src="/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg" className="w-full h-auto rounded-lg object-contain" width="1200" height="630" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad mecánico</p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img alt="Medidor de profundidad digital" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/5f1db272-a18d-4773-a230-09265e4b3f80.jpg" />
+                  <img alt="Medidor de profundidad digital" className="w-full h-auto object-cover rounded-lg" src="/lovable-uploads/5f1db272-a18d-4773-a230-09265e4b3f80.jpg" width="1200" height="630" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad digital</p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img alt="Medidor de profundidad ultrasónico" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/2bf27732-317f-433d-8291-77b4eca1015a.png" />
+                  <img alt="Medidor de profundidad ultrasónico" className="w-full h-auto object-cover rounded-lg" src="/lovable-uploads/2bf27732-317f-433d-8291-77b4eca1015a.png" width="1200" height="630" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad ultrasónico</p>
                 </div>
               </div>

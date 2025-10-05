@@ -15,7 +15,13 @@ const Footer: React.FC = () => {
               © 2025 Regla Online. Todos los derechos reservados.
             </p>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-end">
+            <Link to="/sobre-nosotros" className="text-sm text-ruler-primary hover:underline">
+              Sobre Nosotros
+            </Link>
+            <Link to="/contacto" className="text-sm text-ruler-primary hover:underline">
+              Contacto
+            </Link>
             <Link to="/privacy" className="text-sm text-ruler-primary hover:underline">
               {t('privacy')}
             </Link>

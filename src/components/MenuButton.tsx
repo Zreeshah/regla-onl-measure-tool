@@ -122,6 +122,20 @@ const MenuButton: React.FC = () => {
               Cómo Usar una Regla
             </Link>
             <Link 
+              to="/sobre-nosotros" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Sobre Nosotros
+            </Link>
+            <Link 
+              to="/contacto" 
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Contacto
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

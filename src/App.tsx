@@ -11,6 +11,8 @@ import React from "react";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import BlogPost from "./pages/BlogPost";
 import SaberDNIBlogPost from "./pages/SaberDNIBlogPost";
@@ -43,6 +45,8 @@ const App: React.FC = () => {
                   <Route path="/" element={<Index />} />
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/disclaimer" element={<Disclaimer />} />
+                  <Route path="/contacto" element={<Contact />} />
+                  <Route path="/sobre-nosotros" element={<About />} />
                   <Route path="/blog/buscar-dni-por-nombre" element={<BlogPost />} />
                   <Route path="/blog/saber-dni-persona" element={<SaberDNIBlogPost />} />
                   <Route path="/blog/perdido-dni" element={<LostDNIBlogPost />} />

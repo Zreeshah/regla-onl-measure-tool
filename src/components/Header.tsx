@@ -166,6 +166,20 @@ const Header: React.FC = () => {
                   <ul className="grid gap-3 p-4 w-[200px]">
                     <li>
                       <NavigationMenuLink asChild>
+                        <Link to="/sobre-nosotros" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Sobre Nosotros
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/contacto" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Contacto
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
                         <Link to="/privacy" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
                           {t('privacy')}
                         </Link>

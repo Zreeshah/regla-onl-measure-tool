@@ -308,10 +308,10 @@ const Index = () => {
                       </div>
 
                       <div className="my-6">
-                        <img 
-                          src={reglaOnline} 
-                          alt="Instrumento de precisión calibrador digital sobre superficie oscura para mediciones exactas" 
-                          className="w-full h-auto rounded-lg"
+                        <img
+                          src={reglaOnline}
+                          alt="Instrumento de precisión calibrador digital sobre superficie oscura para mediciones exactas"
+                          className="max-w-md mx-auto h-auto rounded-lg shadow-md"
                           width={1200}
                           height={630}
                         />

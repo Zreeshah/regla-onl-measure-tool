@@ -364,10 +364,10 @@ const Index = () => {
                     </p>
 
                     <div className="my-6">
-                      <img 
-                        src={reglaPrecision} 
-                        alt="Persona usando regla de medición profesional sobre papel con precisión milimétrica en trabajo de diseño" 
-                        className="w-full h-auto rounded-lg"
+                      <img
+                        src={reglaPrecision}
+                        alt="Persona usando regla de medición profesional sobre papel con precisión milimétrica en trabajo de diseño"
+                        className="max-w-md mx-auto h-auto rounded-lg shadow-md"
                         width={1200}
                         height={630}
                       />

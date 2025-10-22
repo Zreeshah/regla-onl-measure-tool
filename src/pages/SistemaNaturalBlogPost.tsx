@@ -21,8 +21,13 @@ const SistemaNaturalBlogPost: React.FC = () => {
             <header className="mb-10 text-center">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">Sistema Natural de Unidades: Qué es y Cómo Funciona</h1>
               <div className="w-full rounded-lg overflow-hidden mb-6">
-                <img alt="Sistema Natural de Unidades - Representación del universo" src="/lovable-uploads/6e30be3b-fb3c-45ac-9368-d0c966ceb463.jpg" className="w-full h-auto object-cover" />
-                <p className="text-sm text-gray-500 mt-1">El sistema natural de unidades se basa en constantes universales.</p>
+                <img
+                  alt="Sistema Natural de Unidades - Representación del universo"
+                  src="/lovable-uploads/6e30be3b-fb3c-45ac-9368-d0c966ceb463.jpg"
+                  className="w-full h-auto object-contain max-h-[300px] sm:max-h-[400px] md:max-h-[500px] mx-auto"
+                  loading="lazy"
+                />
+                <p className="text-sm text-gray-500 mt-2">El sistema natural de unidades se basa en constantes universales.</p>
               </div>
             </header>
 
@@ -56,8 +61,13 @@ const SistemaNaturalBlogPost: React.FC = () => {
                   <strong>¿Qué es un sistema natural</strong> en términos simples? Es una forma de medir que refleja las leyes intrínsecas del universo, asegurando que las unidades sean consistentes en cualquier lugar y tiempo. Este enfoque es especialmente valioso en física teórica, donde la precisión y la universalidad son cruciales.
                 </p>
                 <div className="bg-gray-100 p-4 rounded-lg my-6">
-                  <img alt="Constantes fundamentales del universo" className="w-full h-auto rounded-lg mb-2" src="/lovable-uploads/5edf45ba-3814-4583-b74c-27296f9e750d.jpg" />
-                  <p className="text-sm text-center">Las constantes universales son la base del sistema natural de unidades</p>
+                  <img
+                    alt="Constantes fundamentales del universo"
+                    src="/lovable-uploads/5edf45ba-3814-4583-b74c-27296f9e750d.jpg"
+                    className="w-full h-auto rounded-lg mb-2 object-contain max-h-[250px] sm:max-h-[350px] md:max-h-[450px] mx-auto"
+                    loading="lazy"
+                  />
+                  <p className="text-sm text-center text-gray-600">Las constantes universales son la base del sistema natural de unidades</p>
                 </div>
               </section>
 

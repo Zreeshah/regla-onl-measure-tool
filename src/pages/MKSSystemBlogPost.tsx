@@ -19,7 +19,12 @@ const MKSSystemBlogPost: React.FC = () => {
         <article className="prose prose-lg max-w-none">
           {/* Featured Image */}
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
-            <img alt="Sistema MKS - Metro, Kilogramo, Segundo" src="/lovable-uploads/3d520faf-c186-4486-92e5-9bcbb32657b4.jpg" className="w-full h-auto object-cover" />
+            <img
+              alt="Sistema MKS - Metro, Kilogramo, Segundo"
+              src="/lovable-uploads/3d520faf-c186-4486-92e5-9bcbb32657b4.jpg"
+              className="w-full h-auto object-contain max-h-[400px] md:max-h-[500px]"
+              loading="lazy"
+            />
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Sistema MKS: Qué es, Unidades y su Importancia en la Medición</h1>
@@ -103,8 +108,13 @@ const MKSSystemBlogPost: React.FC = () => {
             <h3 className="text-xl font-semibold mt-6 mb-3">Orígenes del Sistema Métrico</h3>
             
             <div className="mb-4">
-              <img alt="Evolución histórica de los sistemas de medida" src="/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg" className="w-full h-auto rounded-lg shadow-md object-scale-down" />
-              <p className="text-sm text-gray-600 mt-2">Evolución de los sistemas de medida a lo largo de la historia</p>
+              <img
+                alt="Evolución histórica de los sistemas de medida"
+                src="/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg"
+                className="w-full h-auto rounded-lg shadow-md object-contain max-h-[300px] md:max-h-[400px] mx-auto"
+                loading="lazy"
+              />
+              <p className="text-sm text-gray-600 mt-2 text-center">Evolución de los sistemas de medida a lo largo de la historia</p>
             </div>
             
             <p>

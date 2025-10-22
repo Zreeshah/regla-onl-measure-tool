@@ -42,11 +42,12 @@ const ImprimirRegla: React.FC = () => {
               </div>
 
               <div className="flex flex-col lg:flex-row gap-8 mb-8">
-                <div className="lg:w-auto flex-shrink-0">
+                <div className="lg:w-auto flex-shrink-0 flex justify-center lg:justify-start">
                   <img
                     src={reglaImage}
                     alt="Imprimir Regla"
-                    className="h-auto max-h-[800px] w-auto"
+                    className="h-auto max-h-[500px] sm:max-h-[600px] lg:max-h-[800px] w-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
 

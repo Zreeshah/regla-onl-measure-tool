@@ -30,14 +30,21 @@ const MenuButton: React.FC = () => {
         </SheetHeader>
         <div className="py-6">
           <nav className="flex flex-col space-y-4">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}
             >
               Inicio
             </Link>
-            <Link 
+            <Link
+              to="/imprimir"
+              className="text-lg font-medium hover:text-ruler-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              Imprimir Regla
+            </Link>
+            <Link
               to="/blog/buscar-dni-por-nombre" 
               className="text-lg font-medium hover:text-ruler-primary"
               onClick={() => setIsOpen(false)}

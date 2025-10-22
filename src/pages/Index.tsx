@@ -12,6 +12,7 @@ import { Ruler as RulerIcon, Maximize, Square, Pencil, Book, ArrowRight } from '
 import { Link } from 'react-router-dom';
 import { blogArticles } from '@/utils/internalLinks';
 import CanonicalLink from '@/components/CanonicalLink';
+import calibrationGuide from '@/assets/calibration-guide.png';
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
@@ -167,6 +168,20 @@ const Index = () => {
                         </Link>
                       ))}
                     </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="mb-10">
+                <Card className="bg-white p-6">
+                  <CardContent className="p-0">
+                    <img 
+                      src={calibrationGuide} 
+                      alt="Guía de calibración: Se ajusta al ancho de una tarjeta de plástico" 
+                      className="w-full h-auto rounded-lg"
+                      width={1200}
+                      height={630}
+                    />
                   </CardContent>
                 </Card>
               </div>

@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import { blogArticles } from '@/utils/internalLinks';
 import CanonicalLink from '@/components/CanonicalLink';
 import calibrationGuide from '@/assets/calibration-guide.png';
+import reglaOnline from '@/assets/regla-online.jpg';
+import reglaPrecision from '@/assets/regla-precision.jpg';
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
@@ -253,6 +255,149 @@ const Index = () => {
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <RulerSizesTable />
               </Suspense>
+
+              <div className="mb-10">
+                <Card className="bg-white p-6">
+                  <CardContent className="p-0">
+                    <h2 className="text-2xl font-bold mb-4 text-[#9b87f5]">¿Cómo utilizar la regla online correctamente?</h2>
+                    <p className="mb-6 text-gray-700">
+                      Aprende paso a paso a calibrar y usar la regla virtual en tu dispositivo para obtener medidas lo más precisas posibles.
+                    </p>
+
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800">1. Elige la unidad de medida</h3>
+                        <p className="text-gray-700">
+                          Selecciona la unidad que necesites: milímetros (mm), centímetros (cm) o pulgadas (in). Puedes cambiarla en cualquier momento desde el menú de la regla.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800">2. Calibra la pantalla (método recomendado)</h3>
+                        <p className="text-gray-700 mb-3">
+                          Para que la regla muestre medidas reales, realiza una calibración rápida:
+                        </p>
+                        
+                        <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                          <h4 className="font-semibold mb-2 text-gray-800">Opción A — Calibración por tarjeta estándar (recomendada):</h4>
+                          <ul className="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Coloca una tarjeta de crédito o débito sobre la pantalla.</li>
+                            <li>Ajusta el control de calibración hasta que la longitud de la tarjeta en pantalla coincida con 85.6 mm (tamaño estándar).</li>
+                            <li>Guarda la calibración.</li>
+                          </ul>
+                        </div>
+
+                        <div className="bg-gray-50 p-4 rounded-lg">
+                          <h4 className="font-semibold mb-2 text-gray-800">Opción B — Calibración por diagonal de pantalla:</h4>
+                          <ul className="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Si conoces la diagonal de tu pantalla en pulgadas, introdúcela en el campo de calibración.</li>
+                            <li>La web calculará la relación píxeles→mm automáticamente.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800">3. Prepara el dispositivo y el objeto a medir</h3>
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                          <li>Coloca el dispositivo (teléfono/tablet/PC) sobre una superficie plana y estable.</li>
+                          <li>Asegúrate de que la pantalla está limpia y sin reflejos que dificulten la lectura.</li>
+                          <li>Coloca el objeto a medir lo más paralelo posible a la regla en pantalla.</li>
+                        </ul>
+                      </div>
+
+                      <div className="my-6">
+                        <img 
+                          src={reglaOnline} 
+                          alt="Instrumento de precisión calibrador digital sobre superficie oscura para mediciones exactas" 
+                          className="w-full h-auto rounded-lg"
+                          width={1200}
+                          height={630}
+                        />
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800">4. Mide correctamente</h3>
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                          <li>Sitúa el borde del objeto en el punto 0 de la regla virtual.</li>
+                          <li>Lee la medida en la unidad seleccionada.</li>
+                          <li>Si el objeto es más largo que la regla en pantalla, anota la medida visible y desplaza el objeto para medir el resto (o usa la función de desplazamiento/zoom si está disponible).</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800">5. Consejos para mayor precisión</h3>
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                          <li>Verifica que la escala del navegador esté al 100% (sin zoom).</li>
+                          <li>Evita medir a través de fundas muy gruesas o protectores que alteren la posición del objeto.</li>
+                          <li>Recalibra si cambias de dispositivo o después de una actualización del navegador.</li>
+                          <li>Para mediciones críticas (ingeniería, construcción) usa instrumentos físicos certificados.</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800">6. Problemas comunes y soluciones rápidas</h3>
+                        <div className="space-y-3">
+                          <div className="bg-gray-50 p-3 rounded">
+                            <p className="text-gray-700"><strong>Medidas incorrectas:</strong> Recalibra con la tarjeta estándar.</p>
+                          </div>
+                          <div className="bg-gray-50 p-3 rounded">
+                            <p className="text-gray-700"><strong>La regla se ve distorsionada:</strong> Asegúrate de que no haya zoom en la página ni en la configuración de accesibilidad.</p>
+                          </div>
+                          <div className="bg-gray-50 p-3 rounded">
+                            <p className="text-gray-700"><strong>No funciona en mi navegador:</strong> Actualiza el navegador o prueba con Chrome/Firefox/Safari en su versión más reciente.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="mb-10">
+                <Card className="bg-white p-6">
+                  <CardContent className="p-0">
+                    <h2 className="text-2xl font-bold mb-4 text-[#9b87f5]">¡Empieza a medir ahora!</h2>
+                    <p className="text-lg text-gray-700 mb-4">
+                      Tu pantalla puede convertirse en una herramienta de medición precisa y gratuita. Con nuestra regla online, puedes medir objetos directamente desde tu móvil, tablet o computadora sin necesidad de descargar nada.
+                    </p>
+
+                    <div className="my-6">
+                      <img 
+                        src={reglaPrecision} 
+                        alt="Persona usando regla de medición profesional sobre papel con precisión milimétrica en trabajo de diseño" 
+                        className="w-full h-auto rounded-lg"
+                        width={1200}
+                        height={630}
+                      />
+                    </div>
+
+                    <div className="space-y-6">
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h3 className="text-xl font-semibold mb-2 text-gray-800">⚡ Rápido, fácil y gratis</h3>
+                        <p className="text-gray-700">
+                          Solo calibra una vez, y podrás usar la regla virtual siempre que la necesites. Funciona perfectamente con las unidades más comunes: centímetros, milímetros y pulgadas.
+                        </p>
+                      </div>
+
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h3 className="text-xl font-semibold mb-2 text-gray-800">✓ Listo para comenzar</h3>
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                          <li>Pulsa el botón "Calibrar pantalla".</li>
+                          <li>Ajusta la regla según el tamaño de tu pantalla o con una tarjeta estándar.</li>
+                          <li>¡Empieza a medir de inmediato cualquier objeto que tengas a la mano!</li>
+                        </ul>
+                      </div>
+
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h3 className="text-xl font-semibold mb-2 text-gray-800">🎯 ¿Por qué esperar?</h3>
+                        <p className="text-gray-700">
+                          Mide, compara y calcula al instante desde cualquier dispositivo. Ideal para estudiantes, diseñadores, artesanos y todo aquel que necesite una medición rápida y fiable.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </main>
             
             <Footer />

@@ -34,6 +34,11 @@ const Header: React.FC = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
+                <Link to="/imprimir" className={`${navigationMenuTriggerStyle()} px-4`}>
+                  Imprimir Regla
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[250px]">

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,7 +13,6 @@ import HowToUseSection from '@/components/HowToUseSection';
 import WhyPerfectSection from '@/components/WhyPerfectSection';
 import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
-
 const MobileRuler: React.FC = () => {
   const {
     pixelsPerCm,
@@ -33,7 +31,7 @@ const MobileRuler: React.FC = () => {
   const {
     t
   } = useLanguage();
-  
+
   // Dynamic ruler height based on screen size
   const calculateRulerHeight = () => {
     // Ensure we show at least up to 25 units or screen size + buffer, whichever is larger
@@ -42,25 +40,21 @@ const MobileRuler: React.FC = () => {
     const heightPerUnit = 40; // Approximate pixels per unit
     return Math.max(minHeight, unitsToShow * heightPerUnit);
   };
-  
   const [rulerHeight, setRulerHeight] = useState(calculateRulerHeight());
   const rulerRef = useRef<HTMLDivElement>(null);
   const [inputValue, setInputValue] = useState<string>(screenSize.toString());
-  
+
   // Recalculate ruler height when screen size changes
   useEffect(() => {
     setRulerHeight(calculateRulerHeight());
     setInputValue(screenSize.toString());
   }, [screenSize]);
-  
   useEffect(() => {
     calibrateByScreen(screenSize);
   }, [screenSize, calibrateByScreen]);
-  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
-  
   const handleInputBlur = () => {
     const newSize = parseFloat(inputValue);
     if (!isNaN(newSize) && newSize > 0) {
@@ -70,13 +64,11 @@ const MobileRuler: React.FC = () => {
       setInputValue(screenSize.toString());
     }
   };
-  
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.currentTarget.blur();
     }
   };
-  
   const generateTicks = () => {
     if (!rulerRef.current) return [];
     const ticks = [];
@@ -104,9 +96,7 @@ const MobileRuler: React.FC = () => {
     }
     return ticks;
   };
-  
   const ticks = generateTicks();
-  
   return <div className="relative mobile-ruler-container">
       <div className="px-2 pt-2 text-center flex justify-between items-center">
         <p className="text-xs text-gray-600 mb-1">(Scroll down to show full ruler)</p>
@@ -115,49 +105,49 @@ const MobileRuler: React.FC = () => {
       
       {/* Updated container with dynamic height and scrollable area */}
       <div className="mobile-ruler-layout" style={{
-        height: 'auto',
-        maxHeight: '80vh',
-        position: 'relative',
-        overflowX: 'hidden',
-        overflowY: 'auto'
-      }}>
+      height: 'auto',
+      maxHeight: '80vh',
+      position: 'relative',
+      overflowX: 'hidden',
+      overflowY: 'auto'
+    }}>
         <div className="ruler-container ruler-vertical mobile-ruler" ref={rulerRef} style={{
-          width: '80px',
-          height: `${rulerHeight}px`,
-          position: 'relative',
-          overflow: 'visible',
-          margin: '0'
-        }}>
+        width: '80px',
+        height: `${rulerHeight}px`,
+        position: 'relative',
+        overflow: 'visible',
+        margin: '0'
+      }}>
           <div className="relative h-full w-full rounded-none">
             <div className="absolute h-full w-8 left-8 bg-transparent border-l border-[#9b87f5]"></div>
             
             {ticks.map((tick, index) => <div key={index} className="absolute">
                 <div className="absolute" style={{
-                  width: tick.type === 'major' ? '32px' : '16px',
-                  height: '2px',
-                  top: `${tick.position}px`,
-                  left: tick.type === 'major' ? '28px' : '44px',
-                  transform: 'translateY(-50%)',
-                  backgroundColor: '#9b87f5'
-                }}></div>
+              width: tick.type === 'major' ? '32px' : '16px',
+              height: '2px',
+              top: `${tick.position}px`,
+              left: tick.type === 'major' ? '28px' : '44px',
+              transform: 'translateY(-50%)',
+              backgroundColor: '#9b87f5'
+            }}></div>
                 
                 {tick.showLabel && <div className="absolute font-bold" style={{
-                  top: `${tick.position}px`,
-                  left: '12px',
-                  transform: 'translateY(-50%)',
-                  color: '#7E69AB',
-                  fontSize: '20px'
-                }}>
+              top: `${tick.position}px`,
+              left: '12px',
+              transform: 'translateY(-50%)',
+              color: '#7E69AB',
+              fontSize: '20px'
+            }}>
                     {tick.label}
                   </div>}
               </div>)}
             
             <div className="absolute text-sm bg-[#f1f0fb] px-2 rounded text-[#7E69AB] font-semibold" style={{
-              bottom: '24px',
-              left: '12px',
-              transform: 'rotate(-90deg)',
-              transformOrigin: 'left bottom'
-            }}>
+            bottom: '24px',
+            left: '12px',
+            transform: 'rotate(-90deg)',
+            transformOrigin: 'left bottom'
+          }}>
               {unit.toUpperCase()}
             </div>
           </div>
@@ -172,28 +162,13 @@ const MobileRuler: React.FC = () => {
             <div className="flex items-center gap-2 mb-2">
               <div className="relative w-16 h-28 border border-gray-300 rounded-lg flex items-center justify-center flex-col">
                 <span className="text-sm text-gray-500">Screen</span>
-                <Input 
-                  type="number"
-                  min="3"
-                  max="25"
-                  step="0.1"
-                  value={inputValue}
-                  onChange={handleInputChange}
-                  onBlur={handleInputBlur}
-                  onKeyDown={handleKeyDown}
-                  className="text-center h-8 w-14 text-sm font-bold"
-                />
+                <Input type="number" min="3" max="25" step="0.1" value={inputValue} onChange={handleInputChange} onBlur={handleInputBlur} onKeyDown={handleKeyDown} className="text-center h-8 w-14 text-sm font-bold" />
                 <span className="text-xs">inches</span>
               </div>
               
               <div className="flex-grow flex flex-col">
                 <p className="text-xs text-gray-500 mb-1">Enter your device's screen size</p>
-                <Button 
-                  onClick={redetectScreenSize} 
-                  size="sm" 
-                  variant="outline" 
-                  className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]"
-                >
+                <Button onClick={redetectScreenSize} size="sm" variant="outline" className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]">
                   <RefreshCw size={10} className="mr-1" />
                   Re-detect
                 </Button>
@@ -204,67 +179,7 @@ const MobileRuler: React.FC = () => {
       </div>
       
       {/* Homepage content after the ruler section */}
-      <div className="px-4 py-6 mt-4">
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-8">
-          <h1 className="text-2xl font-bold text-[#9b87f5] mb-2">
-            Regla Online Tamaño Real
-          </h1>
-          <p className="text-gray-600 mb-4">
-            Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
-          </p>
-          <HomeContent />
-        </div>
-        
-        <div className="mb-10">
-          <Card className="bg-white p-4">
-            <CardContent className="p-0">
-              <p className="mb-4">{t('rulerDescription')}</p>
-              <p className="mb-4">{t('contentIntro')}</p>
-              
-              <h2 className="text-xl font-bold mb-3 text-[#9b87f5]">{t('moreInfo')}</h2>
-              <div className="grid grid-cols-1 gap-4 mb-6">
-                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                  <RulerIcon className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">{t('useCase1')}</h3>
-                    <p className="text-sm text-gray-600">{t('useCase1Description')}</p>
-                  </div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                  <Pencil className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">{t('useCase2')}</h3>
-                    <p className="text-sm text-gray-600">{t('useCase2Description')}</p>
-                  </div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                  <Square className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">{t('useCase3')}</h3>
-                    <p className="text-sm text-gray-600">{t('useCase3Description')}</p>
-                  </div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                  <Maximize className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">{t('useCase4')}</h3>
-                    <p className="text-sm text-gray-600">{t('useCase4Description')}</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        
-        <div className="grid grid-cols-1 gap-6 mb-10">
-          <HowToUseSection />
-          <WhyPerfectSection />
-        </div>
-        
-        <FaqSection />
-        
-        <RulerSizesTable />
-      </div>
+      
       
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center">
         <div className="flex items-center space-x-4">
@@ -297,5 +212,4 @@ const MobileRuler: React.FC = () => {
       </div>
     </div>;
 };
-
 export default MobileRuler;

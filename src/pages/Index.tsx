@@ -182,7 +182,8 @@ const Index = () => {
                     <img 
                       src={calibrationGuide} 
                       alt="Guía de calibración: Se ajusta al ancho de una tarjeta de plástico" 
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-auto rounded-lg object-cover"
+                      loading="lazy"
                       width={1200}
                       height={630}
                     />
@@ -311,7 +312,8 @@ const Index = () => {
                         <img
                           src={reglaOnline}
                           alt="Instrumento de precisión calibrador digital sobre superficie oscura para mediciones exactas"
-                          className="max-w-md mx-auto h-auto rounded-lg shadow-md"
+                          className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
+                          loading="lazy"
                           width={1200}
                           height={630}
                         />
@@ -367,7 +369,8 @@ const Index = () => {
                       <img
                         src={reglaPrecision}
                         alt="Persona usando regla de medición profesional sobre papel con precisión milimétrica en trabajo de diseño"
-                        className="max-w-md mx-auto h-auto rounded-lg shadow-md"
+                        className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
+                        loading="lazy"
                         width={1200}
                         height={630}
                       />

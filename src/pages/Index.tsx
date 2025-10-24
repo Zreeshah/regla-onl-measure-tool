@@ -15,12 +15,12 @@ import CanonicalLink from '@/components/CanonicalLink';
 import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
+import HomeContent from '@/components/HomeContent';
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
 const FaqSection = lazy(() => import('@/components/FaqSection'));
 const RulerSizesTable = lazy(() => import('@/components/RulerSizesTable'));
-const HomeContent = lazy(() => import('@/components/HomeContent'));
 
 const Index = () => {
   const { t } = useLanguage();
@@ -187,20 +187,19 @@ const Index = () => {
                       fetchPriority="high"
                       width={1200}
                       height={630}
+                      decoding="async"
                     />
                   </CardContent>
                 </Card>
               </div>
               
-              <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
-                <div className="mb-10">
-                  <Card className="bg-white p-6">
-                    <CardContent className="p-0">
-                      <HomeContent />
-                    </CardContent>
-                  </Card>
-                </div>
-              </Suspense>
+              <div className="mb-10">
+                <Card className="bg-white p-6">
+                  <CardContent className="p-0">
+                    <HomeContent />
+                  </CardContent>
+                </Card>
+              </div>
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <div className="mb-10">
@@ -316,8 +315,8 @@ const Index = () => {
                           className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                           loading="lazy"
                           decoding="async"
-                          width={1200}
-                          height={630}
+                          width={800}
+                          height={420}
                         />
                       </div>
 
@@ -373,8 +372,9 @@ const Index = () => {
                         alt="Persona usando regla de medición profesional sobre papel con precisión milimétrica en trabajo de diseño"
                         className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                         loading="lazy"
-                        width={1200}
-                        height={630}
+                        decoding="async"
+                        width={800}
+                        height={420}
                       />
                     </div>
 

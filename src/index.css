@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Optimize font loading */
+@layer base {
+  html {
+    font-display: swap;
+  }
+}
+
 /* Font optimization for better LCP */
 @layer base {
   @font-face {

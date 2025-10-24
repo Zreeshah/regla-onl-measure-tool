@@ -183,7 +183,8 @@ const Index = () => {
                       src={calibrationGuide} 
                       alt="Guía de calibración: Se ajusta al ancho de una tarjeta de plástico" 
                       className="w-full h-auto rounded-lg object-cover"
-                      loading="lazy"
+                      loading="eager"
+                      fetchPriority="high"
                       width={1200}
                       height={630}
                     />
@@ -314,6 +315,7 @@ const Index = () => {
                           alt="Instrumento de precisión calibrador digital sobre superficie oscura para mediciones exactas"
                           className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                           loading="lazy"
+                          decoding="async"
                           width={1200}
                           height={630}
                         />

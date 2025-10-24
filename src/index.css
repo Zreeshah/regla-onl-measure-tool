@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font optimization for better LCP */
+@layer base {
+  @font-face {
+    font-family: system-ui;
+    font-display: swap;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

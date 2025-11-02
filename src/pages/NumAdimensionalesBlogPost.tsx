@@ -39,7 +39,7 @@ const NumAdimensionalesBlogPost = () => {
         <article className="max-w-4xl mx-auto">
           {/* Featured Image */}
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
-            <img alt="Representación de números adimensionales" className="w-full h-auto object-cover" loading="lazy" width="1200" height="630" src="/lovable-uploads/6328a843-2738-47e0-a58d-69f6ab06586b.jpg" />
+            <img alt="Representación de números adimensionales" className="w-full h-auto object-cover" loading="lazy" width="1200" height="630" src="/lovable-uploads/numeros-adimensionales.jpg" />
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-ruler-primary">Números Adimensionales: Qué Son, Significado y Ejemplos Prácticos</h1>

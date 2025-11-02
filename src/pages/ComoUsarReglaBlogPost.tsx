@@ -133,7 +133,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                   <p className="text-sm text-gray-600 italic">Regla metálica profesional, ideal para dibujo técnico y mediciones precisas.</p>
                 </div>
                 <div>
-                  <img alt="Regla siendo usada para dibujar" className="w-full h-64 object-cover rounded-lg mb-2" src="/lovable-uploads/bb16f626-e524-4084-865f-88ee1ff6eea2.jpg" />
+                  <img alt="Regla siendo usada para dibujar" className="w-full h-64 object-cover rounded-lg mb-2" src="/lovable-uploads/regla-dibujo.jpg" />
                   <p className="text-sm text-gray-600 italic">El uso correcto de la regla permite trazar líneas rectas con precisión.</p>
                 </div>
               </div>
@@ -195,7 +195,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                 <strong>Ejemplo práctico</strong>: Si mides un lápiz y el punto cero está alineado con un extremo, y el otro extremo cae entre 12 y 13 cm, estima la fracción más cercana (ej., 12.8 cm).
               </p>
               
-              <img alt="Regla midiendo un objeto" className="w-full h-64 sm:h-80 object-cover rounded-lg my-8" src="/lovable-uploads/c058baa5-0359-41f1-a81f-fdaeb13aa151.jpg" />
+              <img alt="Regla midiendo un objeto" className="w-full h-64 sm:h-80 object-cover rounded-lg my-8" src="/lovable-uploads/regla-midiendo.jpg" />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="tecnicas-avanzadas">Técnicas Avanzadas para Medir con una Regla</h2>
               

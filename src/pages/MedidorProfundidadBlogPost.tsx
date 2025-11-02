@@ -71,7 +71,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
               </p>
 
               <div className="bg-blue-50 p-4 rounded-lg my-6">
-                <img alt="Medidor de profundidad en uso" src="/lovable-uploads/ffdb12f2-5be7-4807-ac03-92d6bb79f171.jpg" className="w-full h-auto rounded-lg mb-2 object-contain" width="1200" height="630" />
+                <img alt="Medidor de profundidad en uso" src="/lovable-uploads/medidor-profundidad-uso.jpg" className="w-full h-auto rounded-lg mb-2 object-contain" width="1200" height="630" />
                 <p className="text-sm text-gray-600 italic">Un medidor de profundidad en acción</p>
               </div>
 
@@ -98,7 +98,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img alt="Medidor de profundidad mecánico" src="/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg" className="w-full h-auto rounded-lg object-contain" width="1200" height="630" />
+                  <img alt="Medidor de profundidad mecánico" src="/lovable-uploads/medidor-profundidad-mecanico.jpg" className="w-full h-auto rounded-lg object-contain" width="1200" height="630" />
                   <p className="text-sm text-gray-500 italic mt-2">Medidor de profundidad mecánico</p>
                 </div>
               </div>

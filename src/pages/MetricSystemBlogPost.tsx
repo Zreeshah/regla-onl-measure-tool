@@ -99,7 +99,7 @@ const MetricSystemBlogPost: React.FC = () => {
             </div>
             
             <div className="my-8">
-              <img alt="Ventajas del Sistema Métrico Decimal" src="/lovable-uploads/ac043476-ab03-4ce6-b0b3-942cb4d79ac5.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />
+              <img alt="Ventajas del Sistema Métrico Decimal" src="/lovable-uploads/sistema-metrico-ventajas.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />
             </div>
             
             <h2 id="unidades-del-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">

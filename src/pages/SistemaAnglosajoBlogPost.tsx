@@ -33,7 +33,7 @@ const SistemaAnglosajoBlogPost = () => {
           <h1 className="text-3xl font-bold mb-6 text-ruler-primary">Sistema Anglosajón de Unidades: Qué es, Unidades y Conversiones</h1>
 
           <div className="my-6 rounded-lg overflow-hidden shadow-md">
-            <img alt="Sistema Anglosajón de Unidades" className="w-full h-auto object-cover" src="/lovable-uploads/f10610cb-bdc6-42eb-b57f-3f1e036a8580.jpg" />
+            <img alt="Sistema Anglosajón de Unidades" className="w-full h-auto object-cover" src="/lovable-uploads/sistema-anglosajón.jpg" />
             <p className="text-xs text-gray-500 p-2 bg-gray-100">Imagen: El sistema anglosajón tiene un origen histórico y sigue siendo relevante en países como Estados Unidos y Reino Unido.</p>
           </div>
 

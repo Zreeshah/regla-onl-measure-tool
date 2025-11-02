@@ -80,7 +80,7 @@ const ClinometroBlogPost: React.FC = () => {
             </p>
 
             <div className="my-8 flex justify-center">
-              <img alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" src="/lovable-uploads/ce693ed3-d8cb-43dd-a187-074a62e05b25.jpg" width="1200" height="630" />
+              <img alt="Clinómetro utilizado en topografía" className="rounded-lg w-full max-w-2xl h-auto" src="/lovable-uploads/clinometro-topografia.jpg" width="1200" height="630" />
             </div>
 
             <h2 id="historia-del-clinómetro" className="text-2xl font-semibold mt-8 mb-4">Historia del Clinómetro</h2>

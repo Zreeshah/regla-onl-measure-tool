@@ -45,16 +45,6 @@ const Header: React.FC = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          to="/blog/buscar-dni-por-nombre" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          Buscar DNI por Nombre
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
                           to="/blog/saber-dni-persona" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >

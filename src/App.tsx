@@ -58,7 +58,8 @@ const App: React.FC = () => {
                     <Route path="/disclaimer" element={<Disclaimer />} />
                     <Route path="/contacto" element={<Contact />} />
                     <Route path="/sobre-nosotros" element={<About />} />
-                    <Route path="/blog/buscar-dni-por-nombre" element={<BlogPost />} />
+                    {/* DRAFT: Hidden for later revival - redirects to homepage via vercel.json */}
+                    {/* <Route path="/blog/buscar-dni-por-nombre" element={<BlogPost />} /> */}
                     <Route path="/blog/saber-dni-persona" element={<SaberDNIBlogPost />} />
                     <Route path="/blog/perdido-dni" element={<LostDNIBlogPost />} />
                     <Route path="/blog/sistema-metrico-decimal" element={<MetricSystemBlogPost />} />

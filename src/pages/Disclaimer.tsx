@@ -8,42 +8,23 @@ import { Helmet } from 'react-helmet-async';
 const Disclaimer = () => {
   const { t } = useLanguage();
   
-  // Content for Spanish only since we removed English support
   const content = {
-    title: "Aviso Legal",
-    accuracy: "Precisión de las Medidas",
-    accuracyText: "Nuestra herramienta de regla en línea está diseñada para proporcionar medidas lo más precisas posible. Sin embargo, la precisión puede verse afectada por varios factores:",
-    accuracyItems: [
-      "La resolución y tamaño de su pantalla",
-      "La precisión de la información de calibración proporcionada",
-      "Las configuraciones específicas del navegador y del sistema operativo",
-      "Variaciones en la fabricación de dispositivos"
-    ],
-    disclaimer: "Descargo de Responsabilidad",
-    disclaimerText: "Regla.Onl proporciona esta herramienta 'tal cual', sin garantías de ningún tipo. Aunque nos esforzamos por ofrecer mediciones precisas, no podemos garantizar la exactitud absoluta para todas las pantallas y dispositivos.",
-    disclaimerItems: [
-      "No somos responsables de cualquier error o inexactitud en las mediciones",
-      "No asumimos responsabilidad por proyectos o decisiones basadas en las mediciones realizadas con nuestra herramienta",
-      "Para mediciones que requieren precisión absoluta, recomendamos utilizar instrumentos de medición físicos calibrados"
-    ],
-    usage: "Uso Aceptable",
-    usageText: "Al utilizar nuestra herramienta de regla en línea, usted acepta:",
-    usageItems: [
-      "Utilizarla solo para fines legales y apropiados",
-      "No intentar manipular, descompilar o modificar la herramienta",
-      "No utilizar la herramienta de manera que pueda dañar, sobrecargar o comprometer nuestros sistemas"
-    ],
-    changes: "Cambios en el Servicio",
-    changesText: "Nos reservamos el derecho de modificar, suspender o interrumpir cualquier aspecto de nuestra herramienta en cualquier momento sin previo aviso.",
-    contact: "Contacto",
-    contactText: "Si tiene alguna pregunta sobre este aviso legal, puede contactarnos en: info@regla.onl"
+    title: "Descargo de responsabilidad de Regla",
+    intro: "Si necesita más información o tiene alguna pregunta sobre el descargo de responsabilidad de nuestro sitio web, no dude en contactarnos por correo electrónico a admin@regla.onl.",
+    mainTitle: "Descargo de responsabilidad de Regla",
+    mainText: "Toda la información de este sitio web (https://regla.onl) se publica de buena fe y únicamente con fines informativos generales. Regla no ofrece garantías sobre la integridad, fiabilidad y exactitud de esta información. Cualquier acción que usted realice basándose en la información que encuentre en este sitio web (Regla) es bajo su propia responsabilidad. Regla no se hace responsable de las pérdidas o daños relacionados con el uso de nuestro sitio web.",
+    externalLinks: "Desde nuestro sitio web, puede visitar otros sitios web a través de enlaces externos. Si bien nos esforzamos por proporcionar solo enlaces de calidad a sitios web útiles y éticos, no tenemos control sobre el contenido ni la naturaleza de estos sitios. Estos enlaces a otros sitios web no implican una recomendación de todo el contenido que se encuentra en ellos. Los propietarios y el contenido de los sitios pueden cambiar sin previo aviso, incluso antes de que tengamos la oportunidad de eliminar un enlace que ya no funcione. Tenga en cuenta que, al salir de nuestro sitio web, otros sitios pueden tener políticas de privacidad y términos diferentes que escapan a nuestro control. Asegúrese de consultar las políticas de privacidad y los términos de servicio de dichos sitios antes de realizar cualquier transacción o subir información.",
+    consentTitle: "Consentimiento",
+    consentText: "Al usar nuestro sitio web, usted acepta este descargo de responsabilidad y sus términos.",
+    updateTitle: "Actualización",
+    updateText: "En caso de que actualicemos, modifiquemos o realicemos algún cambio en este documento, dichos cambios se publicarán aquí de forma destacada."
   };
   
   return (
     <>
       <Helmet>
         <title>{content.title} - Regla.Onl</title>
-        <meta name="description" content={content.disclaimerText} />
+        <meta name="description" content={content.mainText.substring(0, 160)} />
         <html lang="es" />
         <link rel="canonical" href="https://regla.onl/disclaimer" />
       </Helmet>
@@ -53,64 +34,37 @@ const Disclaimer = () => {
         
         <main className="container flex-1 py-8">
           <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
-            <div className="text-2xl font-bold mb-6 text-ruler-primary">
+            <h1 className="text-2xl font-bold mb-6 text-ruler-primary">
               {content.title}
-            </div>
+            </h1>
             
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.accuracy}
-            </h2>
-            <p className="mb-3">
-              {content.accuracyText}
+            <p className="mb-6">
+              {content.intro}
             </p>
-            <ul className="list-disc pl-6 mb-6">
-              {content.accuracyItems.map((item, index) => (
-                <li key={index} className="mb-1">
-                  {item}
-                </li>
-              ))}
-            </ul>
             
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.disclaimer}
-            </h2>
-            <p className="mb-3">
-              {content.disclaimerText}
-            </p>
-            <ul className="list-disc pl-6 mb-6">
-              {content.disclaimerItems.map((item, index) => (
-                <li key={index} className="mb-1">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.usage}
-            </h2>
-            <p className="mb-3">
-              {content.usageText}
-            </p>
-            <ul className="list-disc pl-6 mb-6">
-              {content.usageItems.map((item, index) => (
-                <li key={index} className="mb-1">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.changes}
+              {content.mainTitle}
             </h2>
             <p className="mb-6">
-              {content.changesText}
+              {content.mainText}
+            </p>
+            
+            <p className="mb-6">
+              {content.externalLinks}
             </p>
             
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.contact}
+              {content.consentTitle}
+            </h2>
+            <p className="mb-6">
+              {content.consentText}
+            </p>
+            
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
+              {content.updateTitle}
             </h2>
             <p>
-              {content.contactText}
+              {content.updateText}
             </p>
           </div>
         </main>

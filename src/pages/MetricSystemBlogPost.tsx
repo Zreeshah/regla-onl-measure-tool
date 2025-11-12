@@ -7,6 +7,7 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { Square, Triangle, Circle, ArrowDown, ArrowUp } from 'lucide-react';
+import AdUnit from '@/components/AdUnit';
 const MetricSystemBlogPost: React.FC = () => {
   const {
     t
@@ -110,6 +111,8 @@ const MetricSystemBlogPost: React.FC = () => {
               A continuación, te presentamos las unidades principales del <strong>sistema métrico decimal</strong> para cada tipo 
               de medida, con <strong>tablas del sistema métrico decimal</strong> claras y detalladas.
             </p>
+
+            <AdUnit />
             
             <h3 id="medidas-de-longitud" className="text-xl font-semibold mt-8 mb-4">
               Medidas de Longitud
@@ -286,6 +289,8 @@ const MetricSystemBlogPost: React.FC = () => {
             <p className="text-sm italic">
               <strong>Nota</strong>: 1 litro de agua (a 4°C) equivale aproximadamente a 1 kilogramo, una relación útil en conversiones.
             </p>
+
+            <AdUnit />
             
             <h3 id="medidas-de-superficie" className="text-xl font-semibold mt-8 mb-4">
               Medidas de Superficie
@@ -400,6 +405,8 @@ const MetricSystemBlogPost: React.FC = () => {
                 </TableBody>
               </Table>
             </div>
+
+            <AdUnit />
             
             <div className="my-8">
               <img alt="Unidades del Sistema Métrico Decimal" src="/lovable-uploads/3aaf4fe4-39fa-4068-9fb3-a5d1decbbc8e.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />

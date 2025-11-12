@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table } from '@/components/ui/table';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import AdUnit from '@/components/AdUnit';
 const SistemaNaturalBlogPost: React.FC = () => {
   return <>
       <Helmet>
@@ -70,6 +71,8 @@ const SistemaNaturalBlogPost: React.FC = () => {
                   <p className="text-sm text-center text-gray-600">Las constantes universales son la base del sistema natural de unidades</p>
                 </div>
               </section>
+
+              <AdUnit />
 
               <section id="constantes-fundamentales" className="mb-10">
                 <h2 className="text-2xl font-bold mb-4">Constantes Fundamentales del Sistema Natural</h2>
@@ -209,6 +212,8 @@ const SistemaNaturalBlogPost: React.FC = () => {
                   En <strong>astrofísica y cosmología</strong>, cuando estudiamos la época de Planck (los primeros 10⁻⁴⁴ segundos después del Big Bang), las escalas de Planck son las únicas que tienen sentido físico. A esas energías y escalas extremas, todos los efectos cuánticos de la gravedad son importantes, y trabajar en unidades de Planck nos permite comprender mejor los procesos que ocurrieron en esos momentos críticos del universo.
                 </p>
               </section>
+
+              <AdUnit />
 
               <section id="comparación" className="mb-10">
                 <h2 className="text-2xl font-bold mb-4">Comparación con Otros Sistemas de Unidades</h2>
@@ -358,6 +363,8 @@ const SistemaNaturalBlogPost: React.FC = () => {
                 
                 
               </section>
+
+              <AdUnit />
 
               <section id="conclusión" className="mb-10">
                 <h2 className="text-2xl font-bold mb-4">Conclusión</h2>

@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calculator, Ruler, Scale, MoveHorizontal, Clock, Zap, Atom } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import AdUnit from '@/components/AdUnit';
 const MKSSystemBlogPost: React.FC = () => {
   return <div className="min-h-screen flex flex-col">
       <Helmet>
@@ -95,6 +96,8 @@ const MKSSystemBlogPost: React.FC = () => {
               </ul>
             </div>
           </section>
+
+          <AdUnit />
 
           <section id="historia-sistema-mks">
             <h2 className="text-2xl font-bold mt-8 mb-4">
@@ -456,6 +459,8 @@ const MKSSystemBlogPost: React.FC = () => {
                 </TableRow>
               </TableBody>
             </Table>
+
+            <AdUnit />
             
             <div className="bg-gray-100 p-4 rounded-lg my-6">
               <h4 className="font-semibold mb-2">Ejemplo práctico:</h4>

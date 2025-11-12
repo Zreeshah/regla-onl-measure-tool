@@ -142,7 +142,11 @@ const Index = () => {
           </div>
         )}
         
-        <main 
+        <div className="container">
+          <AdUnit />
+        </div>
+        
+        <main
           className={`container flex-1 relative pb-6 ${isMobile ? 'mt-8' : ''}`}
           style={!isMobile ? { marginTop: contentTopMargin } : {}}
         >

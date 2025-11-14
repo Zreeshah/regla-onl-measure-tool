@@ -16,7 +16,6 @@ import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
-import AdUnit from '@/components/AdUnit';
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
@@ -142,11 +141,7 @@ const Index = () => {
           </div>
         )}
         
-        <div className="container">
-          <AdUnit />
-        </div>
-        
-        <main
+        <main 
           className={`container flex-1 relative pb-6 ${isMobile ? 'mt-8' : ''}`}
           style={!isMobile ? { marginTop: contentTopMargin } : {}}
         >
@@ -181,8 +176,6 @@ const Index = () => {
                 </Card>
               </div>
 
-              <AdUnit />
-
               <div className="mb-10">
                 <Card className="bg-white p-6">
                   <CardContent className="p-0">
@@ -199,8 +192,6 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </div>
-
-              <AdUnit />
               
               <div className="mb-10">
                 <Card className="bg-white p-6">
@@ -209,8 +200,6 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </div>
-
-              <AdUnit />
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <div className="mb-10">
@@ -261,14 +250,10 @@ const Index = () => {
                   <WhyPerfectSection />
                 </div>
               </Suspense>
-
-              <AdUnit />
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <FaqSection />
               </Suspense>
-
-              <AdUnit />
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <RulerSizesTable />
@@ -418,10 +403,8 @@ const Index = () => {
                       </div>
                     </div>
               </CardContent>
-                </Card>
-              </div>
-
-              <AdUnit />
+            </Card>
+          </div>
         </main>
         
         <Footer />

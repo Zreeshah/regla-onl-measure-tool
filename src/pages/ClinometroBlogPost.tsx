@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import AdUnit from '@/components/AdUnit';
 const ClinometroBlogPost: React.FC = () => {
   return <div className="flex flex-col min-h-screen">
       <Helmet>
@@ -100,8 +99,6 @@ const ClinometroBlogPost: React.FC = () => {
             <p>
               Esta evolución refleja la importancia del <strong>clinómetro</strong> en la historia de la medición.
             </p>
-
-            <AdUnit />
 
             <h2 id="partes-y-funcionamiento-del-clinómetro" className="text-2xl font-semibold mt-8 mb-4">Partes y Funcionamiento del Clinómetro</h2>
             
@@ -216,8 +213,6 @@ const ClinometroBlogPost: React.FC = () => {
             <div className="my-8 flex justify-center">
               
             </div>
-
-            <AdUnit />
 
             <h2 id="clinómetro-digital" className="text-2xl font-semibold mt-8 mb-4">Clinómetro Digital: La Evolución Tecnológica</h2>
             <p>
@@ -344,8 +339,6 @@ const ClinometroBlogPost: React.FC = () => {
             <p className="mt-4">
               Esta tabla te ayuda a elegir según tus necesidades.
             </p>
-
-            <AdUnit />
 
             <h2 id="conclusión" className="text-2xl font-semibold mt-8 mb-4">Conclusión</h2>
             <p>

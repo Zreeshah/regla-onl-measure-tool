@@ -5,7 +5,6 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft, Ruler, ChevronRight } from 'lucide-react';
-import AdUnit from '@/components/AdUnit';
 const ComoUsarReglaBlogPost: React.FC = () => {
   const {
     t
@@ -121,8 +120,6 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <AdUnit />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="que-es-una-regla">¿Qué es una Regla de Medir?</h2>
               
@@ -217,8 +214,6 @@ const ComoUsarReglaBlogPost: React.FC = () => {
               <p>
                 Estas técnicas te ayudarán a dominar <strong>cómo se usa la regla</strong> en situaciones complejas.
               </p>
-
-              <AdUnit />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="tipos-de-reglas">Tipos de Reglas y Materiales</h2>
               
@@ -417,8 +412,6 @@ const ComoUsarReglaBlogPost: React.FC = () => {
               <p>
                 <strong>Ejemplo</strong>: Si mides 5 pulgadas, multiplica por 2.54 para obtener 12.7 cm.
               </p>
-
-              <AdUnit />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="conclusion">Conclusión</h2>
               

@@ -9,7 +9,6 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
-import AdUnit from '@/components/AdUnit';
 const MedidorProfundidadBlogPost: React.FC = () => {
   const currentUrl = "/blog/medidor-profundidad";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
@@ -80,8 +79,6 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                 El <strong>instrumento para medir profundidad</strong> puede ser mecánico, digital o incluso ultrasónico, dependiendo de la aplicación y la precisión requerida. Los <strong>indicadores de profundidad</strong> varían según el tipo de medidor, pero todos comparten el objetivo de proporcionar una medición exacta y confiable.
               </p>
             </section>
-
-            <AdUnit />
 
             <section id="tipos" className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
@@ -157,8 +154,6 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                 </p>
               </div>
             </section>
-
-            <AdUnit />
 
             <section id="aplicaciones" className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
@@ -246,8 +241,6 @@ const MedidorProfundidadBlogPost: React.FC = () => {
                 <li><strong>Baterías</strong>: Reemplaza las baterías en los modelos digitales según sea necesario.</li>
               </ul>
             </section>
-
-            <AdUnit />
 
             <section id="conclusion" className="mb-4">
               <RelatedArticlesSection currentUrl={currentUrl} />

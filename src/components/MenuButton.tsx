@@ -44,6 +44,44 @@ const MenuButton: React.FC = () => {
             >
               Imprimir Regla
             </Link>
+            
+            <div className="border-t border-gray-200 my-4 pt-4">
+              <p className="text-sm font-semibold text-gray-500 mb-3">Información</p>
+              <div className="flex flex-col space-y-3">
+                <Link 
+                  to="/sobre-nosotros" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Sobre Nosotros
+                </Link>
+                <Link 
+                  to="/contacto" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contacto
+                </Link>
+                <Link 
+                  to="/privacy" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t('privacy')}
+                </Link>
+                <Link 
+                  to="/disclaimer" 
+                  className="text-lg font-medium hover:text-ruler-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t('disclaimer')}
+                </Link>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 my-4 pt-4">
+              <p className="text-sm font-semibold text-gray-500 mb-3">Blog</p>
+              <div className="flex flex-col space-y-3">
             <Link
               to="/blog/buscar-dni-por-nombre" 
               className="text-lg font-medium hover:text-ruler-primary"
@@ -128,34 +166,8 @@ const MenuButton: React.FC = () => {
             >
               Cómo Usar una Regla
             </Link>
-            <Link 
-              to="/sobre-nosotros" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Sobre Nosotros
-            </Link>
-            <Link 
-              to="/contacto" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Contacto
-            </Link>
-            <Link 
-              to="/privacy" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('privacy')}
-            </Link>
-            <Link 
-              to="/disclaimer" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('disclaimer')}
-            </Link>
+              </div>
+            </div>
           </nav>
         </div>
       </SheetContent>

@@ -28,133 +28,141 @@ const MenuButton: React.FC = () => {
         <SheetHeader>
           <SheetTitle className="text-ruler-primary">Menu</SheetTitle>
         </SheetHeader>
-        <div className="py-6">
-          <nav className="flex flex-col space-y-4">
+        <div className="py-6 overflow-y-auto max-h-[calc(100vh-8rem)]">
+          <nav className="flex flex-col space-y-1">
             <Link
               to="/"
-              className="text-lg font-medium hover:text-ruler-primary"
+              className="text-lg font-medium hover:text-ruler-primary py-2"
               onClick={() => setIsOpen(false)}
             >
               Inicio
             </Link>
             <Link
               to="/imprimir"
-              className="text-lg font-medium hover:text-ruler-primary"
+              className="text-lg font-medium hover:text-ruler-primary py-2"
               onClick={() => setIsOpen(false)}
             >
               Imprimir Regla
             </Link>
-            <Link
-              to="/blog/buscar-dni-por-nombre" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Buscar DNI por Nombre
-            </Link>
-            <Link 
-              to="/blog/saber-dni-persona" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Cómo Saber el DNI de una Persona
-            </Link>
-            <Link 
-              to="/blog/perdido-dni" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              He Perdido el DNI
-            </Link>
-            <Link 
-              to="/blog/sistema-metrico-decimal" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Sistema Métrico Decimal
-            </Link>
-            <Link 
-              to="/blog/sistema-mks" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Sistema MKS
-            </Link>
-            <Link 
-              to="/blog/sistema-natural-unidades" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Sistema Natural de Unidades
-            </Link>
-            <Link 
-              to="/blog/sistema-anglosajon-unidades" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Sistema Anglosajón de Unidades
-            </Link>
-            <Link 
-              to="/blog/clinometro" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Clinómetro: Qué es y Cómo Usarlo
-            </Link>
-            <Link 
-              to="/blog/medidor-profundidad" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Medidor de Profundidad: Qué es y Cómo Usarlo
-            </Link>
-            <Link 
-              to="/blog/numeros-adimensionales" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Números Adimensionales
-            </Link>
-            <Link 
-              to="/blog/como-saber-cuanto-paro" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Cómo Saber Cuánto Paro Tengo
-            </Link>
-            <Link 
-              to="/blog/como-usar-regla" 
-              className="text-lg font-medium hover:text-ruler-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              Cómo Usar una Regla
-            </Link>
+            
+            <div className="pt-4 pb-2">
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Información</p>
+            </div>
             <Link 
               to="/sobre-nosotros" 
-              className="text-lg font-medium hover:text-ruler-primary"
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
               Sobre Nosotros
             </Link>
             <Link 
               to="/contacto" 
-              className="text-lg font-medium hover:text-ruler-primary"
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
               Contacto
             </Link>
             <Link 
               to="/privacy" 
-              className="text-lg font-medium hover:text-ruler-primary"
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
               {t('privacy')}
             </Link>
             <Link 
               to="/disclaimer" 
-              className="text-lg font-medium hover:text-ruler-primary"
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
               {t('disclaimer')}
+            </Link>
+            
+            <div className="pt-4 pb-2">
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Blog</p>
+            </div>
+            <Link
+              to="/blog/buscar-dni-por-nombre" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Buscar DNI por Nombre
+            </Link>
+            <Link 
+              to="/blog/saber-dni-persona" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Cómo Saber el DNI de una Persona
+            </Link>
+            <Link 
+              to="/blog/perdido-dni" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              He Perdido el DNI
+            </Link>
+            <Link 
+              to="/blog/sistema-metrico-decimal" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema Métrico Decimal
+            </Link>
+            <Link 
+              to="/blog/sistema-mks" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema MKS
+            </Link>
+            <Link 
+              to="/blog/sistema-natural-unidades" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema Natural de Unidades
+            </Link>
+            <Link 
+              to="/blog/sistema-anglosajon-unidades" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Sistema Anglosajón de Unidades
+            </Link>
+            <Link 
+              to="/blog/clinometro" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Clinómetro: Qué es y Cómo Usarlo
+            </Link>
+            <Link 
+              to="/blog/medidor-profundidad" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Medidor de Profundidad: Qué es y Cómo Usarlo
+            </Link>
+            <Link 
+              to="/blog/numeros-adimensionales" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Números Adimensionales
+            </Link>
+            <Link 
+              to="/blog/como-saber-cuanto-paro" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Cómo Saber Cuánto Paro Tengo
+            </Link>
+            <Link 
+              to="/blog/como-usar-regla" 
+              className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Cómo Usar una Regla
             </Link>
           </nav>
         </div>

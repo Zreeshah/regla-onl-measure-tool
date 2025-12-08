@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Ruler from '@/components/Ruler';
@@ -16,11 +16,10 @@ import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
-
-const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
-const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
-const FaqSection = lazy(() => import('@/components/FaqSection'));
-const RulerSizesTable = lazy(() => import('@/components/RulerSizesTable'));
+import HowToUseSection from '@/components/HowToUseSection';
+import WhyPerfectSection from '@/components/WhyPerfectSection';
+import FaqSection from '@/components/FaqSection';
+import RulerSizesTable from '@/components/RulerSizesTable';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -212,63 +211,55 @@ const Index = () => {
                 </Card>
               </div>
               
-              <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
-                <div className="mb-10">
-                  <Card className="bg-white p-6">
-                    <CardContent className="p-0">
-                      <p className="mb-4">{t('rulerDescription')}</p>
-                      <p className="mb-4">{t('contentIntro')}</p>
-                      
-                      <h2 className="text-xl font-bold mb-3 text-[#9b87f5]">{t('moreInfo')}</h2>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                          <RulerIcon className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                          <div>
-                            <h3 className="font-semibold mb-1">{t('useCase1')}</h3>
-                            <p className="text-sm text-gray-600">{t('useCase1Description')}</p>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                          <Pencil className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                          <div>
-                            <h3 className="font-semibold mb-1">{t('useCase2')}</h3>
-                            <p className="text-sm text-gray-600">{t('useCase2Description')}</p>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                          <Square className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                          <div>
-                            <h3 className="font-semibold mb-1">{t('useCase3')}</h3>
-                            <p className="text-sm text-gray-600">{t('useCase3Description')}</p>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg flex items-start">
-                          <Maximize className="text-[#9b87f5] mr-2 mt-1" size={20} />
-                          <div>
-                            <h3 className="font-semibold mb-1">{t('useCase4')}</h3>
-                            <p className="text-sm text-gray-600">{t('useCase4Description')}</p>
-                          </div>
+              <div className="mb-10">
+                <Card className="bg-white p-6">
+                  <CardContent className="p-0">
+                    <p className="mb-4">{t('rulerDescription')}</p>
+                    <p className="mb-4">{t('contentIntro')}</p>
+                    
+                    <h2 className="text-xl font-bold mb-3 text-[#9b87f5]">{t('moreInfo')}</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <RulerIcon className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                        <div>
+                          <h3 className="font-semibold mb-1">{t('useCase1')}</h3>
+                          <p className="text-sm text-gray-600">{t('useCase1Description')}</p>
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </Suspense>
+                      <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <Pencil className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                        <div>
+                          <h3 className="font-semibold mb-1">{t('useCase2')}</h3>
+                          <p className="text-sm text-gray-600">{t('useCase2Description')}</p>
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <Square className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                        <div>
+                          <h3 className="font-semibold mb-1">{t('useCase3')}</h3>
+                          <p className="text-sm text-gray-600">{t('useCase3Description')}</p>
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <Maximize className="text-[#9b87f5] mr-2 mt-1" size={20} />
+                        <div>
+                          <h3 className="font-semibold mb-1">{t('useCase4')}</h3>
+                          <p className="text-sm text-gray-600">{t('useCase4Description')}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
               
-              <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                  <HowToUseSection />
-                  <WhyPerfectSection />
-                </div>
-              </Suspense>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <HowToUseSection />
+                <WhyPerfectSection />
+              </div>
               
-              <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
-                <FaqSection />
-              </Suspense>
+              <FaqSection />
               
-              <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
-                <RulerSizesTable />
-              </Suspense>
+              <RulerSizesTable />
 
               <div className="mb-10">
                 <Card className="bg-white p-6">

@@ -142,14 +142,25 @@ const Index = () => {
         )}
         
         <main 
-          className={`container flex-1 relative pb-6 ${isMobile ? 'mt-8' : ''}`}
+          className={`container flex-1 relative pb-6 ${isMobile ? 'mt-4' : ''}`}
           style={!isMobile ? { marginTop: contentTopMargin } : {}}
         >
-              <div className="mb-10">
-                <Card className="bg-white p-6">
+              {isMobile && (
+                <div className="mb-6 text-center">
+                  <h1 className="text-2xl font-bold text-[#9b87f5] mb-2">
+                    Regla Online a Tamaño Real
+                  </h1>
+                  <p className="text-sm text-gray-600">
+                    Regla digital con calibración precisa para medir objetos reales
+                  </p>
+                </div>
+              )}
+              
+              <div className="mb-6 md:mb-10">
+                <Card className="bg-white p-4 md:p-6">
                   <CardContent className="p-0">
-                    <h2 className="text-2xl font-bold mb-4 text-[#9b87f5] flex items-center">
-                      <Book size={24} className="mr-2" />
+                    <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-[#9b87f5] flex items-center">
+                      <Book size={20} className="mr-2" />
                       Artículos Destacados
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -176,8 +187,8 @@ const Index = () => {
                 </Card>
               </div>
 
-              <div className="mb-10">
-                <Card className="bg-white p-6">
+              <div className="mb-6 md:mb-10">
+                <Card className="bg-white p-4 md:p-6">
                   <CardContent className="p-0">
                     <img 
                       src={calibrationGuide} 

@@ -97,57 +97,69 @@ const MobileRuler: React.FC = () => {
     return ticks;
   };
   const ticks = generateTicks();
-  return <div className="relative mobile-ruler-container">
+  return (
+    <div className="relative mobile-ruler-container">
       <div className="px-2 pt-2 text-center flex justify-between items-center">
-        <p className="text-xs text-gray-600 mb-1">(Scroll down to show full ruler)</p>
+        <p className="text-xs text-gray-600 mb-1">(Scroll down for content)</p>
         <MenuButton />
       </div>
       
-      {/* Updated container with dynamic height and scrollable area */}
-      <div className="mobile-ruler-layout" style={{
-      height: 'auto',
-      maxHeight: '80vh',
-      position: 'relative',
-      overflowX: 'hidden',
-      overflowY: 'auto'
-    }}>
-        <div className="ruler-container ruler-vertical mobile-ruler" ref={rulerRef} style={{
-        width: '80px',
-        height: `${rulerHeight}px`,
-        position: 'relative',
-        overflow: 'visible',
-        margin: '0'
-      }}>
+      {/* Ruler with fixed reasonable height - no nested scroll */}
+      <div className="mobile-ruler-layout relative" style={{ height: '320px' }}>
+        <div 
+          className="ruler-container ruler-vertical mobile-ruler" 
+          ref={rulerRef} 
+          style={{
+            width: '80px',
+            height: '320px',
+            position: 'relative',
+            overflow: 'hidden',
+            margin: '0'
+          }}
+        >
           <div className="relative h-full w-full rounded-none">
             <div className="absolute h-full w-8 left-8 bg-transparent border-l border-[#9b87f5]"></div>
             
-            {ticks.map((tick, index) => <div key={index} className="absolute">
-                <div className="absolute" style={{
-              width: tick.type === 'major' ? '32px' : '16px',
-              height: '2px',
-              top: `${tick.position}px`,
-              left: tick.type === 'major' ? '28px' : '44px',
-              transform: 'translateY(-50%)',
-              backgroundColor: '#9b87f5'
-            }}></div>
+            {ticks.filter(tick => tick.position <= 320).map((tick, index) => (
+              <div key={index} className="absolute">
+                <div 
+                  className="absolute" 
+                  style={{
+                    width: tick.type === 'major' ? '32px' : '16px',
+                    height: '2px',
+                    top: `${tick.position}px`,
+                    left: tick.type === 'major' ? '28px' : '44px',
+                    transform: 'translateY(-50%)',
+                    backgroundColor: '#9b87f5'
+                  }}
+                />
                 
-                {tick.showLabel && <div className="absolute font-bold" style={{
-              top: `${tick.position}px`,
-              left: '12px',
-              transform: 'translateY(-50%)',
-              color: '#7E69AB',
-              fontSize: '20px'
-            }}>
+                {tick.showLabel && (
+                  <div 
+                    className="absolute font-bold" 
+                    style={{
+                      top: `${tick.position}px`,
+                      left: '12px',
+                      transform: 'translateY(-50%)',
+                      color: '#7E69AB',
+                      fontSize: '20px'
+                    }}
+                  >
                     {tick.label}
-                  </div>}
-              </div>)}
+                  </div>
+                )}
+              </div>
+            ))}
             
-            <div className="absolute text-sm bg-[#f1f0fb] px-2 rounded text-[#7E69AB] font-semibold" style={{
-            bottom: '24px',
-            left: '12px',
-            transform: 'rotate(-90deg)',
-            transformOrigin: 'left bottom'
-          }}>
+            <div 
+              className="absolute text-sm bg-[#f1f0fb] px-2 rounded text-[#7E69AB] font-semibold" 
+              style={{
+                bottom: '24px',
+                left: '12px',
+                transform: 'rotate(-90deg)',
+                transformOrigin: 'left bottom'
+              }}
+            >
               {unit.toUpperCase()}
             </div>
           </div>
@@ -162,13 +174,28 @@ const MobileRuler: React.FC = () => {
             <div className="flex items-center gap-2 mb-2">
               <div className="relative w-16 h-28 border border-gray-300 rounded-lg flex items-center justify-center flex-col">
                 <span className="text-sm text-gray-500">Screen</span>
-                <Input type="number" min="3" max="25" step="0.1" value={inputValue} onChange={handleInputChange} onBlur={handleInputBlur} onKeyDown={handleKeyDown} className="text-center h-8 w-14 text-sm font-bold" />
+                <Input 
+                  type="number" 
+                  min="3" 
+                  max="25" 
+                  step="0.1" 
+                  value={inputValue} 
+                  onChange={handleInputChange} 
+                  onBlur={handleInputBlur} 
+                  onKeyDown={handleKeyDown} 
+                  className="text-center h-8 w-14 text-sm font-bold" 
+                />
                 <span className="text-xs">inches</span>
               </div>
               
               <div className="flex-grow flex flex-col">
                 <p className="text-xs text-gray-500 mb-1">Enter your device's screen size</p>
-                <Button onClick={redetectScreenSize} size="sm" variant="outline" className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]">
+                <Button 
+                  onClick={redetectScreenSize} 
+                  size="sm" 
+                  variant="outline" 
+                  className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]"
+                >
                   <RefreshCw size={10} className="mr-1" />
                   Re-detect
                 </Button>
@@ -178,24 +205,22 @@ const MobileRuler: React.FC = () => {
         </div>
       </div>
       
-      {/* Homepage content after the ruler section */}
-      
-      
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center">
+      {/* Unit switcher - sticky instead of fixed to avoid overlap */}
+      <div className="sticky bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center z-10">
         <div className="flex items-center space-x-4">
-          <a href="#" className={`text-[#9b87f5] ${unit === 'cm' ? 'font-bold' : ''}`} onClick={e => {
-          e.preventDefault();
-          setUnit('cm');
-        }}>
+          <button 
+            className={`text-[#9b87f5] ${unit === 'cm' ? 'font-bold' : ''}`} 
+            onClick={() => setUnit('cm')}
+          >
             CM
-          </a>
+          </button>
           <span className="text-gray-300">|</span>
-          <a href="#" className={`text-[#9b87f5] ${unit === 'inch' ? 'font-bold' : ''}`} onClick={e => {
-          e.preventDefault();
-          setUnit('inch');
-        }}>
+          <button 
+            className={`text-[#9b87f5] ${unit === 'inch' ? 'font-bold' : ''}`} 
+            onClick={() => setUnit('inch')}
+          >
             INCH
-          </a>
+          </button>
           <span className="text-gray-300">|</span>
           <Link to="/blog/buscar-dni-por-nombre" className="text-[#9b87f5] text-sm">
             Blog
@@ -210,6 +235,8 @@ const MobileRuler: React.FC = () => {
           </Link>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default MobileRuler;

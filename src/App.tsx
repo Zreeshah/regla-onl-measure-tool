@@ -58,8 +58,7 @@ const App: React.FC = () => {
                     <Route path="/disclaimer" element={<Disclaimer />} />
                     <Route path="/contacto" element={<Contact />} />
                     <Route path="/sobre-nosotros" element={<About />} />
-                    {/* DRAFT: Hidden for later revival - redirects to homepage */}
-                    <Route path="/blog/buscar-dni-por-nombre" element={<Navigate to="/" replace />} />
+                    <Route path="/blog/buscar-dni-por-nombre" element={<BlogPost />} />
                     <Route path="/blog/saber-dni-persona" element={<SaberDNIBlogPost />} />
                     <Route path="/blog/perdido-dni" element={<LostDNIBlogPost />} />
                     <Route path="/blog/sistema-metrico-decimal" element={<MetricSystemBlogPost />} />

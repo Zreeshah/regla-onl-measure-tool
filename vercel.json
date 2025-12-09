@@ -4,12 +4,5 @@
       "source": "/(.*)",
       "destination": "/"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/blog/buscar-dni-por-nombre",
-      "destination": "/",
-      "permanent": true
-    }
   ]
 }

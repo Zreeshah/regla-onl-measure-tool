@@ -17,6 +17,7 @@ import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
 import NativeAd from '@/components/NativeAd';
+import DismissibleAd from '@/components/DismissibleAd';
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
@@ -121,6 +122,9 @@ const Index = () => {
       <CanonicalLink />
       
       <div className="flex flex-col min-h-screen bg-gray-50">
+        {/* Dismissible ad at the very top */}
+        <DismissibleAd />
+        
         <Header />
         
         {!isMobile && (

@@ -16,6 +16,7 @@ import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
+import NativeAd from '@/components/NativeAd';
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
@@ -187,6 +188,11 @@ const Index = () => {
                 </Card>
               </div>
 
+              {/* Ad placement 1 - After featured articles */}
+              <div className="mb-6 md:mb-10">
+                <NativeAd className="rounded-lg" />
+              </div>
+
               <div className="mb-6 md:mb-10">
                 <Card className="bg-white p-4 md:p-6">
                   <CardContent className="p-0">
@@ -210,6 +216,11 @@ const Index = () => {
                     <HomeContent />
                   </CardContent>
                 </Card>
+              </div>
+
+              {/* Ad placement 2 - After HomeContent */}
+              <div className="mb-6 md:mb-10">
+                <NativeAd className="rounded-lg" />
               </div>
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
@@ -261,6 +272,11 @@ const Index = () => {
                   <WhyPerfectSection />
                 </div>
               </Suspense>
+
+              {/* Ad placement 3 - After How to Use section */}
+              <div className="mb-6 md:mb-10">
+                <NativeAd className="rounded-lg" />
+              </div>
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <FaqSection />
@@ -413,9 +429,9 @@ const Index = () => {
                         </p>
                       </div>
                     </div>
-              </CardContent>
-            </Card>
-          </div>
+                  </CardContent>
+                </Card>
+              </div>
         </main>
         
         <Footer />

@@ -9,6 +9,7 @@ import { Clock, Share2, ArrowLeft } from 'lucide-react';
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
+import NativeAd from '@/components/NativeAd';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();
@@ -252,6 +253,11 @@ const BlogPost: React.FC = () => {
               <p>
                 ¿Quieres más consejos sobre trámites en España? Explora nuestro sitio web para encontrar guías detalladas sobre procesos administrativos y documentación. ¡Sigue informado y resuelve tus dudas con facilidad!
               </p>
+              
+              {/* Native Ad placement in blog post */}
+              <div className="my-8">
+                <NativeAd className="rounded-lg" />
+              </div>
             </article>
           </div>
         </div>

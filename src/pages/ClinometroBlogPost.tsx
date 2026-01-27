@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import NativeAd from '@/components/NativeAd';
-
 const ClinometroBlogPost: React.FC = () => {
   return <div className="flex flex-col min-h-screen">
       <Helmet>
@@ -356,11 +354,6 @@ const ClinometroBlogPost: React.FC = () => {
               descubrir guías prácticas sobre topografía, física y tecnología. ¡Domina el <strong>clinómetro</strong> 
               y lleva tus mediciones al siguiente nivel hoy mismo!
             </p>
-            
-            {/* Native Ad placement */}
-            <div className="my-8">
-              <NativeAd className="rounded-lg" />
-            </div>
           </div>
         </div>
       </main>

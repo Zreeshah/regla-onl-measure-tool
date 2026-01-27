@@ -5,8 +5,6 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Search, Database, AlertTriangle, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import NativeAd from '@/components/NativeAd';
-
 const SaberDNIBlogPost: React.FC = () => {
   const {
     t
@@ -303,11 +301,6 @@ const SaberDNIBlogPost: React.FC = () => {
                     <p>
                       ¿Buscas más información sobre trámites en España? Explora nuestro sitio para descubrir guías prácticas sobre procesos administrativos y documentación. ¡Resuelve tus dudas de forma sencilla y confiable!
                     </p>
-                    
-                    {/* Native Ad placement */}
-                    <div className="my-8">
-                      <NativeAd className="rounded-lg" />
-                    </div>
                   </div>
                 </div>
               </section>

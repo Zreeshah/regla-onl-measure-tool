@@ -9,6 +9,7 @@ import { Clock, Share2, ArrowLeft } from 'lucide-react';
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
+import AdBanner from '@/components/AdBanner';
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();
@@ -43,6 +44,8 @@ const BlogPost: React.FC = () => {
             <ArrowLeft size={16} className="mr-1" />
             Volver a la página principal
           </Link>
+          
+          <AdBanner className="mb-6" />
           
           <div className="bg-white rounded-xl shadow-sm p-5 sm:p-8 mb-8">
             <div className="mb-6 flex items-center justify-between">

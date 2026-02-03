@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import AdBanner from '@/components/AdBanner';
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "El nombre es requerido" }).max(100, { message: "El nombre debe tener menos de 100 caracteres" }),
@@ -78,6 +79,7 @@ const Contact = () => {
         <Header />
         
         <main className="container flex-1 py-8">
+          <AdBanner className="mb-6 max-w-2xl mx-auto" />
           <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
             <h1 className="text-2xl font-bold mb-6 text-ruler-primary">
               Contacto

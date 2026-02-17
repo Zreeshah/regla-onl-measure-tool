@@ -16,7 +16,7 @@ import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
-import AdBanner from '@/components/AdBanner';
+
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));
 const WhyPerfectSection = lazy(() => import('@/components/WhyPerfectSection'));
@@ -131,15 +131,11 @@ const Index = () => {
             <p className="text-lg text-gray-600 mt-2 animate-slide-in">
               Regla digital y cinta métrica online con calibración precisa para medir objetos reales en tu pantalla
             </p>
-            <AdBanner className="mt-4" />
+            
           </div>
         )}
         
-        {isMobile && (
-          <div className="container">
-            <AdBanner className="mt-2 mb-2" />
-          </div>
-        )}
+        
         
         {isMobile ? (
           <MobileRuler />
@@ -155,7 +151,6 @@ const Index = () => {
         >
               {isMobile && (
                 <>
-                  <AdBanner className="mb-4" />
                   <div className="mb-4 text-center">
                     <h1 className="text-2xl font-bold text-[#9b87f5] mb-2">
                       Regla Online a Tamaño Real
@@ -167,7 +162,7 @@ const Index = () => {
                 </>
               )}
               
-              {!isMobile && <AdBanner className="mb-4" />}
+              
               
               <div className="mb-6 md:mb-10">
                 <Card className="bg-white p-4 md:p-6">

@@ -135,9 +135,8 @@ const Index = () => {
           </div>
         )}
 
-        <div className="container">
-          <AdBanner className="my-2" />
-        </div>
+
+
 
         {isMobile ? (
           <MobileRuler />

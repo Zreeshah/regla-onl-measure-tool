@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
 import { Ruler, Target, Users, Zap } from 'lucide-react';
-import AdBanner from '@/components/AdBanner';
+
 
 const About = () => {
   return (

@@ -9,7 +9,7 @@ import { Clock, Share2, ArrowLeft } from 'lucide-react';
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
-import AdBanner from '@/components/AdBanner';
+
 
 const BlogPost: React.FC = () => {
   const { t } = useLanguage();

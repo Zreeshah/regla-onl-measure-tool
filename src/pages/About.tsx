@@ -20,7 +20,7 @@ const About = () => {
         
         <main className="container flex-1 py-8">
           <div className="max-w-4xl mx-auto">
-            <AdBanner className="mb-6" />
+            
             <div className="bg-white p-8 rounded-lg shadow-md mb-8">
               <h1 className="text-3xl font-bold mb-6 text-ruler-primary">
                 Sobre Nosotros

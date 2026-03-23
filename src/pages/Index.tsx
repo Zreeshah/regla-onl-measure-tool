@@ -16,7 +16,7 @@ import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
-import AdBanner from '@/components/AdBanner';
+
 
 
 const HowToUseSection = lazy(() => import('@/components/HowToUseSection'));

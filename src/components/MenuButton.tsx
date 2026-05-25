@@ -1,7 +1,8 @@
+"use client";
 
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
   Sheet,
@@ -31,46 +32,46 @@ const MenuButton: React.FC = () => {
         <div className="py-6 overflow-y-auto max-h-[calc(100vh-8rem)]">
           <nav className="flex flex-col space-y-1">
             <Link
-              to="/"
+              href="/"
               className="text-lg font-medium hover:text-ruler-primary py-2"
               onClick={() => setIsOpen(false)}
             >
-              Inicio
+              Home
             </Link>
             <Link
-              to="/imprimir"
+              href="/print-ruler"
               className="text-lg font-medium hover:text-ruler-primary py-2"
               onClick={() => setIsOpen(false)}
             >
-              Imprimir Regla
+              Print Ruler
             </Link>
             
             <div className="pt-4 pb-2">
-              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Información</p>
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Information</p>
             </div>
             <Link 
-              to="/sobre-nosotros" 
+              href="/about" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Sobre Nosotros
+              About Us
             </Link>
             <Link 
-              to="/contacto" 
+              href="/contact" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Contacto
+              Contact
             </Link>
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
               {t('privacy')}
             </Link>
             <Link 
-              to="/disclaimer" 
+              href="/disclaimer" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
@@ -81,88 +82,88 @@ const MenuButton: React.FC = () => {
               <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Blog</p>
             </div>
             <Link
-              to="/blog/buscar-dni-por-nombre" 
+              href="/blog/how-to-read-a-ruler" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Buscar DNI por Nombre
+              How to Read a Ruler
             </Link>
             <Link 
-              to="/blog/saber-dni-persona" 
+              href="/blog/metric-vs-imperial" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Cómo Saber el DNI de una Persona
+              Metric vs Imperial
             </Link>
             <Link 
-              to="/blog/perdido-dni" 
+              href="/blog/how-to-measure-on-phone" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              He Perdido el DNI
+              How to Measure on Your Phone
             </Link>
             <Link 
-              to="/blog/sistema-metrico-decimal" 
+              href="/blog/metric-system-explained" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Sistema Métrico Decimal
+              The Metric System Explained
             </Link>
             <Link 
-              to="/blog/sistema-mks" 
+              href="/blog/mks-system" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Sistema MKS
+              MKS System
             </Link>
             <Link 
-              to="/blog/sistema-natural-unidades" 
+              href="/blog/natural-units-system" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Sistema Natural de Unidades
+              Natural Units System
             </Link>
             <Link 
-              to="/blog/sistema-anglosajon-unidades" 
+              href="/blog/imperial-measurement-system" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Sistema Anglosajón de Unidades
+              Imperial Measurement System
             </Link>
             <Link 
-              to="/blog/clinometro" 
+              href="/blog/clinometer-guide" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Clinómetro: Qué es y Cómo Usarlo
+              Clinometer: What It Is & How to Use It
             </Link>
             <Link 
-              to="/blog/medidor-profundidad" 
+              href="/blog/depth-gauge-guide" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Medidor de Profundidad: Qué es y Cómo Usarlo
+              Depth Gauge: What It Is & How to Use It
             </Link>
             <Link 
-              to="/blog/numeros-adimensionales" 
+              href="/blog/dimensionless-numbers" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Números Adimensionales
+              Dimensionless Numbers
             </Link>
             <Link 
-              to="/blog/como-saber-cuanto-paro" 
+              href="/blog/measurement-units-guide" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Cómo Saber Cuánto Paro Tengo
+              Measurement Units Guide
             </Link>
             <Link 
-              to="/blog/como-usar-regla" 
+              href="/blog/how-to-use-a-ruler" 
               className="text-base font-medium hover:text-ruler-primary py-2 pl-2"
               onClick={() => setIsOpen(false)}
             >
-              Cómo Usar una Regla
+              How to Use a Ruler
             </Link>
           </nav>
         </div>

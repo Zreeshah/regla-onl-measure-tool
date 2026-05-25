@@ -1,3 +1,4 @@
+"use client";
 
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
@@ -27,27 +28,34 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
   const [pixelsPerCm, setPixelsPerCm] = useState<number>(38); // Default calibration
   const [unit, setUnit] = useState<'cm' | 'mm' | 'inch'>('cm');
   const [orientation, setOrientation] = useState<'horizontal' | 'vertical'>('horizontal');
-  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const [screenHeight, setScreenHeight] = useState<number>(window.innerHeight);
+  const [screenWidth, setScreenWidth] = useState<number>(1024);
+  const [screenHeight, setScreenHeight] = useState<number>(768);
 
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== 'undefined') {
       setScreenWidth(window.innerWidth);
       setScreenHeight(window.innerHeight);
-    };
 
-    window.addEventListener('resize', handleResize);
-    
-    // Initial auto-calibration - run once on mount
-    autoCalibrate();
-    
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+        setScreenHeight(window.innerHeight);
+      };
+
+      window.addEventListener('resize', handleResize);
+      
+      // Initial auto-calibration - run once on mount
+      autoCalibrate();
+      
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   // Calculate physical screen size using DPI and screen dimensions
   const calculatePhysicalScreenSize = (): number => {
+    if (typeof window === 'undefined') return 15.6;
+    
     // Try to use more accurate method using screen.width/height if available
     // These values are in physical pixels
     const screenObj = window.screen;
@@ -78,16 +86,19 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
     // Fallback to window dimensions if screen dimensions aren't reliable
     const dpr = window.devicePixelRatio || 1;
     const dpi = dpr * 96;
-    const widthInInches = screenWidth / dpi;
-    const heightInInches = screenHeight / dpi;
+    const widthInInches = window.innerWidth / dpi;
+    const heightInInches = window.innerHeight / dpi;
     
     // Pythagoras to calculate diagonal
     return Math.sqrt(widthInInches * widthInInches + heightInInches * heightInInches);
   };
 
   const autoCalibrate = () => {
+    if (typeof window === 'undefined') return;
+    
     // Try to detect the physical screen size
     const estimatedScreenSizeInches = calculatePhysicalScreenSize();
+    const currentWidth = window.innerWidth;
     
     if (estimatedScreenSizeInches > 3) {
       // If we got a reasonable value, use it
@@ -95,11 +106,11 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
       console.log('Auto-calibrated to:', estimatedScreenSizeInches.toFixed(1) + ' inches');
     } else {
       // Fallback to a common screen size based on device width
-      if (screenWidth < 600) {
+      if (currentWidth < 600) {
         // Probably a phone
         calibrateByScreen(5.5);
         console.log('Auto-calibrated to default phone size: 5.5 inches');
-      } else if (screenWidth < 1024) {
+      } else if (currentWidth < 1024) {
         // Probably a tablet
         calibrateByScreen(10);
         console.log('Auto-calibrated to default tablet size: 10 inches');
@@ -112,9 +123,14 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
   };
 
   const calibrateByScreen = (screenSizeInches: number) => {
+    if (typeof window === 'undefined') return;
+    
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    
     // Calculate the pixels per inch based on the screen's diagonal size
     const screenDiagonalPixels = Math.sqrt(
-      Math.pow(screenWidth, 2) + Math.pow(screenHeight, 2)
+      Math.pow(width, 2) + Math.pow(height, 2)
     );
     const pixelsPerInch = screenDiagonalPixels / screenSizeInches;
     const newPixelsPerCm = pixelsPerInch / CM_PER_INCH;
@@ -126,9 +142,13 @@ export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ childre
   };
 
   const calibrateByCard = () => {
+    if (typeof window === 'undefined') return;
+    
+    const width = window.innerWidth;
+    
     // Standard credit card width (85.6mm)
     // We'll use 30% of screen width as a reasonable size for the credit card
-    const creditCardWidthPixels = screenWidth * 0.3;
+    const creditCardWidthPixels = width * 0.3;
     const pixelsPerMm = creditCardWidthPixels / CREDIT_CARD_WIDTH_MM;
     const newPixelsPerCm = pixelsPerMm * 10; // 10mm in 1cm
     

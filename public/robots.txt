@@ -1,5 +1,4 @@
-
 User-agent: *
 Allow: /
 
-Sitemap: https://regla.onl/sitemap.xml
+Sitemap: https://online-ruler.onl/sitemap.xml

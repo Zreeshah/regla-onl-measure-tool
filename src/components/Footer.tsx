@@ -1,7 +1,8 @@
+"use client";
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -12,20 +13,20 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-gray-500">
-              © 2025 Regla Online. Todos los derechos reservados.
+              © 2025 Online Ruler. All rights reserved.
             </p>
           </div>
           <div className="flex flex-wrap gap-4 justify-center md:justify-end">
-            <Link to="/sobre-nosotros" className="text-sm text-ruler-primary hover:underline">
-              Sobre Nosotros
+            <Link href="/about" className="text-sm text-ruler-primary hover:underline">
+              About Us
             </Link>
-            <Link to="/contacto" className="text-sm text-ruler-primary hover:underline">
-              Contacto
+            <Link href="/contact" className="text-sm text-ruler-primary hover:underline">
+              Contact
             </Link>
-            <Link to="/privacy" className="text-sm text-ruler-primary hover:underline">
+            <Link href="/privacy" className="text-sm text-ruler-primary hover:underline">
               {t('privacy')}
             </Link>
-            <Link to="/disclaimer" className="text-sm text-ruler-primary hover:underline">
+            <Link href="/disclaimer" className="text-sm text-ruler-primary hover:underline">
               {t('disclaimer')}
             </Link>
           </div>

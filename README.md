@@ -1,6 +1,5 @@
-# Welcome to your Regla project
+# Welcome to your Online Ruler project
 
 ## Project info
 
-**URL**: https://regla.onl
-
+**URL**: https://online-ruler.onl

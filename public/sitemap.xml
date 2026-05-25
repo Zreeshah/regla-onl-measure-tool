@@ -1,83 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://regla.onl/</loc>
+    <loc>https://online-ruler.onl/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://regla.onl/imprimir</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://online-ruler.onl/print-ruler</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://regla.onl/privacy</loc>
+    <loc>https://online-ruler.onl/about</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://regla.onl/disclaimer</loc>
+    <loc>https://online-ruler.onl/contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/buscar-dni-por-nombre</loc>
+    <loc>https://online-ruler.onl/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://online-ruler.onl/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://online-ruler.onl/blog/how-to-read-a-ruler</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/saber-dni-persona</loc>
+    <loc>https://online-ruler.onl/blog/metric-vs-imperial</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/perdido-dni</loc>
+    <loc>https://online-ruler.onl/blog/how-to-measure-on-phone</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/sistema-metrico-decimal</loc>
+    <loc>https://online-ruler.onl/blog/metric-system-explained</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/sistema-mks</loc>
+    <loc>https://online-ruler.onl/blog/dimensionless-numbers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://online-ruler.onl/blog/measurement-units-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/sistema-natural-unidades</loc>
+    <loc>https://online-ruler.onl/blog/how-to-use-a-ruler</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/sistema-anglosajon-unidades</loc>
+    <loc>https://online-ruler.onl/blog/mks-system</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://online-ruler.onl/blog/natural-units-system</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://online-ruler.onl/blog/clinometer-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://online-ruler.onl/blog/imperial-measurement-system</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://regla.onl/blog/clinometro</loc>
+    <loc>https://online-ruler.onl/blog/depth-gauge-guide</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://regla.onl/blog/medidor-profundidad</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://regla.onl/blog/numeros-adimensionales</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://regla.onl/blog/como-saber-cuanto-paro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://regla.onl/blog/como-usar-regla</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

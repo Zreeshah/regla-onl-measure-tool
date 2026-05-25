@@ -3,119 +3,119 @@ import React from 'react';
 const HomeContent: React.FC = () => {
   return (
     <div className="prose prose-sm md:prose-base lg:prose-lg max-w-none text-gray-700">
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Regla Online - Herramienta de Medición Virtual en Tamaño Real</strong></h2>
-      <p>¡Bienvenido a <strong>Regla.onl</strong>, tu <strong>regla virtual</strong> en línea para mediciones precisas! Ya sea que necesites una <strong>regla en centímetros</strong> o una <strong>regla en pulgadas</strong>, nuestra herramienta es perfecta para medir cualquier cosa directamente desde tu navegador, ya sea en tu computadora o dispositivo móvil. Con <strong>Regla.onl</strong>, tienes acceso a una <strong>regla tamaño real</strong> que se adapta a tu pantalla, ofreciendo la precisión que necesitas sin depender de una regla física.</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Online Ruler — Real Size Virtual Measurement Tool</strong></h2>
+      <p>Welcome to <strong>Online-Ruler.Onl</strong>, your <strong>virtual ruler</strong> online for precise measurements! Whether you need a <strong>cm ruler</strong> or an <strong>inch ruler</strong>, our tool is perfect for measuring anything directly from your browser, on your computer or mobile device. With <strong>Online-Ruler.Onl</strong>, you have access to a <strong>real size ruler</strong> that adapts to your screen, offering the precision you need without relying on a physical ruler.</p>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Qué es </strong><strong>Regla.onl</strong><strong>?</strong></h2>
-      <p><strong>Regla.onl</strong> es una <strong>regla online</strong> gratuita que te permite medir objetos y distancias con facilidad. Nuestra <strong>regla virtual</strong> es ideal para estudiantes, diseñadores, arquitectos y cualquier persona que necesite realizar mediciones rápidas y exactas. Olvídate de buscar una regla tradicional; con <strong>Regla.onl</strong>, tienes una <strong>regla para medir</strong> siempre disponible directamente en tu pantalla.</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>What is Online-Ruler.Onl?</strong></h2>
+      <p><strong>Online-Ruler.Onl</strong> is a free <strong>ruler online</strong> that lets you measure objects and distances with ease. Our <strong>virtual ruler</strong> is ideal for students, designers, architects, and anyone who needs quick and accurate <strong>ruler measurements</strong>. Forget searching for a traditional ruler; with <strong>Online-Ruler.Onl</strong>, you always have a <strong>ruler</strong> for measuring right on your screen.</p>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Cómo usar nuestra Regla Online?</strong></h2>
-      <p>Usar <strong>Regla.onl</strong> es simple y rápido:</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>How to Use Our Online Ruler</strong></h2>
+      <p>Using <strong>Online-Ruler.Onl</strong> is simple and fast:</p>
       <ol className="list-decimal pl-6 mb-4">
           <li className="mb-2">
-              <p><strong>Calibra la regla</strong>: Ajusta la <strong>regla tamaño real</strong> según el tamaño de tu pantalla para garantizar resultados precisos.</p>
+              <p><strong>Calibrate the ruler</strong>: Adjust the <strong>real size ruler</strong> according to your screen size for accurate results.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Mide con facilidad</strong>: Coloca el objeto junto a la pantalla o usa la <strong>regla virtual</strong> para medir distancias en documentos digitales.</p>
+              <p><strong>Measure with ease</strong>: Place the object next to the screen or use the <strong>virtual ruler</strong> to measure distances in digital documents.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Elige tu unidad</strong>: Cambia entre <strong>centímetros</strong> y <strong>pulgadas</strong> según lo que necesites.</p>
+              <p><strong>Choose your unit</strong>: Switch between <strong>centimeters</strong> and <strong>inches</strong> as needed.</p>
           </li>
       </ol>
-      <p>Nuestra <strong>regla en línea</strong> es intuitiva y no requiere descargas ni instalaciones, lo que la hace ideal para cualquier situación.</p>
+      <p>Our <strong>online ruler</strong> is intuitive and requires no downloads or installations, making it ideal for any situation.</p>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Características de nuestra Regla Virtual</strong></h2>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Features of Our Virtual Ruler</strong></h2>
       <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
-              <p><strong>Medición en centímetros y pulgadas</strong>: Alterna entre unidades con un solo clic.</p>
+              <p><strong>Measurement in centimeters and inches</strong>: Switch between units with a single click.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Tamaño real ajustable</strong>: Calibra la <strong>regla tamaño real</strong> para que se adapte perfectamente a tu pantalla.</p>
+              <p><strong>Adjustable real size</strong>: Calibrate the <strong>real size ruler</strong> to perfectly fit your screen.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Compatible con todos los dispositivos</strong>: Funciona en computadoras, laptops, tablets y smartphones.</p>
+              <p><strong>Compatible with all devices</strong>: Works on computers, laptops, tablets, and smartphones.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Sin descargas</strong>: Usa la <strong>regla online</strong> directamente desde tu navegador.</p>
+              <p><strong>No downloads</strong>: Use the <strong>online ruler</strong> directly from your browser.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Perfecta para todos</strong>: Ideal para diseñadores, estudiantes y profesionales.</p>
+              <p><strong>Perfect for everyone</strong>: Ideal for designers, students, and professionals.</p>
           </li>
       </ul>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Beneficios de usar una Regla en Línea</strong></h2>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Benefits of Using an Online Ruler</strong></h2>
       <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
-              <p><strong>Siempre accesible</strong>: Usa nuestra <strong>regla virtual</strong> desde cualquier lugar con conexión a internet.</p>
+              <p><strong>Always accessible</strong>: Use our <strong>virtual ruler</strong> from anywhere with an internet connection.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Sin herramientas físicas</strong>: No necesitas llevar una <strong>regla para medir</strong> contigo.</p>
+              <p><strong>No physical tools needed</strong>: You don't need to carry a <strong>ruler</strong> with you.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Mediciones rápidas</strong>: Obtén resultados precisos en segundos.</p>
+              <p><strong>Fast measurements</strong>: Get precise results in seconds.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Versátil</strong>: Úsala para proyectos escolares, diseño, arquitectura y más.</p>
+              <p><strong>Versatile</strong>: Use it for school projects, design, architecture, and more.</p>
           </li>
       </ul>
-      <p>¡Prueba <strong>Regla.onl</strong> hoy y disfruta de la comodidad de tener una <strong>regla métrica</strong> siempre a tu alcance!</p>
+      <p>Try <strong>Online-Ruler.Onl</strong> today and enjoy the convenience of having a <strong>ruler</strong> always at your fingertips!</p>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Consejos para Medir con Precisión</strong></h2>
-      <p>Para aprovechar al máximo nuestra <strong>regla en línea</strong>, sigue estos consejos:</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Tips for Accurate Measurement</strong></h2>
+      <p>To get the most out of our <strong>online ruler</strong>, follow these tips:</p>
       <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
-              <p><strong>Calibra correctamente</strong>: Asegúrate de ajustar la <strong>regla tamaño real</strong> según tu pantalla.</p>
+              <p><strong>Calibrate correctly</strong>: Make sure to adjust the <strong>real size ruler</strong> according to your screen.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Usa un objeto de referencia</strong>: Verifica la precisión con algo de tamaño conocido, como una moneda.</p>
+              <p><strong>Use a reference object</strong>: Verify precision with something of a known size, like a coin or credit card.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Mantén la pantalla limpia</strong>: Evita errores asegurándote de que no haya suciedad en la pantalla.</p>
+              <p><strong>Keep the screen clean</strong>: Avoid errors by making sure there's no dirt on the screen.</p>
           </li>
       </ul>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Testimonios de Usuarios</strong></h2>
-      <p className="mb-2">"<strong>Regla.onl</strong> me ha sido muy útil cuando necesito medir algo rápidamente y no tengo una regla física a mano. ¡Es increíblemente práctica!"</p>
-      <p className="italic mb-4">— Usuario satisfecho</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>User Testimonials</strong></h2>
+      <p className="mb-2">"<strong>Online-Ruler.Onl</strong> has been incredibly useful when I need to measure something quickly and don't have a physical ruler on hand. It's incredibly practical!"</p>
+      <p className="italic mb-4">— Satisfied user</p>
       
-      <p className="mb-2">"Como estudiante de diseño, esta <strong>regla virtual</strong> me ha facilitado mucho mis proyectos. Es precisa y fácil de usar."</p>
-      <p className="italic mb-4">— Estudiante de diseño</p>
+      <p className="mb-2">"As a design student, this <strong>virtual ruler</strong> has made my projects so much easier. It's accurate and easy to use."</p>
+      <p className="italic mb-4">— Design student</p>
       
       <hr className="my-6" />
       
-      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>¿Por qué elegir </strong><strong>Regla.onl</strong><strong>?</strong></h2>
-      <p>En <strong>Regla.onl</strong>, ofrecemos la mejor <strong>regla online</strong> disponible. Nuestra herramienta destaca por:</p>
+      <h2 className="text-2xl font-bold text-[#9b87f5] mb-4"><strong>Why Choose Online-Ruler.Onl?</strong></h2>
+      <p>At <strong>Online-Ruler.Onl</strong>, we offer the best <strong>online ruler</strong> available. Our tool stands out for:</p>
       <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
-              <p><strong>Precisión</strong>: Mediciones exactas en <strong>centímetros</strong> y <strong>pulgadas</strong>.</p>
+              <p><strong>Precision</strong>: Exact <strong>ruler measurements</strong> in <strong>centimeters</strong> and <strong>inches</strong>.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Facilidad de uso</strong>: Una interfaz sencilla para todos.</p>
+              <p><strong>Ease of use</strong>: A simple interface for everyone.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Gratuita</strong>: Sin costos ni suscripciones.</p>
+              <p><strong>Free</strong>: No costs or subscriptions.</p>
           </li>
           <li className="mb-2">
-              <p><strong>Accesibilidad</strong>: Tu <strong>regla en línea</strong> está disponible en cualquier momento y dispositivo.</p>
+              <p><strong>Accessibility</strong>: Your <strong>online ruler</strong> is available anytime and on any device.</p>
           </li>
       </ul>
-      <p>Ya sea para un proyecto importante o una medición rápida, <strong>Regla.onl</strong> es tu solución ideal.</p>
+      <p>Whether for an important project or a quick measurement, <strong>Online-Ruler.Onl</strong> is your ideal solution.</p>
       
       <hr className="my-6" />
       
-      <p className="font-medium">¡Empieza a medir con precisión ahora mismo! Descubre <strong>Regla.onl</strong>, tu <strong>regla virtual</strong> confiable y siempre accesible.</p>
+      <p className="font-medium">Start measuring with precision right now! Discover <strong>Online-Ruler.Onl</strong>, your reliable and always accessible <strong>virtual ruler</strong>.</p>
     </div>
   );
 };

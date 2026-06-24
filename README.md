@@ -2,4 +2,4 @@
 
 ## Project info
 
-**URL**: https://online-ruler.onl
+**URL**: https://regla.onl

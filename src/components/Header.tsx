@@ -1,9 +1,8 @@
-"use client";
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Ruler } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import MenuButton from './MenuButton';
 import {
   NavigationMenu,
@@ -21,22 +20,22 @@ const Header: React.FC = () => {
   return (
     <header className="py-4 mb-6 border-b">
       <div className="container flex justify-between items-center">
-        <Link href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <Ruler size={28} className="text-ruler-primary mr-2" />
-          <span className="text-2xl font-bold text-ruler-primary">Online-Ruler<span className="text-gray-800">.Onl</span></span>
+          <span className="text-2xl font-bold text-ruler-primary">Regla<span className="text-gray-800">.Onl</span></span>
         </Link>
         
         <div className="hidden md:flex items-center">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" className={`${navigationMenuTriggerStyle()} px-4`}>
-                  Home
+                <Link to="/" className={`${navigationMenuTriggerStyle()} px-4`}>
+                  Inicio
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/print-ruler" className={`${navigationMenuTriggerStyle()} px-4`}>
-                  Print Ruler
+                <Link to="/imprimir" className={`${navigationMenuTriggerStyle()} px-4`}>
+                  Imprimir Regla
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -46,110 +45,110 @@ const Header: React.FC = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/how-to-read-a-ruler" 
+                          to="/blog/saber-dni-persona" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          How to Read a Ruler
+                          Cómo Saber el DNI de una Persona
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/how-to-measure-on-phone" 
+                          to="/blog/perdido-dni" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          How to Measure on Your Phone
+                          He Perdido el DNI
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/metric-system-explained" 
+                          to="/blog/sistema-metrico-decimal" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          The Metric System Explained
+                          Sistema Métrico Decimal
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/mks-system" 
+                          to="/blog/sistema-mks" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          MKS System
+                          Sistema MKS
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/natural-units-system" 
+                          to="/blog/sistema-natural-unidades" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          Natural Units System
+                          Sistema Natural de Unidades
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/imperial-measurement-system" 
+                          to="/blog/sistema-anglosajon-unidades" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          Imperial Measurement System
+                          Sistema Anglosajón de Unidades
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/clinometer-guide" 
+                          to="/blog/clinometro" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          Clinometer: What It Is & How to Use It
+                          Clinómetro: Qué es y Cómo Usarlo
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/depth-gauge-guide" 
+                          to="/blog/medidor-profundidad" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          Depth Gauge: What It Is & How to Use It
+                          Medidor de Profundidad: Qué es y Cómo Usarlo
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/dimensionless-numbers" 
+                          to="/blog/numeros-adimensionales" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          Dimensionless Numbers
+                          Números Adimensionales
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/measurement-units-guide" 
+                          to="/blog/como-saber-cuanto-paro" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          Measurement Units Guide
+                          Cómo Saber Cuánto Paro Tengo
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link 
-                          href="/blog/how-to-use-a-ruler" 
+                          to="/blog/como-usar-regla" 
                           className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          How to Use a Ruler
+                          Cómo Usar una Regla
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -157,33 +156,33 @@ const Header: React.FC = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>More</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Más</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px]">
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link href="/about" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
-                          About Us
+                        <Link to="/sobre-nosotros" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Sobre Nosotros
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link href="/contact" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
-                          Contact
+                        <Link to="/contacto" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Contacto
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link href="/privacy" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                        <Link to="/privacy" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
                           {t('privacy')}
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link href="/disclaimer" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                        <Link to="/disclaimer" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
                           {t('disclaimer')}
                         </Link>
                       </NavigationMenuLink>

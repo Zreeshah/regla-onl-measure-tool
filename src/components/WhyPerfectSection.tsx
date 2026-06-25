@@ -1,4 +1,3 @@
-"use client";
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -31,11 +30,11 @@ const WhyPerfectSection: React.FC = () => {
             </li>
             <li className="flex">
               <Check className="text-green-500 mr-2 shrink-0" size={20} />
-              <span>Digital ruler with multiple units (cm, mm, inches)</span>
+              <span>Regla digital con múltiples unidades (cm, mm, pulgadas)</span>
             </li>
             <li className="flex">
               <Check className="text-green-500 mr-2 shrink-0" size={20} />
-              <span>Real size ruler with calibration for exact measurements</span>
+              <span>Regla tamaño real con calibración para medidas exactas</span>
             </li>
           </ul>
         </CardContent>

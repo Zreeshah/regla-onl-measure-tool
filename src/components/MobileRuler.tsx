@@ -1,15 +1,18 @@
-"use client";
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useDeviceInfo } from '@/hooks/use-device-info';
-import { RefreshCw } from 'lucide-react';
+import { RefreshCw, Smartphone, RulerIcon, Maximize, Square, Pencil } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import HomeContent from '@/components/HomeContent';
 import MenuButton from '@/components/MenuButton';
-
+import { Card, CardContent } from '@/components/ui/card';
+import HowToUseSection from '@/components/HowToUseSection';
+import WhyPerfectSection from '@/components/WhyPerfectSection';
+import FaqSection from '@/components/FaqSection';
+import RulerSizesTable from '@/components/RulerSizesTable';
 const MobileRuler: React.FC = () => {
   const {
     pixelsPerCm,
@@ -31,15 +34,17 @@ const MobileRuler: React.FC = () => {
 
   // Dynamic ruler height based on screen size
   const calculateRulerHeight = () => {
-    const minHeight = 400;
-    const unitsToShow = Math.max(25, Math.ceil(screenSize) + 5);
-    const heightPerUnit = 40;
+    // Ensure we show at least up to 25 units or screen size + buffer, whichever is larger
+    const minHeight = 400; // Minimum height
+    const unitsToShow = Math.max(25, Math.ceil(screenSize) + 5); // Show at least screen size + 5 units
+    const heightPerUnit = 40; // Approximate pixels per unit
     return Math.max(minHeight, unitsToShow * heightPerUnit);
   };
   const [rulerHeight, setRulerHeight] = useState(calculateRulerHeight());
   const rulerRef = useRef<HTMLDivElement>(null);
   const [inputValue, setInputValue] = useState<string>(screenSize.toString());
 
+  // Recalculate ruler height when screen size changes
   useEffect(() => {
     setRulerHeight(calculateRulerHeight());
     setInputValue(screenSize.toString());
@@ -67,6 +72,7 @@ const MobileRuler: React.FC = () => {
   const generateTicks = () => {
     if (!rulerRef.current) return [];
     const ticks = [];
+    // Increased maximum value to ensure all units are shown
     const maxValue = Math.max(25, Math.ceil(screenSize) + 5);
     const majorTickInterval = 1;
     const minorTickInterval = 0.2;
@@ -97,6 +103,7 @@ const MobileRuler: React.FC = () => {
         <MenuButton />
       </div>
       
+      {/* Updated container with dynamic height and scrollable area */}
       <div className="mobile-ruler-layout" style={{
       height: 'auto',
       maxHeight: '80vh',
@@ -160,7 +167,7 @@ const MobileRuler: React.FC = () => {
               </div>
               
               <div className="flex-grow flex flex-col">
-                <p className="text-xs text-gray-500 mb-1">Enter your device&apos;s screen size</p>
+                <p className="text-xs text-gray-500 mb-1">Enter your device's screen size</p>
                 <Button onClick={redetectScreenSize} size="sm" variant="outline" className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]">
                   <RefreshCw size={10} className="mr-1" />
                   Re-detect
@@ -170,6 +177,8 @@ const MobileRuler: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* Homepage content after the ruler section */}
       
       
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex justify-center">
@@ -188,15 +197,15 @@ const MobileRuler: React.FC = () => {
             INCH
           </a>
           <span className="text-gray-300">|</span>
-          <Link href="/blog/how-to-read-a-ruler" className="text-[#9b87f5] text-sm">
+          <Link to="/blog/buscar-dni-por-nombre" className="text-[#9b87f5] text-sm">
             Blog
           </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/privacy" className="text-[#9b87f5] text-sm">
+          <Link to="/privacy" className="text-[#9b87f5] text-sm">
             {t('privacy')}
           </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/disclaimer" className="text-[#9b87f5] text-sm">
+          <Link to="/disclaimer" className="text-[#9b87f5] text-sm">
             {t('disclaimer')}
           </Link>
         </div>

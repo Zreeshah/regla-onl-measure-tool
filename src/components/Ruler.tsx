@@ -1,4 +1,3 @@
-"use client";
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
@@ -374,7 +373,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
             className={`${unit === 'inch' ? 'bg-[#9b87f5] hover:bg-[#7E69AB]' : 'bg-white'} h-6 text-[10px] px-2`}
             onClick={() => setUnit('inch')}
           >
-            IN
+            PULG
           </Button>
         </div>
       </div>

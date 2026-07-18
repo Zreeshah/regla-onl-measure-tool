@@ -1,0 +1,21 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/blog/how-to-measure-on-phone/page": "app/blog/how-to-measure-on-phone/page.js",
+  "/blog/how-to-read-a-ruler/page": "app/blog/how-to-read-a-ruler/page.js",
+  "/blog/clinometer-guide/page": "app/blog/clinometer-guide/page.js",
+  "/blog/imperial-measurement-system/page": "app/blog/imperial-measurement-system/page.js",
+  "/blog/measurement-units-guide/page": "app/blog/measurement-units-guide/page.js",
+  "/blog/metric-system-explained/page": "app/blog/metric-system-explained/page.js",
+  "/blog/mks-system/page": "app/blog/mks-system/page.js",
+  "/blog/natural-units-system/page": "app/blog/natural-units-system/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/disclaimer/page": "app/disclaimer/page.js",
+  "/page": "app/page.js",
+  "/print-ruler/page": "app/print-ruler/page.js",
+  "/blog/depth-gauge-guide/page": "app/blog/depth-gauge-guide/page.js",
+  "/blog/dimensionless-numbers/page": "app/blog/dimensionless-numbers/page.js",
+  "/blog/how-to-use-a-ruler/page": "app/blog/how-to-use-a-ruler/page.js",
+  "/blog/metric-vs-imperial/page": "app/blog/metric-vs-imperial/page.js",
+  "/privacy/page": "app/privacy/page.js"
+}

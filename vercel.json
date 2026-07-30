@@ -1,5 +1,10 @@
 {
   "redirects": [
+    {
+      "source": "/ads.txt",
+      "destination": "https://adstxt.journeymv.com/sites/dc43bd93-33f3-4d0a-a1bc-7d81d5c35b86/ads.txt",
+      "statusCode": 301
+    }
   ],
   "rewrites": [
     {

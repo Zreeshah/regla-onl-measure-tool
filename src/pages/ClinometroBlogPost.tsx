@@ -25,7 +25,7 @@ const ClinometroBlogPost: React.FC = () => {
           <div className="flex items-center space-x-4 text-sm text-gray-500 mb-6">
             <div className="flex items-center">
               <Clock size={14} className="mr-1" />
-              <span>Actualizado: Abril 2025</span>
+              <span>Actualizado: Abril 2026</span>
             </div>
             <div className="flex items-center">
               <User size={14} className="mr-1" />

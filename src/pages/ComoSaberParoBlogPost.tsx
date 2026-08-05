@@ -506,7 +506,7 @@ const ComoSaberParoBlogPost: React.FC = () => {
                       <ul className="list-disc ml-6 space-y-1">
                         <li><strong>Primeros 180 días</strong>: Cobrarás el <strong>70%</strong> de tu base reguladora.</li>
                         <li><strong>Desde el día 181</strong>: Cobrarás el <strong>50%</strong> de tu base reguladora.</li>
-                        <li><strong>Límites 2025</strong>: Entre 570 € (mínimo sin hijos) y 1,575 € (máximo con dos o más hijos).</li>
+                        <li><strong>Límites 2026</strong>: Entre 570 € (mínimo sin hijos) y 1,575 € (máximo con dos o más hijos).</li>
                       </ul>
                       <p className="text-gray-700 mt-3">
                         Para una estimación precisa, usa el programa de autocálculo en 

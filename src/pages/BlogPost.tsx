@@ -51,7 +51,7 @@ const BlogPost: React.FC = () => {
             <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center text-gray-500 text-sm">
                 <Clock size={16} className="mr-1" />
-                <span>Publicado: 13 abril, 2025</span>
+                <span>Publicado: 13 abril, 2026</span>
               </div>
               <button className="flex items-center text-gray-500 text-sm hover:text-ruler-primary">
                 <Share2 size={16} className="mr-1" />

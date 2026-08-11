@@ -270,6 +270,18 @@ const Index = () => {
                   <WhyPerfectSection />
                 </div>
               </Suspense>
+
+              <div className="mb-10">
+                <img
+                  src="/lovable-uploads/regla-online-infographic.png"
+                  alt="Infografía de regla online a tamaño real con pasos de calibración, casos de uso y verificación de precisión"
+                  className="block w-full max-w-5xl mx-auto h-auto rounded-lg border border-gray-200 shadow-lg bg-white"
+                  loading="lazy"
+                  decoding="async"
+                  width={1536}
+                  height={2752}
+                />
+              </div>
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <FaqSection />

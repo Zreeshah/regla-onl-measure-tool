@@ -182,6 +182,17 @@ const HomePageClient = () => {
                   <HowToUseSection />
                   <WhyPerfectSection />
                 </div>
+
+                <div className="mb-10">
+                  <Image
+                    src="/lovable-uploads/regla-online-infographic.png"
+                    alt="Infographic for the real size online ruler with calibration steps, use cases, and precision checks"
+                    className="block w-full max-w-5xl mx-auto h-auto rounded-lg border border-gray-200 shadow-lg bg-white"
+                    loading="lazy"
+                    width={1536}
+                    height={2752}
+                  />
+                </div>
               
                 <FaqSection />
               

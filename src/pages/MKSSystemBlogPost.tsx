@@ -109,8 +109,8 @@ const MKSSystemBlogPost: React.FC = () => {
             
             <div className="mb-4">
               <img
-                alt="Evolución histórica de los sistemas de medida"
-                src="/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg"
+                alt="Referencia visual del sistema métrico en mediciones científicas"
+                src="/lovable-uploads/sistema-metrico-ventajas.jpg"
                 className="w-full h-auto rounded-lg shadow-md object-contain max-h-[300px] md:max-h-[400px] mx-auto"
                 loading="lazy"
               />

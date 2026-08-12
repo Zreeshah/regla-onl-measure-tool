@@ -9,7 +9,7 @@ interface CanonicalLinkProps {
 
 const CanonicalLink: React.FC<CanonicalLinkProps> = ({ customUrl }) => {
   const location = useLocation();
-  const baseUrl = window.location.origin;
+  const baseUrl = 'https://regla.onl';
   const canonicalUrl = customUrl || `${baseUrl}${location.pathname}`;
 
   return (

@@ -272,15 +272,27 @@ const Index = () => {
               </Suspense>
 
               <div className="mb-10">
-                <img
-                  src="/lovable-uploads/regla-online-infographic.png"
-                  alt="Infografía de regla online a tamaño real con pasos de calibración, casos de uso y verificación de precisión"
-                  className="block w-full max-w-5xl mx-auto h-auto rounded-lg border border-gray-200 shadow-lg bg-white"
-                  loading="lazy"
-                  decoding="async"
-                  width={1536}
-                  height={2752}
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet="/lovable-uploads/regla-online-infographic-480.avif 480w, /lovable-uploads/regla-online-infographic-768.avif 768w, /lovable-uploads/regla-online-infographic-1024.avif 1024w, /lovable-uploads/regla-online-infographic-1536.avif 1536w"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet="/lovable-uploads/regla-online-infographic-480.webp 480w, /lovable-uploads/regla-online-infographic-768.webp 768w, /lovable-uploads/regla-online-infographic-1024.webp 1024w, /lovable-uploads/regla-online-infographic-1536.webp 1536w"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                  />
+                  <img
+                    src="/lovable-uploads/regla-online-infographic.png"
+                    alt="Infografía de regla online a tamaño real con pasos de calibración, casos de uso y verificación de precisión"
+                    className="block w-full max-w-5xl mx-auto h-auto rounded-lg border border-gray-200 shadow-lg bg-white"
+                    loading="lazy"
+                    decoding="async"
+                    width={1536}
+                    height={2752}
+                  />
+                </picture>
               </div>
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>

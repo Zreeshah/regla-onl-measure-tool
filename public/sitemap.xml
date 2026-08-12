@@ -2,82 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://regla.onl/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/imprimir</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://regla.onl/sobre-nosotros</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://regla.onl/contacto</loc>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/privacy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/disclaimer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/buscar-dni-por-nombre</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/saber-dni-persona</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/perdido-dni</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/sistema-metrico-decimal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/sistema-mks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/sistema-natural-unidades</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/sistema-anglosajon-unidades</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/clinometro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/medidor-profundidad</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/numeros-adimensionales</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/como-saber-cuanto-paro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://regla.onl/blog/como-usar-regla</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
 </urlset>

@@ -16,7 +16,7 @@ const ImprimirRegla: React.FC = () => {
         <title>Imprimir Regla - Regla en Línea para Imprimir Gratis | Regla.Onl</title>
         <meta name="description" content="Imprime una regla de 30 cm o 12 pulgadas gratis. Regla para imprimir en tamaño real, calibrada y lista para usar en casa o la escuela." />
         <meta name="keywords" content="imprimir regla, regla para imprimir, regla imprimible, regla 30 cm, regla 12 pulgadas" />
-        <link rel="canonical" href="https://regla.online/imprimir" />
+        <link rel="canonical" href="https://regla.onl/imprimir" />
       </Helmet>
 
       <Layout>

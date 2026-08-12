@@ -1,10 +1,104 @@
 {
-  "redirects": [
-  ],
-  "rewrites": [
+  "headers": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: blob:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https: wss:; frame-src https:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ],
+  "redirects": [],
+  "rewrites": [
+    {
+      "source": "/imprimir",
+      "destination": "/imprimir/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/disclaimer",
+      "destination": "/disclaimer/index.html"
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contacto/index.html"
+    },
+    {
+      "source": "/sobre-nosotros",
+      "destination": "/sobre-nosotros/index.html"
+    },
+    {
+      "source": "/blog/buscar-dni-por-nombre",
+      "destination": "/blog/buscar-dni-por-nombre/index.html"
+    },
+    {
+      "source": "/blog/saber-dni-persona",
+      "destination": "/blog/saber-dni-persona/index.html"
+    },
+    {
+      "source": "/blog/perdido-dni",
+      "destination": "/blog/perdido-dni/index.html"
+    },
+    {
+      "source": "/blog/sistema-metrico-decimal",
+      "destination": "/blog/sistema-metrico-decimal/index.html"
+    },
+    {
+      "source": "/blog/sistema-mks",
+      "destination": "/blog/sistema-mks/index.html"
+    },
+    {
+      "source": "/blog/sistema-natural-unidades",
+      "destination": "/blog/sistema-natural-unidades/index.html"
+    },
+    {
+      "source": "/blog/sistema-anglosajon-unidades",
+      "destination": "/blog/sistema-anglosajon-unidades/index.html"
+    },
+    {
+      "source": "/blog/clinometro",
+      "destination": "/blog/clinometro/index.html"
+    },
+    {
+      "source": "/blog/medidor-profundidad",
+      "destination": "/blog/medidor-profundidad/index.html"
+    },
+    {
+      "source": "/blog/numeros-adimensionales",
+      "destination": "/blog/numeros-adimensionales/index.html"
+    },
+    {
+      "source": "/blog/como-saber-cuanto-paro",
+      "destination": "/blog/como-saber-cuanto-paro/index.html"
+    },
+    {
+      "source": "/blog/como-usar-regla",
+      "destination": "/blog/como-usar-regla/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

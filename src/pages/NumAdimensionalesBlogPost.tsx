@@ -8,10 +8,25 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import BlogFaq from '@/components/BlogFaq';
 const NumAdimensionalesBlogPost = () => {
   const currentUrl = "/blog/numeros-adimensionales";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
+  const adimensionalesFaq = [
+    {
+      question: "¿Por qué un número adimensional no tiene unidades?",
+      answer: "Porque se calcula como una relación entre magnitudes compatibles o combinadas de forma que las unidades se cancelan y queda un valor puro."
+    },
+    {
+      question: "¿Un porcentaje es adimensional?",
+      answer: "Sí. Un porcentaje expresa una proporción respecto a 100, por eso no depende de metros, segundos, kilogramos u otra unidad física."
+    },
+    {
+      question: "¿Qué número adimensional conviene aprender primero?",
+      answer: "El número de Reynolds suele ser un buen punto de partida porque muestra con claridad cómo una relación sin unidades ayuda a clasificar flujos laminares o turbulentos."
+    }
+  ];
   return <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Números Adimensionales: Qué Son, Significado y Ejemplos Prácticos</title>
@@ -239,6 +254,8 @@ const NumAdimensionalesBlogPost = () => {
               <li><strong>Ahorro de recursos</strong>: Al modelar fenómenos con precisión, reducen la necesidad de pruebas físicas costosas.</li>
             </ul>
             <p>Estas ventajas hacen que los <strong>números adimensionales</strong> sean una herramienta poderosa en cualquier campo técnico.</p>
+
+            <BlogFaq items={adimensionalesFaq} />
 
             <h2 id="conclusión" className="text-2xl font-semibold mt-8 mb-4">Conclusión</h2>
             

@@ -9,10 +9,25 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
+import BlogFaq from '@/components/BlogFaq';
 const MedidorProfundidadBlogPost: React.FC = () => {
   const currentUrl = "/blog/medidor-profundidad";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
+  const profundidadFaq = [
+    {
+      question: "¿Qué tipo de medidor de profundidad es más preciso?",
+      answer: "Para trabajos repetidos en milímetros, un medidor digital o un calibre de profundidad suele ser más cómodo y preciso. Para tareas sencillas, uno mecánico bien calibrado puede ser suficiente."
+    },
+    {
+      question: "¿Cómo compruebo que el medidor está calibrado?",
+      answer: "Pon el medidor a cero sobre una superficie plana, revisa que el palpador se deslice sin juego y compara la lectura con una profundidad conocida antes de medir piezas importantes."
+    },
+    {
+      question: "¿Una regla online sirve para medir profundidad?",
+      answer: "Una regla online ayuda en referencias visibles y medidas planas, pero no sustituye un medidor de profundidad cuando necesitas leer agujeros, ranuras o cavidades internas."
+    }
+  ];
   return <Layout>
       <Helmet>
         <title>Medidor de Profundidad: Qué es, Tipos y Cómo Usarlo con Precisión</title>
@@ -45,6 +60,18 @@ const MedidorProfundidadBlogPost: React.FC = () => {
               __html: homepageLink
             }} /> En esta guía completa, exploraremos los diferentes <strong>tipos de medidores de profundidad</strong>, sus aplicaciones en diversas industrias y cómo utilizarlos correctamente.
             </p>
+
+            <div className="mb-8 rounded-lg border border-blue-100 bg-blue-50 p-5">
+              <h2 className="text-xl font-semibold mb-3 text-gray-800">Respuesta rápida: para qué sirve un medidor de profundidad</h2>
+              <p className="mb-3 text-gray-700">
+                Sirve para medir la distancia desde una superficie de referencia hasta el fondo de una cavidad, ranura, escalón o agujero. La clave es apoyar bien la base, poner la lectura a cero y bajar el palpador hasta el fondo sin inclinar el instrumento.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Usa un modelo digital si necesitas lecturas rápidas en mm o pulgadas.</li>
+                <li>Usa uno mecánico si priorizas resistencia y no quieres depender de baterías.</li>
+                <li>Repite la medición si la pieza tiene rebabas, polvo o una superficie irregular.</li>
+              </ul>
+            </div>
 
             <div className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-gray-800">Tabla de Contenidos</h2>
@@ -243,6 +270,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
             </section>
 
             <section id="conclusion" className="mb-4">
+              <BlogFaq items={profundidadFaq} />
               <RelatedArticlesSection currentUrl={currentUrl} />
               
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 mt-8">Conclusión</h2>

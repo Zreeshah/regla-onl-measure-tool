@@ -9,6 +9,7 @@ import { Clock, Share2, ArrowLeft } from 'lucide-react';
 import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
+import BlogFaq from '@/components/BlogFaq';
 
 
 const BlogPost: React.FC = () => {
@@ -16,6 +17,20 @@ const BlogPost: React.FC = () => {
   const currentUrl = "/blog/buscar-dni-por-nombre";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
   const homepageLink = createContextualLink(relatedArticles[0]);
+  const dniFaq = [
+    {
+      question: "¿Puedo buscar un DNI solo con nombre y apellido?",
+      answer: "No siempre. En España el DNI es un dato personal protegido, por lo que solo debe consultarse mediante fuentes oficiales, información pública legítima o con consentimiento de la persona."
+    },
+    {
+      question: "¿Es legal usar un buscador de DNI?",
+      answer: "Puede ser legal si el buscador trabaja con datos públicos y el uso tiene una finalidad legítima. Evita servicios que prometen datos privados sin verificación o sin base legal clara."
+    },
+    {
+      question: "¿Cuál es la forma más segura de verificar una identidad?",
+      answer: "La opción más segura es pedir a la persona un documento válido, usar canales oficiales o acudir a una entidad autorizada cuando el trámite lo justifique."
+    }
+  ];
   
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -245,6 +260,9 @@ const BlogPost: React.FC = () => {
                 width="1200"
                 height="630"
               />
+
+              <BlogFaq items={dniFaq} />
+              <RelatedArticlesSection currentUrl={currentUrl} />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Última palabra</h2>
               

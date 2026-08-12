@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Search, Database, AlertTriangle, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import BlogFaq from '@/components/BlogFaq';
 const SaberDNIBlogPost: React.FC = () => {
   const {
     t
@@ -12,6 +13,20 @@ const SaberDNIBlogPost: React.FC = () => {
 
   // Create a shortened meta description (150-160 characters max)
   const metaDescription = "Descubre cómo saber el DNI de una persona en España de forma legal. Guía completa con métodos verificados para consultar el DNI por nombre y apellidos.";
+  const dniFaq = [
+    {
+      question: "¿Se puede saber el DNI de otra persona legalmente?",
+      answer: "Solo en casos con base legal, información pública legítima o consentimiento. El DNI es un dato personal protegido y no debe buscarse mediante métodos invasivos."
+    },
+    {
+      question: "¿El BOE siempre muestra el DNI completo?",
+      answer: "No. En muchas publicaciones oficiales los datos aparecen limitados, anonimizados o parcialmente ocultos para proteger la privacidad."
+    },
+    {
+      question: "¿Qué hago si necesito confirmar una identidad?",
+      answer: "Lo más prudente es pedir el documento directamente, usar una vía oficial o consultar con la entidad responsable del trámite antes de compartir o tratar datos personales."
+    }
+  ];
   return <>
       <Helmet>
         <title>Cómo Saber el DNI de una Persona en España: Guía Completa y Legal</title>
@@ -42,7 +57,7 @@ const SaberDNIBlogPost: React.FC = () => {
                 }
               },
               "datePublished": "2024-04-13",
-              "dateModified": "2024-04-13"
+              "dateModified": "2026-08-12"
             }
           `}
         </script>
@@ -289,6 +304,24 @@ const SaberDNIBlogPost: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              <section className="mb-10 rounded-lg border border-gray-200 bg-gray-50 p-5">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">Guías relacionadas sobre DNI</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <a href="/blog/buscar-dni-por-nombre" className="text-ruler-primary hover:underline">
+                      Buscar DNI por nombre y apellido en España
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/blog/perdido-dni" className="text-ruler-primary hover:underline">
+                      Qué hacer si has perdido el DNI
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <BlogFaq items={dniFaq} className="mb-10" />
               
               <section id="conclusion" className="mb-6">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Conclusión</h2>

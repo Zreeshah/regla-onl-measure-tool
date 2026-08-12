@@ -5,8 +5,11 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calculator, Phone, Calendar, FileText, DollarSign, Search, HelpCircle, User, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 
 const ComoSaberParoBlogPost: React.FC = () => {
+  const currentUrl = "/blog/como-saber-cuanto-paro";
+
   return (
     <>
       <Helmet>
@@ -59,6 +62,21 @@ const ComoSaberParoBlogPost: React.FC = () => {
                 resolver tus dudas sobre <strong>cuanto paro tengo</strong>. ¡Descubre cómo verificar tu paro y maximiza 
                 tus derechos como trabajador!
               </p>
+
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-5 mb-8">
+                <h2 className="text-xl font-semibold text-gray-900 mb-3">Respuesta rápida</h2>
+                <p className="text-gray-700 mb-3">
+                  Para saber cuánto paro tienes, consulta tu expediente en el SEPE con certificado digital, DNI electrónico o Cl@ve. Si solo quieres estimarlo, revisa tu vida laboral y compara tus días cotizados con la tabla de duración.
+                </p>
+                <ol className="list-decimal ml-6 text-gray-700 space-y-1">
+                  <li>Comprueba tus días cotizados en los últimos 6 años.</li>
+                  <li>Consulta la prestación en la sede electrónica del SEPE.</li>
+                  <li>Usa el autocálculo oficial si aún no tienes resolución.</li>
+                </ol>
+                <p className="text-sm text-blue-700 mt-3">
+                  La respuesta oficial depende de tu expediente, bases de cotización y situación laboral concreta.
+                </p>
+              </div>
               
               {/* Tabla de Contenidos */}
               <Card className="mb-8 bg-gray-50">
@@ -516,6 +534,8 @@ const ComoSaberParoBlogPost: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              <RelatedArticlesSection currentUrl={currentUrl} />
               
               <section id="conclusion">
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusión</h2>

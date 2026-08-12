@@ -203,45 +203,31 @@ function buildStructuredData(route) {
   }
 
   if (route.type === "home") {
-    graph.push(
-      {
-        "@type": "WebApplication",
-        "@id": `${canonical}#app`,
-        "name": "Regla Online",
-        "url": canonical,
-        "description": route.description,
-        "applicationCategory": "UtilityApplication",
-        "operatingSystem": "Any",
-        "inLanguage": "es",
-        "isAccessibleForFree": true,
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "featureList": [
-          "Medicion en centimetros, milimetros y pulgadas",
-          "Calibracion de pantalla",
-          "Regla a tamaño real",
-          "Compatible con movil, tableta y computadora"
-        ],
-        "publisher": {
-          "@id": `${BASE_URL}/#organization`
-        }
+    graph.push({
+      "@type": "WebApplication",
+      "@id": `${canonical}#app`,
+      "name": "Regla Online",
+      "url": canonical,
+      "description": route.description,
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${canonical}#faq`,
-        "mainEntity": route.faq.map(item => ({
-          "@type": "Question",
-          "name": item.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": item.answer
-          }
-        }))
+      "featureList": [
+        "Medicion en centimetros, milimetros y pulgadas",
+        "Calibracion de pantalla",
+        "Regla a tamaño real",
+        "Compatible con movil, tableta y computadora"
+      ],
+      "publisher": {
+        "@id": `${BASE_URL}/#organization`
       }
-    );
+    });
   }
 
   if (route.type === "tool") {
@@ -283,6 +269,21 @@ function buildStructuredData(route) {
       "datePublished": route.published,
       "dateModified": route.modified,
       "inLanguage": "es"
+    });
+  }
+
+  if (route.faq?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      "mainEntity": route.faq.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
     });
   }
 

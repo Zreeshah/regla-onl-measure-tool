@@ -174,6 +174,20 @@ export const routes = [
           "El contenido presenta metodos de consulta, limites legales y recomendaciones para verificar identidad sin vulnerar datos personales."
         ]
       }
+    ],
+    faq: [
+      {
+        question: "¿Puedo buscar un DNI solo con nombre y apellido?",
+        answer: "No siempre. En España el DNI es un dato personal protegido, por lo que solo debe consultarse mediante fuentes oficiales, informacion publica legitima o con consentimiento de la persona."
+      },
+      {
+        question: "¿Es legal usar un buscador de DNI?",
+        answer: "Puede ser legal si el buscador trabaja con datos publicos y el uso tiene una finalidad legitima. Evita servicios que prometen datos privados sin verificacion o sin base legal clara."
+      },
+      {
+        question: "¿Cuál es la forma más segura de verificar una identidad?",
+        answer: "La opcion mas segura es pedir a la persona un documento valido, usar canales oficiales o acudir a una entidad autorizada cuando el tramite lo justifique."
+      }
     ]
   },
   {
@@ -193,6 +207,20 @@ export const routes = [
           "El articulo resume formas legales de orientar una busqueda de datos de identidad en España, explicando limites, fuentes publicas y precauciones importantes.",
           "Tambien recuerda que el DNI es un dato personal y que cualquier consulta debe realizarse con motivo legitimo y respeto por la privacidad."
         ]
+      }
+    ],
+    faq: [
+      {
+        question: "¿Se puede saber el DNI de otra persona legalmente?",
+        answer: "Solo en casos con base legal, informacion publica legitima o consentimiento. El DNI es un dato personal protegido y no debe buscarse mediante metodos invasivos."
+      },
+      {
+        question: "¿El BOE siempre muestra el DNI completo?",
+        answer: "No. En muchas publicaciones oficiales los datos aparecen limitados, anonimizados o parcialmente ocultos para proteger la privacidad."
+      },
+      {
+        question: "¿Qué hago si necesito confirmar una identidad?",
+        answer: "Lo mas prudente es pedir el documento directamente, usar una via oficial o consultar con la entidad responsable del tramite antes de compartir o tratar datos personales."
       }
     ]
   },
@@ -314,6 +342,20 @@ export const routes = [
           "El contenido conecta la medicion angular con aplicaciones de topografia, educacion, senderismo y proyectos tecnicos."
         ]
       }
+    ],
+    faq: [
+      {
+        question: "¿Cuál es la diferencia entre clinómetro e inclinómetro?",
+        answer: "En el uso practico suelen referirse a instrumentos muy similares: ambos miden inclinacion o pendiente. Clinometro se usa mucho en topografia, geologia y medicion de angulos."
+      },
+      {
+        question: "¿Un móvil puede funcionar como clinómetro?",
+        answer: "Si, un smartphone puede servir para comprobaciones rapidas si tiene sensores calibrados, aunque para trabajos profesionales conviene confirmar con un instrumento dedicado."
+      },
+      {
+        question: "¿Cómo reduzco errores al medir una pendiente?",
+        answer: "Calibra el equipo, apoyalo sobre una superficie estable, evita vibraciones y repite la lectura varias veces antes de tomar el valor final."
+      }
     ]
   },
   {
@@ -333,6 +375,27 @@ export const routes = [
           "El articulo explica medidores mecanicos, digitales y especializados para medir ranuras, agujeros y superficies en trabajos tecnicos.",
           "Incluye recomendaciones para preparar la pieza, leer la escala y evitar errores de medicion."
         ]
+      },
+      {
+        heading: "Respuesta rapida",
+        paragraphs: [
+          "Un medidor de profundidad sirve para medir la distancia desde una superficie de referencia hasta el fondo de una cavidad, ranura, escalon o agujero.",
+          "La clave es apoyar bien la base, poner la lectura a cero y bajar el palpador sin inclinar el instrumento."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "¿Qué tipo de medidor de profundidad es más preciso?",
+        answer: "Para trabajos repetidos en milimetros, un medidor digital o un calibre de profundidad suele ser mas comodo y preciso. Para tareas sencillas, uno mecanico bien calibrado puede ser suficiente."
+      },
+      {
+        question: "¿Cómo compruebo que el medidor está calibrado?",
+        answer: "Pon el medidor a cero sobre una superficie plana, revisa que el palpador se deslice sin juego y compara la lectura con una profundidad conocida antes de medir piezas importantes."
+      },
+      {
+        question: "¿Una regla online sirve para medir profundidad?",
+        answer: "Una regla online ayuda en referencias visibles y medidas planas, pero no sustituye un medidor de profundidad cuando necesitas leer agujeros, ranuras o cavidades internas."
       }
     ]
   },
@@ -354,6 +417,20 @@ export const routes = [
           "La guia presenta ejemplos conocidos y explica por que estos numeros ayudan a comparar fenomenos en diferentes escalas."
         ]
       }
+    ],
+    faq: [
+      {
+        question: "¿Por qué un número adimensional no tiene unidades?",
+        answer: "Porque se calcula como una relacion entre magnitudes compatibles o combinadas de forma que las unidades se cancelan y queda un valor puro."
+      },
+      {
+        question: "¿Un porcentaje es adimensional?",
+        answer: "Si. Un porcentaje expresa una proporcion respecto a 100, por eso no depende de metros, segundos, kilogramos u otra unidad fisica."
+      },
+      {
+        question: "¿Qué número adimensional conviene aprender primero?",
+        answer: "El numero de Reynolds suele ser un buen punto de partida porque muestra con claridad como una relacion sin unidades ayuda a clasificar flujos laminares o turbulentos."
+      }
     ]
   },
   {
@@ -373,6 +450,27 @@ export const routes = [
           "Esta guia explica como consultar el paro acumulado, revisar la prestacion por desempleo y entender la relacion entre dias cotizados y duracion de la ayuda.",
           "Tambien orienta sobre la Sede Electronica del SEPE y los pasos habituales para solicitar informacion oficial."
         ]
+      },
+      {
+        heading: "Respuesta rapida",
+        paragraphs: [
+          "Para saber cuanto paro tienes, consulta tu expediente en el SEPE con certificado digital, DNI electronico o Cl@ve.",
+          "Si solo quieres estimarlo, revisa tu vida laboral y compara tus dias cotizados con la tabla de duracion."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "¿Se Pierde el Paro Acumulado?",
+        answer: "No pierdes el paro acumulado reciente, pero las cotizaciones de hace mas de 6 años no cuentan para calcular la prestacion por desempleo."
+      },
+      {
+        question: "¿Qué Pasa si Vuelvo a Trabajar?",
+        answer: "Si encuentras empleo antes de agotar tu paro, puedes suspender la prestacion y reanudarla si vuelves a quedar desempleado dentro del plazo aplicable."
+      },
+      {
+        question: "¿Cuánto Dinero Recibiré por el Paro?",
+        answer: "La cuantia depende de tus bases de cotizacion y de los limites vigentes. Para una estimacion precisa, usa el autocalculo oficial del SEPE o consulta tu expediente."
       }
     ]
   },

@@ -5,7 +5,25 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import BlogFaq from '@/components/BlogFaq';
+import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 const ClinometroBlogPost: React.FC = () => {
+  const currentUrl = "/blog/clinometro";
+  const clinometroFaq = [
+    {
+      question: "¿Cuál es la diferencia entre clinómetro e inclinómetro?",
+      answer: "En el uso práctico suelen referirse a instrumentos muy similares: ambos miden inclinación o pendiente. Clinómetro se usa mucho en topografía, geología y medición de ángulos."
+    },
+    {
+      question: "¿Un móvil puede funcionar como clinómetro?",
+      answer: "Sí, un smartphone puede servir para comprobaciones rápidas si tiene sensores calibrados, aunque para trabajos profesionales conviene confirmar con un instrumento dedicado."
+    },
+    {
+      question: "¿Cómo reduzco errores al medir una pendiente?",
+      answer: "Calibra el equipo, apóyalo sobre una superficie estable, evita vibraciones y repite la lectura varias veces antes de tomar el valor final."
+    }
+  ];
+
   return <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Clinómetro: Qué es, Para Qué Sirve y Cómo Usarlo | Regla.Onl</title>
@@ -62,6 +80,7 @@ const ClinometroBlogPost: React.FC = () => {
               <li><a href="#cómo-usar-un-clinómetro">Cómo Usar un Clinómetro: Guía Práctica</a></li>
               <li><a href="#ventajas-y-limitaciones">Ventajas y Limitaciones del Clinómetro</a></li>
               <li><a href="#tabla-comparación">Tabla de Comparación: Tradicional vs. Digital</a></li>
+              <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
               <li><a href="#conclusión">Conclusión</a></li>
             </ul>
 
@@ -339,6 +358,9 @@ const ClinometroBlogPost: React.FC = () => {
             <p className="mt-4">
               Esta tabla te ayuda a elegir según tus necesidades.
             </p>
+
+            <BlogFaq items={clinometroFaq} />
+            <RelatedArticlesSection currentUrl={currentUrl} />
 
             <h2 id="conclusión" className="text-2xl font-semibold mt-8 mb-4">Conclusión</h2>
             <p>

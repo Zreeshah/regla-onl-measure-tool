@@ -100,8 +100,11 @@ const AdUnit: React.FC<AdUnitProps> = ({
 
     const check = () => {
       const value = ins.getAttribute('data-ad-status');
-      if (value === 'unfilled') setStatus('unfilled');
-      else if (value === 'filled') setStatus('filled');
+      if (!value) return;
+      // AdSense reports "filled" on success and several no-ad variants
+      // ("unfilled", "unfill-optimized", ...). Anything that is not a real ad
+      // collapses so the reader never meets an empty box.
+      setStatus(value === 'filled' ? 'filled' : 'unfilled');
     };
 
     check();

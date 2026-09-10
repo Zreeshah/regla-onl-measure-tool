@@ -83,10 +83,9 @@ export default function RootLayout({
           `}
         </Script>
         <Script
-          src="https://scripts.scriptwrapper.com/tags/dc43bd93-33f3-4d0a-a1bc-7d81d5c35b86.js"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6218065184548996"
           strategy="afterInteractive"
-          data-noptimize="1"
-          data-cfasync="false"
+          crossOrigin="anonymous"
         />
         <Providers>
           {children}

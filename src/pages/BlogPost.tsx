@@ -10,6 +10,7 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
 import BlogFaq from '@/components/BlogFaq';
+import AdUnit from '@/components/AdUnit';
 
 
 const BlogPost: React.FC = () => {
@@ -122,6 +123,7 @@ const BlogPost: React.FC = () => {
                 <p className="text-sm text-gray-600 italic">La verificación de identidad es uno de los usos más comunes al buscar un DNI por nombre.</p>
               </div>
               
+              <AdUnit />
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="métodos-para-buscar-dni-en-españa">Métodos para Buscar DNI en España</h2>
               
               <p>
@@ -216,6 +218,7 @@ const BlogPost: React.FC = () => {
                 Recuerda que necesitarás una <strong>exposición de motivos</strong> clara para justificar tu solicitud.
               </p>
               
+              <AdUnit />
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="cómo-buscar-dni-por-nombre-y-apellido-gratis">Cómo Buscar DNI por Nombre y Apellido Gratis</h2>
               
               <p>

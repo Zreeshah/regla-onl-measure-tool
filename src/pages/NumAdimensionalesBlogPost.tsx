@@ -9,6 +9,7 @@ import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import BlogFaq from '@/components/BlogFaq';
+import AdUnit from '@/components/AdUnit';
 const NumAdimensionalesBlogPost = () => {
   const currentUrl = "/blog/numeros-adimensionales";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
@@ -100,6 +101,7 @@ const NumAdimensionalesBlogPost = () => {
             </ul>
             <p>En resumen, los <strong>números adimensionales</strong> son pilares de la ciencia moderna, ofreciendo una forma estandarizada de analizar y comprender el mundo físico.</p>
 
+            <AdUnit />
             <h2 id="ejemplos-de-números-adimensionales" className="text-2xl font-semibold mt-8 mb-4">Ejemplos de Números Adimensionales</h2>
             <p>Para ilustrar el <strong>adimensional significado</strong>, aquí tienes algunos <strong>adimensional ejemplos</strong> ampliamente utilizados en física e ingeniería:</p>
             
@@ -212,6 +214,7 @@ const NumAdimensionalesBlogPost = () => {
               </Table>
             </div>
 
+            <AdUnit />
             <h2 id="aplicaciones-prácticas-de-los-números-adimensionales" className="text-2xl font-semibold mt-8 mb-4">Aplicaciones Prácticas de los Números Adimensionales</h2>
             <p>Los <strong>números adimensionales</strong> tienen un impacto significativo en múltiples disciplinas. Algunas aplicaciones incluyen:</p>
             <ul className="list-disc ml-6 mb-6">

@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Search, Database, AlertTriangle, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BlogFaq from '@/components/BlogFaq';
+import AdUnit from '@/components/AdUnit';
 const SaberDNIBlogPost: React.FC = () => {
   const {
     t
@@ -124,6 +125,7 @@ const SaberDNIBlogPost: React.FC = () => {
               </section>
               
               <section id="metodos-comprobados" className="mb-10">
+                <AdUnit />
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Métodos Comprobados para Saber el DNI de una Persona</h2>
                 <p className="mb-6">
                   A continuación, te presentamos tres formas efectivas de <strong>cómo saber el DNI de una persona por su nombre</strong> en España. Cada método tiene sus particularidades, pero todos son legales y accesibles si se usan correctamente.
@@ -245,6 +247,7 @@ const SaberDNIBlogPost: React.FC = () => {
               </section>
               
               <section id="que-es-boe" className="mb-10">
+                <AdUnit />
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Qué es el BOE y Cómo Ayuda a Saber el DNI</h2>
                 <p className="mb-4">
                   El <strong>Boletín Oficial del Estado (BOE)</strong> es un organismo público dependiente del Ministerio de la Presidencia, Relaciones con las Cortes y Memoria Democrática. Su función principal es publicar información oficial, como leyes, decretos, notificaciones y datos de interés público.
@@ -306,6 +309,7 @@ const SaberDNIBlogPost: React.FC = () => {
               </section>
 
               <section className="mb-10 rounded-lg border border-gray-200 bg-gray-50 p-5">
+                <AdUnit />
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Guías relacionadas sobre DNI</h2>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>

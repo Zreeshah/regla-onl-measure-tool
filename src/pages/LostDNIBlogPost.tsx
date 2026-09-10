@@ -9,6 +9,7 @@ import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import CanonicalLink from '@/components/CanonicalLink';
+import AdUnit from '@/components/AdUnit';
 
 const LostDNIBlogPost: React.FC = () => {
   const currentUrl = "/blog/perdido-dni";
@@ -160,6 +161,7 @@ const LostDNIBlogPost: React.FC = () => {
               </section>
               
               <section id="extranjero" className="mb-8">
+                <AdUnit />
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
                   <MapPin className="mr-2 text-blue-600" size={24} />
                   He Perdido el DNI en el Extranjero: ¿Qué Hago?
@@ -230,6 +232,7 @@ const LostDNIBlogPost: React.FC = () => {
               </section>
               
               <section id="renovar" className="mb-8">
+                <AdUnit />
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
                   <FileText className="mr-2 text-blue-600" size={24} />
                   Cómo Renovar el DNI si lo He Perdido
@@ -304,6 +307,7 @@ const LostDNIBlogPost: React.FC = () => {
               <section id="conclusion" className="mb-4">
                 <RelatedArticlesSection currentUrl={currentUrl} />
                 
+                <AdUnit />
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800 mt-8">Conclusión</h2>
                 
                 <p className="mb-4 text-gray-700">

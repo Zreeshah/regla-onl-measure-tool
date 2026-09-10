@@ -7,6 +7,7 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { Square, Triangle, Circle, ArrowDown, ArrowUp } from 'lucide-react';
+import AdUnit from '@/components/AdUnit';
 const MetricSystemBlogPost: React.FC = () => {
   const {
     t
@@ -102,6 +103,7 @@ const MetricSystemBlogPost: React.FC = () => {
               <img alt="Ventajas del Sistema Métrico Decimal" src="/lovable-uploads/sistema-metrico-ventajas.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />
             </div>
             
+            <AdUnit />
             <h2 id="unidades-del-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">
               Unidades del Sistema Métrico Decimal
             </h2>
@@ -405,6 +407,7 @@ const MetricSystemBlogPost: React.FC = () => {
               <img alt="Unidades del Sistema Métrico Decimal" src="/lovable-uploads/3aaf4fe4-39fa-4068-9fb3-a5d1decbbc8e.jpg" className="w-full h-48 md:h-64 rounded-lg shadow-md object-contain" />
             </div>
             
+            <AdUnit />
             <h2 id="cómo-convertir-unidades-en-el-sistema-métrico-decimal" className="text-2xl font-bold mt-10 mb-4">
               Cómo Convertir Unidades en el Sistema Métrico Decimal
             </h2>
@@ -481,6 +484,7 @@ const MetricSystemBlogPost: React.FC = () => {
               </div>
             </div>
             
+            <AdUnit />
             <h2 id="sistema-métrico-decimal-ejemplos-prácticos" className="text-2xl font-bold mt-10 mb-4">
               Sistema Métrico Decimal: Ejemplos Prácticos
             </h2>

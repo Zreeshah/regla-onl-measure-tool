@@ -4,6 +4,7 @@ import { ChevronRight, Ruler, ArrowRight, BarChart3, Scale } from 'lucide-react'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Separator } from "@/components/ui/separator";
+import AdUnit from '@/components/AdUnit';
 const SistemaAnglosajoBlogPost = () => {
   return <>
       <Helmet>
@@ -159,6 +160,7 @@ const SistemaAnglosajoBlogPost = () => {
             </table>
           </div>
 
+          <AdUnit />
           <h2 id="conversion" className="text-2xl font-bold mt-8 mb-4">
             Conversión al Sistema Métrico
           </h2>
@@ -222,6 +224,7 @@ const SistemaAnglosajoBlogPost = () => {
 
           <p>Estas aplicaciones reflejan su arraigo en la vida diaria de países angloparlantes.</p>
 
+          <AdUnit />
           <h2 id="desafios" className="text-2xl font-bold mt-8 mb-4">
             Desafíos y Adopción Global
           </h2>
@@ -285,6 +288,7 @@ const SistemaAnglosajoBlogPost = () => {
             </table>
           </div>
 
+          <AdUnit />
           <h2 id="ejemplos" className="text-2xl font-bold mt-8 mb-4">
             Ejemplos Prácticos de Conversión
           </h2>

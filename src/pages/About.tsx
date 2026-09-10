@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
 import { Ruler, Target, Users, Zap } from 'lucide-react';
+import AdUnit from '@/components/AdUnit';
 
 
 const About = () => {
@@ -62,6 +63,7 @@ const About = () => {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+              <AdUnit />
               <h2 className="text-2xl font-semibold mb-6 text-ruler-primary">
                 ¿Por qué elegir Regla.Onl?
               </h2>
@@ -120,6 +122,7 @@ const About = () => {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md">
+              <AdUnit />
               <h2 className="text-2xl font-semibold mb-4 text-ruler-primary">
                 Nuestro Compromiso
               </h2>

@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Table } from '@/components/ui/table';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import AdUnit from '@/components/AdUnit';
 const SistemaNaturalBlogPost: React.FC = () => {
   return <>
       <Helmet>
@@ -126,6 +127,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
               </section>
 
               <section id="unidades-del-sistema-natural" className="mb-10">
+                <AdUnit />
                 <h2 className="text-2xl font-bold mb-4">Unidades del Sistema Natural</h2>
                 <p className="mb-4">
                   En el <strong>sistema natural</strong>, las unidades se derivan de las constantes fundamentales, eliminando la necesidad de patrones arbitrarios. Las más comunes son:
@@ -211,6 +213,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
               </section>
 
               <section id="comparación" className="mb-10">
+                <AdUnit />
                 <h2 className="text-2xl font-bold mb-4">Comparación con Otros Sistemas de Unidades</h2>
                 <p className="mb-4">
                   El <strong>sistema natural</strong> se distingue de otros sistemas por su enfoque universal. Aquí una comparación:
@@ -286,6 +289,7 @@ const SistemaNaturalBlogPost: React.FC = () => {
               </section>
 
               <section id="tabla-unidades" className="mb-10">
+                <AdUnit />
                 <h2 className="text-2xl font-bold mb-4">Tabla de Unidades y Constantes</h2>
                 <p className="mb-4">
                   Esta tabla resume las unidades principales del <strong>sistema natural</strong> y sus equivalencias:

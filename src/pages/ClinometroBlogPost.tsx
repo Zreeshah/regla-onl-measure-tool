@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import BlogFaq from '@/components/BlogFaq';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import AdUnit from '@/components/AdUnit';
 const ClinometroBlogPost: React.FC = () => {
   const currentUrl = "/blog/clinometro";
   const clinometroFaq = [
@@ -176,6 +177,7 @@ const ClinometroBlogPost: React.FC = () => {
               
             </div>
 
+            <AdUnit />
             <h2 id="tipos-de-clinómetros" className="text-2xl font-semibold mt-8 mb-4">Tipos de Clinómetros</h2>
             <p>Existen varios tipos de clinómetros, cada uno adaptado a necesidades específicas:</p>
             
@@ -233,6 +235,7 @@ const ClinometroBlogPost: React.FC = () => {
               
             </div>
 
+            <AdUnit />
             <h2 id="clinómetro-digital" className="text-2xl font-semibold mt-8 mb-4">Clinómetro Digital: La Evolución Tecnológica</h2>
             <p>
               El <strong>clinómetro digital</strong> ha transformado la medición de ángulos gracias a la tecnología moderna:
@@ -316,6 +319,7 @@ const ClinometroBlogPost: React.FC = () => {
               <strong>Consejo</strong>: Combina un clinómetro con un GPS o teodolito para mediciones más complejas.
             </p>
 
+            <AdUnit />
             <h2 id="tabla-comparación" className="text-2xl font-semibold mt-8 mb-4">Tabla de Comparación: Clinómetro Tradicional vs. Digital</h2>
             
             <Table>

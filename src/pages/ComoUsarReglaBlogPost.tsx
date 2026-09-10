@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Clock, Share2, ArrowLeft, Ruler, ChevronRight } from 'lucide-react';
+import AdUnit from '@/components/AdUnit';
 const ComoUsarReglaBlogPost: React.FC = () => {
   const {
     t
@@ -177,6 +178,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                 Algunas reglas incluyen características adicionales, como bordes antideslizantes o escalas dobles (métricas e imperiales).
               </p>
               
+              <AdUnit />
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="como-se-usa-la-regla">Cómo Se Usa la Regla: Pasos Básicos</h2>
               
               <p>
@@ -262,6 +264,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
               
               
               
+              <AdUnit />
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="aplicaciones">Aplicaciones de la Regla en la Vida Diaria</h2>
               
               <p>
@@ -327,6 +330,7 @@ const ComoUsarReglaBlogPost: React.FC = () => {
                 <p className="text-sm text-gray-600 italic">Las reglas online son herramientas útiles para diseñadores y profesionales que trabajan en entornos digitales.</p>
               </div>
               
+              <AdUnit />
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="errores-comunes">Errores Comunes al Usar una Regla y Cómo Evitarlos</h2>
               
               <p>

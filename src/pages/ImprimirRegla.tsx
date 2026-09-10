@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Printer } from 'lucide-react';
 import reglaImage from '@/assets/Regla para Imprimir.png';
+import AdUnit from '@/components/AdUnit';
 
 const ImprimirRegla: React.FC = () => {
   const handlePrint = () => {
@@ -73,6 +74,7 @@ const ImprimirRegla: React.FC = () => {
                   </section>
 
                   <section className="bg-white p-6 rounded-lg shadow-sm">
+                    <AdUnit />
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                       Tipos de Reglas para Imprimir
                     </h2>
@@ -131,6 +133,7 @@ const ImprimirRegla: React.FC = () => {
                   </section>
 
                   <section className="bg-white p-6 rounded-lg shadow-sm">
+                    <AdUnit />
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                       Una Última Cosa
                     </h2>

@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { Calculator, Phone, Calendar, FileText, DollarSign, Search, HelpCircle, User, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
+import AdUnit from '@/components/AdUnit';
 
 const ComoSaberParoBlogPost: React.FC = () => {
   const currentUrl = "/blog/como-saber-cuanto-paro";
@@ -266,6 +267,7 @@ const ComoSaberParoBlogPost: React.FC = () => {
               </section>
               
               <section id="tabla-de-dias-cotizados">
+                <AdUnit />
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Tabla de Días Cotizados para Cobrar Paro</h2>
                 <p className="text-gray-700 mb-4">
                   La duración de tu <strong>prestación por desempleo</strong> depende de los días que hayas cotizado en los últimos 6 años. 
@@ -401,6 +403,7 @@ const ComoSaberParoBlogPost: React.FC = () => {
               </section>
               
               <section id="cuando-y-como-solicitar">
+                <AdUnit />
                 <h2 className="text-2xl font-semibold mt-8 mb-4">¿Cuándo y Cómo Solicitar el Paro?</h2>
                 <p className="text-gray-700 mb-4">
                   Para <strong>consultar prestación por desempleo</strong> y solicitarla, tienes un plazo de <strong>15 días hábiles</strong> 
@@ -479,6 +482,7 @@ const ComoSaberParoBlogPost: React.FC = () => {
               </section>
               
               <section id="preguntas-frecuentes">
+                <AdUnit />
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Preguntas Frecuentes sobre el Paro</h2>
                 
                 <div className="space-y-6 mb-8">

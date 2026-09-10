@@ -16,6 +16,7 @@ import calibrationGuide from '@/assets/calibration-guide.png';
 import reglaOnline from '@/assets/regla-online.jpg';
 import reglaPrecision from '@/assets/regla-precision.jpg';
 import HomeContent from '@/components/HomeContent';
+import AdUnit from '@/components/AdUnit';
 
 
 
@@ -164,6 +165,8 @@ const Index = () => {
               )}
               
               
+              {/* Below the ruler tool - the tool stays fully usable above it */}
+              <AdUnit className="mb-6" />
               
               <div className="mb-6 md:mb-10">
                 <Card className="bg-white p-4 md:p-6">
@@ -220,6 +223,8 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </div>
+              
+              <AdUnit className="mb-10" />
               
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <div className="mb-10">
@@ -295,6 +300,8 @@ const Index = () => {
                 </picture>
               </div>
               
+              <AdUnit className="mb-10" />
+              
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <FaqSection />
               </Suspense>
@@ -302,6 +309,8 @@ const Index = () => {
               <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse rounded-lg"></div>}>
                 <RulerSizesTable />
               </Suspense>
+
+              <AdUnit className="mb-10" />
 
               <div className="mb-10">
                 <Card className="bg-white p-6">

@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calculator, Ruler, Scale, MoveHorizontal, Clock, Zap, Atom } from 'lucide-react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import AdUnit from '@/components/AdUnit';
 const MKSSystemBlogPost: React.FC = () => {
   return <div className="min-h-screen flex flex-col">
       <Helmet>
@@ -153,6 +154,7 @@ const MKSSystemBlogPost: React.FC = () => {
           </section>
 
           <section id="unidades-basicas">
+            <AdUnit />
             <h2 className="text-2xl font-bold mt-8 mb-4">
               Unidades Básicas del Sistema MKS
             </h2>
@@ -249,6 +251,7 @@ const MKSSystemBlogPost: React.FC = () => {
           </section>
 
           <section id="diferencias">
+            <AdUnit />
             <h2 className="text-2xl font-bold mt-8 mb-4">
               Diferencias entre MKS, SI y Otros Sistemas
             </h2>
@@ -405,6 +408,7 @@ const MKSSystemBlogPost: React.FC = () => {
           </section>
 
           <section id="tabla-equivalencias">
+            <AdUnit />
             <h2 className="text-2xl font-bold mt-8 mb-4">
               Tabla de Equivalencias y Conversiones
             </h2>

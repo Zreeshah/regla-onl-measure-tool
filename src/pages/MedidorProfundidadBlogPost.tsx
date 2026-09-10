@@ -10,6 +10,7 @@ import { getRelatedArticles, createContextualLink } from '@/utils/internalLinks'
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import { Link } from 'react-router-dom';
 import BlogFaq from '@/components/BlogFaq';
+import AdUnit from '@/components/AdUnit';
 const MedidorProfundidadBlogPost: React.FC = () => {
   const currentUrl = "/blog/medidor-profundidad";
   const relatedArticles = getRelatedArticles(currentUrl, 2);
@@ -108,6 +109,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
             </section>
 
             <section id="tipos" className="mb-8">
+              <AdUnit />
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
                 <Settings className="mr-2 text-blue-600" size={24} />
                 Tipos de Medidores de Profundidad
@@ -183,6 +185,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
             </section>
 
             <section id="aplicaciones" className="mb-8">
+              <AdUnit />
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
                 <BarChart className="mr-2 text-blue-600" size={24} />
                 Aplicaciones del Medidor de Profundidad
@@ -251,6 +254,7 @@ const MedidorProfundidadBlogPost: React.FC = () => {
             </section>
 
             <section id="mantenimiento" className="mb-8">
+              <AdUnit />
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
                 <Clock className="mr-2 text-blue-600" size={24} />
                 Mantenimiento del Medidor de Profundidad

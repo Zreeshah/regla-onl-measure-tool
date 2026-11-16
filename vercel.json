@@ -95,10 +95,6 @@
     {
       "source": "/blog/como-usar-regla",
       "destination": "/blog/como-usar-regla/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
